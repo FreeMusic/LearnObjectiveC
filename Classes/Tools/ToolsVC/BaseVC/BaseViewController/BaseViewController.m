@@ -22,9 +22,6 @@
     //开启iOS7及以上的滑动返回效果
     //返回按钮自定义
     self.navigationController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backIcon"] style:UIBarButtonItemStyleDone target:self action:@selector(backClick)];
-    self.Messages = @[
-        
-    ];
 }
 
 - (void)backClick{
@@ -66,8 +63,6 @@
 }
 
 @end
-
-
 
 
 @interface ObjectiveModel ()

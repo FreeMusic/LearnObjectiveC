@@ -10,13 +10,13 @@
 
 @interface BaseViewController : UIViewController
 
-@property (nonatomic, strong) NSArray *Messages;
+@property (nonatomic, copy) NSArray *Messages;
 
 @end
 
 @interface ObjectiveModel: NSObject
 
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, copy) NSString *title;
 @property (nonatomic, strong) UIViewController *vc;
 
 + (ObjectiveModel *)initTitle:(NSString *)title vc:(UIViewController *)vc;
