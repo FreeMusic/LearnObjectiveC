@@ -6,9 +6,9 @@
 //  Copyright © 2019年 橘子. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MyTableViewVC.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : MyTableViewVC
 
 
 @end

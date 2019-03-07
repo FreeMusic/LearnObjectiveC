@@ -15,6 +15,11 @@
 		181F319F2230BDDD0098E099 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F319E2230BDDD0098E099 /* main.m */; };
 		181F31A92230BDDD0098E099 /* LearnObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31A82230BDDD0098E099 /* LearnObjectiveCTests.m */; };
 		181F31B42230BDDD0098E099 /* LearnObjectiveCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31B32230BDDD0098E099 /* LearnObjectiveCUITests.m */; };
+		181F31CD2230C3530098E099 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31CC2230C3530098E099 /* BaseViewController.m */; };
+		181F31D12230C44A0098E099 /* MyTableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31D02230C44A0098E099 /* MyTableViewVC.m */; };
+		181F31D52230C5FA0098E099 /* MyTableReFreshVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31D42230C5FA0098E099 /* MyTableReFreshVC.m */; };
+		181F31DA2230E7890098E099 /* ErrorCodeExampleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31D92230E7890098E099 /* ErrorCodeExampleVC.m */; };
+		181F31DE2230EA940098E099 /* BAD_ACCESS_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31DD2230EA940098E099 /* BAD_ACCESS_VC.m */; };
 		919735996E7228FD6C736DD0 /* libPods-LearnObjectiveCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4947D508C763C6A7F9AB609C /* libPods-LearnObjectiveCUITests.a */; };
 		98BEB752F35B782F968A28C1 /* libPods-LearnObjectiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C8AE55DD99ABC5D96520 /* libPods-LearnObjectiveC.a */; };
 		BC9A8EB5F33AEAD001DAB123 /* libPods-LearnObjectiveCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E40F4D024E57FB0808C251 /* libPods-LearnObjectiveCTests.a */; };
@@ -56,6 +61,19 @@
 		181F31AF2230BDDD0098E099 /* LearnObjectiveCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnObjectiveCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181F31B32230BDDD0098E099 /* LearnObjectiveCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnObjectiveCUITests.m; sourceTree = "<group>"; };
 		181F31B52230BDDD0098E099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181F31C22230C0580098E099 /* Header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.pch; sourceTree = "<group>"; };
+		181F31C32230C0890098E099 /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
+		181F31C42230C1B20098E099 /* ConfigurationConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigurationConst.h; sourceTree = "<group>"; };
+		181F31CB2230C3530098E099 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		181F31CC2230C3530098E099 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		181F31CF2230C44A0098E099 /* MyTableViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewVC.h; sourceTree = "<group>"; };
+		181F31D02230C44A0098E099 /* MyTableViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewVC.m; sourceTree = "<group>"; };
+		181F31D32230C5FA0098E099 /* MyTableReFreshVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableReFreshVC.h; sourceTree = "<group>"; };
+		181F31D42230C5FA0098E099 /* MyTableReFreshVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableReFreshVC.m; sourceTree = "<group>"; };
+		181F31D82230E7890098E099 /* ErrorCodeExampleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorCodeExampleVC.h; sourceTree = "<group>"; };
+		181F31D92230E7890098E099 /* ErrorCodeExampleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorCodeExampleVC.m; sourceTree = "<group>"; };
+		181F31DC2230EA940098E099 /* BAD_ACCESS_VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAD_ACCESS_VC.h; sourceTree = "<group>"; };
+		181F31DD2230EA940098E099 /* BAD_ACCESS_VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAD_ACCESS_VC.m; sourceTree = "<group>"; };
 		38E4C8AE55DD99ABC5D96520 /* libPods-LearnObjectiveC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjectiveC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4947D508C763C6A7F9AB609C /* libPods-LearnObjectiveCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjectiveCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F744E4CB9B4A24875B64718 /* Pods-LearnObjectiveCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCUITests/Pods-LearnObjectiveCUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +114,7 @@
 		181F31832230BDDB0098E099 = {
 			isa = PBXGroup;
 			children = (
+				181F31C52230C2940098E099 /* Classes */,
 				181F318E2230BDDB0098E099 /* LearnObjectiveC */,
 				181F31A72230BDDD0098E099 /* LearnObjectiveCTests */,
 				181F31B22230BDDD0098E099 /* LearnObjectiveCUITests */,
@@ -122,6 +141,9 @@
 				181F31902230BDDB0098E099 /* AppDelegate.m */,
 				181F31922230BDDB0098E099 /* ViewController.h */,
 				181F31932230BDDB0098E099 /* ViewController.m */,
+				181F31C32230C0890098E099 /* MacroDefinition.h */,
+				181F31C42230C1B20098E099 /* ConfigurationConst.h */,
+				181F31C22230C0580098E099 /* Header.pch */,
 				181F31952230BDDB0098E099 /* Main.storyboard */,
 				181F31982230BDDD0098E099 /* Assets.xcassets */,
 				181F319A2230BDDD0098E099 /* LaunchScreen.storyboard */,
@@ -147,6 +169,103 @@
 				181F31B52230BDDD0098E099 /* Info.plist */,
 			);
 			path = LearnObjectiveCUITests;
+			sourceTree = "<group>";
+		};
+		181F31C52230C2940098E099 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				181F31C62230C2940098E099 /* ContentsOfLearning */,
+				181F31C72230C2940098E099 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		181F31C62230C2940098E099 /* ContentsOfLearning */ = {
+			isa = PBXGroup;
+			children = (
+				181F31D62230E7410098E099 /* 错误编码示范 */,
+			);
+			path = ContentsOfLearning;
+			sourceTree = "<group>";
+		};
+		181F31C72230C2940098E099 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				181F31C82230C2AD0098E099 /* ToolsVC */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		181F31C82230C2AD0098E099 /* ToolsVC */ = {
+			isa = PBXGroup;
+			children = (
+				181F31C92230C3310098E099 /* BaseVC */,
+			);
+			path = ToolsVC;
+			sourceTree = "<group>";
+		};
+		181F31C92230C3310098E099 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				181F31D22230C5ED0098E099 /* MyTableReFreshVC */,
+				181F31CE2230C43D0098E099 /* MyTableViewVC */,
+				181F31CA2230C3310098E099 /* BaseViewController */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		181F31CA2230C3310098E099 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				181F31CB2230C3530098E099 /* BaseViewController.h */,
+				181F31CC2230C3530098E099 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		181F31CE2230C43D0098E099 /* MyTableViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				181F31CF2230C44A0098E099 /* MyTableViewVC.h */,
+				181F31D02230C44A0098E099 /* MyTableViewVC.m */,
+			);
+			path = MyTableViewVC;
+			sourceTree = "<group>";
+		};
+		181F31D22230C5ED0098E099 /* MyTableReFreshVC */ = {
+			isa = PBXGroup;
+			children = (
+				181F31D32230C5FA0098E099 /* MyTableReFreshVC.h */,
+				181F31D42230C5FA0098E099 /* MyTableReFreshVC.m */,
+			);
+			path = MyTableReFreshVC;
+			sourceTree = "<group>";
+		};
+		181F31D62230E7410098E099 /* 错误编码示范 */ = {
+			isa = PBXGroup;
+			children = (
+				181F31DB2230EA850098E099 /* BAD_ACCESS_VC */,
+				181F31D72230E76B0098E099 /* MainClass */,
+			);
+			path = "错误编码示范";
+			sourceTree = "<group>";
+		};
+		181F31D72230E76B0098E099 /* MainClass */ = {
+			isa = PBXGroup;
+			children = (
+				181F31D82230E7890098E099 /* ErrorCodeExampleVC.h */,
+				181F31D92230E7890098E099 /* ErrorCodeExampleVC.m */,
+			);
+			path = MainClass;
+			sourceTree = "<group>";
+		};
+		181F31DB2230EA850098E099 /* BAD_ACCESS_VC */ = {
+			isa = PBXGroup;
+			children = (
+				181F31DC2230EA940098E099 /* BAD_ACCESS_VC.h */,
+				181F31DD2230EA940098E099 /* BAD_ACCESS_VC.m */,
+			);
+			path = BAD_ACCESS_VC;
 			sourceTree = "<group>";
 		};
 		42A076A795CE4B7DA295BF06 /* Frameworks */ = {
@@ -183,6 +302,7 @@
 				181F31882230BDDB0098E099 /* Sources */,
 				181F31892230BDDB0098E099 /* Frameworks */,
 				181F318A2230BDDB0098E099 /* Resources */,
+				212C7B64A8E3D9A266C4B89C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,6 +421,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		212C7B64A8E3D9A266C4B89C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LearnObjectiveC/Pods-LearnObjectiveC-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LearnObjectiveC/Pods-LearnObjectiveC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2725A4790D6B83B61ACF8DC2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,8 +501,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				181F31942230BDDB0098E099 /* ViewController.m in Sources */,
+				181F31CD2230C3530098E099 /* BaseViewController.m in Sources */,
+				181F31DE2230EA940098E099 /* BAD_ACCESS_VC.m in Sources */,
+				181F31D12230C44A0098E099 /* MyTableViewVC.m in Sources */,
 				181F319F2230BDDD0098E099 /* main.m in Sources */,
+				181F31DA2230E7890098E099 /* ErrorCodeExampleVC.m in Sources */,
 				181F31912230BDDB0098E099 /* AppDelegate.m in Sources */,
+				181F31D52230C5FA0098E099 /* MyTableReFreshVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,14 +679,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZW85V7AG4;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LearnObjectiveC/Header.pch";
 				INFOPLIST_FILE = LearnObjectiveC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuandukeji.LearnObjectiveC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -554,14 +699,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZW85V7AG4;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LearnObjectiveC/Header.pch";
 				INFOPLIST_FILE = LearnObjectiveC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuandukeji.LearnObjectiveC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

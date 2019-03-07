@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ErrorCodeExampleVC.h"
 
 @interface ViewController ()
 
@@ -16,13 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    self.title = @"Learn Objective-C";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.Messages = @[
+                      [ObjectiveModel initTitle:@"错误编码示范" vc:[ErrorCodeExampleVC new]],
+                      ];
+    
 }
 
 

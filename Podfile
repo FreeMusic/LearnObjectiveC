@@ -6,6 +6,10 @@ target 'LearnObjectiveC' do
   # use_frameworks!
 
   # Pods for LearnObjectiveC
+  pod 'AFNetworking'
+  pod 'Masonry'
+  pod 'SDWebImage'
+  pod 'MJRefresh'
 
   target 'LearnObjectiveCTests' do
     inherit! :search_paths

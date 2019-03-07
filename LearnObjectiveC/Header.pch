@@ -1,0 +1,29 @@
+//
+//  Header.pch
+//  LearnObjectiveC
+//
+//  Created by 橘子 on 2019/3/7.
+//  Copyright © 2019年 橘子. All rights reserved.
+//
+
+#ifndef Header_h
+#define Header_h
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+
+/**
+ 宏定义 常量定义
+ */
+#import "MacroDefinition.h"
+#import "ConfigurationConst.h"
+
+/**
+ 第三方库头文件
+ */
+#import "Masonry.h"
+#import "MJRefresh.h"
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"//引入webimage
+
+#endif /* Header_h */
