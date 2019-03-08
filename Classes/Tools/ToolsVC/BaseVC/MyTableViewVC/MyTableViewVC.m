@@ -80,7 +80,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ObjectiveModel *model = self.Messages[indexPath.row];
-    [self.navigationController pushViewController:model.vc animated:YES];
+    
+    if (model.vcName) {
+        UIViewController *vc = [NSClassFromString(model.vcName) new];
+        vc.title = model.title;
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        model.vc.title = model.title;
+        [self.navigationController pushViewController:model.vc animated:YES];
+    }
 }
 
 @end

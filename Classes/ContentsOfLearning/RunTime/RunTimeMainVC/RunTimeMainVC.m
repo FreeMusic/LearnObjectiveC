@@ -7,8 +7,6 @@
 //
 
 #import "RunTimeMainVC.h"
-#import "KVC_VC.h"
-#import "KVO_VC.h"
 
 @interface RunTimeMainVC ()
 
@@ -20,8 +18,8 @@
     [super viewDidLoad];
     
     self.Messages = @[
-                      [ObjectiveModel initTitle:@"KVC" vc:[KVC_VC new]],
-                      [ObjectiveModel initTitle:@"KVO" vc:[KVO_VC new]],
+                      [ObjectiveModel initTitle:@"KVC" vcName:@"KVC_VC"],
+                      [ObjectiveModel initTitle:@"KVO" vcName:@"KVO_VC"],
                       ];
 }
 

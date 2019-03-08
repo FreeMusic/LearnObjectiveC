@@ -10,6 +10,7 @@
 #import "ErrorCodeExampleVC.h"
 #import "RunLoopMainVC.h"
 #import "RunTimeMainVC.h"
+#import "MemoryMainVC.h"
 
 @interface ViewController ()
 
@@ -24,12 +25,13 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.Messages = @[
-                      [ObjectiveModel initTitle:@"错误编码示范" vc:[ErrorCodeExampleVC new]],
-                      [ObjectiveModel initTitle:@"运行时" vc:[RunTimeMainVC new]],
-                      [ObjectiveModel initTitle:@"RunLoop" vc:[RunLoopMainVC new]],
-                      ];
-    
+                    [ObjectiveModel initTitle:@"错误编码示范" vcName:@"ErrorCodeExampleVC"],
+                    [ObjectiveModel initTitle:@"运行时" vcName:@"RunTimeMainVC"],
+                    [ObjectiveModel initTitle:@"RunLoop" vcName:@"RunLoopMainVC"],
+                    [ObjectiveModel initTitle:@"内存管理" vcName:@"MemoryMainVC"],
+                    ];
 }
+
 
 
 @end

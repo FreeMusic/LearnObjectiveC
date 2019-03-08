@@ -71,14 +71,24 @@
 
 @implementation ObjectiveModel
 
++ (ObjectiveModel *)initTitle:(NSString *)title vcName:(NSString *)vcName{
+    
+    ObjectiveModel *model = [ObjectiveModel new];
+    model.title = title;
+    model.vcName = vcName;
+    
+    return model;
+}
+
 + (ObjectiveModel *)initTitle:(NSString *)title vc:(UIViewController *)vc{
     
     ObjectiveModel *model = [ObjectiveModel new];
     model.title = title;
     model.vc = vc;
-    model.vc.title = title;
     
     return model;
 }
+
+
 
 @end

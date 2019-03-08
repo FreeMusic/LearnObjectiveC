@@ -32,14 +32,14 @@
 
 @interface KVC_VC ()
 
+@property (nonatomic, strong) KVC_Model *model;
+
 @end
 
 @implementation KVC_VC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.view.backgroundColor = [UIColor redColor];
     
     //键值编码 KVC修改私有变量
     [self KeyValueCodingChangePrivacyObject];
@@ -57,18 +57,11 @@
  */
 - (void)KeyValueCodingChangePrivacyObject{
     //KVC访问私有变量
-    KVC_Model *model = [[KVC_Model alloc] init];
-    RYQLog(@"%@    %@", model.name, [model valueForKey:@"privacy"]);
+    self.model = [[KVC_Model alloc] init];
+    RYQLog(@"%@    %@", self.model.name, [self.model valueForKey:@"privacy"]);
     //KVC修改私有变量
-    [model setValue:@"KVC修改私有变量" forKey:@"privacy"];
-    RYQLog(@"%@    %@", model.name, [model valueForKey:@"privacy"]);
-}
-
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    
-    self.view.backgroundColor = [UIColor greenColor];
-    RYQLog(@"viewWillDisappear");
+    [self.model setValue:@"KVC修改私有变量" forKey:@"privacy"];
+    RYQLog(@"%@    %@", self.model.name, [self.model valueForKey:@"privacy"]);
 }
 
 - (void)dealloc {
@@ -76,6 +69,5 @@
     RYQLog(@"dealloc");
     
 }
-
 
 @end

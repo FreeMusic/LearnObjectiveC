@@ -7,7 +7,6 @@
 //
 
 #import "ErrorCodeExampleVC.h"
-#import "BAD_ACCESS_VC.h"
 
 @interface ErrorCodeExampleVC ()
 
@@ -19,9 +18,8 @@
     [super viewDidLoad];
     
     self.Messages = @[
-                      [ObjectiveModel initTitle:@"BAD_ACCESS" vc:[BAD_ACCESS_VC new]],
+                      [ObjectiveModel initTitle:@"BAD_ACCESS" vcName:@"BAD_ACCESS_VC"],
                       ];
 }
-
 
 @end

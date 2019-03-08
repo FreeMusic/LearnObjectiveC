@@ -25,6 +25,8 @@
 		181F31EE223112470098E099 /* KVC_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31ED223112470098E099 /* KVC_VC.m */; };
 		181F31F12231132C0098E099 /* KVC_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31F02231132C0098E099 /* KVC_Model.m */; };
 		181F31F522311A730098E099 /* KVO_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31F422311A730098E099 /* KVO_VC.m */; };
+		1846836522320CB90032A4EE /* MemoryMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836422320CB90032A4EE /* MemoryMainVC.m */; };
+		1846836822320CCA0032A4EE /* CopyTargetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836722320CCA0032A4EE /* CopyTargetVC.m */; };
 		919735996E7228FD6C736DD0 /* libPods-LearnObjectiveCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4947D508C763C6A7F9AB609C /* libPods-LearnObjectiveCUITests.a */; };
 		98BEB752F35B782F968A28C1 /* libPods-LearnObjectiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C8AE55DD99ABC5D96520 /* libPods-LearnObjectiveC.a */; };
 		BC9A8EB5F33AEAD001DAB123 /* libPods-LearnObjectiveCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E40F4D024E57FB0808C251 /* libPods-LearnObjectiveCTests.a */; };
@@ -89,6 +91,10 @@
 		181F31F02231132C0098E099 /* KVC_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVC_Model.m; sourceTree = "<group>"; };
 		181F31F322311A730098E099 /* KVO_VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVO_VC.h; sourceTree = "<group>"; };
 		181F31F422311A730098E099 /* KVO_VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVO_VC.m; sourceTree = "<group>"; };
+		1846836322320CB90032A4EE /* MemoryMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryMainVC.h; sourceTree = "<group>"; };
+		1846836422320CB90032A4EE /* MemoryMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryMainVC.m; sourceTree = "<group>"; };
+		1846836622320CCA0032A4EE /* CopyTargetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyTargetVC.h; sourceTree = "<group>"; };
+		1846836722320CCA0032A4EE /* CopyTargetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyTargetVC.m; sourceTree = "<group>"; };
 		38E4C8AE55DD99ABC5D96520 /* libPods-LearnObjectiveC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjectiveC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4947D508C763C6A7F9AB609C /* libPods-LearnObjectiveCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjectiveCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F744E4CB9B4A24875B64718 /* Pods-LearnObjectiveCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCUITests/Pods-LearnObjectiveCUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 		181F31C62230C2940098E099 /* ContentsOfLearning */ = {
 			isa = PBXGroup;
 			children = (
+				1846835F22320BEA0032A4EE /* MemoryRule */,
 				181F31E3223111830098E099 /* RunLoop */,
 				181F31E1223111830098E099 /* RunTime */,
 				181F31D62230E7410098E099 /* 错误编码示范 */,
@@ -339,6 +346,33 @@
 				181F31F422311A730098E099 /* KVO_VC.m */,
 			);
 			path = KVO_VC;
+			sourceTree = "<group>";
+		};
+		1846835F22320BEA0032A4EE /* MemoryRule */ = {
+			isa = PBXGroup;
+			children = (
+				1846836222320C4A0032A4EE /* MemoryMainVC */,
+				1846836022320BEA0032A4EE /* CopyTargetVC */,
+			);
+			path = MemoryRule;
+			sourceTree = "<group>";
+		};
+		1846836022320BEA0032A4EE /* CopyTargetVC */ = {
+			isa = PBXGroup;
+			children = (
+				1846836622320CCA0032A4EE /* CopyTargetVC.h */,
+				1846836722320CCA0032A4EE /* CopyTargetVC.m */,
+			);
+			path = CopyTargetVC;
+			sourceTree = "<group>";
+		};
+		1846836222320C4A0032A4EE /* MemoryMainVC */ = {
+			isa = PBXGroup;
+			children = (
+				1846836322320CB90032A4EE /* MemoryMainVC.h */,
+				1846836422320CB90032A4EE /* MemoryMainVC.m */,
+			);
+			path = MemoryMainVC;
 			sourceTree = "<group>";
 		};
 		42A076A795CE4B7DA295BF06 /* Frameworks */ = {
@@ -577,12 +611,14 @@
 				181F31E7223111A20098E099 /* RunLoopMainVC.m in Sources */,
 				181F31942230BDDB0098E099 /* ViewController.m in Sources */,
 				181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */,
+				1846836822320CCA0032A4EE /* CopyTargetVC.m in Sources */,
 				181F31CD2230C3530098E099 /* BaseViewController.m in Sources */,
 				181F31DE2230EA940098E099 /* BAD_ACCESS_VC.m in Sources */,
 				181F31F12231132C0098E099 /* KVC_Model.m in Sources */,
 				181F31D12230C44A0098E099 /* MyTableViewVC.m in Sources */,
 				181F319F2230BDDD0098E099 /* main.m in Sources */,
 				181F31DA2230E7890098E099 /* ErrorCodeExampleVC.m in Sources */,
+				1846836522320CB90032A4EE /* MemoryMainVC.m in Sources */,
 				181F31912230BDDB0098E099 /* AppDelegate.m in Sources */,
 				181F31D52230C5FA0098E099 /* MyTableReFreshVC.m in Sources */,
 				181F31F522311A730098E099 /* KVO_VC.m in Sources */,
