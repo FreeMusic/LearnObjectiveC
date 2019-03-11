@@ -23,6 +23,8 @@
 		181F31E7223111A20098E099 /* RunLoopMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31E6223111A20098E099 /* RunLoopMainVC.m */; };
 		181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31E9223111AD0098E099 /* RunTimeMainVC.m */; };
 		181F31F522311A730098E099 /* KVO_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31F422311A730098E099 /* KVO_VC.m */; };
+		183ADC582235EFE200ADB09B /* KVC_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC552235EFE200ADB09B /* KVC_Model.m */; };
+		183ADC592235EFE200ADB09B /* KVC_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC572235EFE200ADB09B /* KVC_VC.m */; };
 		1846836522320CB90032A4EE /* MemoryMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836422320CB90032A4EE /* MemoryMainVC.m */; };
 		1846836822320CCA0032A4EE /* CopyTargetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836722320CCA0032A4EE /* CopyTargetVC.m */; };
 		1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836A2232463B0032A4EE /* KVO_AimModel.m */; };
@@ -86,6 +88,10 @@
 		181F31E9223111AD0098E099 /* RunTimeMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeMainVC.m; sourceTree = "<group>"; };
 		181F31F322311A730098E099 /* KVO_VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVO_VC.h; sourceTree = "<group>"; };
 		181F31F422311A730098E099 /* KVO_VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVO_VC.m; sourceTree = "<group>"; };
+		183ADC542235EFE200ADB09B /* KVC_Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVC_Model.h; sourceTree = "<group>"; };
+		183ADC552235EFE200ADB09B /* KVC_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVC_Model.m; sourceTree = "<group>"; };
+		183ADC562235EFE200ADB09B /* KVC_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVC_VC.h; sourceTree = "<group>"; };
+		183ADC572235EFE200ADB09B /* KVC_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVC_VC.m; sourceTree = "<group>"; };
 		1846836322320CB90032A4EE /* MemoryMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryMainVC.h; sourceTree = "<group>"; };
 		1846836422320CB90032A4EE /* MemoryMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryMainVC.m; sourceTree = "<group>"; };
 		1846836622320CCA0032A4EE /* CopyTargetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyTargetVC.h; sourceTree = "<group>"; };
@@ -292,6 +298,7 @@
 		181F31E1223111830098E099 /* RunTime */ = {
 			isa = PBXGroup;
 			children = (
+				183ADC532235EFE200ADB09B /* KVC_VC */,
 				181F31F222311A5F0098E099 /* KVO_VC */,
 				181F31E2223111830098E099 /* RunTimeMainVC */,
 			);
@@ -333,6 +340,17 @@
 				1846836A2232463B0032A4EE /* KVO_AimModel.m */,
 			);
 			path = KVO_VC;
+			sourceTree = "<group>";
+		};
+		183ADC532235EFE200ADB09B /* KVC_VC */ = {
+			isa = PBXGroup;
+			children = (
+				183ADC542235EFE200ADB09B /* KVC_Model.h */,
+				183ADC552235EFE200ADB09B /* KVC_Model.m */,
+				183ADC562235EFE200ADB09B /* KVC_VC.h */,
+				183ADC572235EFE200ADB09B /* KVC_VC.m */,
+			);
+			path = KVC_VC;
 			sourceTree = "<group>";
 		};
 		1846835F22320BEA0032A4EE /* MemoryRule */ = {
@@ -596,6 +614,7 @@
 			files = (
 				1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */,
 				181F31E7223111A20098E099 /* RunLoopMainVC.m in Sources */,
+				183ADC582235EFE200ADB09B /* KVC_Model.m in Sources */,
 				181F31942230BDDB0098E099 /* ViewController.m in Sources */,
 				181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */,
 				1846836822320CCA0032A4EE /* CopyTargetVC.m in Sources */,
@@ -608,6 +627,7 @@
 				181F31912230BDDB0098E099 /* AppDelegate.m in Sources */,
 				181F31D52230C5FA0098E099 /* MyTableReFreshVC.m in Sources */,
 				181F31F522311A730098E099 /* KVO_VC.m in Sources */,
+				183ADC592235EFE200ADB09B /* KVC_VC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
