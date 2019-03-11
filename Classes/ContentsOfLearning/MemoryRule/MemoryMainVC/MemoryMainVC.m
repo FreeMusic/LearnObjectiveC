@@ -21,6 +21,8 @@
     
     self.Messages = @[
                       [ObjectiveModel initTitle:@"控制器不执行dealloc" vc:[CopyTargetVC new]],
+                      [ObjectiveModel initTitle:@"自动释放池" vcName:@"AutoreleasePoolVC"],
+                      [ObjectiveModel initTitle:@"数组remove方法" vcName:@"ArrayRemoveVC"],
                       ];
 }
 

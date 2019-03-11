@@ -25,6 +25,10 @@
 		181F31F522311A730098E099 /* KVO_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31F422311A730098E099 /* KVO_VC.m */; };
 		183ADC582235EFE200ADB09B /* KVC_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC552235EFE200ADB09B /* KVC_Model.m */; };
 		183ADC592235EFE200ADB09B /* KVC_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC572235EFE200ADB09B /* KVC_VC.m */; };
+		183ADC5E2235FABA00ADB09B /* AutoreleasePoolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC5D2235FABA00ADB09B /* AutoreleasePoolVC.m */; };
+		183ADC622235FED100ADB09B /* ArrayRemoveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC612235FED100ADB09B /* ArrayRemoveVC.m */; };
+		183ADC6722360FD800ADB09B /* FactoryDesignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC6622360FD800ADB09B /* FactoryDesignVC.m */; };
+		183ADC6B2236100E00ADB09B /* DesignMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC6A2236100E00ADB09B /* DesignMainVC.m */; };
 		1846836522320CB90032A4EE /* MemoryMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836422320CB90032A4EE /* MemoryMainVC.m */; };
 		1846836822320CCA0032A4EE /* CopyTargetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836722320CCA0032A4EE /* CopyTargetVC.m */; };
 		1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836A2232463B0032A4EE /* KVO_AimModel.m */; };
@@ -92,6 +96,14 @@
 		183ADC552235EFE200ADB09B /* KVC_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVC_Model.m; sourceTree = "<group>"; };
 		183ADC562235EFE200ADB09B /* KVC_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVC_VC.h; sourceTree = "<group>"; };
 		183ADC572235EFE200ADB09B /* KVC_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVC_VC.m; sourceTree = "<group>"; };
+		183ADC5C2235FABA00ADB09B /* AutoreleasePoolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoreleasePoolVC.h; sourceTree = "<group>"; };
+		183ADC5D2235FABA00ADB09B /* AutoreleasePoolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoreleasePoolVC.m; sourceTree = "<group>"; };
+		183ADC602235FED100ADB09B /* ArrayRemoveVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayRemoveVC.h; sourceTree = "<group>"; };
+		183ADC612235FED100ADB09B /* ArrayRemoveVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayRemoveVC.m; sourceTree = "<group>"; };
+		183ADC6522360FD800ADB09B /* FactoryDesignVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryDesignVC.h; sourceTree = "<group>"; };
+		183ADC6622360FD800ADB09B /* FactoryDesignVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryDesignVC.m; sourceTree = "<group>"; };
+		183ADC692236100E00ADB09B /* DesignMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignMainVC.h; sourceTree = "<group>"; };
+		183ADC6A2236100E00ADB09B /* DesignMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignMainVC.m; sourceTree = "<group>"; };
 		1846836322320CB90032A4EE /* MemoryMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryMainVC.h; sourceTree = "<group>"; };
 		1846836422320CB90032A4EE /* MemoryMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryMainVC.m; sourceTree = "<group>"; };
 		1846836622320CCA0032A4EE /* CopyTargetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyTargetVC.h; sourceTree = "<group>"; };
@@ -207,6 +219,7 @@
 		181F31C62230C2940098E099 /* ContentsOfLearning */ = {
 			isa = PBXGroup;
 			children = (
+				183ADC6322360FA500ADB09B /* DesignPatterns */,
 				1846835F22320BEA0032A4EE /* MemoryRule */,
 				181F31E3223111830098E099 /* RunLoop */,
 				181F31E1223111830098E099 /* RunTime */,
@@ -353,9 +366,56 @@
 			path = KVC_VC;
 			sourceTree = "<group>";
 		};
+		183ADC5B2235FAA500ADB09B /* AutoreleasePoolVC */ = {
+			isa = PBXGroup;
+			children = (
+				183ADC5C2235FABA00ADB09B /* AutoreleasePoolVC.h */,
+				183ADC5D2235FABA00ADB09B /* AutoreleasePoolVC.m */,
+			);
+			path = AutoreleasePoolVC;
+			sourceTree = "<group>";
+		};
+		183ADC5F2235FEC800ADB09B /* ArrayRemoveVC */ = {
+			isa = PBXGroup;
+			children = (
+				183ADC602235FED100ADB09B /* ArrayRemoveVC.h */,
+				183ADC612235FED100ADB09B /* ArrayRemoveVC.m */,
+			);
+			path = ArrayRemoveVC;
+			sourceTree = "<group>";
+		};
+		183ADC6322360FA500ADB09B /* DesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				183ADC6822360FFD00ADB09B /* DesignMainVC */,
+				183ADC6422360FA500ADB09B /* FactoryDesign */,
+			);
+			path = DesignPatterns;
+			sourceTree = "<group>";
+		};
+		183ADC6422360FA500ADB09B /* FactoryDesign */ = {
+			isa = PBXGroup;
+			children = (
+				183ADC6522360FD800ADB09B /* FactoryDesignVC.h */,
+				183ADC6622360FD800ADB09B /* FactoryDesignVC.m */,
+			);
+			path = FactoryDesign;
+			sourceTree = "<group>";
+		};
+		183ADC6822360FFD00ADB09B /* DesignMainVC */ = {
+			isa = PBXGroup;
+			children = (
+				183ADC692236100E00ADB09B /* DesignMainVC.h */,
+				183ADC6A2236100E00ADB09B /* DesignMainVC.m */,
+			);
+			path = DesignMainVC;
+			sourceTree = "<group>";
+		};
 		1846835F22320BEA0032A4EE /* MemoryRule */ = {
 			isa = PBXGroup;
 			children = (
+				183ADC5F2235FEC800ADB09B /* ArrayRemoveVC */,
+				183ADC5B2235FAA500ADB09B /* AutoreleasePoolVC */,
 				1846836222320C4A0032A4EE /* MemoryMainVC */,
 				1846836022320BEA0032A4EE /* CopyTargetVC */,
 			);
@@ -624,9 +684,13 @@
 				181F319F2230BDDD0098E099 /* main.m in Sources */,
 				181F31DA2230E7890098E099 /* ErrorCodeExampleVC.m in Sources */,
 				1846836522320CB90032A4EE /* MemoryMainVC.m in Sources */,
+				183ADC622235FED100ADB09B /* ArrayRemoveVC.m in Sources */,
+				183ADC6B2236100E00ADB09B /* DesignMainVC.m in Sources */,
 				181F31912230BDDB0098E099 /* AppDelegate.m in Sources */,
 				181F31D52230C5FA0098E099 /* MyTableReFreshVC.m in Sources */,
 				181F31F522311A730098E099 /* KVO_VC.m in Sources */,
+				183ADC5E2235FABA00ADB09B /* AutoreleasePoolVC.m in Sources */,
+				183ADC6722360FD800ADB09B /* FactoryDesignVC.m in Sources */,
 				183ADC592235EFE200ADB09B /* KVC_VC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

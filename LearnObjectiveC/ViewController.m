@@ -29,6 +29,7 @@
                     [ObjectiveModel initTitle:@"运行时" vcName:@"RunTimeMainVC"],
                     [ObjectiveModel initTitle:@"RunLoop" vcName:@"RunLoopMainVC"],
                     [ObjectiveModel initTitle:@"内存管理" vcName:@"MemoryMainVC"],
+                    [ObjectiveModel initTitle:@"设计模式" vcName:@"DesignMainVC"],
                     ];
 }
 
