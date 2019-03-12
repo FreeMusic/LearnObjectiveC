@@ -67,15 +67,10 @@
         }
     }
     cell.textLabel.text = self.dataSource[indexPath.row];
-    //cell.textLabel.text = self.dataSource[indexPath.row];
     //cell.textLabel.text = [self.dataSource objectAtIndexVerify:indexPath.row];
     //cell.textLabel.text = [self.dataSource objectAtIndex:indexPath.row];
     
     return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

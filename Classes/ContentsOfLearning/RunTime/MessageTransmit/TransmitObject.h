@@ -10,8 +10,4 @@
 
 @interface TransmitObject : NSObject
 
-+ (instancetype)object;
-
-- (void)eat;
-
 @end

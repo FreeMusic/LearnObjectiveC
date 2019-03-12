@@ -411,6 +411,8 @@
 		183ADC6322360FA500ADB09B /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				18FE817F2237A1FD0061428B /* MVC */,
+				18FE81802237A1FD0061428B /* MVVM */,
 				183ADC6822360FFD00ADB09B /* DesignMainVC */,
 				183ADC6422360FA500ADB09B /* FactoryDesign */,
 			);
@@ -462,6 +464,44 @@
 				1846836422320CB90032A4EE /* MemoryMainVC.m */,
 			);
 			path = MemoryMainVC;
+			sourceTree = "<group>";
+		};
+		18FE817F2237A1FD0061428B /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				18FE81822237A22B0061428B /* Controller */,
+				18FE81832237A22B0061428B /* Model */,
+				18FE81812237A22B0061428B /* View */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		18FE81802237A1FD0061428B /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		18FE81812237A22B0061428B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18FE81822237A22B0061428B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18FE81832237A22B0061428B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		18FEC62622374E8800313854 /* MessageTransmit */ = {

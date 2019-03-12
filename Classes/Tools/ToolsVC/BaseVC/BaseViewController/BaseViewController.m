@@ -8,7 +8,6 @@
 
 #import "BaseViewController.h"
 
-
 @interface BaseViewController ()<UIGestureRecognizerDelegate> //声明侧滑手势的delegate
 
 @end
