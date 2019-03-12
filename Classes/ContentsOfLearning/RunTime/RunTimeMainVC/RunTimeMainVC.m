@@ -20,6 +20,8 @@
     self.Messages = @[
                       [ObjectiveModel initTitle:@"KVC" vcName:@"KVC_VC"],
                       [ObjectiveModel initTitle:@"KVO" vcName:@"KVO_VC"],
+                      [ObjectiveModel initTitle:@"消息转发" vcName:@"MessageTransmitVC"],
+                      [ObjectiveModel initTitle:@"防止数组越界" vcName:@"ArrayBoundsVC"],
                       ];
 }
 

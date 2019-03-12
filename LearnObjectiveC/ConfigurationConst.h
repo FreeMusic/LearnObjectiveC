@@ -9,6 +9,11 @@
 #ifndef ConfigurationConst_h
 #define ConfigurationConst_h
 
+/**
+ *  屏幕尺寸宽和高
+ */
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
 
 #endif /* ConfigurationConst_h */

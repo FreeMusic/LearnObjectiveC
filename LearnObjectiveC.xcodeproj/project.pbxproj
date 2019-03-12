@@ -32,6 +32,13 @@
 		1846836522320CB90032A4EE /* MemoryMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836422320CB90032A4EE /* MemoryMainVC.m */; };
 		1846836822320CCA0032A4EE /* CopyTargetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836722320CCA0032A4EE /* CopyTargetVC.m */; };
 		1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836A2232463B0032A4EE /* KVO_AimModel.m */; };
+		18FEC62922374E9900313854 /* MessageTransmitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC62822374E9900313854 /* MessageTransmitVC.m */; };
+		18FEC62C22374EE200313854 /* TransmitObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC62B22374EE200313854 /* TransmitObject.m */; };
+		18FEC63022377E7500313854 /* ArrayBoundsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC62F22377E7500313854 /* ArrayBoundsVC.m */; };
+		18FEC63922377ED300313854 /* NSArray+ErrorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC63422377ED300313854 /* NSArray+ErrorHandle.m */; };
+		18FEC63A22377ED300313854 /* NSMutableArray+ErrorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC63622377ED300313854 /* NSMutableArray+ErrorHandle.m */; };
+		18FEC63B22377ED300313854 /* NSObject+SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC63822377ED300313854 /* NSObject+SwizzleMethod.m */; };
+		18FEC63E2237801500313854 /* BoundsNextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC63D2237801500313854 /* BoundsNextVC.m */; };
 		919735996E7228FD6C736DD0 /* libPods-LearnObjectiveCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4947D508C763C6A7F9AB609C /* libPods-LearnObjectiveCUITests.a */; };
 		98BEB752F35B782F968A28C1 /* libPods-LearnObjectiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C8AE55DD99ABC5D96520 /* libPods-LearnObjectiveC.a */; };
 		BC9A8EB5F33AEAD001DAB123 /* libPods-LearnObjectiveCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E40F4D024E57FB0808C251 /* libPods-LearnObjectiveCTests.a */; };
@@ -110,6 +117,20 @@
 		1846836722320CCA0032A4EE /* CopyTargetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyTargetVC.m; sourceTree = "<group>"; };
 		184683692232463B0032A4EE /* KVO_AimModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVO_AimModel.h; sourceTree = "<group>"; };
 		1846836A2232463B0032A4EE /* KVO_AimModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVO_AimModel.m; sourceTree = "<group>"; };
+		18FEC62722374E9900313854 /* MessageTransmitVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTransmitVC.h; sourceTree = "<group>"; };
+		18FEC62822374E9900313854 /* MessageTransmitVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTransmitVC.m; sourceTree = "<group>"; };
+		18FEC62A22374EE200313854 /* TransmitObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransmitObject.h; sourceTree = "<group>"; };
+		18FEC62B22374EE200313854 /* TransmitObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransmitObject.m; sourceTree = "<group>"; };
+		18FEC62E22377E7500313854 /* ArrayBoundsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayBoundsVC.h; sourceTree = "<group>"; };
+		18FEC62F22377E7500313854 /* ArrayBoundsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayBoundsVC.m; sourceTree = "<group>"; };
+		18FEC63322377ED300313854 /* NSArray+ErrorHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ErrorHandle.h"; sourceTree = "<group>"; };
+		18FEC63422377ED300313854 /* NSArray+ErrorHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ErrorHandle.m"; sourceTree = "<group>"; };
+		18FEC63522377ED300313854 /* NSMutableArray+ErrorHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+ErrorHandle.h"; sourceTree = "<group>"; };
+		18FEC63622377ED300313854 /* NSMutableArray+ErrorHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+ErrorHandle.m"; sourceTree = "<group>"; };
+		18FEC63722377ED300313854 /* NSObject+SwizzleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SwizzleMethod.h"; sourceTree = "<group>"; };
+		18FEC63822377ED300313854 /* NSObject+SwizzleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SwizzleMethod.m"; sourceTree = "<group>"; };
+		18FEC63C2237801500313854 /* BoundsNextVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoundsNextVC.h; sourceTree = "<group>"; };
+		18FEC63D2237801500313854 /* BoundsNextVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoundsNextVC.m; sourceTree = "<group>"; };
 		38E4C8AE55DD99ABC5D96520 /* libPods-LearnObjectiveC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjectiveC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4947D508C763C6A7F9AB609C /* libPods-LearnObjectiveCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjectiveCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F744E4CB9B4A24875B64718 /* Pods-LearnObjectiveCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCUITests/Pods-LearnObjectiveCUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +252,7 @@
 		181F31C72230C2940098E099 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				18FEC63122377ED300313854 /* ToolsObject */,
 				181F31C82230C2AD0098E099 /* ToolsVC */,
 			);
 			path = Tools;
@@ -311,6 +333,8 @@
 		181F31E1223111830098E099 /* RunTime */ = {
 			isa = PBXGroup;
 			children = (
+				18FEC62D22377D8100313854 /* ArrayBounds */,
+				18FEC62622374E8800313854 /* MessageTransmit */,
 				183ADC532235EFE200ADB09B /* KVC_VC */,
 				181F31F222311A5F0098E099 /* KVO_VC */,
 				181F31E2223111830098E099 /* RunTimeMainVC */,
@@ -438,6 +462,49 @@
 				1846836422320CB90032A4EE /* MemoryMainVC.m */,
 			);
 			path = MemoryMainVC;
+			sourceTree = "<group>";
+		};
+		18FEC62622374E8800313854 /* MessageTransmit */ = {
+			isa = PBXGroup;
+			children = (
+				18FEC62722374E9900313854 /* MessageTransmitVC.h */,
+				18FEC62822374E9900313854 /* MessageTransmitVC.m */,
+				18FEC62A22374EE200313854 /* TransmitObject.h */,
+				18FEC62B22374EE200313854 /* TransmitObject.m */,
+			);
+			path = MessageTransmit;
+			sourceTree = "<group>";
+		};
+		18FEC62D22377D8100313854 /* ArrayBounds */ = {
+			isa = PBXGroup;
+			children = (
+				18FEC62E22377E7500313854 /* ArrayBoundsVC.h */,
+				18FEC62F22377E7500313854 /* ArrayBoundsVC.m */,
+				18FEC63C2237801500313854 /* BoundsNextVC.h */,
+				18FEC63D2237801500313854 /* BoundsNextVC.m */,
+			);
+			path = ArrayBounds;
+			sourceTree = "<group>";
+		};
+		18FEC63122377ED300313854 /* ToolsObject */ = {
+			isa = PBXGroup;
+			children = (
+				18FEC63222377ED300313854 /* ArrayBounds */,
+			);
+			path = ToolsObject;
+			sourceTree = "<group>";
+		};
+		18FEC63222377ED300313854 /* ArrayBounds */ = {
+			isa = PBXGroup;
+			children = (
+				18FEC63322377ED300313854 /* NSArray+ErrorHandle.h */,
+				18FEC63422377ED300313854 /* NSArray+ErrorHandle.m */,
+				18FEC63522377ED300313854 /* NSMutableArray+ErrorHandle.h */,
+				18FEC63622377ED300313854 /* NSMutableArray+ErrorHandle.m */,
+				18FEC63722377ED300313854 /* NSObject+SwizzleMethod.h */,
+				18FEC63822377ED300313854 /* NSObject+SwizzleMethod.m */,
+			);
+			path = ArrayBounds;
 			sourceTree = "<group>";
 		};
 		42A076A795CE4B7DA295BF06 /* Frameworks */ = {
@@ -672,6 +739,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FEC62C22374EE200313854 /* TransmitObject.m in Sources */,
+				18FEC62922374E9900313854 /* MessageTransmitVC.m in Sources */,
+				18FEC63022377E7500313854 /* ArrayBoundsVC.m in Sources */,
 				1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */,
 				181F31E7223111A20098E099 /* RunLoopMainVC.m in Sources */,
 				183ADC582235EFE200ADB09B /* KVC_Model.m in Sources */,
@@ -679,14 +749,18 @@
 				181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */,
 				1846836822320CCA0032A4EE /* CopyTargetVC.m in Sources */,
 				181F31CD2230C3530098E099 /* BaseViewController.m in Sources */,
+				18FEC63A22377ED300313854 /* NSMutableArray+ErrorHandle.m in Sources */,
 				181F31DE2230EA940098E099 /* BAD_ACCESS_VC.m in Sources */,
 				181F31D12230C44A0098E099 /* MyTableViewVC.m in Sources */,
 				181F319F2230BDDD0098E099 /* main.m in Sources */,
 				181F31DA2230E7890098E099 /* ErrorCodeExampleVC.m in Sources */,
 				1846836522320CB90032A4EE /* MemoryMainVC.m in Sources */,
 				183ADC622235FED100ADB09B /* ArrayRemoveVC.m in Sources */,
+				18FEC63B22377ED300313854 /* NSObject+SwizzleMethod.m in Sources */,
 				183ADC6B2236100E00ADB09B /* DesignMainVC.m in Sources */,
+				18FEC63922377ED300313854 /* NSArray+ErrorHandle.m in Sources */,
 				181F31912230BDDB0098E099 /* AppDelegate.m in Sources */,
+				18FEC63E2237801500313854 /* BoundsNextVC.m in Sources */,
 				181F31D52230C5FA0098E099 /* MyTableReFreshVC.m in Sources */,
 				181F31F522311A730098E099 /* KVO_VC.m in Sources */,
 				183ADC5E2235FABA00ADB09B /* AutoreleasePoolVC.m in Sources */,
