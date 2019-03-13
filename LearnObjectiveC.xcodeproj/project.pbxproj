@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180C82D8223890F10092EBF0 /* FunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C82D7223890F10092EBF0 /* FunctionVC.m */; };
+		180C82DB2238910D0092EBF0 /* BuriesPointTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C82DA2238910D0092EBF0 /* BuriesPointTestVC.m */; };
 		181F31912230BDDB0098E099 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31902230BDDB0098E099 /* AppDelegate.m */; };
 		181F31942230BDDB0098E099 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31932230BDDB0098E099 /* ViewController.m */; };
 		181F31972230BDDB0098E099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181F31952230BDDB0098E099 /* Main.storyboard */; };
@@ -64,6 +66,10 @@
 /* Begin PBXFileReference section */
 		0AEFD4F2AC48ADFBBE8E1805 /* Pods-LearnObjectiveCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCUITests/Pods-LearnObjectiveCUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0CC6282705465E117CA14B2F /* Pods-LearnObjectiveCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCTests/Pods-LearnObjectiveCTests.debug.xcconfig"; sourceTree = "<group>"; };
+		180C82D6223890F10092EBF0 /* FunctionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionVC.h; sourceTree = "<group>"; };
+		180C82D7223890F10092EBF0 /* FunctionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionVC.m; sourceTree = "<group>"; };
+		180C82D92238910D0092EBF0 /* BuriesPointTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuriesPointTestVC.h; sourceTree = "<group>"; };
+		180C82DA2238910D0092EBF0 /* BuriesPointTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuriesPointTestVC.m; sourceTree = "<group>"; };
 		181F318C2230BDDB0098E099 /* LearnObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181F318F2230BDDB0098E099 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		181F31902230BDDB0098E099 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -168,6 +174,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180C82D3223890A00092EBF0 /* FunctionOptimization */ = {
+			isa = PBXGroup;
+			children = (
+				180C82D5223890D60092EBF0 /* Function */,
+				180C82D4223890A00092EBF0 /* BuriesPointTestVC */,
+			);
+			path = FunctionOptimization;
+			sourceTree = "<group>";
+		};
+		180C82D4223890A00092EBF0 /* BuriesPointTestVC */ = {
+			isa = PBXGroup;
+			children = (
+				180C82D92238910D0092EBF0 /* BuriesPointTestVC.h */,
+				180C82DA2238910D0092EBF0 /* BuriesPointTestVC.m */,
+			);
+			path = BuriesPointTestVC;
+			sourceTree = "<group>";
+		};
+		180C82D5223890D60092EBF0 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				180C82D6223890F10092EBF0 /* FunctionVC.h */,
+				180C82D7223890F10092EBF0 /* FunctionVC.m */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
 		181F31832230BDDB0098E099 = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +273,7 @@
 		181F31C62230C2940098E099 /* ContentsOfLearning */ = {
 			isa = PBXGroup;
 			children = (
+				180C82D3223890A00092EBF0 /* FunctionOptimization */,
 				183ADC6322360FA500ADB09B /* DesignPatterns */,
 				1846835F22320BEA0032A4EE /* MemoryRule */,
 				181F31E3223111830098E099 /* RunLoop */,
@@ -781,6 +815,7 @@
 			files = (
 				18FEC62C22374EE200313854 /* TransmitObject.m in Sources */,
 				18FEC62922374E9900313854 /* MessageTransmitVC.m in Sources */,
+				180C82D8223890F10092EBF0 /* FunctionVC.m in Sources */,
 				18FEC63022377E7500313854 /* ArrayBoundsVC.m in Sources */,
 				1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */,
 				181F31E7223111A20098E099 /* RunLoopMainVC.m in Sources */,
@@ -791,6 +826,7 @@
 				181F31CD2230C3530098E099 /* BaseViewController.m in Sources */,
 				18FEC63A22377ED300313854 /* NSMutableArray+ErrorHandle.m in Sources */,
 				181F31DE2230EA940098E099 /* BAD_ACCESS_VC.m in Sources */,
+				180C82DB2238910D0092EBF0 /* BuriesPointTestVC.m in Sources */,
 				181F31D12230C44A0098E099 /* MyTableViewVC.m in Sources */,
 				181F319F2230BDDD0098E099 /* main.m in Sources */,
 				181F31DA2230E7890098E099 /* ErrorCodeExampleVC.m in Sources */,
