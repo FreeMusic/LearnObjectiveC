@@ -26,4 +26,9 @@
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"//引入webimage
 
+/**
+ 工具类文件
+ */
+
+
 #endif /* Header_h */
