@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import <Bugly/Bugly.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<BuglyDelegate>
 
 @end
 
@@ -23,8 +24,28 @@
     self.window = [[UIWindow alloc] init];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = naviVC;
+    //初始化Bugly
+    [self initBuglyConfigure];
     
     return YES;
+}
+/**
+ 初始化Bugly
+ */
+- (void)initBuglyConfigure {
+    
+    BuglyConfig *config = [[BuglyConfig alloc] init];
+    config.debugMode = YES;
+    config.blockMonitorEnable = YES;
+    //设置被卡住的阈值时间，当停留时间>阈值时间，它将记录一个事件，并在应用程序启动下报告数据。默认值为3.5s
+    config.blockMonitorTimeout = 1.5;
+    config.channel = @"Bugly";
+    config.delegate = self;
+    config.consolelogEnable = NO;
+    config.viewControllerTrackingEnable = NO;
+    [Bugly startWithAppId:@"a74b771cad"];
+    [Bugly startWithAppId:@"a74b771cad" developmentDevice:YES config:config];
+    
 }
 
 

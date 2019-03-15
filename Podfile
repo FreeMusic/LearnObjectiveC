@@ -10,6 +10,7 @@ target 'LearnObjectiveC' do
   pod 'Masonry'
   pod 'SDWebImage'
   pod 'MJRefresh'
+  pod 'Bugly'
 
   target 'LearnObjectiveCTests' do
     inherit! :search_paths
