@@ -36,6 +36,7 @@
 		18481320223A218300C566D5 /* MVCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1848131F223A218300C566D5 /* MVCController.m */; };
 		18481323223A21A300C566D5 /* MVC_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 18481322223A21A300C566D5 /* MVC_Model.m */; };
 		18481326223A21B600C566D5 /* MVC_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 18481325223A21B600C566D5 /* MVC_View.m */; };
+		18ED2503225AE95A00006116 /* MainStructureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2502225AE95A00006116 /* MainStructureVC.m */; };
 		18FEC62922374E9900313854 /* MessageTransmitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC62822374E9900313854 /* MessageTransmitVC.m */; };
 		18FEC62C22374EE200313854 /* TransmitObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC62B22374EE200313854 /* TransmitObject.m */; };
 		18FEC63022377E7500313854 /* ArrayBoundsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC62F22377E7500313854 /* ArrayBoundsVC.m */; };
@@ -136,6 +137,8 @@
 		18481322223A21A300C566D5 /* MVC_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVC_Model.m; sourceTree = "<group>"; };
 		18481324223A21B600C566D5 /* MVC_View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVC_View.h; sourceTree = "<group>"; };
 		18481325223A21B600C566D5 /* MVC_View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVC_View.m; sourceTree = "<group>"; };
+		18ED2501225AE95A00006116 /* MainStructureVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStructureVC.h; sourceTree = "<group>"; };
+		18ED2502225AE95A00006116 /* MainStructureVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStructureVC.m; sourceTree = "<group>"; };
 		18FEC62722374E9900313854 /* MessageTransmitVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTransmitVC.h; sourceTree = "<group>"; };
 		18FEC62822374E9900313854 /* MessageTransmitVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTransmitVC.m; sourceTree = "<group>"; };
 		18FEC62A22374EE200313854 /* TransmitObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransmitObject.h; sourceTree = "<group>"; };
@@ -299,6 +302,7 @@
 		181F31C62230C2940098E099 /* ContentsOfLearning */ = {
 			isa = PBXGroup;
 			children = (
+				18ED24FF225AE93B00006116 /* 数据结构与算法 */,
 				180C82D3223890A00092EBF0 /* FunctionOptimization */,
 				183ADC6322360FA500ADB09B /* DesignPatterns */,
 				1846835F22320BEA0032A4EE /* MemoryRule */,
@@ -525,6 +529,23 @@
 				1846836422320CB90032A4EE /* MemoryMainVC.m */,
 			);
 			path = MemoryMainVC;
+			sourceTree = "<group>";
+		};
+		18ED24FF225AE93B00006116 /* 数据结构与算法 */ = {
+			isa = PBXGroup;
+			children = (
+				18ED2500225AE93B00006116 /* MainStructureVC */,
+			);
+			path = "数据结构与算法";
+			sourceTree = "<group>";
+		};
+		18ED2500225AE93B00006116 /* MainStructureVC */ = {
+			isa = PBXGroup;
+			children = (
+				18ED2501225AE95A00006116 /* MainStructureVC.h */,
+				18ED2502225AE95A00006116 /* MainStructureVC.m */,
+			);
+			path = MainStructureVC;
 			sourceTree = "<group>";
 		};
 		18EEA0152241D63F00325FF3 /* Reflection */ = {
@@ -942,6 +963,7 @@
 				181F31912230BDDB0098E099 /* AppDelegate.m in Sources */,
 				18FEC63E2237801500313854 /* BoundsNextVC.m in Sources */,
 				181F31D52230C5FA0098E099 /* MyTableReFreshVC.m in Sources */,
+				18ED2503225AE95A00006116 /* MainStructureVC.m in Sources */,
 				181F31F522311A730098E099 /* KVO_VC.m in Sources */,
 				183ADC5E2235FABA00ADB09B /* AutoreleasePoolVC.m in Sources */,
 				183ADC6722360FD800ADB09B /* FactoryDesignVC.m in Sources */,

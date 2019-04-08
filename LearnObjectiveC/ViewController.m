@@ -31,6 +31,7 @@
                     [ObjectiveModel initTitle:@"内存管理" vcName:@"MemoryMainVC"],
                     [ObjectiveModel initTitle:@"设计模式" vcName:@"DesignMainVC"],
                     [ObjectiveModel initTitle:@"功能优化" vcName:@"FunctionVC"],
+                    [ObjectiveModel initTitle:@"数据结构与算法" vcName:@"MainStructureVC"],
                     ];
 }
 
