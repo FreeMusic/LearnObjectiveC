@@ -97,6 +97,8 @@ void theLogarithmicOrde(){
         count = count*2;
         
     }
+    /*由于每次count 乘以2之后，就距离n更近了一分。也就是说，有多少个2相乘后大于 n ，则会退出循环。由于 2^x = n 得到 x = log2(n) 所以这个循环的时间复杂度为O(logn)。*/
+    
 }
 
 /**

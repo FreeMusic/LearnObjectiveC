@@ -36,6 +36,7 @@ typedef struct Node *LinkList;
     
     self.Messages = @[
                       [ObjectiveModel initTitle:@"算法的时间复杂度" vcName:@"TimeComplexityVC"],
+                      [ObjectiveModel initTitle:@"线性表" vcName:@"MainLinearTableVC"],
                       ];
 }
 
