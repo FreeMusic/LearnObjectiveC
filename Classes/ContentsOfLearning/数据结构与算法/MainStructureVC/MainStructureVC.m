@@ -35,33 +35,8 @@ typedef struct Node *LinkList;
     [super viewDidLoad];
     
     self.Messages = @[
-                      
+                      [ObjectiveModel initTitle:@"算法的时间复杂度" vcName:@"TimeComplexityVC"],
                       ];
-}
-
-void CreateListHead (LinkList *l, int n)
-{
-    
-}
-
-
-Status GetElem (LinkList list, int i, ElemType *elem)
-{
-    int j = 0;
-    LinkList p = list->next;
-    j = 1;
-    
-    while (p && j < i) {
-        p = p->next;
-        
-        ++j;
-    }
-    
-    if ( !p || j > i) return StatusError;
-    
-    *elem = p->data;
-    
-    return StatusSuccess;
 }
 
 @end

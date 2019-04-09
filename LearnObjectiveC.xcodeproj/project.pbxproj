@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		180C82D8223890F10092EBF0 /* FunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C82D7223890F10092EBF0 /* FunctionVC.m */; };
 		180C82DB2238910D0092EBF0 /* BuriesPointTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C82DA2238910D0092EBF0 /* BuriesPointTestVC.m */; };
+		180F1970225C348A00F62A8C /* TimeComplexityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F196F225C348A00F62A8C /* TimeComplexityVC.m */; };
 		181F31912230BDDB0098E099 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31902230BDDB0098E099 /* AppDelegate.m */; };
 		181F31942230BDDB0098E099 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31932230BDDB0098E099 /* ViewController.m */; };
 		181F31972230BDDB0098E099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181F31952230BDDB0098E099 /* Main.storyboard */; };
@@ -79,6 +80,8 @@
 		180C82D7223890F10092EBF0 /* FunctionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionVC.m; sourceTree = "<group>"; };
 		180C82D92238910D0092EBF0 /* BuriesPointTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuriesPointTestVC.h; sourceTree = "<group>"; };
 		180C82DA2238910D0092EBF0 /* BuriesPointTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuriesPointTestVC.m; sourceTree = "<group>"; };
+		180F196E225C348A00F62A8C /* TimeComplexityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeComplexityVC.h; sourceTree = "<group>"; };
+		180F196F225C348A00F62A8C /* TimeComplexityVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeComplexityVC.m; sourceTree = "<group>"; };
 		181F318C2230BDDB0098E099 /* LearnObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181F318F2230BDDB0098E099 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		181F31902230BDDB0098E099 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -227,6 +230,15 @@
 				180C82D7223890F10092EBF0 /* FunctionVC.m */,
 			);
 			path = Function;
+			sourceTree = "<group>";
+		};
+		180F196D225C345A00F62A8C /* 算法的时间复杂度 */ = {
+			isa = PBXGroup;
+			children = (
+				180F196E225C348A00F62A8C /* TimeComplexityVC.h */,
+				180F196F225C348A00F62A8C /* TimeComplexityVC.m */,
+			);
+			path = "算法的时间复杂度";
 			sourceTree = "<group>";
 		};
 		181F31832230BDDB0098E099 = {
@@ -534,6 +546,7 @@
 		18ED24FF225AE93B00006116 /* 数据结构与算法 */ = {
 			isa = PBXGroup;
 			children = (
+				180F196D225C345A00F62A8C /* 算法的时间复杂度 */,
 				18ED2500225AE93B00006116 /* MainStructureVC */,
 			);
 			path = "数据结构与算法";
@@ -932,6 +945,7 @@
 			files = (
 				18FEC62C22374EE200313854 /* TransmitObject.m in Sources */,
 				18FEC62922374E9900313854 /* MessageTransmitVC.m in Sources */,
+				180F1970225C348A00F62A8C /* TimeComplexityVC.m in Sources */,
 				180C82D8223890F10092EBF0 /* FunctionVC.m in Sources */,
 				5516629F2256F75C0058C9F1 /* GeoCoding.m in Sources */,
 				18FEC63022377E7500313854 /* ArrayBoundsVC.m in Sources */,
