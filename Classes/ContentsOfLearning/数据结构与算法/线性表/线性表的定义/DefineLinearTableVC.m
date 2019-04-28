@@ -10,7 +10,13 @@
 
 #import "DefineLinearTableVC.h"
 
+static const BOOL ILoveYY = YES;
+
+static const int distanceFuture = 21900;
+
 @interface DefineLinearTableVC ()
+
+@property (nonatomic, assign) int love;
 
 @end
 
@@ -19,8 +25,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _love = 1;
     
+    if (ILoveYY) {
+        
+        DefineLinearTableVC *sunXianSheng = [DefineLinearTableVC new];
+        
+        [sunXianSheng wantHaveAlongLastingLoveWithYou];
+        
+    }
 }
 
+- (void)wantHaveAlongLastingLoveWithYou{
+    
+    int ourBegin = 1;
+    
+    while (ourBegin < distanceFuture) {
+        ourBegin++;
+        _love = _love*2+ourBegin;
+    }
+    
+}
 
 @end
