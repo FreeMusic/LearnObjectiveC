@@ -24,10 +24,10 @@
 typedef int ElemType;//int类型的数据
 
 typedef NS_ENUM(NSUInteger, Status) {
-
+    
     ERROR = 0,//失败或者报错
     SUCCESS = 1,//成功
-
+    
 };
 
 /**
