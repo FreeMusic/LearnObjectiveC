@@ -12,22 +12,14 @@
 
 #define MAXSIZE 20 //存储空间初始化分配量 线性表的最大长度
 
-typedef int ElemType;//int类型的数据
-
-typedef struct {
+typedef struct SQList {
     
     ElemType data[MAXSIZE];//数组存储数据元素 最大值为MAXSIZE 数组data，r它的存储位置就是存储空间的存储位置
     int length; //线性表当前长度
-    struct SQList *next;
+    int listSize;//数组的最大长度
     
 }SQList;
 
-typedef NS_ENUM(NSUInteger, Status) {
-    
-    ERROR = 0,//失败或者报错
-    SUCCESS = 1,//成功
-    
-};
 
 @interface SQListSequentialListVC ()
 
@@ -37,7 +29,51 @@ typedef NS_ENUM(NSUInteger, Status) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    //初始化线性表
+    SQList list = initSequentialList(10);
+    travelWholeList(list);
+    //获得链表元素操作
+    GetElem(list, 3);
+    //线性表的插入操作
+    ElemType insert = 44;
+    ListInsert(&list, 5, insert);
+    //线性表的删除操作
+    ListDelete(&list, 5);
+    //线性表是否为空
+    ListisEmpty(list);
+    //线性表是否已满
+    ListisFull(list);
+    //元素是否存在
+    ElemisExitInList(list, 74);
+    //两个顺序线性表的合并
+    combineTwoLinkLists();
+    //两个线性表的拼接
+    jointTwoLinkLists();
+    //线性表的拆分
+    componentLinkList();
+}
+
+/**
+ 初始化线性表
+ */
+SQList initSequentialList(int listLength)
+{
     
+    SQList list;
+    list.length = 0;
+    listLength = (listLength >= MAXSIZE) ? MAXSIZE : listLength;
+    
+    for (int i = 0; i < listLength; i++) {
+        
+        ElemType elem = rand() % 100 + 1;//100以内的随机数
+        list.data[i] = elem;
+        list.length++;
+        
+    }
+    list.listSize = MAXSIZE;
+    
+    return list;
     
 }
 
@@ -51,16 +87,16 @@ typedef NS_ENUM(NSUInteger, Status) {
 
  @param list SQList
  @param i 下标
- @param elem ElemType
  @return 状态
  */
-Status GetElem (SQList list, int i , ElemType elem)
+Status GetElem (SQList list, int i)
 {
     if (list.length == 0 || i < 1 || i > list.length) {
         return ERROR;
     }
-    elem = list.data[i - 1];
+    ElemType elem = list.data[i - 1];
     
+    RYQLog(@"获得链表元素操作   elem = %d ", elem);
     
     return SUCCESS;
 }
@@ -80,30 +116,52 @@ Status GetElem (SQList list, int i , ElemType elem)
  @param elem ElemType
  @return 状态
  */
-Status ListInsert (SQList list, int i , ElemType elem)
+Status ListInsert (SQList *list, int i , ElemType elem)
 {
     int k;
     //线性表已填满  此处先暂时抛出异常
-    if (list.length == MAXSIZE) {
+    if (list->length >= list->listSize) {
         return ERROR;
     }
     //插入位置不合理，抛出异常。
-    if (i < 1 || i > list.length+1) {
+    if (i < 1 || i > list->length+1) {
         return ERROR;
     }
     //插入位置在表尾 不需要移动元素，在i(其他位置)，从第i个位置遍历到最后一个元素，将这些元素都向后移动一个位置
-    if (i < list.length) {
+    if (i < list->length) {
         
-        for (k = list.length-1 ; k > i - 1; k--) {
-            list.data[k+1] = list.data[k];
+        for (k = list->length-1 ; k > i - 1; k--) {
+            list->data[k+1] = list->data[k];
         }
         
     }
     //新元素的赋值
-    list.data[i-1] = elem;
-    list.length ++;
+    list->data[i-1] = elem;
+    list->length ++;
+//    查询
+//    GetElem(list, i);
     
     return SUCCESS;
+}
+
+/**
+ 为一个线性顺序表添加数据
+
+ @param list SQList
+ @param elem ElemType
+ */
+void addElemToList(SQList *list, ElemType elem)
+{
+    //线性表已填满  此处先暂时抛出异常
+    if (list->length >= list->listSize) {
+        RYQLog(@"线性表已填满");
+        return;
+    }
+    int length = list->length;
+    RYQLog(@"%d", length);
+    //新元素的赋值
+    list->data[list->length] = elem;
+    list->length ++;
 }
 
 /**
@@ -117,33 +175,198 @@ Status ListInsert (SQList list, int i , ElemType elem)
 
  @param list SQList
  @param i 下标
- @param elem ElemType
  @return 状态
  */
-Status ListDelete (SQList list, int i, ElemType elem)
+Status ListDelete (SQList *list, int i)
 {
     int k;
     //线性表为空
-    if (list.length == 0) {
+    if (list->length == 0) {
         return ERROR;
     }
     //删除位置不正确
-    if (i < 1 || i > list.length) {
+    if (i < 1 || i > list->length) {
         return ERROR;
     }
     //取出删除的元素
-    elem = list.data[i-1];
+    ElemType elem = list->data[i-1];
+    RYQLog(@"要删除的元素 elem = %d", elem);
     //删除的位置在表尾 不需要移动元素，在i(其他位置)，从第i个位置遍历到最后一个元素，将这些元素都向前移动一个位置
-    if (i < list.length) {
+    if (i < list->length) {
         
-        for (k = i; k < list.length; k++) {
-            list.data[k-1] = list.data[k];
+        for (k = i; k < list->length; k++) {
+            list->data[k-1] = list->data[k];
         }
         
     }
-    list.length--;
+    list->length--;
     
     return SUCCESS;
+}
+
+/**
+ 线性表是否为空
+
+ @param list 线性顺序存储表
+ @return ERROR 不为空； SUCCESS 为空；
+ */
+Status ListisEmpty(SQList list)
+{
+    if (list.length == 0) {
+        RYQLog(@"线性表为空");
+        return SUCCESS;
+    }
+    RYQLog(@"线性表不为空");
+    return ERROR;
+}
+
+/**
+ 线性表是否已满
+
+ @param list 线性顺序存储表
+ @return ERROR 线性表未满；SUCCESS 线性表已满
+ */
+Status ListisFull(SQList list)
+{
+    if (list.length >= list.listSize) {
+        RYQLog(@"线性表已满");
+        return SUCCESS;
+    }
+    RYQLog(@"线性表未满");
+    return ERROR;
+}
+
+/**
+ 元素是否在线性顺序表中
+
+ @param list 线性顺序存储表
+ @param elem 元素
+ @return ERROR 不存在；SUCCESS 存在
+ */
+Status ElemisExitInList(SQList list, ElemType elem)
+{
+    int index = -1;
+    
+    for (int i = 0; i < list.length; i++) {
+        
+        ElemType currentElem = list.data[i];
+        if (currentElem == elem) {
+            
+            index = i;
+            RYQLog(@"元素在线性顺序表中 他是第%d个元素", index+1);
+            return SUCCESS;
+        }
+        
+    }
+    
+    RYQLog(@"元素不存在线性顺序表中");
+    
+    return ERROR;
+}
+
+/**
+ 遍历打印表中的所有元素
+
+ @param list 线性表
+ */
+void travelWholeList(SQList list)
+{
+    for (int i = 0; i < list.length; i++) {
+        
+        RYQLog(@"第%d个元素  它的值为%d", i+1, list.data[i]);
+        
+    }
+}
+
+/**
+ 清空线性顺序表
+
+ @param list 线性顺序表
+ */
+void cleanLinkList(SQList list)
+{
+    list.length = 0;
+}
+
+/**
+ 线性顺序表的销毁
+ */
+void destoryLinkList (SQList list)
+{
+    free(&list);
+}
+
+/**
+ 两个线性表的合并 A表和B表两个表合并后的新表里面，没有重复的元素。（A与B的并集）
+ */
+void combineTwoLinkLists ()
+{
+    SQList secondList = initSequentialList(5);
+    SQList firstList = initSequentialList(10);
+    int firstLength = firstList.length;
+    int secondLength = secondList.length;
+    //如果firstLength + secondLength > firstList.listSize 表示该线性表的数组的最大容量需要增大。
+    if (firstLength + secondLength > firstList.listSize) {
+        firstList.listSize = firstLength + secondLength;
+    }
+    //将secondList表中的元素 一个个插入到firstList表中
+    for (int i = 0; i < secondLength; i++) {
+        //从secondList表中将元素一个个取出来
+        ElemType elem = secondList.data[i];
+        //检测取出来的元素在firstList中是否存在
+        Status type = ElemisExitInList(firstList, elem);
+        //如果不存在 则将elem插入放到firstList表中
+        if (type == ERROR) {
+            addElemToList(&firstList, elem);
+        }
+    }
+    RYQLog(@"两个线性表的合并   %d", firstList.length);
+}
+
+/**
+ 两个线性表的拼接 不考虑A表和B表中是否有重复的元素。直接将B表拼接在A表的后面
+ */
+void jointTwoLinkLists ()
+{
+    SQList secondList = initSequentialList(5);
+    SQList firstList = initSequentialList(10);
+    int firstLength = firstList.length;
+    int secondLength = secondList.length;
+    //如果firstLength + secondLength > firstList.listSize 表示该线性表的数组的最大容量需要增大。
+    if (firstLength + secondLength > firstList.listSize) {
+        firstList.listSize = firstLength + secondLength;
+    }
+    //将secondList表中的元素 一个个插入到firstList表中
+    for (int i = 0; i < secondLength; i++) {
+        //从secondList表中将元素一个个取出来
+        ElemType elem = secondList.data[i];
+        //则将elem插入放到firstList表中
+        addElemToList(&firstList, elem);
+    }
+    RYQLog(@"两个线性表的拼接   %d", firstList.length);
+}
+
+/**
+ 线性表的拆分
+ */
+void componentLinkList ()
+{
+    //假设切割后listA长度为10，listB为5；
+    int listA_Length = 10;
+    int listB_length = 5;
+    
+    SQList list = initSequentialList(listA_Length+listB_length);
+    SQList listB = initSequentialList(0);
+    RYQLog(@"******** list.data[5] = %d", list.data[5]);
+    for (int i = 0; i < listB_length; i++) {
+        ElemType elem = list.data[i+listA_Length];
+        //将list表的后五个元素分给listB
+        addElemToList(&listB, elem);
+        //将list表的后五个元素删除
+        ListDelete(&list, list.length);
+    }
+    RYQLog(@"******** list.data[5] = %d", list.data[5]);
+    RYQLog(@"%d    %d", list.length, listB.length);
 }
 
 /**
