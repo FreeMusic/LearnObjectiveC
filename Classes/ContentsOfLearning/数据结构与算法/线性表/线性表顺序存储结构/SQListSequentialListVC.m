@@ -14,7 +14,7 @@
 
 typedef struct SQList {
     
-    ElemType data[MAXSIZE];//数组存储数据元素 最大值为MAXSIZE 数组data，r它的存储位置就是存储空间的存储位置
+    ElemType data[MAXSIZE];//数组存储数据元素 最大值为MAXSIZE 数组data，它的存储位置就是存储空间的存储位置
     int length; //线性表当前长度
     int listSize;//数组的最大长度
     
@@ -30,28 +30,28 @@ typedef struct SQList {
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    //初始化线性表
-    SQList list = initSequentialList(10);
+//    //初始化线性表
+    SQList list = initSequentialList(20);
     travelWholeList(list);
-    //获得链表元素操作
-    GetElem(list, 3);
-    //线性表的插入操作
-    ElemType insert = 44;
-    ListInsert(&list, 5, insert);
-    //线性表的删除操作
-    ListDelete(&list, 5);
-    //线性表是否为空
-    ListisEmpty(list);
-    //线性表是否已满
-    ListisFull(list);
-    //元素是否存在
-    ElemisExitInList(list, 74);
-    //两个顺序线性表的合并
-    combineTwoLinkLists();
+//    //获得链表元素操作
+//    GetElem(list, 3);
+//    //线性表的插入操作
+//    ElemType insert = 44;
+//    ListInsert(&list, 5, insert);
+//    //线性表的删除操作
+//    ListDelete(&list, 5);
+//    //线性表是否为空
+//    ListisEmpty(list);
+//    //线性表是否已满
+//    ListisFull(list);
+//    //元素是否存在
+//    ElemisExitInList(list, 74);
+//    //两个顺序线性表的合并
+//    combineTwoLinkLists();
     //两个线性表的拼接
-    jointTwoLinkLists();
-    //线性表的拆分
-    componentLinkList();
+//    jointTwoLinkLists();
+//    //线性表的拆分
+//    componentLinkList();
 }
 
 /**
@@ -62,8 +62,8 @@ SQList initSequentialList(int listLength)
     
     SQList list;
     list.length = 0;
-    listLength = (listLength >= MAXSIZE) ? MAXSIZE : listLength;
-    
+//    listLength = (listLength >= MAXSIZE) ? MAXSIZE : listLength;
+    RYQLog(@"listLength = %d", listLength);
     for (int i = 0; i < listLength; i++) {
         
         ElemType elem = rand() % 100 + 1;//100以内的随机数
@@ -71,7 +71,9 @@ SQList initSequentialList(int listLength)
         list.length++;
         
     }
-    list.listSize = MAXSIZE;
+//    list.listSize = MAXSIZE;
+    list.listSize = listLength;
+    RYQLog(@"list.length = %d   list.listSize %d", list.length, listLength);
     
     return list;
     
@@ -138,7 +140,7 @@ Status ListInsert (SQList *list, int i , ElemType elem)
     //新元素的赋值
     list->data[i-1] = elem;
     list->length ++;
-//    查询
+//    //查询
 //    GetElem(list, i);
     
     return SUCCESS;
@@ -154,14 +156,17 @@ void addElemToList(SQList *list, ElemType elem)
 {
     //线性表已填满  此处先暂时抛出异常
     if (list->length >= list->listSize) {
-        RYQLog(@"线性表已填满");
-        return;
+//        RYQLog(@"线性表已填满");
+//        return;
+        //线性表的l扩容
+        sequentialListDilatation(list);
     }
     int length = list->length;
     RYQLog(@"%d", length);
     //新元素的赋值
     list->data[list->length] = elem;
     list->length ++;
+    travelWholeList(*list);
 }
 
 /**
@@ -265,6 +270,28 @@ Status ElemisExitInList(SQList list, ElemType elem)
 }
 
 /**
+ 顺序线性表的扩容
+
+ @param list 顺序线性表
+ */
+void sequentialListDilatation(SQList *list)
+{
+//    if(Psql->size=Psql->capacity)    //表满
+//    {
+//        Psql->capacity*=n;    //扩容成n倍
+//        elemtype *new_data=(elemtype*)malloc(Psql->capacity*sizeof(elemtype));    //不建议用realloc函数
+//        memcpy(new_data,Psql->data,Psql->size*sizeof(elemtype));    //从源src所指的内存地址的起始位置开始拷贝n个字节到目标dest所指的内存地址的起始位置中
+//        free(Psql->data);
+//        Psql->data=new_data;
+//        printf("扩容成功\n");
+//    }
+    
+    list->listSize *= 2;
+
+    list->listSize = list->listSize+1;
+}
+
+/**
  遍历打印表中的所有元素
 
  @param list 线性表
@@ -328,7 +355,7 @@ void combineTwoLinkLists ()
  */
 void jointTwoLinkLists ()
 {
-    SQList secondList = initSequentialList(5);
+    SQList secondList = initSequentialList(15);
     SQList firstList = initSequentialList(10);
     int firstLength = firstList.length;
     int secondLength = secondList.length;
