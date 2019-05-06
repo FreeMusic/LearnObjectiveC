@@ -14,7 +14,7 @@
  
  头结点和头指针的区分：
  1.头指针是指向链表中第一个结点的指针。头结点是为了操作的统一方便设立的，放在第一个元素的结点之前。若链表中有头结点，那么链表中的第一个结点就是头结点了，所以头指针此刻指向的是头结点的指针。
- 2.头指针h具有标识作用，所以常用头指针冠以链表的名字。无论链表是否为空，头指针均不为空。头指针是链表的必要元素。
+ 2.头指针具有标识作用，所以常用头指针冠以链表的名字。无论链表是否为空，头指针均不为空。头指针是链表的必要元素。
  疑问：为什么空链表一定要有头指针，个人认为链表为空表示链表存在，但是没有任何结点。头指针此刻更觉得像是存储着空链表的地址。纯属猜想
  3.链表有了头结点，在对第一元素结点前插入结点和删除第一个结点，其操作与其他结点的操作就统一了。头结点不一定是链表的必需元素。
  */
@@ -42,12 +42,54 @@ typedef struct Node *LinkList;//定义一个链表
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
+    //单链表的创建
+    LinkList list;
+    createListHead(&list, 20);
+    //单链表的数据读取
+    GetNodeElem(list, 1);
+    //单链表的数据插入
+    NodeListInsert(&list, 5);
+    GetNodeElem(list, 5);
 }
 
 /**
+ 单链表的创建:
+ 创建思路：
+ 1.声明一个结点p。
+ 2.初始化一个空链表list。
+ 3.让list的头结点的指针指向NULL，即创建一个带头结点的单链表。
+ 4.循环：
+    生成一个新结点赋值给p
+    随机生成一个数字赋值给p结点的数据域data
+    将p插入到头结点和新的结点之间（头插法）
+ 
+
+ @param list 单链表
+ @param length 大小
+ */
+void createListHead (LinkList *list, int length)
+{
+    
+    LinkList p;
+    //time()主要用来获取当前的系统时间
+    //srand()函数主要用来配合rand()，函数来使用。假如没有srand()，那么每次生成的随机数都是一样的。根据时间的不同生成的随机数也不一样
+    srand(time(0));
+    
+    *list = (LinkList)malloc(sizeof(Node));
+    (*list)->next = NULL;//创建一个带头结点的空链表
+    
+    for (int i = 0; i < length; i++) {
+        
+        p = (LinkList)malloc(sizeof(Node));//生成新的结点
+        p->data = rand() % 100 + 1;//生成随机数 赋值给p结点的数据域
+        p->next = (*list)->next;
+        (*list)->next = p;//将p插入到头结点和新的结点之间
+        RYQLog(@"第%d个元素  它的值为%d", i+1, p->data);
+    }
+}
+/**
  单链表的数据读取
- 获取链表第i个数据的思路:
+ 获取链表第i个数据的思路:通过下标i，比方要查找第4个数据。从第一个开始通过next指针，找到第二个数据。再通过第二个数据的next指针找到第三个数据。最后通过第三个数据的next指针找到第四个数据。
  1.声明一个结点p指向链表的y第一个结点，初始化j从1开始。
  2.当j < i时，就遍历链表，让p的指针向后移动，不断指向下一个结点，j累加1.
  3.若到链表末尾p为空，则说明第i个元素不存在；
@@ -56,10 +98,9 @@ typedef struct Node *LinkList;//定义一个链表
 
  @param list 结点
  @param i 下标
- @param elem 数据
  @return 结果
  */
-Status GetNodeElem (LinkList list, int i, ElemType elem)
+Status GetNodeElem (LinkList list, int i)
 {
     
     int j = 1;
@@ -77,7 +118,8 @@ Status GetNodeElem (LinkList list, int i, ElemType elem)
         return ERROR;
     }
     
-    elem = pList->data;
+    ElemType elem = pList->data;
+    RYQLog(@"单链表的数据读取  elem = %d", elem);
 
     return SUCCESS;
 }
@@ -92,12 +134,30 @@ Status GetNodeElem (LinkList list, int i, ElemType elem)
 
  @param list 结点
  @param i 下标
- @param elem 数据
  @return 结果
  */
-Status NodeListInsert (LinkList list, int i, ElemType elem)
+Status NodeListInsert (LinkList *list, int i)
 {
+    int j = 1;
+    LinkList pList = *list;//声明一个结点p 并让p指向链表
+    //p不为空g或者计数器j还没有等于i的时候 循环继续。
+    while (pList && j < i) {
+        
+        //让p指向下一个结点
+        pList = pList->next;
+        
+        ++j;
+    }
+    //第i个元素不存在 抛异常
+    if (!pList || j > i) {
+        return ERROR;
+    }
     
+    ElemType elem = 99;//要插入的数值
+    LinkList s = (LinkList)malloc(sizeof(Node));//生成一个新的结点s
+    s->data = elem;//结点s数据域的赋值
+    s->next = pList->next;//将p结点的next指针指向赋值给s的next指针
+    pList->next = s;//将p结点的next指针指向s
     
     return SUCCESS;
 }

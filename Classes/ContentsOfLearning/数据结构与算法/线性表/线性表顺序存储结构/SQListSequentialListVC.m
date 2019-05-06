@@ -30,28 +30,28 @@ typedef struct SQList {
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    //初始化线性表
+    //初始化线性表
     SQList list = initSequentialList(20);
     travelWholeList(list);
-//    //获得链表元素操作
-//    GetElem(list, 3);
-//    //线性表的插入操作
-//    ElemType insert = 44;
-//    ListInsert(&list, 5, insert);
-//    //线性表的删除操作
-//    ListDelete(&list, 5);
-//    //线性表是否为空
-//    ListisEmpty(list);
-//    //线性表是否已满
-//    ListisFull(list);
-//    //元素是否存在
-//    ElemisExitInList(list, 74);
-//    //两个顺序线性表的合并
-//    combineTwoLinkLists();
-    //两个线性表的拼接
-//    jointTwoLinkLists();
-//    //线性表的拆分
-//    componentLinkList();
+    //获得链表元素操作
+    GetElem(list, 3);
+    //线性表的插入操作
+    ElemType insert = 44;
+    ListInsert(&list, 5, insert);
+    //线性表的删除操作
+    ListDelete(&list, 5);
+    //线性表是否为空
+    ListisEmpty(list);
+    //线性表是否已满
+    ListisFull(list);
+    //元素是否存在
+    ElemisExitInList(list, 74);
+    //两个顺序线性表的合并
+    combineTwoLinkLists();
+    // 两个线性表的拼接
+    jointTwoLinkLists();
+    //线性表的拆分
+    componentLinkList();
 }
 
 /**
@@ -62,8 +62,7 @@ SQList initSequentialList(int listLength)
     
     SQList list;
     list.length = 0;
-//    listLength = (listLength >= MAXSIZE) ? MAXSIZE : listLength;
-    RYQLog(@"listLength = %d", listLength);
+    listLength = (listLength >= MAXSIZE) ? MAXSIZE : listLength;
     for (int i = 0; i < listLength; i++) {
         
         ElemType elem = rand() % 100 + 1;//100以内的随机数
@@ -71,9 +70,7 @@ SQList initSequentialList(int listLength)
         list.length++;
         
     }
-//    list.listSize = MAXSIZE;
-    list.listSize = listLength;
-    RYQLog(@"list.length = %d   list.listSize %d", list.length, listLength);
+    list.listSize = MAXSIZE;
     
     return list;
     
@@ -156,17 +153,17 @@ void addElemToList(SQList *list, ElemType elem)
 {
     //线性表已填满  此处先暂时抛出异常
     if (list->length >= list->listSize) {
-//        RYQLog(@"线性表已填满");
-//        return;
-        //线性表的l扩容
-        sequentialListDilatation(list);
+        RYQLog(@"线性表已填满");
+        return;
+//        //线性表的l扩容
+//        sequentialListDilatation(list);
     }
     int length = list->length;
     RYQLog(@"%d", length);
     //新元素的赋值
     list->data[list->length] = elem;
     list->length ++;
-    travelWholeList(*list);
+//    travelWholeList(*list);
 }
 
 /**
@@ -285,10 +282,10 @@ void sequentialListDilatation(SQList *list)
 //        Psql->data=new_data;
 //        printf("扩容成功\n");
 //    }
-    
-    list->listSize *= 2;
-
-    list->listSize = list->listSize+1;
+//
+//    list->listSize *= 2;
+//
+//    list->listSize = list->listSize+1;
 }
 
 /**
@@ -384,7 +381,6 @@ void componentLinkList ()
     
     SQList list = initSequentialList(listA_Length+listB_length);
     SQList listB = initSequentialList(0);
-    RYQLog(@"******** list.data[5] = %d", list.data[5]);
     for (int i = 0; i < listB_length; i++) {
         ElemType elem = list.data[i+listA_Length];
         //将list表的后五个元素分给listB
@@ -392,8 +388,6 @@ void componentLinkList ()
         //将list表的后五个元素删除
         ListDelete(&list, list.length);
     }
-    RYQLog(@"******** list.data[5] = %d", list.data[5]);
-    RYQLog(@"%d    %d", list.length, listB.length);
 }
 
 /**
