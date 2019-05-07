@@ -39,6 +39,8 @@
 		18481320223A218300C566D5 /* MVCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1848131F223A218300C566D5 /* MVCController.m */; };
 		18481323223A21A300C566D5 /* MVC_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 18481322223A21A300C566D5 /* MVC_Model.m */; };
 		18481326223A21B600C566D5 /* MVC_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 18481325223A21B600C566D5 /* MVC_View.m */; };
+		187C3EE0228166E5000F205C /* CircularLinkedListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C3EDF228166E5000F205C /* CircularLinkedListVC.m */; };
+		187C3EE322816716000F205C /* BothWayLinkListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C3EE222816716000F205C /* BothWayLinkListVC.m */; };
 		18D412A322768D7900DF7815 /* SQListSequentialListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D412A222768D7900DF7815 /* SQListSequentialListVC.m */; };
 		18D412AA2276A66400DF7815 /* SQListLinkedStorageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D412A92276A66400DF7815 /* SQListLinkedStorageVC.m */; };
 		18E523022277DDDE001DAA3A /* BaseDataStructureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E523012277DDDE001DAA3A /* BaseDataStructureVC.m */; };
@@ -149,6 +151,10 @@
 		18481322223A21A300C566D5 /* MVC_Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVC_Model.m; sourceTree = "<group>"; };
 		18481324223A21B600C566D5 /* MVC_View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVC_View.h; sourceTree = "<group>"; };
 		18481325223A21B600C566D5 /* MVC_View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVC_View.m; sourceTree = "<group>"; };
+		187C3EDE228166E5000F205C /* CircularLinkedListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircularLinkedListVC.h; sourceTree = "<group>"; };
+		187C3EDF228166E5000F205C /* CircularLinkedListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircularLinkedListVC.m; sourceTree = "<group>"; };
+		187C3EE122816716000F205C /* BothWayLinkListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BothWayLinkListVC.h; sourceTree = "<group>"; };
+		187C3EE222816716000F205C /* BothWayLinkListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BothWayLinkListVC.m; sourceTree = "<group>"; };
 		18D412A122768D7900DF7815 /* SQListSequentialListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQListSequentialListVC.h; sourceTree = "<group>"; };
 		18D412A222768D7900DF7815 /* SQListSequentialListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQListSequentialListVC.m; sourceTree = "<group>"; };
 		18D412A82276A66400DF7815 /* SQListLinkedStorageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQListLinkedStorageVC.h; sourceTree = "<group>"; };
@@ -259,7 +265,9 @@
 		180F1971225C496F00F62A8C /* 线性表 */ = {
 			isa = PBXGroup;
 			children = (
-				18D412A72276A62100DF7815 /* 线性表链式存储结构 */,
+				187C3EDC228166A9000F205C /* 双向链表 */,
+				187C3EDD228166A9000F205C /* 单向循环链表 */,
+				18D412A72276A62100DF7815 /* 单链表 */,
 				18D412A022768D4D00DF7815 /* 线性表顺序存储结构 */,
 				180F1973225C49BD00F62A8C /* MainLinearTableVC */,
 				180F1972225C496F00F62A8C /* 线性表的定义 */,
@@ -588,6 +596,24 @@
 			path = MemoryMainVC;
 			sourceTree = "<group>";
 		};
+		187C3EDC228166A9000F205C /* 双向链表 */ = {
+			isa = PBXGroup;
+			children = (
+				187C3EE122816716000F205C /* BothWayLinkListVC.h */,
+				187C3EE222816716000F205C /* BothWayLinkListVC.m */,
+			);
+			path = "双向链表";
+			sourceTree = "<group>";
+		};
+		187C3EDD228166A9000F205C /* 单向循环链表 */ = {
+			isa = PBXGroup;
+			children = (
+				187C3EDE228166E5000F205C /* CircularLinkedListVC.h */,
+				187C3EDF228166E5000F205C /* CircularLinkedListVC.m */,
+			);
+			path = "单向循环链表";
+			sourceTree = "<group>";
+		};
 		18D412A022768D4D00DF7815 /* 线性表顺序存储结构 */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,13 +623,13 @@
 			path = "线性表顺序存储结构";
 			sourceTree = "<group>";
 		};
-		18D412A72276A62100DF7815 /* 线性表链式存储结构 */ = {
+		18D412A72276A62100DF7815 /* 单链表 */ = {
 			isa = PBXGroup;
 			children = (
 				18D412A82276A66400DF7815 /* SQListLinkedStorageVC.h */,
 				18D412A92276A66400DF7815 /* SQListLinkedStorageVC.m */,
 			);
-			path = "线性表链式存储结构";
+			path = "单链表";
 			sourceTree = "<group>";
 		};
 		18E522FF2277DDCB001DAA3A /* BaseDataStructureVC */ = {
@@ -1019,6 +1045,7 @@
 				18FEC62C22374EE200313854 /* TransmitObject.m in Sources */,
 				18FEC62922374E9900313854 /* MessageTransmitVC.m in Sources */,
 				180F1970225C348A00F62A8C /* TimeComplexityVC.m in Sources */,
+				187C3EE0228166E5000F205C /* CircularLinkedListVC.m in Sources */,
 				18E523022277DDDE001DAA3A /* BaseDataStructureVC.m in Sources */,
 				18D412AA2276A66400DF7815 /* SQListLinkedStorageVC.m in Sources */,
 				180C82D8223890F10092EBF0 /* FunctionVC.m in Sources */,
@@ -1056,6 +1083,7 @@
 				181F31D52230C5FA0098E099 /* MyTableReFreshVC.m in Sources */,
 				18ED2503225AE95A00006116 /* MainStructureVC.m in Sources */,
 				18D412A322768D7900DF7815 /* SQListSequentialListVC.m in Sources */,
+				187C3EE322816716000F205C /* BothWayLinkListVC.m in Sources */,
 				181F31F522311A730098E099 /* KVO_VC.m in Sources */,
 				183ADC5E2235FABA00ADB09B /* AutoreleasePoolVC.m in Sources */,
 				183ADC6722360FD800ADB09B /* FactoryDesignVC.m in Sources */,

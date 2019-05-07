@@ -20,7 +20,9 @@
     self.Messages = @[
                       [ObjectiveModel initTitle:@"线性表的定义" vcName:@"DefineLinearTableVC"],
                       [ObjectiveModel initTitle:@"线性表的顺序存储结构" vcName:@"SQListSequentialListVC"],
-                      [ObjectiveModel initTitle:@"线性表的链式存储结构" vcName:@"SQListLinkedStorageVC"],
+                      [ObjectiveModel initTitle:@"单链表" vcName:@"SQListLinkedStorageVC"],
+                      [ObjectiveModel initTitle:@"单向循环链表" vcName:@"CircularLinkedListVC"],
+                      [ObjectiveModel initTitle:@"双向链表" vcName:@"BothWayLinkListVC"],
                       ];
 }
 
