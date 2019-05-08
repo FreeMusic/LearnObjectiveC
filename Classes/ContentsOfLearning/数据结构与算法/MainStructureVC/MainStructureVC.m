@@ -38,6 +38,12 @@ typedef struct Node *LinkList;
                       [ObjectiveModel initTitle:@"算法的时间复杂度" vcName:@"TimeComplexityVC"],
                       [ObjectiveModel initTitle:@"线性表" vcName:@"MainLinearTableVC"],
                       ];
+    RYQLog(@"MainStructureVC 执行了viewDidLoad");
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    RYQLog(@"MainStructureVC 执行了viewWillAppear");
 }
 
 @end

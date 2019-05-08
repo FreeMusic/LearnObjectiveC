@@ -35,6 +35,15 @@
                     ];
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    RYQLog(@"ViewController 执行了viewWillDisappear");
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    RYQLog(@"ViewController 执行了viewDidDisappear");
+}
 
 
 @end
