@@ -44,7 +44,7 @@ typedef struct Node *LinkList;//定义一个链表
 
     //单链表的创建
     LinkList list;
-    createListHead(&list, 20);
+    createTailLinkList(&list, 20);
     //单链表的数据读取
     GetNodeElem(list, 1);
     //单链表的数据插入
@@ -116,7 +116,7 @@ void createTailLinkList (LinkList *list, int length)
         p->data = rand() % 100 + 1;//生成随机数 赋值给p结点的数据域
         r->next = p;//将表尾的结点指针指向新的结点
         r = p;//将新的结点赋值给表尾的结点
-        
+        RYQLog(@"第%d个元素  它的值为%d", i+1, p->data);
     }
     
     r->next = NULL;//表示当前链表u也结束
@@ -259,6 +259,51 @@ Status CleanNodeList(LinkList *list)
         
     }
     (*list)->next = NULL;//头结点指针域置为空
+    
+    return SUCCESS;
+}
+
+/**
+ 销毁单链表
+ 
+ @param list 单链表
+ @return 结果
+ */
+Status DestroyLinkList(LinkList *list)
+{
+    LinkList p,q;
+    p = (*list)->next;//p指向第一个结点
+    while (p != *list) {
+        
+        q = p->next;
+        free(p);
+        p = q;
+        
+    }
+    free(list);
+    list = NULL;
+    
+    return SUCCESS;
+}
+
+/**
+ 翻转单链表：头插法
+
+ @param list 单链表
+ @return 结果
+ */
+Status ReversalLinkList(LinkList *list)
+{
+    LinkList p, q;//定义p和q两个结点分别记录待逆置链表的首位结点和次首位结点
+    p = (*list)->next;//p指向首位结点
+    (*list)->next = NULL;//断开头结点与链表
+    while (p) {
+        q = p;
+        p = p->next;
+        
+        q->next = (*list)->next;
+        (*list)->next = q;
+    }
     
     return SUCCESS;
 }
