@@ -203,7 +203,7 @@ Status CleanCycleNodeList(CycleList *list)
 {
     CycleList p,q;
     p = (*list)->next;//p指向第一个结点
-    while (p) {
+    while (p != *list) {
         
         q = p->next;
         free(p);
