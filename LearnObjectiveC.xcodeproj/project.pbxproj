@@ -45,6 +45,7 @@
 		18D412AA2276A66400DF7815 /* SQListLinkedStorageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D412A92276A66400DF7815 /* SQListLinkedStorageVC.m */; };
 		18E523022277DDDE001DAA3A /* BaseDataStructureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E523012277DDDE001DAA3A /* BaseDataStructureVC.m */; };
 		18ED2503225AE95A00006116 /* MainStructureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2502225AE95A00006116 /* MainStructureVC.m */; };
+		18F3F66822857CFE00B36BB5 /* RYQObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F3F66722857CFE00B36BB5 /* RYQObject.m */; };
 		18FEC62922374E9900313854 /* MessageTransmitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC62822374E9900313854 /* MessageTransmitVC.m */; };
 		18FEC62C22374EE200313854 /* TransmitObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC62B22374EE200313854 /* TransmitObject.m */; };
 		18FEC63022377E7500313854 /* ArrayBoundsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC62F22377E7500313854 /* ArrayBoundsVC.m */; };
@@ -163,6 +164,8 @@
 		18E523012277DDDE001DAA3A /* BaseDataStructureVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseDataStructureVC.m; sourceTree = "<group>"; };
 		18ED2501225AE95A00006116 /* MainStructureVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStructureVC.h; sourceTree = "<group>"; };
 		18ED2502225AE95A00006116 /* MainStructureVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStructureVC.m; sourceTree = "<group>"; };
+		18F3F66622857CFE00B36BB5 /* RYQObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RYQObject.h; sourceTree = "<group>"; };
+		18F3F66722857CFE00B36BB5 /* RYQObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RYQObject.m; sourceTree = "<group>"; };
 		18FEC62722374E9900313854 /* MessageTransmitVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTransmitVC.h; sourceTree = "<group>"; };
 		18FEC62822374E9900313854 /* MessageTransmitVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTransmitVC.m; sourceTree = "<group>"; };
 		18FEC62A22374EE200313854 /* TransmitObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransmitObject.h; sourceTree = "<group>"; };
@@ -525,6 +528,8 @@
 			children = (
 				183ADC5C2235FABA00ADB09B /* AutoreleasePoolVC.h */,
 				183ADC5D2235FABA00ADB09B /* AutoreleasePoolVC.m */,
+				18F3F66622857CFE00B36BB5 /* RYQObject.h */,
+				18F3F66722857CFE00B36BB5 /* RYQObject.m */,
 			);
 			path = AutoreleasePoolVC;
 			sourceTree = "<group>";
@@ -1077,6 +1082,7 @@
 				18481323223A21A300C566D5 /* MVC_Model.m in Sources */,
 				551662A72256FA770058C9F1 /* UIButton+Extenion.m in Sources */,
 				5516629B2256F6F40058C9F1 /* NSDictionary+CLLocation.m in Sources */,
+				18F3F66822857CFE00B36BB5 /* RYQObject.m in Sources */,
 				551662A42256FA610058C9F1 /* UILabel+Extenion.m in Sources */,
 				181F31912230BDDB0098E099 /* AppDelegate.m in Sources */,
 				18FEC63E2237801500313854 /* BoundsNextVC.m in Sources */,

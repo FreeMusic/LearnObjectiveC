@@ -7,6 +7,8 @@
 //
 
 #import "AutoreleasePoolVC.h"
+#import <objc/runtime.h>
+
 /**
  autoreleasePool是一个延时release的机制， 在自动释放池被销毁或耗尽时，会向池中的所有对象发送release消息，释放所有autorelease对象。
  ARC下，我们使用@autoreleasepool{}来使用一个自动释放池
@@ -53,6 +55,15 @@
     @autoreleasepool {
         self.name = @"自动释放池";
     }
+    
+    for (int i = 0; i < 1000000; i++) {
+        @autoreleasepool {
+            NSString *str = @"abc";
+            str = [str lowercaseString];
+            str = [str stringByAppendingString:@"xyz"];
+        }
+    }
+//    RYQLog(@"@autoreleasepool self.name = %@", self.name);
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
