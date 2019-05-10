@@ -6,8 +6,8 @@
 //  Copyright © 2019年 橘子. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface AutoreleasePoolVC : BaseViewController
+@interface AutoreleasePoolVC : UIViewController
 
 @end

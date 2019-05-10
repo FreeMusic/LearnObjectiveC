@@ -66,12 +66,12 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
-    RYQLog(@"%@", self.name);
+//    RYQLog(@"%@", self.name);
 }
 
 - (void)dealloc {
-    RYQLog(@"dealloc");
-    RYQLog(@"%@", self.name);
+//    RYQLog(@"dealloc");
+//    RYQLog(@"%@", self.name);
 }
 
 @end

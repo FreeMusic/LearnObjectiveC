@@ -139,23 +139,23 @@ Status GetNodeElem (LinkList list, int i)
 {
     
     int j = 1;
-    LinkList pList = list->next;//声明一个结点p 并让p指向链表
+    LinkList p = list->next;//声明一个结点p 并让p指向链表
     //p不为空g或者计数器j还没有等于i的时候 循环继续。
-    while (pList && j < i) {
+    while (p && j < i) {
         
         //让p指向下一个结点
-        pList = pList->next;
+        p = p->next;
         
         ++j;
     }
     //第i个元素不存在 抛异常
-    if (!pList || j > i) {
+    if (!p || j > i) {
         RYQLog(@"单链表的数据读取  没有找到该元素");
         
         return ERROR;
     }
     
-    ElemType elem = pList->data;
+    ElemType elem = p->data;
     RYQLog(@"单链表的数据读取  elem = %d", elem);
 
     return SUCCESS;
@@ -164,10 +164,10 @@ Status GetNodeElem (LinkList list, int i)
 /**
  单链表的数据插入
  思路：
- 1.声明一个结点p指向链表的第一个结点，初始化j从1开始；
- 2.当j < i时，就遍历链表，让p的指针向后移动，不断指向下一个结点，j累加1；
- 3.
- 
+ 1.寻找p结点，假如没有找到，返回失败。
+ 2.查找成功生成一个新结点s，结点s数据域的赋值。
+ 3.将p结点的next指针指向赋值给s的next指针
+ 4.将p结点的next指针指向s
 
  @param list 结点
  @param i 下标
@@ -176,25 +176,25 @@ Status GetNodeElem (LinkList list, int i)
 Status NodeListInsert (LinkList *list, int i)
 {
     int j = 1;
-    LinkList pList = *list;//声明一个结点p 并让p指向链表
+    LinkList p = *list;//声明一个结点p 并让p指向链表
     //p不为空g或者计数器j还没有等于i的时候 循环继续。
-    while (pList && j < i) {
+    while (p && j < i) {
         
         //让p指向下一个结点
-        pList = pList->next;
+        p = p->next;
         
         ++j;
     }
     //第i个元素不存在 抛异常
-    if (!pList || j > i) {
+    if (!p || j > i) {
         return ERROR;
     }
     
     ElemType elem = 99;//要插入的数值
     LinkList s = (LinkList)malloc(sizeof(Node));//生成一个新的结点s
     s->data = elem;//结点s数据域的赋值
-    s->next = pList->next;//将p结点的next指针指向赋值给s的next指针
-    pList->next = s;//将p结点的next指针指向s
+    s->next = p->next;//将p结点的next指针指向赋值给s的next指针
+    p->next = s;//将p结点的next指针指向s
     
     return SUCCESS;
 }
@@ -204,7 +204,7 @@ Status NodeListInsert (LinkList *list, int i)
  删除下标为i的结点思路：
  1.声明一个结点p指向链表的第一个结点，初始化j从1开始；
  2.当j < i时，遍历链表，让p的指针向后移，不断指向下一个结点，j累加1.
- 3.若到链表末尾p为空，则说明第i个元素不存在
+ 3.若到链表末尾p为空，则说明第i-1个元素不存在
  4.否则就是查找成功，将欲删除的结点p->next 赋值给q。
  5.单链表的删除标准语句p->next = q->next，
  6.将q结点中的数据赋值给elem
