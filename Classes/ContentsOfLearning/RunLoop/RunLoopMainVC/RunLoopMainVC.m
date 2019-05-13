@@ -8,7 +8,14 @@
 
 #import "RunLoopMainVC.h"
 
+typedef NS_ENUM(NSUInteger ,EventLoopMode) {
+    EventLoopStartMode,
+    EventLoopStopMode
+};
+
 @interface RunLoopMainVC ()
+
+@property (nonatomic, assign) EventLoopMode mode;
 
 @end
 
@@ -17,13 +24,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    int a = mainCLaunge(3);
-    RYQLog(@"%d", a);
+//    //模拟EventLoop
+//    [self simulateRunLoop:EventLoopStartMode];
+//    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self simulateRunLoop:EventLoopStopMode];
+//    });
+//    [[NSRunLoop currentRunLoop] run];
 }
 
-int mainCLaunge(int agr)
+- (void)simulateRunLoop:(EventLoopMode)mode
 {
-    return 4;
+    self.mode = mode;
+    do {
+        RYQLog(@"RunLoop一直在执行着");
+    } while (self.mode == EventLoopStartMode);
 }
+
 
 @end
