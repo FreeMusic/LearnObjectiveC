@@ -55,6 +55,8 @@ typedef struct Node *LinkList;//定义一个链表
     //清空单链表
     CleanNodeList(&list);
     GetNodeElem(list, 5);
+    //合并两个单链表
+    mergeTwoLinkList();
 }
 
 /**
@@ -306,6 +308,46 @@ Status ReversalLinkList(LinkList *list)
     }
     
     return SUCCESS;
+}
+
+/**
+ 遍历单链表
+
+ @param list 单链表
+ */
+void travelAllStoragelist(LinkList *list)
+{
+    LinkList p;
+    p = (*list)->next;//p指向第一个结点
+    int j = 0;
+    while (p) {
+        ++j;
+        RYQLog(@"遍历单链表 第%d个元素 它的值为%d", j,p->data);
+        
+        p = p->next;
+        
+    }
+}
+
+/**
+ 合并两个单链表
+ */
+void mergeTwoLinkList ()
+{
+    //单链表的创建
+    LinkList listA;
+    createTailLinkList(&listA, 2);
+    LinkList listB;
+    createTailLinkList(&listB, 2);
+    travelAllStoragelist(&listA);
+    travelAllStoragelist(&listB);
+    
+    LinkList p;
+    for(p=listA;p->next!=NULL;p=p->next)
+        ;
+    p->next=listB->next;
+    free (listB);
+    travelAllStoragelist(&listA);
 }
 
 @end

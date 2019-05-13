@@ -106,9 +106,6 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_22_cvfxq3v91pz2fs_z37pckgqh0000gn_T_AutoreleasePoolVC_bbec29_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"\350\207\252\345\212\250\351\207\212\346\224\276\346\261\240",15};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_22_cvfxq3v91pz2fs_z37pckgqh0000gn_T_AutoreleasePoolVC_bbec29_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"abc",3};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_22_cvfxq3v91pz2fs_z37pckgqh0000gn_T_AutoreleasePoolVC_bbec29_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"xyz",3};
 
 
 
@@ -234,7 +231,6 @@ typedef unsigned long uintptr_t;
 
 
 
-
 typedef u_int64_t user_addr_t;
 typedef u_int64_t user_size_t;
 typedef int64_t user_ssize_t;
@@ -242,6 +238,13 @@ typedef int64_t user_long_t;
 typedef u_int64_t user_ulong_t;
 typedef int64_t user_time_t;
 typedef int64_t user_off_t;
+
+
+
+
+
+
+
 typedef u_int64_t syscall_arg_t;
 typedef __int64_t __darwin_blkcnt_t;
 typedef __int32_t __darwin_blksize_t;
@@ -332,161 +335,37 @@ typedef struct _opaque_pthread_rwlock_t __darwin_pthread_rwlock_t;
 typedef struct _opaque_pthread_rwlockattr_t __darwin_pthread_rwlockattr_t;
 typedef struct _opaque_pthread_t *__darwin_pthread_t;
 
-
-
-
-
-
-
-
-typedef unsigned char uint8_t;
-typedef unsigned short uint16_t;
-typedef unsigned int uint32_t;
-typedef unsigned long long uint64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-typedef int32_t int_least32_t;
-typedef int64_t int_least64_t;
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-typedef uint32_t uint_least32_t;
-typedef uint64_t uint_least64_t;
-
-
-
-typedef int8_t int_fast8_t;
-typedef int16_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef int64_t int_fast64_t;
-typedef uint8_t uint_fast8_t;
-typedef uint16_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-typedef uint64_t uint_fast64_t;
-typedef long int intmax_t;
-typedef long unsigned int uintmax_t;
-
-
-
-static __inline__
-uint16_t
+static inline
+__uint16_t
 _OSSwapInt16(
-    uint16_t data
+    __uint16_t _data
 )
 {
-
-  return (uint16_t)(data << 8 | data >> 8);
+    return ((__uint16_t)((_data << 8) | (_data >> 8)));
 }
 
-static __inline__
-uint32_t
+static inline
+__uint32_t
 _OSSwapInt32(
-    uint32_t data
+    __uint32_t _data
 )
 {
 
-  data = __builtin_bswap32(data);
+    return __builtin_bswap32(_data);
 
 
 
 
-
-  return data;
 }
 
-static __inline__
-uint64_t
+
+static inline
+__uint64_t
 _OSSwapInt64(
-    uint64_t data
+    __uint64_t _data
 )
 {
-
-    return __builtin_bswap64(data);
-}
-
-
-
-static __inline__
-uint16_t
-OSReadSwapInt16(
-    const volatile void * base,
-    uintptr_t offset
-)
-{
-    uint16_t result;
-
-    result = *(volatile uint16_t *)((volatile uintptr_t)base + offset);
-    return _OSSwapInt16(result);
-}
-
-static __inline__
-uint32_t
-OSReadSwapInt32(
-    const volatile void * base,
-    uintptr_t offset
-)
-{
-    uint32_t result;
-
-    result = *(volatile uint32_t *)((volatile uintptr_t)base + offset);
-    return _OSSwapInt32(result);
-}
-
-static __inline__
-uint64_t
-OSReadSwapInt64(
-    const volatile void * base,
-    uintptr_t offset
-)
-{
-    volatile uint32_t * inp;
-    union ullc {
-        uint64_t ull;
-        uint32_t ul[2];
-    } outv;
-
-    inp = (volatile uint32_t *)((volatile uintptr_t)base + offset);
-    outv.ul[0] = inp[1];
-    outv.ul[1] = inp[0];
-    outv.ul[0] = _OSSwapInt32(outv.ul[0]);
-    outv.ul[1] = _OSSwapInt32(outv.ul[1]);
-    return outv.ull;
-}
-
-
-
-static __inline__
-void
-OSWriteSwapInt16(
-    volatile void * base,
-    uintptr_t offset,
-    uint16_t data
-)
-{
-    *(volatile uint16_t *)((volatile uintptr_t)base + offset) = _OSSwapInt16(data);
-}
-
-static __inline__
-void
-OSWriteSwapInt32(
-    volatile void * base,
-    uintptr_t offset,
-    uint32_t data
-)
-{
-    *(volatile uint32_t *)((volatile uintptr_t)base + offset) = _OSSwapInt32(data);
-}
-
-static __inline__
-void
-OSWriteSwapInt64(
-    volatile void * base,
-    uintptr_t offset,
-    uint64_t data
-)
-{
-    *(volatile uint64_t *)((volatile uintptr_t)base + offset) = _OSSwapInt64(data);
+    return __builtin_bswap64(_data);
 }
 
 
@@ -633,81 +512,519 @@ typedef enum {
  P_PGID
 } idtype_t;
 typedef int sig_atomic_t;
-struct __darwin_arm_exception_state
+struct __darwin_i386_thread_state
 {
- __uint32_t __exception;
- __uint32_t __fsr;
- __uint32_t __far;
+    unsigned int __eax;
+    unsigned int __ebx;
+    unsigned int __ecx;
+    unsigned int __edx;
+    unsigned int __edi;
+    unsigned int __esi;
+    unsigned int __ebp;
+    unsigned int __esp;
+    unsigned int __ss;
+    unsigned int __eflags;
+    unsigned int __eip;
+    unsigned int __cs;
+    unsigned int __ds;
+    unsigned int __es;
+    unsigned int __fs;
+    unsigned int __gs;
 };
-struct __darwin_arm_exception_state64
+struct __darwin_fp_control
 {
- __uint64_t __far;
- __uint32_t __esr;
- __uint32_t __exception;
-};
-struct __darwin_arm_thread_state
-{
- __uint32_t __r[13];
- __uint32_t __sp;
- __uint32_t __lr;
- __uint32_t __pc;
- __uint32_t __cpsr;
-};
-struct __darwin_arm_thread_state64
-{
- __uint64_t __x[29];
- __uint64_t __fp;
- __uint64_t __lr;
- __uint64_t __sp;
- __uint64_t __pc;
- __uint32_t __cpsr;
- __uint32_t __pad;
-};
-struct __darwin_arm_vfp_state
-{
- __uint32_t __r[64];
- __uint32_t __fpscr;
-
-};
-struct __darwin_arm_neon_state64
-{
- __uint128_t __v[32];
- __uint32_t __fpsr;
- __uint32_t __fpcr;
-};
-
-struct __darwin_arm_neon_state
-{
- __uint128_t __v[16];
- __uint32_t __fpsr;
- __uint32_t __fpcr;
-};
-struct arm_legacy_debug_state
-{
- __uint32_t __bvr[16];
- __uint32_t __bcr[16];
- __uint32_t __wvr[16];
- __uint32_t __wcr[16];
-};
-struct __darwin_arm_debug_state32
-{
- __uint32_t __bvr[16];
- __uint32_t __bcr[16];
- __uint32_t __wvr[16];
- __uint32_t __wcr[16];
- __uint64_t __mdscr_el1;
-};
+    unsigned short __invalid :1,
+        __denorm :1,
+    __zdiv :1,
+    __ovrfl :1,
+    __undfl :1,
+    __precis :1,
+      :2,
+    __pc :2,
 
 
-struct __darwin_arm_debug_state64
-{
- __uint64_t __bvr[16];
- __uint64_t __bcr[16];
- __uint64_t __wvr[16];
- __uint64_t __wcr[16];
- __uint64_t __mdscr_el1;
+
+
+
+    __rc :2,
+
+
+
+
+
+
+             :1,
+      :3;
 };
-struct __darwin_arm_cpmu_state64
+typedef struct __darwin_fp_control __darwin_fp_control_t;
+struct __darwin_fp_status
+{
+    unsigned short __invalid :1,
+        __denorm :1,
+    __zdiv :1,
+    __ovrfl :1,
+    __undfl :1,
+    __precis :1,
+    __stkflt :1,
+    __errsumm :1,
+    __c0 :1,
+    __c1 :1,
+    __c2 :1,
+    __tos :3,
+    __c3 :1,
+    __busy :1;
+};
+typedef struct __darwin_fp_status __darwin_fp_status_t;
+struct __darwin_mmst_reg
+{
+ char __mmst_reg[10];
+ char __mmst_rsrv[6];
+};
+struct __darwin_xmm_reg
+{
+ char __xmm_reg[16];
+};
+struct __darwin_ymm_reg
+{
+ char __ymm_reg[32];
+};
+struct __darwin_zmm_reg
+{
+ char __zmm_reg[64];
+};
+struct __darwin_opmask_reg
+{
+ char __opmask_reg[8];
+};
+struct __darwin_i386_float_state
+{
+ int __fpu_reserved[2];
+ struct __darwin_fp_control __fpu_fcw;
+ struct __darwin_fp_status __fpu_fsw;
+ __uint8_t __fpu_ftw;
+ __uint8_t __fpu_rsrv1;
+ __uint16_t __fpu_fop;
+ __uint32_t __fpu_ip;
+ __uint16_t __fpu_cs;
+ __uint16_t __fpu_rsrv2;
+ __uint32_t __fpu_dp;
+ __uint16_t __fpu_ds;
+ __uint16_t __fpu_rsrv3;
+ __uint32_t __fpu_mxcsr;
+ __uint32_t __fpu_mxcsrmask;
+ struct __darwin_mmst_reg __fpu_stmm0;
+ struct __darwin_mmst_reg __fpu_stmm1;
+ struct __darwin_mmst_reg __fpu_stmm2;
+ struct __darwin_mmst_reg __fpu_stmm3;
+ struct __darwin_mmst_reg __fpu_stmm4;
+ struct __darwin_mmst_reg __fpu_stmm5;
+ struct __darwin_mmst_reg __fpu_stmm6;
+ struct __darwin_mmst_reg __fpu_stmm7;
+ struct __darwin_xmm_reg __fpu_xmm0;
+ struct __darwin_xmm_reg __fpu_xmm1;
+ struct __darwin_xmm_reg __fpu_xmm2;
+ struct __darwin_xmm_reg __fpu_xmm3;
+ struct __darwin_xmm_reg __fpu_xmm4;
+ struct __darwin_xmm_reg __fpu_xmm5;
+ struct __darwin_xmm_reg __fpu_xmm6;
+ struct __darwin_xmm_reg __fpu_xmm7;
+ char __fpu_rsrv4[14*16];
+ int __fpu_reserved1;
+};
+
+
+struct __darwin_i386_avx_state
+{
+ int __fpu_reserved[2];
+ struct __darwin_fp_control __fpu_fcw;
+ struct __darwin_fp_status __fpu_fsw;
+ __uint8_t __fpu_ftw;
+ __uint8_t __fpu_rsrv1;
+ __uint16_t __fpu_fop;
+ __uint32_t __fpu_ip;
+ __uint16_t __fpu_cs;
+ __uint16_t __fpu_rsrv2;
+ __uint32_t __fpu_dp;
+ __uint16_t __fpu_ds;
+ __uint16_t __fpu_rsrv3;
+ __uint32_t __fpu_mxcsr;
+ __uint32_t __fpu_mxcsrmask;
+ struct __darwin_mmst_reg __fpu_stmm0;
+ struct __darwin_mmst_reg __fpu_stmm1;
+ struct __darwin_mmst_reg __fpu_stmm2;
+ struct __darwin_mmst_reg __fpu_stmm3;
+ struct __darwin_mmst_reg __fpu_stmm4;
+ struct __darwin_mmst_reg __fpu_stmm5;
+ struct __darwin_mmst_reg __fpu_stmm6;
+ struct __darwin_mmst_reg __fpu_stmm7;
+ struct __darwin_xmm_reg __fpu_xmm0;
+ struct __darwin_xmm_reg __fpu_xmm1;
+ struct __darwin_xmm_reg __fpu_xmm2;
+ struct __darwin_xmm_reg __fpu_xmm3;
+ struct __darwin_xmm_reg __fpu_xmm4;
+ struct __darwin_xmm_reg __fpu_xmm5;
+ struct __darwin_xmm_reg __fpu_xmm6;
+ struct __darwin_xmm_reg __fpu_xmm7;
+ char __fpu_rsrv4[14*16];
+ int __fpu_reserved1;
+ char __avx_reserved1[64];
+ struct __darwin_xmm_reg __fpu_ymmh0;
+ struct __darwin_xmm_reg __fpu_ymmh1;
+ struct __darwin_xmm_reg __fpu_ymmh2;
+ struct __darwin_xmm_reg __fpu_ymmh3;
+ struct __darwin_xmm_reg __fpu_ymmh4;
+ struct __darwin_xmm_reg __fpu_ymmh5;
+ struct __darwin_xmm_reg __fpu_ymmh6;
+ struct __darwin_xmm_reg __fpu_ymmh7;
+};
+
+
+struct __darwin_i386_avx512_state
+{
+ int __fpu_reserved[2];
+ struct __darwin_fp_control __fpu_fcw;
+ struct __darwin_fp_status __fpu_fsw;
+ __uint8_t __fpu_ftw;
+ __uint8_t __fpu_rsrv1;
+ __uint16_t __fpu_fop;
+ __uint32_t __fpu_ip;
+ __uint16_t __fpu_cs;
+ __uint16_t __fpu_rsrv2;
+ __uint32_t __fpu_dp;
+ __uint16_t __fpu_ds;
+ __uint16_t __fpu_rsrv3;
+ __uint32_t __fpu_mxcsr;
+ __uint32_t __fpu_mxcsrmask;
+ struct __darwin_mmst_reg __fpu_stmm0;
+ struct __darwin_mmst_reg __fpu_stmm1;
+ struct __darwin_mmst_reg __fpu_stmm2;
+ struct __darwin_mmst_reg __fpu_stmm3;
+ struct __darwin_mmst_reg __fpu_stmm4;
+ struct __darwin_mmst_reg __fpu_stmm5;
+ struct __darwin_mmst_reg __fpu_stmm6;
+ struct __darwin_mmst_reg __fpu_stmm7;
+ struct __darwin_xmm_reg __fpu_xmm0;
+ struct __darwin_xmm_reg __fpu_xmm1;
+ struct __darwin_xmm_reg __fpu_xmm2;
+ struct __darwin_xmm_reg __fpu_xmm3;
+ struct __darwin_xmm_reg __fpu_xmm4;
+ struct __darwin_xmm_reg __fpu_xmm5;
+ struct __darwin_xmm_reg __fpu_xmm6;
+ struct __darwin_xmm_reg __fpu_xmm7;
+ char __fpu_rsrv4[14*16];
+ int __fpu_reserved1;
+ char __avx_reserved1[64];
+ struct __darwin_xmm_reg __fpu_ymmh0;
+ struct __darwin_xmm_reg __fpu_ymmh1;
+ struct __darwin_xmm_reg __fpu_ymmh2;
+ struct __darwin_xmm_reg __fpu_ymmh3;
+ struct __darwin_xmm_reg __fpu_ymmh4;
+ struct __darwin_xmm_reg __fpu_ymmh5;
+ struct __darwin_xmm_reg __fpu_ymmh6;
+ struct __darwin_xmm_reg __fpu_ymmh7;
+ struct __darwin_opmask_reg __fpu_k0;
+ struct __darwin_opmask_reg __fpu_k1;
+ struct __darwin_opmask_reg __fpu_k2;
+ struct __darwin_opmask_reg __fpu_k3;
+ struct __darwin_opmask_reg __fpu_k4;
+ struct __darwin_opmask_reg __fpu_k5;
+ struct __darwin_opmask_reg __fpu_k6;
+ struct __darwin_opmask_reg __fpu_k7;
+ struct __darwin_ymm_reg __fpu_zmmh0;
+ struct __darwin_ymm_reg __fpu_zmmh1;
+ struct __darwin_ymm_reg __fpu_zmmh2;
+ struct __darwin_ymm_reg __fpu_zmmh3;
+ struct __darwin_ymm_reg __fpu_zmmh4;
+ struct __darwin_ymm_reg __fpu_zmmh5;
+ struct __darwin_ymm_reg __fpu_zmmh6;
+ struct __darwin_ymm_reg __fpu_zmmh7;
+};
+struct __darwin_i386_exception_state
+{
+ __uint16_t __trapno;
+ __uint16_t __cpu;
+ __uint32_t __err;
+ __uint32_t __faultvaddr;
+};
+struct __darwin_x86_debug_state32
+{
+ unsigned int __dr0;
+ unsigned int __dr1;
+ unsigned int __dr2;
+ unsigned int __dr3;
+ unsigned int __dr4;
+ unsigned int __dr5;
+ unsigned int __dr6;
+ unsigned int __dr7;
+};
+struct __darwin_x86_thread_state64
+{
+ __uint64_t __rax;
+ __uint64_t __rbx;
+ __uint64_t __rcx;
+ __uint64_t __rdx;
+ __uint64_t __rdi;
+ __uint64_t __rsi;
+ __uint64_t __rbp;
+ __uint64_t __rsp;
+ __uint64_t __r8;
+ __uint64_t __r9;
+ __uint64_t __r10;
+ __uint64_t __r11;
+ __uint64_t __r12;
+ __uint64_t __r13;
+ __uint64_t __r14;
+ __uint64_t __r15;
+ __uint64_t __rip;
+ __uint64_t __rflags;
+ __uint64_t __cs;
+ __uint64_t __fs;
+ __uint64_t __gs;
+};
+struct __darwin_x86_float_state64
+{
+ int __fpu_reserved[2];
+ struct __darwin_fp_control __fpu_fcw;
+ struct __darwin_fp_status __fpu_fsw;
+ __uint8_t __fpu_ftw;
+ __uint8_t __fpu_rsrv1;
+ __uint16_t __fpu_fop;
+
+
+ __uint32_t __fpu_ip;
+ __uint16_t __fpu_cs;
+
+ __uint16_t __fpu_rsrv2;
+
+
+ __uint32_t __fpu_dp;
+ __uint16_t __fpu_ds;
+
+ __uint16_t __fpu_rsrv3;
+ __uint32_t __fpu_mxcsr;
+ __uint32_t __fpu_mxcsrmask;
+ struct __darwin_mmst_reg __fpu_stmm0;
+ struct __darwin_mmst_reg __fpu_stmm1;
+ struct __darwin_mmst_reg __fpu_stmm2;
+ struct __darwin_mmst_reg __fpu_stmm3;
+ struct __darwin_mmst_reg __fpu_stmm4;
+ struct __darwin_mmst_reg __fpu_stmm5;
+ struct __darwin_mmst_reg __fpu_stmm6;
+ struct __darwin_mmst_reg __fpu_stmm7;
+ struct __darwin_xmm_reg __fpu_xmm0;
+ struct __darwin_xmm_reg __fpu_xmm1;
+ struct __darwin_xmm_reg __fpu_xmm2;
+ struct __darwin_xmm_reg __fpu_xmm3;
+ struct __darwin_xmm_reg __fpu_xmm4;
+ struct __darwin_xmm_reg __fpu_xmm5;
+ struct __darwin_xmm_reg __fpu_xmm6;
+ struct __darwin_xmm_reg __fpu_xmm7;
+ struct __darwin_xmm_reg __fpu_xmm8;
+ struct __darwin_xmm_reg __fpu_xmm9;
+ struct __darwin_xmm_reg __fpu_xmm10;
+ struct __darwin_xmm_reg __fpu_xmm11;
+ struct __darwin_xmm_reg __fpu_xmm12;
+ struct __darwin_xmm_reg __fpu_xmm13;
+ struct __darwin_xmm_reg __fpu_xmm14;
+ struct __darwin_xmm_reg __fpu_xmm15;
+ char __fpu_rsrv4[6*16];
+ int __fpu_reserved1;
+};
+
+
+struct __darwin_x86_avx_state64
+{
+ int __fpu_reserved[2];
+ struct __darwin_fp_control __fpu_fcw;
+ struct __darwin_fp_status __fpu_fsw;
+ __uint8_t __fpu_ftw;
+ __uint8_t __fpu_rsrv1;
+ __uint16_t __fpu_fop;
+
+
+ __uint32_t __fpu_ip;
+ __uint16_t __fpu_cs;
+
+ __uint16_t __fpu_rsrv2;
+
+
+ __uint32_t __fpu_dp;
+ __uint16_t __fpu_ds;
+
+ __uint16_t __fpu_rsrv3;
+ __uint32_t __fpu_mxcsr;
+ __uint32_t __fpu_mxcsrmask;
+ struct __darwin_mmst_reg __fpu_stmm0;
+ struct __darwin_mmst_reg __fpu_stmm1;
+ struct __darwin_mmst_reg __fpu_stmm2;
+ struct __darwin_mmst_reg __fpu_stmm3;
+ struct __darwin_mmst_reg __fpu_stmm4;
+ struct __darwin_mmst_reg __fpu_stmm5;
+ struct __darwin_mmst_reg __fpu_stmm6;
+ struct __darwin_mmst_reg __fpu_stmm7;
+ struct __darwin_xmm_reg __fpu_xmm0;
+ struct __darwin_xmm_reg __fpu_xmm1;
+ struct __darwin_xmm_reg __fpu_xmm2;
+ struct __darwin_xmm_reg __fpu_xmm3;
+ struct __darwin_xmm_reg __fpu_xmm4;
+ struct __darwin_xmm_reg __fpu_xmm5;
+ struct __darwin_xmm_reg __fpu_xmm6;
+ struct __darwin_xmm_reg __fpu_xmm7;
+ struct __darwin_xmm_reg __fpu_xmm8;
+ struct __darwin_xmm_reg __fpu_xmm9;
+ struct __darwin_xmm_reg __fpu_xmm10;
+ struct __darwin_xmm_reg __fpu_xmm11;
+ struct __darwin_xmm_reg __fpu_xmm12;
+ struct __darwin_xmm_reg __fpu_xmm13;
+ struct __darwin_xmm_reg __fpu_xmm14;
+ struct __darwin_xmm_reg __fpu_xmm15;
+ char __fpu_rsrv4[6*16];
+ int __fpu_reserved1;
+ char __avx_reserved1[64];
+ struct __darwin_xmm_reg __fpu_ymmh0;
+ struct __darwin_xmm_reg __fpu_ymmh1;
+ struct __darwin_xmm_reg __fpu_ymmh2;
+ struct __darwin_xmm_reg __fpu_ymmh3;
+ struct __darwin_xmm_reg __fpu_ymmh4;
+ struct __darwin_xmm_reg __fpu_ymmh5;
+ struct __darwin_xmm_reg __fpu_ymmh6;
+ struct __darwin_xmm_reg __fpu_ymmh7;
+ struct __darwin_xmm_reg __fpu_ymmh8;
+ struct __darwin_xmm_reg __fpu_ymmh9;
+ struct __darwin_xmm_reg __fpu_ymmh10;
+ struct __darwin_xmm_reg __fpu_ymmh11;
+ struct __darwin_xmm_reg __fpu_ymmh12;
+ struct __darwin_xmm_reg __fpu_ymmh13;
+ struct __darwin_xmm_reg __fpu_ymmh14;
+ struct __darwin_xmm_reg __fpu_ymmh15;
+};
+
+
+struct __darwin_x86_avx512_state64
+{
+ int __fpu_reserved[2];
+ struct __darwin_fp_control __fpu_fcw;
+ struct __darwin_fp_status __fpu_fsw;
+ __uint8_t __fpu_ftw;
+ __uint8_t __fpu_rsrv1;
+ __uint16_t __fpu_fop;
+
+
+ __uint32_t __fpu_ip;
+ __uint16_t __fpu_cs;
+
+ __uint16_t __fpu_rsrv2;
+
+
+ __uint32_t __fpu_dp;
+ __uint16_t __fpu_ds;
+
+ __uint16_t __fpu_rsrv3;
+ __uint32_t __fpu_mxcsr;
+ __uint32_t __fpu_mxcsrmask;
+ struct __darwin_mmst_reg __fpu_stmm0;
+ struct __darwin_mmst_reg __fpu_stmm1;
+ struct __darwin_mmst_reg __fpu_stmm2;
+ struct __darwin_mmst_reg __fpu_stmm3;
+ struct __darwin_mmst_reg __fpu_stmm4;
+ struct __darwin_mmst_reg __fpu_stmm5;
+ struct __darwin_mmst_reg __fpu_stmm6;
+ struct __darwin_mmst_reg __fpu_stmm7;
+ struct __darwin_xmm_reg __fpu_xmm0;
+ struct __darwin_xmm_reg __fpu_xmm1;
+ struct __darwin_xmm_reg __fpu_xmm2;
+ struct __darwin_xmm_reg __fpu_xmm3;
+ struct __darwin_xmm_reg __fpu_xmm4;
+ struct __darwin_xmm_reg __fpu_xmm5;
+ struct __darwin_xmm_reg __fpu_xmm6;
+ struct __darwin_xmm_reg __fpu_xmm7;
+ struct __darwin_xmm_reg __fpu_xmm8;
+ struct __darwin_xmm_reg __fpu_xmm9;
+ struct __darwin_xmm_reg __fpu_xmm10;
+ struct __darwin_xmm_reg __fpu_xmm11;
+ struct __darwin_xmm_reg __fpu_xmm12;
+ struct __darwin_xmm_reg __fpu_xmm13;
+ struct __darwin_xmm_reg __fpu_xmm14;
+ struct __darwin_xmm_reg __fpu_xmm15;
+ char __fpu_rsrv4[6*16];
+ int __fpu_reserved1;
+ char __avx_reserved1[64];
+ struct __darwin_xmm_reg __fpu_ymmh0;
+ struct __darwin_xmm_reg __fpu_ymmh1;
+ struct __darwin_xmm_reg __fpu_ymmh2;
+ struct __darwin_xmm_reg __fpu_ymmh3;
+ struct __darwin_xmm_reg __fpu_ymmh4;
+ struct __darwin_xmm_reg __fpu_ymmh5;
+ struct __darwin_xmm_reg __fpu_ymmh6;
+ struct __darwin_xmm_reg __fpu_ymmh7;
+ struct __darwin_xmm_reg __fpu_ymmh8;
+ struct __darwin_xmm_reg __fpu_ymmh9;
+ struct __darwin_xmm_reg __fpu_ymmh10;
+ struct __darwin_xmm_reg __fpu_ymmh11;
+ struct __darwin_xmm_reg __fpu_ymmh12;
+ struct __darwin_xmm_reg __fpu_ymmh13;
+ struct __darwin_xmm_reg __fpu_ymmh14;
+ struct __darwin_xmm_reg __fpu_ymmh15;
+ struct __darwin_opmask_reg __fpu_k0;
+ struct __darwin_opmask_reg __fpu_k1;
+ struct __darwin_opmask_reg __fpu_k2;
+ struct __darwin_opmask_reg __fpu_k3;
+ struct __darwin_opmask_reg __fpu_k4;
+ struct __darwin_opmask_reg __fpu_k5;
+ struct __darwin_opmask_reg __fpu_k6;
+ struct __darwin_opmask_reg __fpu_k7;
+ struct __darwin_ymm_reg __fpu_zmmh0;
+ struct __darwin_ymm_reg __fpu_zmmh1;
+ struct __darwin_ymm_reg __fpu_zmmh2;
+ struct __darwin_ymm_reg __fpu_zmmh3;
+ struct __darwin_ymm_reg __fpu_zmmh4;
+ struct __darwin_ymm_reg __fpu_zmmh5;
+ struct __darwin_ymm_reg __fpu_zmmh6;
+ struct __darwin_ymm_reg __fpu_zmmh7;
+ struct __darwin_ymm_reg __fpu_zmmh8;
+ struct __darwin_ymm_reg __fpu_zmmh9;
+ struct __darwin_ymm_reg __fpu_zmmh10;
+ struct __darwin_ymm_reg __fpu_zmmh11;
+ struct __darwin_ymm_reg __fpu_zmmh12;
+ struct __darwin_ymm_reg __fpu_zmmh13;
+ struct __darwin_ymm_reg __fpu_zmmh14;
+ struct __darwin_ymm_reg __fpu_zmmh15;
+ struct __darwin_zmm_reg __fpu_zmm16;
+ struct __darwin_zmm_reg __fpu_zmm17;
+ struct __darwin_zmm_reg __fpu_zmm18;
+ struct __darwin_zmm_reg __fpu_zmm19;
+ struct __darwin_zmm_reg __fpu_zmm20;
+ struct __darwin_zmm_reg __fpu_zmm21;
+ struct __darwin_zmm_reg __fpu_zmm22;
+ struct __darwin_zmm_reg __fpu_zmm23;
+ struct __darwin_zmm_reg __fpu_zmm24;
+ struct __darwin_zmm_reg __fpu_zmm25;
+ struct __darwin_zmm_reg __fpu_zmm26;
+ struct __darwin_zmm_reg __fpu_zmm27;
+ struct __darwin_zmm_reg __fpu_zmm28;
+ struct __darwin_zmm_reg __fpu_zmm29;
+ struct __darwin_zmm_reg __fpu_zmm30;
+ struct __darwin_zmm_reg __fpu_zmm31;
+};
+struct __darwin_x86_exception_state64
+{
+    __uint16_t __trapno;
+    __uint16_t __cpu;
+    __uint32_t __err;
+    __uint64_t __faultvaddr;
+};
+struct __darwin_x86_debug_state64
+{
+ __uint64_t __dr0;
+ __uint64_t __dr1;
+ __uint64_t __dr2;
+ __uint64_t __dr3;
+ __uint64_t __dr4;
+ __uint64_t __dr5;
+ __uint64_t __dr6;
+ __uint64_t __dr7;
+};
+struct __darwin_x86_cpmu_state64
 {
  __uint64_t __ctrs[16];
 };
@@ -717,15 +1034,49 @@ struct __darwin_arm_cpmu_state64
 
 struct __darwin_mcontext32
 {
- struct __darwin_arm_exception_state __es;
- struct __darwin_arm_thread_state __ss;
- struct __darwin_arm_vfp_state __fs;
+ struct __darwin_i386_exception_state __es;
+ struct __darwin_i386_thread_state __ss;
+ struct __darwin_i386_float_state __fs;
+};
+
+
+struct __darwin_mcontext_avx32
+{
+ struct __darwin_i386_exception_state __es;
+ struct __darwin_i386_thread_state __ss;
+ struct __darwin_i386_avx_state __fs;
+};
+
+
+
+struct __darwin_mcontext_avx512_32
+{
+ struct __darwin_i386_exception_state __es;
+ struct __darwin_i386_thread_state __ss;
+ struct __darwin_i386_avx512_state __fs;
 };
 struct __darwin_mcontext64
 {
- struct __darwin_arm_exception_state64 __es;
- struct __darwin_arm_thread_state64 __ss;
- struct __darwin_arm_neon_state64 __ns;
+ struct __darwin_x86_exception_state64 __es;
+ struct __darwin_x86_thread_state64 __ss;
+ struct __darwin_x86_float_state64 __fs;
+};
+
+
+struct __darwin_mcontext_avx64
+{
+ struct __darwin_x86_exception_state64 __es;
+ struct __darwin_x86_thread_state64 __ss;
+ struct __darwin_x86_avx_state64 __fs;
+};
+
+
+
+struct __darwin_mcontext_avx512_64
+{
+ struct __darwin_x86_exception_state64 __es;
+ struct __darwin_x86_thread_state64 __ss;
+ struct __darwin_x86_avx512_state64 __fs;
 };
 typedef struct __darwin_mcontext64 *mcontext_t;
 
@@ -827,6 +1178,40 @@ struct sigstack {
 extern "C" {
 void (*signal(int, void (*)(int)))(int);
 }
+typedef unsigned char uint8_t;
+typedef unsigned short uint16_t;
+typedef unsigned int uint32_t;
+typedef unsigned long long uint64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+typedef int32_t int_least32_t;
+typedef int64_t int_least64_t;
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+typedef uint32_t uint_least32_t;
+typedef uint64_t uint_least64_t;
+
+
+
+typedef int8_t int_fast8_t;
+typedef int16_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef int64_t int_fast64_t;
+typedef uint8_t uint_fast8_t;
+typedef uint16_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+typedef uint64_t uint_fast64_t;
+typedef long int intmax_t;
+typedef long unsigned int uintmax_t;
+
+
+
+
+
+
+
 struct timeval
 {
  __darwin_time_t tv_sec;
@@ -1670,11 +2055,21 @@ inline __attribute__ ((__always_inline__)) int __inline_signbitd(double __x) {
     __u.__f = __x;
     return (int)(__u.__u >> 63);
 }
+
 inline __attribute__ ((__always_inline__)) int __inline_signbitl(long double __x) {
-    union { long double __f; unsigned long long __u;} __u;
-    __u.__f = __x;
-    return (int)(__u.__u >> 63);
+    union {
+        long double __ld;
+        struct{ unsigned long long __m; unsigned short __sexp; } __p;
+    } __u;
+    __u.__ld = __x;
+    return (int)(__u.__p.__sexp >> 15);
 }
+
+
+
+
+
+
 
 inline __attribute__ ((__always_inline__)) int __inline_isnormalf(float __x) {
     return __inline_isfinitef(__x) && __builtin_fabsf(__x) >= 1.17549435e-38F;
@@ -1683,7 +2078,7 @@ inline __attribute__ ((__always_inline__)) int __inline_isnormald(double __x) {
     return __inline_isfinited(__x) && __builtin_fabs(__x) >= 2.2250738585072014e-308;
 }
 inline __attribute__ ((__always_inline__)) int __inline_isnormall(long double __x) {
-    return __inline_isfinitel(__x) && __builtin_fabsl(__x) >= 2.2250738585072014e-308L;
+    return __inline_isfinitel(__x) && __builtin_fabsl(__x) >= 3.36210314311209350626e-4932L;
 }
 extern float acosf(float);
 extern double acos(double);
@@ -2010,13 +2405,8 @@ __attribute__((availability(macos,introduced=10.0,deprecated=10.9,replacement="t
 extern double significand(double)
 __attribute__((availability(macos,introduced=10.0,deprecated=10.9,message="Use `2*frexp( )` or `scalbn(x, -ilogb(x))` instead."))) __attribute__((availability(ios,unavailable))) __attribute__((availability(watchos,unavailable))) __attribute__((availability(tvos,unavailable)));
 }
-typedef int jmp_buf[((14 + 8 + 2) * 2)];
-typedef int sigjmp_buf[((14 + 8 + 2) * 2) + 1];
-
-
-
-
-
+typedef int jmp_buf[((9 * 2) + 3 + 16)];
+typedef int sigjmp_buf[((9 * 2) + 3 + 16) + 1];
 extern "C" {
 extern int setjmp(jmp_buf);
 extern void longjmp(jmp_buf, int) __attribute__((noreturn));
@@ -2071,6 +2461,15 @@ int sigblock(int);
 int sigsetmask(int);
 int sigvec(int, struct sigvec *, struct sigvec *);
 
+}
+
+
+
+
+inline __attribute__ ((__always_inline__)) int
+__sigbits(int __signo)
+{
+    return __signo > 32 ? 0 : (1 << (__signo - 1));
 }
 typedef long int ptrdiff_t;
 typedef __darwin_va_list va_list;
@@ -3360,6 +3759,82 @@ extern void CFBitVectorSetBitAtIndex(CFMutableBitVectorRef bv, CFIndex idx, CFBi
 extern void CFBitVectorSetBits(CFMutableBitVectorRef bv, CFRange range, CFBit value);
 extern void CFBitVectorSetAllBits(CFMutableBitVectorRef bv, CFBit value);
 
+}
+
+
+
+static __inline__
+uint16_t
+OSReadSwapInt16(
+    const volatile void * base,
+    uintptr_t byteOffset
+)
+{
+    uint16_t result;
+
+    result = *(volatile uint16_t *)((uintptr_t)base + byteOffset);
+    return _OSSwapInt16(result);
+}
+
+static __inline__
+uint32_t
+OSReadSwapInt32(
+    const volatile void * base,
+    uintptr_t byteOffset
+)
+{
+    uint32_t result;
+
+    result = *(volatile uint32_t *)((uintptr_t)base + byteOffset);
+    return _OSSwapInt32(result);
+}
+
+static __inline__
+uint64_t
+OSReadSwapInt64(
+    const volatile void * base,
+    uintptr_t byteOffset
+)
+{
+    uint64_t result;
+
+    result = *(volatile uint64_t *)((uintptr_t)base + byteOffset);
+    return _OSSwapInt64(result);
+}
+
+
+
+static __inline__
+void
+OSWriteSwapInt16(
+    volatile void * base,
+    uintptr_t byteOffset,
+    uint16_t data
+)
+{
+    *(volatile uint16_t *)((uintptr_t)base + byteOffset) = _OSSwapInt16(data);
+}
+
+static __inline__
+void
+OSWriteSwapInt32(
+    volatile void * base,
+    uintptr_t byteOffset,
+    uint32_t data
+)
+{
+    *(volatile uint32_t *)((uintptr_t)base + byteOffset) = _OSSwapInt32(data);
+}
+
+static __inline__
+void
+OSWriteSwapInt64(
+    volatile void * base,
+    uintptr_t byteOffset,
+    uint64_t data
+)
+{
+    *(volatile uint64_t *)((uintptr_t)base + byteOffset) = _OSSwapInt64(data);
 }
 enum {
     OSUnknownByteOrder,
@@ -6210,7 +6685,7 @@ void CFURLStopAccessingSecurityScopedResource(CFURLRef url) __attribute__((avail
 
 
 }
-typedef int boolean_t;
+typedef unsigned int boolean_t;
 typedef __darwin_natural_t natural_t;
 typedef int integer_t;
 
@@ -6221,7 +6696,6 @@ typedef int integer_t;
 
 typedef uintptr_t vm_offset_t;
 typedef uintptr_t vm_size_t;
-
 typedef uint64_t mach_vm_address_t;
 typedef uint64_t mach_vm_offset_t;
 typedef uint64_t mach_vm_size_t;
@@ -6229,11 +6703,8 @@ typedef uint64_t mach_vm_size_t;
 typedef uint64_t vm_map_offset_t;
 typedef uint64_t vm_map_address_t;
 typedef uint64_t vm_map_size_t;
-typedef uint32_t vm32_offset_t;
-typedef uint32_t vm32_address_t;
-typedef uint32_t vm32_size_t;
 
-typedef vm_offset_t mach_port_context_t;
+typedef mach_vm_address_t mach_port_context_t;
 typedef natural_t mach_port_name_t;
 typedef mach_port_name_t *mach_port_name_array_t;
 typedef __darwin_mach_port_t mach_port_t;
@@ -13189,13 +13660,6 @@ typedef struct {} _objc_exc_NSArray;
 
 
 #pragma clang assume_nonnull begin
-
-
-
-
-
-
-
 typedef NSString * NSCalendarIdentifier __attribute__((swift_wrapper(struct)));
 
 extern "C" NSCalendarIdentifier const NSCalendarIdentifierGregorian __attribute__((availability(macos,introduced=10.6))) __attribute__((availability(ios,introduced=4.0))) __attribute__((availability(watchos,introduced=2.0))) __attribute__((availability(tvos,introduced=9.0)));
@@ -14380,14 +14844,6 @@ typedef struct {} _objc_exc_NSString;
 
 
 #pragma clang assume_nonnull begin
-
-
-
-
-
-
-
-
 
 #ifndef _REWRITER_typedef_NSDateFormatter
 #define _REWRITER_typedef_NSDateFormatter
@@ -20998,6 +21454,50 @@ struct NSMessagePort_IMPL {
 	id _delegate;
 };
 
+
+/* @end */
+
+
+
+
+
+
+
+
+#ifndef _REWRITER_typedef_NSSocketPort
+#define _REWRITER_typedef_NSSocketPort
+typedef struct objc_object NSSocketPort;
+typedef struct {} _objc_exc_NSSocketPort;
+#endif
+
+struct NSSocketPort_IMPL {
+	struct NSPort_IMPL NSPort_IVARS;
+	void *_receiver;
+	id _connectors;
+	void *_loops;
+	void *_data;
+	id _signature;
+	id _delegate;
+	id _lock;
+	NSUInteger _maxSize;
+	NSUInteger _useCount;
+	NSUInteger _reserved;
+};
+
+
+// - (instancetype)init;
+// - (nullable instancetype)initWithTCPPort:(unsigned short)port;
+// - (nullable instancetype)initWithProtocolFamily:(int)family socketType:(int)type protocol:(int)protocol address:(NSData *)address __attribute__((objc_designated_initializer));
+// - (nullable instancetype)initWithProtocolFamily:(int)family socketType:(int)type protocol:(int)protocol socket:(NSSocketNativeHandle)sock __attribute__((objc_designated_initializer));
+// - (nullable instancetype)initRemoteWithTCPPort:(unsigned short)port host:(nullable NSString *)hostName;
+// - (instancetype)initRemoteWithProtocolFamily:(int)family socketType:(int)type protocol:(int)protocol address:(NSData *)address __attribute__((objc_designated_initializer));
+
+
+// @property (readonly) int protocolFamily;
+// @property (readonly) int socketType;
+// @property (readonly) int protocol;
+// @property (readonly, copy) NSData *address;
+// @property (readonly) NSSocketNativeHandle socket;
 
 /* @end */
 
@@ -32733,7 +33233,6 @@ struct UIAccelerometer_IMPL {
 
 
 typedef double CGFloat;
-typedef struct __attribute__((objc_bridge(id))) __IOSurface *IOSurfaceRef __attribute__((swift_name("IOSurfaceRef")));
 
 
 
@@ -38354,360 +38853,6 @@ struct CAEAGLLayer_IMPL {
 
 
 
-
-
-
-
-
-
-
-
-#pragma clang assume_nonnull begin
-typedef NSUInteger MTLPixelFormat; enum
-{
-    MTLPixelFormatInvalid = 0,
-
-
-
-    MTLPixelFormatA8Unorm = 1,
-
-    MTLPixelFormatR8Unorm = 10,
-    MTLPixelFormatR8Unorm_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 11,
-
-    MTLPixelFormatR8Snorm = 12,
-    MTLPixelFormatR8Uint = 13,
-    MTLPixelFormatR8Sint = 14,
-
-
-
-    MTLPixelFormatR16Unorm = 20,
-    MTLPixelFormatR16Snorm = 22,
-    MTLPixelFormatR16Uint = 23,
-    MTLPixelFormatR16Sint = 24,
-    MTLPixelFormatR16Float = 25,
-
-    MTLPixelFormatRG8Unorm = 30,
-    MTLPixelFormatRG8Unorm_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 31,
-    MTLPixelFormatRG8Snorm = 32,
-    MTLPixelFormatRG8Uint = 33,
-    MTLPixelFormatRG8Sint = 34,
-
-
-
-    MTLPixelFormatB5G6R5Unorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 40,
-    MTLPixelFormatA1BGR5Unorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 41,
-    MTLPixelFormatABGR4Unorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 42,
-    MTLPixelFormatBGR5A1Unorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 43,
-
-
-
-    MTLPixelFormatR32Uint = 53,
-    MTLPixelFormatR32Sint = 54,
-    MTLPixelFormatR32Float = 55,
-
-    MTLPixelFormatRG16Unorm = 60,
-    MTLPixelFormatRG16Snorm = 62,
-    MTLPixelFormatRG16Uint = 63,
-    MTLPixelFormatRG16Sint = 64,
-    MTLPixelFormatRG16Float = 65,
-
-    MTLPixelFormatRGBA8Unorm = 70,
-    MTLPixelFormatRGBA8Unorm_sRGB = 71,
-    MTLPixelFormatRGBA8Snorm = 72,
-    MTLPixelFormatRGBA8Uint = 73,
-    MTLPixelFormatRGBA8Sint = 74,
-
-
-    MTLPixelFormatBGRA8Unorm = 80,
-    MTLPixelFormatBGRA8Unorm_sRGB = 81,
-
-
-
-    MTLPixelFormatRGB10A2Unorm = 90,
-    MTLPixelFormatRGB10A2Uint = 91,
-
-    MTLPixelFormatRG11B10Float = 92,
-    MTLPixelFormatRGB9E5Float = 93,
-
-    MTLPixelFormatBGR10A2Unorm __attribute__((availability(macos,introduced=10.13))) __attribute__((availability(ios,introduced=11.0))) = 94,
-
-    MTLPixelFormatBGR10_XR __attribute__((availability(ios,introduced=10.0))) __attribute__((availability(macos,unavailable))) = 554,
-    MTLPixelFormatBGR10_XR_sRGB __attribute__((availability(ios,introduced=10.0))) __attribute__((availability(macos,unavailable))) = 555,
-
-
-
-    MTLPixelFormatRG32Uint = 103,
-    MTLPixelFormatRG32Sint = 104,
-    MTLPixelFormatRG32Float = 105,
-
-    MTLPixelFormatRGBA16Unorm = 110,
-    MTLPixelFormatRGBA16Snorm = 112,
-    MTLPixelFormatRGBA16Uint = 113,
-    MTLPixelFormatRGBA16Sint = 114,
-    MTLPixelFormatRGBA16Float = 115,
-
-    MTLPixelFormatBGRA10_XR __attribute__((availability(ios,introduced=10.0))) __attribute__((availability(macos,unavailable))) = 552,
-    MTLPixelFormatBGRA10_XR_sRGB __attribute__((availability(ios,introduced=10.0))) __attribute__((availability(macos,unavailable))) = 553,
-
-
-
-    MTLPixelFormatRGBA32Uint = 123,
-    MTLPixelFormatRGBA32Sint = 124,
-    MTLPixelFormatRGBA32Float = 125,
-
-
-
-
-    MTLPixelFormatBC1_RGBA __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 130,
-    MTLPixelFormatBC1_RGBA_sRGB __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 131,
-    MTLPixelFormatBC2_RGBA __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 132,
-    MTLPixelFormatBC2_RGBA_sRGB __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 133,
-    MTLPixelFormatBC3_RGBA __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 134,
-    MTLPixelFormatBC3_RGBA_sRGB __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 135,
-
-
-    MTLPixelFormatBC4_RUnorm __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 140,
-    MTLPixelFormatBC4_RSnorm __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 141,
-    MTLPixelFormatBC5_RGUnorm __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 142,
-    MTLPixelFormatBC5_RGSnorm __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 143,
-
-
-    MTLPixelFormatBC6H_RGBFloat __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 150,
-    MTLPixelFormatBC6H_RGBUfloat __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 151,
-    MTLPixelFormatBC7_RGBAUnorm __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 152,
-    MTLPixelFormatBC7_RGBAUnorm_sRGB __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 153,
-
-
-    MTLPixelFormatPVRTC_RGB_2BPP __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 160,
-    MTLPixelFormatPVRTC_RGB_2BPP_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 161,
-    MTLPixelFormatPVRTC_RGB_4BPP __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 162,
-    MTLPixelFormatPVRTC_RGB_4BPP_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 163,
-    MTLPixelFormatPVRTC_RGBA_2BPP __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 164,
-    MTLPixelFormatPVRTC_RGBA_2BPP_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 165,
-    MTLPixelFormatPVRTC_RGBA_4BPP __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 166,
-    MTLPixelFormatPVRTC_RGBA_4BPP_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 167,
-
-
-    MTLPixelFormatEAC_R11Unorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 170,
-    MTLPixelFormatEAC_R11Snorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 172,
-    MTLPixelFormatEAC_RG11Unorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 174,
-    MTLPixelFormatEAC_RG11Snorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 176,
-    MTLPixelFormatEAC_RGBA8 __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 178,
-    MTLPixelFormatEAC_RGBA8_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 179,
-
-    MTLPixelFormatETC2_RGB8 __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 180,
-    MTLPixelFormatETC2_RGB8_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 181,
-    MTLPixelFormatETC2_RGB8A1 __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 182,
-    MTLPixelFormatETC2_RGB8A1_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 183,
-
-
-    MTLPixelFormatASTC_4x4_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 186,
-    MTLPixelFormatASTC_5x4_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 187,
-    MTLPixelFormatASTC_5x5_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 188,
-    MTLPixelFormatASTC_6x5_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 189,
-    MTLPixelFormatASTC_6x6_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 190,
-    MTLPixelFormatASTC_8x5_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 192,
-    MTLPixelFormatASTC_8x6_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 193,
-    MTLPixelFormatASTC_8x8_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 194,
-    MTLPixelFormatASTC_10x5_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 195,
-    MTLPixelFormatASTC_10x6_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 196,
-    MTLPixelFormatASTC_10x8_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 197,
-    MTLPixelFormatASTC_10x10_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 198,
-    MTLPixelFormatASTC_12x10_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 199,
-    MTLPixelFormatASTC_12x12_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 200,
-
-    MTLPixelFormatASTC_4x4_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 204,
-    MTLPixelFormatASTC_5x4_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 205,
-    MTLPixelFormatASTC_5x5_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 206,
-    MTLPixelFormatASTC_6x5_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 207,
-    MTLPixelFormatASTC_6x6_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 208,
-    MTLPixelFormatASTC_8x5_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 210,
-    MTLPixelFormatASTC_8x6_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 211,
-    MTLPixelFormatASTC_8x8_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 212,
-    MTLPixelFormatASTC_10x5_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 213,
-    MTLPixelFormatASTC_10x6_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 214,
-    MTLPixelFormatASTC_10x8_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 215,
-    MTLPixelFormatASTC_10x10_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 216,
-    MTLPixelFormatASTC_12x10_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 217,
-    MTLPixelFormatASTC_12x12_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 218,
-
-
-
-
-
-
-
-    MTLPixelFormatGBGR422 = 240,
-
-
-
-
-
-
-    MTLPixelFormatBGRG422 = 241,
-
-
-
-    MTLPixelFormatDepth16Unorm __attribute__((availability(macos,introduced=10.12))) __attribute__((availability(ios,unavailable))) = 250,
-    MTLPixelFormatDepth32Float = 252,
-
-
-
-    MTLPixelFormatStencil8 = 253,
-
-
-
-    MTLPixelFormatDepth24Unorm_Stencil8 __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 255,
-    MTLPixelFormatDepth32Float_Stencil8 __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,introduced=9.0))) = 260,
-
-    MTLPixelFormatX32_Stencil8 __attribute__((availability(macos,introduced=10.12))) __attribute__((availability(ios,introduced=10.0))) = 261,
-    MTLPixelFormatX24_Stencil8 __attribute__((availability(macos,introduced=10.12))) __attribute__((availability(ios,unavailable))) = 262,
-
-} __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,introduced=8.0)));
-#pragma clang assume_nonnull end
-#pragma clang assume_nonnull begin
-// @protocol MTLDrawable;
-
-
-
-
-
-
-typedef void (*MTLDrawablePresentedHandler)(id/*<MTLDrawable>*/);
-
-
-
-
-
-__attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,introduced=8.0)))
-// @protocol MTLDrawable <NSObject>
-
-
-// - (void)present;
-
-
-// - (void)presentAtTime:(CFTimeInterval)presentationTime;
-
-
-
-
-
-
-// - (void)presentAfterMinimumDuration:(CFTimeInterval)duration __attribute__((availability(ios,introduced=10.3))) __attribute__((availability(macos,unavailable)));
-
-
-
-
-
-// - (void)addPresentedHandler:(MTLDrawablePresentedHandler)block __attribute__((availability(ios,introduced=10.3))) __attribute__((availability(macos,unavailable)));
-
-
-
-
-
-
-// @property(nonatomic, readonly) CFTimeInterval presentedTime __attribute__((availability(ios,introduced=10.3))) __attribute__((availability(macos,unavailable)));
-
-
-
-
-
-
-// @property (nonatomic, readonly) NSUInteger drawableID __attribute__((availability(ios,introduced=10.3))) __attribute__((availability(macos,unavailable)));
-
-/* @end */
-
-#pragma clang assume_nonnull end
-
-// @protocol MTLDevice;
-// @protocol MTLTexture;
-// @protocol MTLDrawable;
-
-// @class CAMetalLayer;
-#ifndef _REWRITER_typedef_CAMetalLayer
-#define _REWRITER_typedef_CAMetalLayer
-typedef struct objc_object CAMetalLayer;
-typedef struct {} _objc_exc_CAMetalLayer;
-#endif
-
-
-#pragma clang assume_nonnull begin
-// @protocol CAMetalDrawable <MTLDrawable>
-
-
-
-
-// @property(readonly) id <MTLTexture> texture;
-
-
-
-// @property(readonly) CAMetalLayer *layer;
-
-/* @end */
-
-
-
-
-
-__attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(watchos,introduced=2.0))) __attribute__((availability(tvos,introduced=9.0)))
-
-#ifndef _REWRITER_typedef_CAMetalLayer
-#define _REWRITER_typedef_CAMetalLayer
-typedef struct objc_object CAMetalLayer;
-typedef struct {} _objc_exc_CAMetalLayer;
-#endif
-
-struct CAMetalLayer_IMPL {
-	struct CALayer_IMPL CALayer_IVARS;
-	struct _CAMetalLayerPrivate *_priv;
-};
-
-
-
-
-
-
-
-
-// @property(nullable, retain) id <MTLDevice> device;
-
-
-
-
-
-// @property MTLPixelFormat pixelFormat;
-// @property BOOL framebufferOnly;
-
-
-
-
-
-// @property CGSize drawableSize;
-// - (nullable id <CAMetalDrawable>)nextDrawable;
-
-
-
-
-// @property NSUInteger maximumDrawableCount __attribute__((availability(macos,introduced=10.13.2))) __attribute__((availability(ios,introduced=11.2))) __attribute__((availability(watchos,introduced=4.2))) __attribute__((availability(tvos,introduced=11.2)));
-
-
-
-
-
-
-// @property BOOL presentsWithTransaction;
-// @property BOOL allowsNextDrawableTimeout __attribute__((availability(macos,introduced=10.13))) __attribute__((availability(ios,introduced=11.0))) __attribute__((availability(watchos,introduced=4.0))) __attribute__((availability(tvos,introduced=11.0)));
-
-/* @end */
-
-#pragma clang assume_nonnull end
-
-
-
-
-
-
-
 #pragma clang assume_nonnull begin
 
 __attribute__((availability(macos,introduced=10.6))) __attribute__((availability(ios,introduced=5.0))) __attribute__((availability(watchos,introduced=2.0))) __attribute__((availability(tvos,introduced=9.0)))
@@ -40788,407 +40933,6 @@ __attribute__((visibility("default"))) extern CVReturn CVPixelBufferFillExtended
 
 
 }
-
-
-
-
-
-
-
-
-
-typedef uint32_t IOSurfaceID;
-
-typedef uint32_t IOSurfaceLockOptions; enum
-{
-
-
-
-    kIOSurfaceLockReadOnly = 0x00000001,
-
-
-
-
-    kIOSurfaceLockAvoidSync = 0x00000002,
-};
-
-typedef uint32_t IOSurfacePurgeabilityState; enum
-{
-    kIOSurfacePurgeableNonVolatile = 0,
-    kIOSurfacePurgeableVolatile = 1,
-    kIOSurfacePurgeableEmpty = 2,
-    kIOSurfacePurgeableKeepCurrent = 3,
-};
-
-
-
-
-
-
-
-enum {
-    kIOSurfaceDefaultCache = 0,
-    kIOSurfaceInhibitCache = 1,
-    kIOSurfaceWriteThruCache = 2,
-    kIOSurfaceCopybackCache = 3,
-    kIOSurfaceWriteCombineCache = 4,
-    kIOSurfaceCopybackInnerCache = 5
-};
-
-
-enum {
-    kIOSurfaceMapCacheShift = 8,
-    kIOSurfaceMapDefaultCache = kIOSurfaceDefaultCache << kIOSurfaceMapCacheShift,
-    kIOSurfaceMapInhibitCache = kIOSurfaceInhibitCache << kIOSurfaceMapCacheShift,
-    kIOSurfaceMapWriteThruCache = kIOSurfaceWriteThruCache << kIOSurfaceMapCacheShift,
-    kIOSurfaceMapCopybackCache = kIOSurfaceCopybackCache << kIOSurfaceMapCacheShift,
-    kIOSurfaceMapWriteCombineCache = kIOSurfaceWriteCombineCache << kIOSurfaceMapCacheShift,
-    kIOSurfaceMapCopybackInnerCache = kIOSurfaceCopybackInnerCache << kIOSurfaceMapCacheShift,
-};
-
-typedef struct __attribute__((objc_bridge(id))) __attribute__((objc_bridge_mutable(IOSurface))) __IOSurface *IOSurfaceRef __attribute__((swift_name("IOSurfaceRef")));
-
-extern "C" {
-
-
-#pragma clang assume_nonnull begin
-
-
-
-
-
-
-extern const CFStringRef kIOSurfaceAllocSize __attribute__((availability(ios,introduced=3.0)));
-
-
-extern const CFStringRef kIOSurfaceWidth __attribute__((availability(ios,introduced=3.0)));
-
-
-extern const CFStringRef kIOSurfaceHeight __attribute__((availability(ios,introduced=3.0)));
-
-
-
-
-extern const CFStringRef kIOSurfaceBytesPerRow __attribute__((availability(ios,introduced=3.0)));
-
-
-
-
-extern const CFStringRef kIOSurfaceBytesPerElement __attribute__((availability(ios,introduced=3.0)));
-
-
-extern const CFStringRef kIOSurfaceElementWidth __attribute__((availability(ios,introduced=3.0)));
-
-
-extern const CFStringRef kIOSurfaceElementHeight __attribute__((availability(ios,introduced=3.0)));
-
-
-extern const CFStringRef kIOSurfaceOffset __attribute__((availability(ios,introduced=3.0)));
-
-
-
-
-extern const CFStringRef kIOSurfacePlaneInfo __attribute__((availability(ios,introduced=3.0)));
-
-
-extern const CFStringRef kIOSurfacePlaneWidth __attribute__((availability(ios,introduced=3.0)));
-
-
-extern const CFStringRef kIOSurfacePlaneHeight __attribute__((availability(ios,introduced=3.0)));
-
-
-
-
-extern const CFStringRef kIOSurfacePlaneBytesPerRow __attribute__((availability(ios,introduced=3.0)));
-
-
-
-extern const CFStringRef kIOSurfacePlaneOffset __attribute__((availability(ios,introduced=3.0)));
-
-
-extern const CFStringRef kIOSurfacePlaneSize __attribute__((availability(ios,introduced=3.0)));
-
-
-
-
-extern const CFStringRef kIOSurfacePlaneBase __attribute__((availability(ios,introduced=3.0)));
-
-
-
-extern const CFStringRef kIOSurfacePlaneBitsPerElement __attribute__((availability(ios,introduced=11.0)));
-
-
-extern const CFStringRef kIOSurfacePlaneBytesPerElement __attribute__((availability(ios,introduced=3.0)));
-
-
-extern const CFStringRef kIOSurfacePlaneElementWidth __attribute__((availability(ios,introduced=3.0)));
-
-
-extern const CFStringRef kIOSurfacePlaneElementHeight __attribute__((availability(ios,introduced=3.0)));
-
-
-
-
-extern const CFStringRef kIOSurfaceCacheMode __attribute__((availability(ios,introduced=3.0)));
-
-
-extern const CFStringRef kIOSurfaceIsGlobal __attribute__((availability(ios,introduced=3.0,deprecated=9.0)));
-
-
-extern const CFStringRef kIOSurfacePixelFormat __attribute__((availability(ios,introduced=3.0)));
-
-
-extern const CFStringRef kIOSurfacePixelSizeCastingAllowed __attribute__((availability(ios,introduced=10.0)));
-
-
-extern const CFStringRef kIOSurfacePlaneComponentBitDepths __attribute__((availability(ios,introduced=11.0)));
-
-
-extern const CFStringRef kIOSurfacePlaneComponentBitOffsets __attribute__((availability(ios,introduced=11.0)));
-
-typedef int32_t IOSurfaceComponentName; enum {
-    kIOSurfaceComponentNameUnknown = 0,
-    kIOSurfaceComponentNameAlpha = 1,
-    kIOSurfaceComponentNameRed = 2,
-    kIOSurfaceComponentNameGreen = 3,
-    kIOSurfaceComponentNameBlue = 4,
-    kIOSurfaceComponentNameLuma = 5,
-    kIOSurfaceComponentNameChromaRed = 6,
-    kIOSurfaceComponentNameChromaBlue = 7,
-};
-
-
-
-extern const CFStringRef kIOSurfacePlaneComponentNames __attribute__((availability(ios,introduced=11.0)));
-
-typedef int32_t IOSurfaceComponentType; enum {
-    kIOSurfaceComponentTypeUnknown = 0,
-    kIOSurfaceComponentTypeUnsignedInteger = 1,
-    kIOSurfaceComponentTypeSignedInteger = 2,
-    kIOSurfaceComponentTypeFloat = 3,
-};
-
-
-extern const CFStringRef kIOSurfacePlaneComponentTypes __attribute__((availability(ios,introduced=11.0)));
-
-typedef int32_t IOSurfaceComponentRange; enum {
-    kIOSurfaceComponentRangeUnknown = 0,
-    kIOSurfaceComponentRangeFullRange = 1,
-    kIOSurfaceComponentRangeVideoRange = 2,
-    kIOSurfaceComponentRangeWideRange = 3,
-};
-
-
-extern const CFStringRef kIOSurfacePlaneComponentRanges __attribute__((availability(ios,introduced=11.0)));
-
-typedef int32_t IOSurfaceSubsampling; enum {
-    kIOSurfaceSubsamplingUnknown = 0,
-    kIOSurfaceSubsamplingNone = 1,
-    kIOSurfaceSubsampling422 = 2,
-    kIOSurfaceSubsampling420 = 3,
-    kIOSurfaceSubsampling411 = 4,
-};
-
-
-extern const CFStringRef kIOSurfaceSubsampling __attribute__((availability(ios,introduced=11.0)));
-
-CFTypeID IOSurfaceGetTypeID(void)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-IOSurfaceRef _Nullable IOSurfaceCreate(CFDictionaryRef properties)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-
-
-
-
-IOSurfaceRef _Nullable IOSurfaceLookup(IOSurfaceID csid) __attribute__((cf_returns_retained))
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-IOSurfaceID IOSurfaceGetID(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-kern_return_t IOSurfaceLock(IOSurfaceRef buffer, IOSurfaceLockOptions options, uint32_t * _Nullable seed)
-    __attribute__((availability(ios,introduced=3.0)));
-kern_return_t IOSurfaceUnlock(IOSurfaceRef buffer, IOSurfaceLockOptions options, uint32_t * _Nullable seed)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-size_t IOSurfaceGetAllocSize(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-size_t IOSurfaceGetWidth(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-size_t IOSurfaceGetHeight(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-size_t IOSurfaceGetBytesPerElement(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-size_t IOSurfaceGetBytesPerRow(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-void *IOSurfaceGetBaseAddress(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-size_t IOSurfaceGetElementWidth(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-size_t IOSurfaceGetElementHeight(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-OSType IOSurfaceGetPixelFormat(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-
-uint32_t IOSurfaceGetSeed(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-size_t IOSurfaceGetPlaneCount(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-size_t IOSurfaceGetWidthOfPlane(IOSurfaceRef buffer, size_t planeIndex)
-    __attribute__((availability(ios,introduced=3.0)));
-
-size_t IOSurfaceGetHeightOfPlane(IOSurfaceRef buffer, size_t planeIndex)
-    __attribute__((availability(ios,introduced=3.0)));
-
-size_t IOSurfaceGetBytesPerElementOfPlane(IOSurfaceRef buffer, size_t planeIndex)
-    __attribute__((availability(ios,introduced=3.0)));
-
-size_t IOSurfaceGetBytesPerRowOfPlane(IOSurfaceRef buffer, size_t planeIndex)
-    __attribute__((availability(ios,introduced=3.0)));
-
-void *IOSurfaceGetBaseAddressOfPlane(IOSurfaceRef buffer, size_t planeIndex)
-    __attribute__((availability(ios,introduced=3.0)));
-
-size_t IOSurfaceGetElementWidthOfPlane(IOSurfaceRef buffer, size_t planeIndex)
-    __attribute__((availability(ios,introduced=3.0)));
-
-size_t IOSurfaceGetElementHeightOfPlane(IOSurfaceRef buffer, size_t planeIndex)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-
-
-size_t IOSurfaceGetNumberOfComponentsOfPlane(IOSurfaceRef buffer, size_t planeIndex)
-    __attribute__((availability(ios,introduced=11.0)));
-
-IOSurfaceComponentName IOSurfaceGetNameOfComponentOfPlane(IOSurfaceRef buffer, size_t planeIndex, size_t componentIndex)
-    __attribute__((availability(ios,introduced=11.0)));
-
-IOSurfaceComponentType IOSurfaceGetTypeOfComponentOfPlane(IOSurfaceRef buffer, size_t planeIndex, size_t componentIndex)
-    __attribute__((availability(ios,introduced=11.0)));
-
-IOSurfaceComponentRange IOSurfaceGetRangeOfComponentOfPlane(IOSurfaceRef buffer, size_t planeIndex, size_t componentIndex)
-    __attribute__((availability(ios,introduced=11.0)));
-
-size_t IOSurfaceGetBitDepthOfComponentOfPlane(IOSurfaceRef buffer, size_t planeIndex, size_t componentIndex)
-    __attribute__((availability(ios,introduced=11.0)));
-
-size_t IOSurfaceGetBitOffsetOfComponentOfPlane(IOSurfaceRef buffer, size_t planeIndex, size_t componentIndex)
-    __attribute__((availability(ios,introduced=11.0)));
-
-IOSurfaceSubsampling IOSurfaceGetSubsampling(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=11.0)));
-
-
-
-
-void IOSurfaceSetValue(IOSurfaceRef buffer, CFStringRef key, CFTypeRef value)
-    __attribute__((availability(ios,introduced=3.0)));
-
-CFTypeRef _Nullable IOSurfaceCopyValue(IOSurfaceRef buffer, CFStringRef key)
-    __attribute__((availability(ios,introduced=3.0)));
-
-void IOSurfaceRemoveValue(IOSurfaceRef buffer, CFStringRef key)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-
-void IOSurfaceSetValues(IOSurfaceRef buffer, CFDictionaryRef keysAndValues)
-    __attribute__((availability(ios,introduced=3.0)));
-
-CFDictionaryRef _Nullable IOSurfaceCopyAllValues(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-void IOSurfaceRemoveAllValues(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-
-
-
-
-mach_port_t IOSurfaceCreateMachPort(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-
-IOSurfaceRef _Nullable IOSurfaceLookupFromMachPort(mach_port_t port) __attribute__((cf_returns_retained))
-    __attribute__((availability(ios,introduced=3.0)));
-size_t IOSurfaceGetPropertyMaximum(CFStringRef property)
-    __attribute__((availability(ios,introduced=3.0)));
-size_t IOSurfaceGetPropertyAlignment(CFStringRef property)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-
-size_t IOSurfaceAlignProperty(CFStringRef property, size_t value)
-    __attribute__((availability(ios,introduced=3.0)));
-void IOSurfaceIncrementUseCount(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-void IOSurfaceDecrementUseCount(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-int32_t IOSurfaceGetUseCount(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-Boolean IOSurfaceIsInUse(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=3.0)));
-
-
-Boolean IOSurfaceAllowsPixelSizeCasting(IOSurfaceRef buffer)
-    __attribute__((availability(ios,introduced=10.0)));
-kern_return_t IOSurfaceSetPurgeable(IOSurfaceRef buffer, uint32_t newState, uint32_t * _Nullable oldState)
-    __attribute__((availability(ios,introduced=10.0)));
-
-}
-#pragma clang assume_nonnull end
-extern "C" {
-
-
-
-__attribute__((visibility("default"))) extern const CFStringRef _Nonnull kCVPixelBufferIOSurfaceOpenGLTextureCompatibilityKey __attribute__((availability(macosx,introduced=10.6))) __attribute__((availability(ios,unavailable))) __attribute__((availability(tvos,unavailable))) __attribute__((availability(watchos,unavailable)));
-
-__attribute__((visibility("default"))) extern const CFStringRef _Nonnull kCVPixelBufferIOSurfaceOpenGLFBOCompatibilityKey __attribute__((availability(macosx,introduced=10.6))) __attribute__((availability(ios,unavailable))) __attribute__((availability(tvos,unavailable))) __attribute__((availability(watchos,unavailable)));
-
-__attribute__((visibility("default"))) extern const CFStringRef _Nonnull kCVPixelBufferIOSurfaceCoreAnimationCompatibilityKey __attribute__((availability(ios,introduced=4.0)));
-
-
-__attribute__((visibility("default"))) extern const CFStringRef _Nonnull kCVPixelBufferIOSurfaceOpenGLESTextureCompatibilityKey __attribute__((availability(ios,introduced=5.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(macosx,unavailable))) __attribute__((availability(watchos,unavailable)));
-
-__attribute__((visibility("default"))) extern const CFStringRef _Nonnull kCVPixelBufferIOSurfaceOpenGLESFBOCompatibilityKey __attribute__((availability(ios,introduced=5.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(macosx,unavailable))) __attribute__((availability(watchos,unavailable)));
-__attribute__((visibility("default"))) extern IOSurfaceRef _Nullable CVPixelBufferGetIOSurface(CVPixelBufferRef _Nullable pixelBuffer) __attribute__((availability(macosx,introduced=10.6))) __attribute__((availability(ios,introduced=4.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,introduced=4.0)));
-__attribute__((visibility("default"))) extern CVReturn CVPixelBufferCreateWithIOSurface(
-  CFAllocatorRef _Nullable allocator,
-  IOSurfaceRef _Nonnull surface,
-  CFDictionaryRef _Nullable pixelBufferAttributes,
-  CVPixelBufferRef _Nullable * _Nonnull pixelBufferOut) __attribute__((availability(ios,introduced=4.0)));
-
-
-
-
-
-}
 extern "C" {
 
 
@@ -41478,80 +41222,9 @@ __attribute__((visibility("default"))) extern void CVPixelFormatDescriptionRegis
 
 
 extern "C" {
-
-
-
-
-
-// @protocol MTLTexture;
-typedef CVImageBufferRef CVMetalTextureRef;
-
-__attribute__((visibility("default"))) extern CFTypeID CVMetalTextureGetTypeID(void) __attribute__((availability(macosx,introduced=10.11))) __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,unavailable)));
-
-
-
-
-
-
-
-__attribute__((visibility("default"))) extern id /*<MTLTexture>*/ _Nullable CVMetalTextureGetTexture( CVMetalTextureRef _Nonnull image ) __attribute__((availability(macosx,introduced=10.11))) __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,unavailable)));
-
-
-
-
-
-
-
-__attribute__((visibility("default"))) extern Boolean CVMetalTextureIsFlipped( CVMetalTextureRef _Nonnull image ) __attribute__((availability(macosx,introduced=10.11))) __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,unavailable)));
-__attribute__((visibility("default"))) extern void CVMetalTextureGetCleanTexCoords( CVMetalTextureRef _Nonnull image,
-                                                   float lowerLeft[2],
-                                                   float lowerRight[2],
-                                                   float upperRight[2],
-                                                   float upperLeft[2] ) __attribute__((availability(macosx,introduced=10.11))) __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,unavailable)));
-
-
-
-
-
-__attribute__((visibility("default"))) extern const CFStringRef _Nonnull kCVMetalTextureUsage __attribute__((availability(macosx,introduced=10.13))) __attribute__((availability(ios,introduced=11.0))) __attribute__((availability(tvos,introduced=11.0))) __attribute__((availability(watchos,unavailable)));
-
-
-
-
 }
 extern "C" {
 __attribute__((visibility("default"))) extern const CFStringRef _Nonnull kCVMetalTextureCacheMaximumTextureAgeKey __attribute__((availability(macosx,introduced=10.11))) __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,unavailable)));
-// @protocol MTLDevice;
-
-
-
-
-
-
-typedef struct __attribute__((objc_bridge(id))) __CVMetalTextureCache *CVMetalTextureCacheRef;
-
-__attribute__((visibility("default"))) extern CFTypeID CVMetalTextureCacheGetTypeID(void) __attribute__((availability(macosx,introduced=10.11))) __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,unavailable)));
-__attribute__((visibility("default"))) extern CVReturn CVMetalTextureCacheCreate(
-     CFAllocatorRef _Nullable allocator,
-     CFDictionaryRef _Nullable cacheAttributes,
-     id /*<MTLDevice>*/ _Nonnull metalDevice,
-     CFDictionaryRef _Nullable textureAttributes,
-     __attribute__((cf_returns_retained)) CVMetalTextureCacheRef _Nullable * _Nonnull cacheOut ) __attribute__((availability(macosx,introduced=10.11))) __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,unavailable)));
-__attribute__((visibility("default"))) extern CVReturn CVMetalTextureCacheCreateTextureFromImage(
-            CFAllocatorRef _Nullable allocator,
-            CVMetalTextureCacheRef _Nonnull textureCache,
-            CVImageBufferRef _Nonnull sourceImage,
-            CFDictionaryRef _Nullable textureAttributes,
-               MTLPixelFormat pixelFormat,
-               size_t width,
-               size_t height,
-               size_t planeIndex,
-            __attribute__((cf_returns_retained)) CVMetalTextureRef _Nullable * _Nonnull textureOut ) __attribute__((availability(macosx,introduced=10.11))) __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,unavailable)));
-__attribute__((visibility("default"))) extern void CVMetalTextureCacheFlush(CVMetalTextureCacheRef _Nonnull textureCache, CVOptionFlags options) __attribute__((availability(macosx,introduced=10.11))) __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,unavailable)));
-
-
-
-
 }
 
 typedef struct __attribute__((objc_bridge(id))) CGImageSource * CGImageSourceRef;
@@ -42923,19 +42596,6 @@ extern "C" __attribute__((visibility("default"))) CIImageOption const kCIImageAu
                             options:(nullable NSDictionary<CIImageOption, id> *)options __attribute__((availability(ios,introduced=5_0)));
 #endif
 
-
-
-
-// + (CIImage *)imageWithIOSurface:(IOSurfaceRef)surface __attribute__((availability(ios,introduced=5_0)));
-#if 0
-+ (CIImage *)imageWithIOSurface:(IOSurfaceRef)surface
-                        options:(nullable NSDictionary<CIImageOption, id> *)options __attribute__((availability(ios,introduced=5_0)));
-#endif
-
-
-
-
-
 // + (CIImage *)imageWithColor:(CIColor *)color;
 
 
@@ -43005,15 +42665,6 @@ extern "C" __attribute__((visibility("default"))) CIImageOption const kCIImageAu
 #if 0
 - (nullable instancetype)initWithContentsOfURL:(NSURL *)url
                                        options:(nullable NSDictionary<CIImageOption, id> *)options;
-#endif
-
-
-
-// - (instancetype)initWithIOSurface:(IOSurfaceRef)surface __attribute__((availability(ios,introduced=5_0)));
-
-#if 0
-- (instancetype)initWithIOSurface:(IOSurfaceRef)surface
-                          options:(nullable NSDictionary<CIImageOption, id> *)options __attribute__((availability(ios,introduced=5_0)));
 #endif
 
 // - (instancetype)initWithCVImageBuffer:(CVImageBufferRef)imageBuffer __attribute__((availability(ios,introduced=9_0)));
@@ -43441,13 +43092,6 @@ __attribute__((cf_returns_retained)) __attribute__((availability(ios,unavailable
   bounds:(CGRect)bounds
   format:(CIFormat)format
  colorSpace:(nullable CGColorSpaceRef)colorSpace;
-#endif
-
-#if 0
-- (void)render:(CIImage *)image
-   toIOSurface:(IOSurfaceRef)surface
-  bounds:(CGRect)bounds
- colorSpace:(nullable CGColorSpaceRef)colorSpace __attribute__((availability(ios,introduced=5_0)));
 #endif
 
 #if 0
@@ -44669,15 +44313,6 @@ __attribute__((visibility("default"))) __attribute__((availability(ios,introduce
 
 
 // @property (readonly, nonatomic) const void *baseAddress __attribute__((objc_returns_inner_pointer));
-
-
-
-
-// @property (nonatomic, readonly) IOSurfaceRef surface;
-
-
-
-
 // @property (nonatomic, readonly, nullable) CVPixelBufferRef pixelBuffer;
 
 
@@ -44707,7 +44342,7 @@ __attribute__((visibility("default"))) __attribute__((availability(ios,introduce
 
 
 
-// @property (nonatomic, readonly) IOSurfaceRef surface;
+
 
 
 
@@ -45074,183 +44709,218 @@ extern "C" __attribute__((visibility("default"))) CIRAWFilterOption const kCIAct
 
 /* @end */
 
+
+
+
+
+
+
+
+
+
 #pragma clang assume_nonnull begin
+typedef NSUInteger MTLPixelFormat; enum
+{
+    MTLPixelFormatInvalid = 0,
 
 
 
+    MTLPixelFormatA8Unorm = 1,
 
+    MTLPixelFormatR8Unorm = 10,
+    MTLPixelFormatR8Unorm_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 11,
 
-typedef NSString *IOSurfacePropertyKey __attribute__((swift_wrapper(enum)));
+    MTLPixelFormatR8Snorm = 12,
+    MTLPixelFormatR8Uint = 13,
+    MTLPixelFormatR8Sint = 14,
 
 
 
+    MTLPixelFormatR16Unorm = 20,
+    MTLPixelFormatR16Snorm = 22,
+    MTLPixelFormatR16Uint = 23,
+    MTLPixelFormatR16Sint = 24,
+    MTLPixelFormatR16Float = 25,
 
+    MTLPixelFormatRG8Unorm = 30,
+    MTLPixelFormatRG8Unorm_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 31,
+    MTLPixelFormatRG8Snorm = 32,
+    MTLPixelFormatRG8Uint = 33,
+    MTLPixelFormatRG8Sint = 34,
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyAllocSize __attribute__((availability(ios,introduced=12.0)));
 
+    MTLPixelFormatB5G6R5Unorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 40,
+    MTLPixelFormatA1BGR5Unorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 41,
+    MTLPixelFormatABGR4Unorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 42,
+    MTLPixelFormatBGR5A1Unorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 43,
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyWidth __attribute__((availability(ios,introduced=10.0)));
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyHeight __attribute__((availability(ios,introduced=10.0)));
+    MTLPixelFormatR32Uint = 53,
+    MTLPixelFormatR32Sint = 54,
+    MTLPixelFormatR32Float = 55,
 
+    MTLPixelFormatRG16Unorm = 60,
+    MTLPixelFormatRG16Snorm = 62,
+    MTLPixelFormatRG16Uint = 63,
+    MTLPixelFormatRG16Sint = 64,
+    MTLPixelFormatRG16Float = 65,
 
+    MTLPixelFormatRGBA8Unorm = 70,
+    MTLPixelFormatRGBA8Unorm_sRGB = 71,
+    MTLPixelFormatRGBA8Snorm = 72,
+    MTLPixelFormatRGBA8Uint = 73,
+    MTLPixelFormatRGBA8Sint = 74,
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyBytesPerRow __attribute__((availability(ios,introduced=10.0)));
+    MTLPixelFormatBGRA8Unorm = 80,
+    MTLPixelFormatBGRA8Unorm_sRGB = 81,
 
 
 
+    MTLPixelFormatRGB10A2Unorm = 90,
+    MTLPixelFormatRGB10A2Uint = 91,
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyBytesPerElement __attribute__((availability(ios,introduced=10.0)));
+    MTLPixelFormatRG11B10Float = 92,
+    MTLPixelFormatRGB9E5Float = 93,
 
+    MTLPixelFormatBGR10A2Unorm __attribute__((availability(macos,introduced=10.13))) __attribute__((availability(ios,introduced=11.0))) = 94,
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyElementWidth __attribute__((availability(ios,introduced=10.0)));
+    MTLPixelFormatBGR10_XR __attribute__((availability(ios,introduced=10.0))) __attribute__((availability(macos,unavailable))) = 554,
+    MTLPixelFormatBGR10_XR_sRGB __attribute__((availability(ios,introduced=10.0))) __attribute__((availability(macos,unavailable))) = 555,
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyElementHeight __attribute__((availability(ios,introduced=10.0)));
 
+    MTLPixelFormatRG32Uint = 103,
+    MTLPixelFormatRG32Sint = 104,
+    MTLPixelFormatRG32Float = 105,
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyOffset __attribute__((availability(ios,introduced=10.0)));
+    MTLPixelFormatRGBA16Unorm = 110,
+    MTLPixelFormatRGBA16Snorm = 112,
+    MTLPixelFormatRGBA16Uint = 113,
+    MTLPixelFormatRGBA16Sint = 114,
+    MTLPixelFormatRGBA16Float = 115,
 
+    MTLPixelFormatBGRA10_XR __attribute__((availability(ios,introduced=10.0))) __attribute__((availability(macos,unavailable))) = 552,
+    MTLPixelFormatBGRA10_XR_sRGB __attribute__((availability(ios,introduced=10.0))) __attribute__((availability(macos,unavailable))) = 553,
 
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyPlaneInfo __attribute__((availability(ios,introduced=10.0)));
+    MTLPixelFormatRGBA32Uint = 123,
+    MTLPixelFormatRGBA32Sint = 124,
+    MTLPixelFormatRGBA32Float = 125,
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyPlaneWidth __attribute__((availability(ios,introduced=10.0)));
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyPlaneHeight __attribute__((availability(ios,introduced=10.0)));
+    MTLPixelFormatBC1_RGBA __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 130,
+    MTLPixelFormatBC1_RGBA_sRGB __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 131,
+    MTLPixelFormatBC2_RGBA __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 132,
+    MTLPixelFormatBC2_RGBA_sRGB __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 133,
+    MTLPixelFormatBC3_RGBA __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 134,
+    MTLPixelFormatBC3_RGBA_sRGB __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 135,
 
 
+    MTLPixelFormatBC4_RUnorm __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 140,
+    MTLPixelFormatBC4_RSnorm __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 141,
+    MTLPixelFormatBC5_RGUnorm __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 142,
+    MTLPixelFormatBC5_RGSnorm __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 143,
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyPlaneBytesPerRow __attribute__((availability(ios,introduced=10.0)));
+    MTLPixelFormatBC6H_RGBFloat __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 150,
+    MTLPixelFormatBC6H_RGBUfloat __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 151,
+    MTLPixelFormatBC7_RGBAUnorm __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 152,
+    MTLPixelFormatBC7_RGBAUnorm_sRGB __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 153,
 
 
+    MTLPixelFormatPVRTC_RGB_2BPP __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 160,
+    MTLPixelFormatPVRTC_RGB_2BPP_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 161,
+    MTLPixelFormatPVRTC_RGB_4BPP __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 162,
+    MTLPixelFormatPVRTC_RGB_4BPP_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 163,
+    MTLPixelFormatPVRTC_RGBA_2BPP __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 164,
+    MTLPixelFormatPVRTC_RGBA_2BPP_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 165,
+    MTLPixelFormatPVRTC_RGBA_4BPP __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 166,
+    MTLPixelFormatPVRTC_RGBA_4BPP_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 167,
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyPlaneOffset __attribute__((availability(ios,introduced=10.0)));
 
+    MTLPixelFormatEAC_R11Unorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 170,
+    MTLPixelFormatEAC_R11Snorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 172,
+    MTLPixelFormatEAC_RG11Unorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 174,
+    MTLPixelFormatEAC_RG11Snorm __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 176,
+    MTLPixelFormatEAC_RGBA8 __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 178,
+    MTLPixelFormatEAC_RGBA8_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 179,
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyPlaneSize __attribute__((availability(ios,introduced=10.0)));
+    MTLPixelFormatETC2_RGB8 __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 180,
+    MTLPixelFormatETC2_RGB8_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 181,
+    MTLPixelFormatETC2_RGB8A1 __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 182,
+    MTLPixelFormatETC2_RGB8A1_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 183,
 
 
+    MTLPixelFormatASTC_4x4_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 186,
+    MTLPixelFormatASTC_5x4_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 187,
+    MTLPixelFormatASTC_5x5_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 188,
+    MTLPixelFormatASTC_6x5_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 189,
+    MTLPixelFormatASTC_6x6_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 190,
+    MTLPixelFormatASTC_8x5_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 192,
+    MTLPixelFormatASTC_8x6_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 193,
+    MTLPixelFormatASTC_8x8_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 194,
+    MTLPixelFormatASTC_10x5_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 195,
+    MTLPixelFormatASTC_10x6_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 196,
+    MTLPixelFormatASTC_10x8_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 197,
+    MTLPixelFormatASTC_10x10_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 198,
+    MTLPixelFormatASTC_12x10_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 199,
+    MTLPixelFormatASTC_12x12_sRGB __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 200,
 
+    MTLPixelFormatASTC_4x4_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 204,
+    MTLPixelFormatASTC_5x4_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 205,
+    MTLPixelFormatASTC_5x5_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 206,
+    MTLPixelFormatASTC_6x5_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 207,
+    MTLPixelFormatASTC_6x6_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 208,
+    MTLPixelFormatASTC_8x5_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 210,
+    MTLPixelFormatASTC_8x6_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 211,
+    MTLPixelFormatASTC_8x8_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 212,
+    MTLPixelFormatASTC_10x5_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 213,
+    MTLPixelFormatASTC_10x6_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 214,
+    MTLPixelFormatASTC_10x8_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 215,
+    MTLPixelFormatASTC_10x10_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 216,
+    MTLPixelFormatASTC_12x10_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 217,
+    MTLPixelFormatASTC_12x12_LDR __attribute__((availability(ios,introduced=8.0))) __attribute__((availability(macos,unavailable))) = 218,
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyPlaneBase __attribute__((availability(ios,introduced=10.0)));
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyPlaneBytesPerElement __attribute__((availability(ios,introduced=10.0)));
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyPlaneElementWidth __attribute__((availability(ios,introduced=10.0)));
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyPlaneElementHeight __attribute__((availability(ios,introduced=10.0)));
+    MTLPixelFormatGBGR422 = 240,
 
 
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyCacheMode __attribute__((availability(ios,introduced=10.0)));
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyPixelFormat __attribute__((availability(ios,introduced=10.0)));
+    MTLPixelFormatBGRG422 = 241,
 
 
-extern IOSurfacePropertyKey IOSurfacePropertyKeyPixelSizeCastingAllowed __attribute__((availability(ios,introduced=10.0)));
 
+    MTLPixelFormatDepth16Unorm __attribute__((availability(macos,introduced=10.12))) __attribute__((availability(ios,unavailable))) = 250,
+    MTLPixelFormatDepth32Float = 252,
 
-__attribute__((visibility("default"))) __attribute__((availability(ios,introduced=10_0)))
 
-#ifndef _REWRITER_typedef_IOSurface
-#define _REWRITER_typedef_IOSurface
-typedef struct objc_object IOSurface;
-typedef struct {} _objc_exc_IOSurface;
-#endif
 
-struct IOSurface_IMPL {
-	struct NSObject_IMPL NSObject_IVARS;
-	void *_impl;
-};
+    MTLPixelFormatStencil8 = 253,
 
 
 
-// - (nullable instancetype)initWithProperties:(NSDictionary <IOSurfacePropertyKey, id> *)properties;
-// - (kern_return_t)lockWithOptions:(IOSurfaceLockOptions)options seed:(nullable uint32_t *)seed;
-// - (kern_return_t)unlockWithOptions:(IOSurfaceLockOptions)options seed:(nullable uint32_t *)seed;
+    MTLPixelFormatDepth24Unorm_Stencil8 __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,unavailable))) = 255,
+    MTLPixelFormatDepth32Float_Stencil8 __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,introduced=9.0))) = 260,
 
+    MTLPixelFormatX32_Stencil8 __attribute__((availability(macos,introduced=10.12))) __attribute__((availability(ios,introduced=10.0))) = 261,
+    MTLPixelFormatX24_Stencil8 __attribute__((availability(macos,introduced=10.12))) __attribute__((availability(ios,unavailable))) = 262,
 
-// @property (readonly) NSInteger allocationSize;
-
-// @property (readonly) NSInteger width;
-// @property (readonly) NSInteger height;
-// @property (readonly) void *baseAddress __attribute__((objc_returns_inner_pointer));
-// @property (readonly) OSType pixelFormat;
-
-// @property (readonly) NSInteger bytesPerRow;
-// @property (readonly) NSInteger bytesPerElement;
-// @property (readonly) NSInteger elementWidth;
-// @property (readonly) NSInteger elementHeight;
-
-
-
-// @property (readonly) uint32_t seed;
-
-
-// @property (readonly) NSUInteger planeCount;
-
-
-
-
-// - (NSInteger)widthOfPlaneAtIndex:(NSUInteger)planeIndex;
-// - (NSInteger)heightOfPlaneAtIndex:(NSUInteger)planeIndex;
-// - (NSInteger)bytesPerRowOfPlaneAtIndex:(NSUInteger)planeIndex;
-// - (NSInteger)bytesPerElementOfPlaneAtIndex:(NSUInteger)planeIndex;
-// - (NSInteger)elementWidthOfPlaneAtIndex:(NSUInteger)planeIndex;
-// - (NSInteger)elementHeightOfPlaneAtIndex:(NSUInteger)planeIndex;
-// - (void *)baseAddressOfPlaneAtIndex:(NSUInteger)planeIndex __attribute__((objc_returns_inner_pointer));
-
-
-
-
-// - (void)setAttachment:(id)anObject forKey:(NSString *)key;
-// - (nullable id)attachmentForKey:(NSString *)key;
-// - (void)removeAttachmentForKey:(NSString *)key;
-// - (void)setAllAttachments:(NSDictionary<NSString *, id> *)dict;
-// - (nullable NSDictionary<NSString *, id> *)allAttachments;
-// - (void)removeAllAttachments;
-// @property (readonly, getter = isInUse) BOOL inUse;
-// - (void)incrementUseCount;
-// - (void)decrementUseCount;
-
-
-
-
-// @property (readonly ) int32_t localUseCount;
-
-
-
-
-// @property (readonly) BOOL allowsPixelSizeCasting;
-
-
-#if 0
-- (kern_return_t)setPurgeable:(IOSurfacePurgeabilityState)newState oldState:(IOSurfacePurgeabilityState * _Nullable)oldState
-    __attribute__((availability(ios,introduced=11.0)));
-#endif
-
-
-/* @end */
-
-
-
-extern IOSurfacePropertyKey IOSurfacePropertyAllocSizeKey __attribute__((availability(ios,introduced=10.0,deprecated=12.0)));
+} __attribute__((availability(macos,introduced=10.11))) __attribute__((availability(ios,introduced=8.0)));
 #pragma clang assume_nonnull end
-
-
 
 // @protocol MTLTexture, MTLCommandBuffer;
 
@@ -45276,7 +44946,6 @@ struct CIRenderDestination_IMPL {
 };
 
 // - (instancetype) initWithPixelBuffer:(CVPixelBufferRef)pixelBuffer;
-// - (instancetype) initWithIOSurface:(IOSurface*)surface;
 #if 0
 - (instancetype) initWithMTLTexture:(id<MTLTexture>)texture
                       commandBuffer:(nullable id<MTLCommandBuffer>)commandBuffer;
@@ -66082,9 +65751,11 @@ typedef struct {} _objc_exc_AutoreleasePoolVC;
 #endif
 
 extern "C" unsigned long OBJC_IVAR_$_AutoreleasePoolVC$_name;
+extern "C" unsigned long OBJC_IVAR_$_AutoreleasePoolVC$_dog;
 struct AutoreleasePoolVC_IMPL {
 	struct UIViewController_IMPL UIViewController_IVARS;
 	NSString *_name;
+	Animal *_dog;
 };
 
 
@@ -66237,7 +65908,7 @@ class_getMethodImplementation(Class _Nullable cls, SEL _Nonnull name)
 extern "C" __attribute__((visibility("default"))) IMP _Nullable
 class_getMethodImplementation_stret(Class _Nullable cls, SEL _Nonnull name)
     __attribute__((availability(macosx,introduced=10.5))) __attribute__((availability(ios,introduced=2.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,introduced=1.0)))
-    __attribute__((unavailable("not available in arm64")));
+                          ;
 extern "C" __attribute__((visibility("default"))) BOOL
 class_respondsToSelector(Class _Nullable cls, SEL _Nonnull sel)
     __attribute__((availability(macosx,introduced=10.5))) __attribute__((availability(ios,introduced=2.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,introduced=1.0)));
@@ -66694,9 +66365,29 @@ extern "C" __attribute__((visibility("default"))) id _Nullable
 extern "C" __attribute__((visibility("default"))) void
 (* _Nonnull _error)(id _Nullable, const char * _Nonnull, va_list)
      __attribute__((unavailable));
+#pragma clang assume_nonnull begin
+
+
+#ifndef _REWRITER_typedef_Animal
+#define _REWRITER_typedef_Animal
+typedef struct objc_object Animal;
+typedef struct {} _objc_exc_Animal;
+#endif
+
+struct Animal_IMPL {
+	struct NSObject_IMPL NSObject_IVARS;
+};
+
+
+// @property (nonatomic, assign) int order;
+
+/* @end */
+
+#pragma clang assume_nonnull end
 // @interface AutoreleasePoolVC ()
 
 // @property (nonatomic, strong) NSString *name;
+// @property (nonatomic, strong) Animal *dog;
 
 /* @end */
 
@@ -66707,33 +66398,15 @@ extern "C" __attribute__((visibility("default"))) void
 static void _I_AutoreleasePoolVC_viewDidLoad(AutoreleasePoolVC * self, SEL _cmd) {
     ((void (*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("AutoreleasePoolVC"))}, sel_registerName("viewDidLoad"));
 
-
-    /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
-        ((void (*)(id, SEL, NSString *))(void *)objc_msgSend)((id)self, sel_registerName("setName:"), (NSString *)&__NSConstantStringImpl__var_folders_22_cvfxq3v91pz2fs_z37pckgqh0000gn_T_AutoreleasePoolVC_bbec29_mi_0);
-    }
-
-    for (int i = 0; i < 1000000; i++) {
-        /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
-            NSString *str = (NSString *)&__NSConstantStringImpl__var_folders_22_cvfxq3v91pz2fs_z37pckgqh0000gn_T_AutoreleasePoolVC_bbec29_mi_1;
-            str = ((NSString *(*)(id, SEL))(void *)objc_msgSend)((id)str, sel_registerName("lowercaseString"));
-            str = ((NSString *(*)(id, SEL, NSString * _Nonnull))(void *)objc_msgSend)((id)str, sel_registerName("stringByAppendingString:"), (NSString *)&__NSConstantStringImpl__var_folders_22_cvfxq3v91pz2fs_z37pckgqh0000gn_T_AutoreleasePoolVC_bbec29_mi_2);
-        }
-    }
-
-}
-
-
-static void _I_AutoreleasePoolVC_viewWillDisappear_(AutoreleasePoolVC * self, SEL _cmd, BOOL animated) {
-    ((void (*)(__rw_objc_super *, SEL, BOOL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("AutoreleasePoolVC"))}, sel_registerName("viewWillDisappear:"), (BOOL)animated);
+    ((void (*)(id, SEL, UIColor * _Nullable))(void *)objc_msgSend)((id)((UIView *(*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("view")), sel_registerName("setBackgroundColor:"), ((UIColor * _Nonnull (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("UIColor"), sel_registerName("whiteColor")));
 
 
 
 
-}
 
 
-static void _I_AutoreleasePoolVC_viewDidDisappear_(AutoreleasePoolVC * self, SEL _cmd, BOOL animated) {
-    ((void (*)(__rw_objc_super *, SEL, BOOL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("AutoreleasePoolVC"))}, sel_registerName("viewDidDisappear:"), (BOOL)animated);
+
+    NSDictionary *dictionary = ((NSDictionary * _Nonnull (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSDictionary"), sel_registerName("dictionary"));
 
 
 }
@@ -66747,6 +66420,9 @@ static void _I_AutoreleasePoolVC_dealloc(AutoreleasePoolVC * self, SEL _cmd) {
 
 static NSString * _I_AutoreleasePoolVC_name(AutoreleasePoolVC * self, SEL _cmd) { return (*(NSString **)((char *)self + OBJC_IVAR_$_AutoreleasePoolVC$_name)); }
 static void _I_AutoreleasePoolVC_setName_(AutoreleasePoolVC * self, SEL _cmd, NSString *name) { (*(NSString **)((char *)self + OBJC_IVAR_$_AutoreleasePoolVC$_name)) = name; }
+
+static Animal * _I_AutoreleasePoolVC_dog(AutoreleasePoolVC * self, SEL _cmd) { return (*(Animal **)((char *)self + OBJC_IVAR_$_AutoreleasePoolVC$_dog)); }
+static void _I_AutoreleasePoolVC_setDog_(AutoreleasePoolVC * self, SEL _cmd, Animal *dog) { (*(Animal **)((char *)self + OBJC_IVAR_$_AutoreleasePoolVC$_dog)) = dog; }
 // @end
 
 struct _prop_t {
@@ -66788,6 +66464,7 @@ struct _class_ro_t {
 	unsigned int flags;
 	unsigned int instanceStart;
 	unsigned int instanceSize;
+	unsigned int reserved;
 	const unsigned char *ivarLayout;
 	const char *name;
 	const struct _method_list_t *baseMethods;
@@ -66817,15 +66494,17 @@ extern "C" __declspec(dllimport) struct objc_cache _objc_empty_cache;
 #pragma warning(disable:4273)
 
 extern "C" unsigned long int OBJC_IVAR_$_AutoreleasePoolVC$_name __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct AutoreleasePoolVC, _name);
+extern "C" unsigned long int OBJC_IVAR_$_AutoreleasePoolVC$_dog __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct AutoreleasePoolVC, _dog);
 
 static struct /*_ivar_list_t*/ {
 	unsigned int entsize;  // sizeof(struct _prop_t)
 	unsigned int count;
-	struct _ivar_t ivar_list[1];
+	struct _ivar_t ivar_list[2];
 } _OBJC_$_INSTANCE_VARIABLES_AutoreleasePoolVC __attribute__ ((used, section ("__DATA,__objc_const"))) = {
 	sizeof(_ivar_t),
-	1,
-	{{(unsigned long int *)&OBJC_IVAR_$_AutoreleasePoolVC$_name, "_name", "@\"NSString\"", 3, 8}}
+	2,
+	{{(unsigned long int *)&OBJC_IVAR_$_AutoreleasePoolVC$_name, "_name", "@\"NSString\"", 3, 8},
+	 {(unsigned long int *)&OBJC_IVAR_$_AutoreleasePoolVC$_dog, "_dog", "@\"Animal\"", 3, 8}}
 };
 
 static struct /*_method_list_t*/ {
@@ -66836,15 +66515,16 @@ static struct /*_method_list_t*/ {
 	sizeof(_objc_method),
 	6,
 	{{(struct objc_selector *)"viewDidLoad", "v16@0:8", (void *)_I_AutoreleasePoolVC_viewDidLoad},
-	{(struct objc_selector *)"viewWillDisappear:", "v20@0:8B16", (void *)_I_AutoreleasePoolVC_viewWillDisappear_},
-	{(struct objc_selector *)"viewDidDisappear:", "v20@0:8B16", (void *)_I_AutoreleasePoolVC_viewDidDisappear_},
 	{(struct objc_selector *)"dealloc", "v16@0:8", (void *)_I_AutoreleasePoolVC_dealloc},
 	{(struct objc_selector *)"name", "@16@0:8", (void *)_I_AutoreleasePoolVC_name},
-	{(struct objc_selector *)"setName:", "v24@0:8@16", (void *)_I_AutoreleasePoolVC_setName_}}
+	{(struct objc_selector *)"setName:", "v24@0:8@16", (void *)_I_AutoreleasePoolVC_setName_},
+	{(struct objc_selector *)"dog", "@16@0:8", (void *)_I_AutoreleasePoolVC_dog},
+	{(struct objc_selector *)"setDog:", "v24@0:8@16", (void *)_I_AutoreleasePoolVC_setDog_}}
 };
 
 static struct _class_ro_t _OBJC_METACLASS_RO_$_AutoreleasePoolVC __attribute__ ((used, section ("__DATA,__objc_const"))) = {
 	1, sizeof(struct _class_t), sizeof(struct _class_t), 
+	(unsigned int)0, 
 	0, 
 	"AutoreleasePoolVC",
 	0, 
@@ -66856,6 +66536,7 @@ static struct _class_ro_t _OBJC_METACLASS_RO_$_AutoreleasePoolVC __attribute__ (
 
 static struct _class_ro_t _OBJC_CLASS_RO_$_AutoreleasePoolVC __attribute__ ((used, section ("__DATA,__objc_const"))) = {
 	0, __OFFSETOFIVAR__(struct AutoreleasePoolVC, _name), sizeof(struct AutoreleasePoolVC_IMPL), 
+	(unsigned int)0, 
 	0, 
 	"AutoreleasePoolVC",
 	(const struct _method_list_t *)&_OBJC_$_INSTANCE_METHODS_AutoreleasePoolVC,

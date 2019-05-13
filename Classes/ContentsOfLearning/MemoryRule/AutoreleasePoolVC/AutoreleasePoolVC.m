@@ -8,6 +8,7 @@
 
 #import "AutoreleasePoolVC.h"
 #import <objc/runtime.h>
+#import "Animal.h"
 
 /**
  autoreleasePool是一个延时release的机制， 在自动释放池被销毁或耗尽时，会向池中的所有对象发送release消息，释放所有autorelease对象。
@@ -43,6 +44,7 @@
 @interface AutoreleasePoolVC ()
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) Animal *dog;
 
 @end
 
@@ -51,33 +53,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
 //    self.name = @"自动释放池";
-    @autoreleasepool {
-        self.name = @"自动释放池";
-    }
-    
-    for (int i = 0; i < 1000000; i++) {
-        @autoreleasepool {
-            NSString *str = @"abc";
-            str = [str lowercaseString];
-            str = [str stringByAppendingString:@"xyz"];
-        }
-    }
-//    RYQLog(@"@autoreleasepool self.name = %@", self.name);
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
     
 //    @autoreleasepool {
-//        self.name = nil;
+//        self.name = @"自动释放池";
+//        Animal *dog = [[Animal alloc] init];
 //    }
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
     
-//    RYQLog(@"%@", self.name);
+    NSDictionary *dictionary = [NSDictionary dictionary];
+ 
+    
 }
 
 - (void)dealloc {
