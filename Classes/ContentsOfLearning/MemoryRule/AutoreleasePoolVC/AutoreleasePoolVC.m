@@ -43,7 +43,7 @@
 
 @interface AutoreleasePoolVC ()
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, weak) NSString *name;
 @property (nonatomic, strong) Animal *dog;
 
 @end
@@ -56,19 +56,19 @@
     self.view.backgroundColor = [UIColor whiteColor];
 //    self.name = @"自动释放池";
     
-//    @autoreleasepool {
-//        self.name = @"自动释放池";
-//        Animal *dog = [[Animal alloc] init];
-//    }
-    
+    @autoreleasepool {
+        self.name = @"自动释放池";
+        Animal *dog = [[Animal alloc] init];
+    }
+    RYQLog(@"%@", self.name);
     NSDictionary *dictionary = [NSDictionary dictionary];
  
     
 }
 
 - (void)dealloc {
-//    RYQLog(@"dealloc");
-//    RYQLog(@"%@", self.name);
+    RYQLog(@"dealloc");
+    RYQLog(@"%@", self.name);
 }
 
 @end
