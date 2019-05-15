@@ -29,10 +29,11 @@
 		181F31F522311A730098E099 /* KVO_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31F422311A730098E099 /* KVO_VC.m */; };
 		183ADC582235EFE200ADB09B /* KVC_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC552235EFE200ADB09B /* KVC_Model.m */; };
 		183ADC592235EFE200ADB09B /* KVC_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC572235EFE200ADB09B /* KVC_VC.m */; };
-		183ADC5E2235FABA00ADB09B /* AutoreleasePoolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC5D2235FABA00ADB09B /* AutoreleasePoolVC.m */; };
+		183ADC5E2235FABA00ADB09B /* AutoreleasePoolVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC5D2235FABA00ADB09B /* AutoreleasePoolVC.mm */; };
 		183ADC622235FED100ADB09B /* ArrayRemoveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC612235FED100ADB09B /* ArrayRemoveVC.m */; };
 		183ADC6722360FD800ADB09B /* FactoryDesignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC6622360FD800ADB09B /* FactoryDesignVC.m */; };
 		183ADC6B2236100E00ADB09B /* DesignMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ADC6A2236100E00ADB09B /* DesignMainVC.m */; };
+		183C6330228BF748002CDDB2 /* AutoreleasePool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 183C632E228BF748002CDDB2 /* AutoreleasePool.mm */; };
 		1846836522320CB90032A4EE /* MemoryMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836422320CB90032A4EE /* MemoryMainVC.m */; };
 		1846836822320CCA0032A4EE /* CopyTargetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836722320CCA0032A4EE /* CopyTargetVC.m */; };
 		1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846836A2232463B0032A4EE /* KVO_AimModel.m */; };
@@ -134,13 +135,15 @@
 		183ADC562235EFE200ADB09B /* KVC_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVC_VC.h; sourceTree = "<group>"; };
 		183ADC572235EFE200ADB09B /* KVC_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVC_VC.m; sourceTree = "<group>"; };
 		183ADC5C2235FABA00ADB09B /* AutoreleasePoolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoreleasePoolVC.h; sourceTree = "<group>"; };
-		183ADC5D2235FABA00ADB09B /* AutoreleasePoolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoreleasePoolVC.m; sourceTree = "<group>"; };
+		183ADC5D2235FABA00ADB09B /* AutoreleasePoolVC.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AutoreleasePoolVC.mm; sourceTree = "<group>"; };
 		183ADC602235FED100ADB09B /* ArrayRemoveVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayRemoveVC.h; sourceTree = "<group>"; };
 		183ADC612235FED100ADB09B /* ArrayRemoveVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayRemoveVC.m; sourceTree = "<group>"; };
 		183ADC6522360FD800ADB09B /* FactoryDesignVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryDesignVC.h; sourceTree = "<group>"; };
 		183ADC6622360FD800ADB09B /* FactoryDesignVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryDesignVC.m; sourceTree = "<group>"; };
 		183ADC692236100E00ADB09B /* DesignMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignMainVC.h; sourceTree = "<group>"; };
 		183ADC6A2236100E00ADB09B /* DesignMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignMainVC.m; sourceTree = "<group>"; };
+		183C632E228BF748002CDDB2 /* AutoreleasePool.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AutoreleasePool.mm; sourceTree = "<group>"; };
+		183C632F228BF748002CDDB2 /* AutoreleasePool.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AutoreleasePool.hpp; sourceTree = "<group>"; };
 		1846836322320CB90032A4EE /* MemoryMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryMainVC.h; sourceTree = "<group>"; };
 		1846836422320CB90032A4EE /* MemoryMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryMainVC.m; sourceTree = "<group>"; };
 		1846836622320CCA0032A4EE /* CopyTargetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyTargetVC.h; sourceTree = "<group>"; };
@@ -530,7 +533,9 @@
 			isa = PBXGroup;
 			children = (
 				183ADC5C2235FABA00ADB09B /* AutoreleasePoolVC.h */,
-				183ADC5D2235FABA00ADB09B /* AutoreleasePoolVC.m */,
+				183ADC5D2235FABA00ADB09B /* AutoreleasePoolVC.mm */,
+				183C632E228BF748002CDDB2 /* AutoreleasePool.mm */,
+				183C632F228BF748002CDDB2 /* AutoreleasePool.hpp */,
 				550B4DF32287B07900417CA5 /* Animal.h */,
 				550B4DF42287B07900417CA5 /* Animal.m */,
 				1879F3C522895D1D00C48D34 /* Person.h */,
@@ -1081,6 +1086,7 @@
 				181F31D12230C44A0098E099 /* MyTableViewVC.m in Sources */,
 				181F319F2230BDDD0098E099 /* main.m in Sources */,
 				181F31DA2230E7890098E099 /* ErrorCodeExampleVC.m in Sources */,
+				183C6330228BF748002CDDB2 /* AutoreleasePool.mm in Sources */,
 				1846836522320CB90032A4EE /* MemoryMainVC.m in Sources */,
 				183ADC622235FED100ADB09B /* ArrayRemoveVC.m in Sources */,
 				18FEC63B22377ED300313854 /* NSObject+SwizzleMethod.m in Sources */,
@@ -1097,7 +1103,7 @@
 				18D412A322768D7900DF7815 /* SQListSequentialListVC.m in Sources */,
 				187C3EE322816716000F205C /* BothWayLinkListVC.m in Sources */,
 				181F31F522311A730098E099 /* KVO_VC.m in Sources */,
-				183ADC5E2235FABA00ADB09B /* AutoreleasePoolVC.m in Sources */,
+				183ADC5E2235FABA00ADB09B /* AutoreleasePoolVC.mm in Sources */,
 				183ADC6722360FD800ADB09B /* FactoryDesignVC.m in Sources */,
 				183ADC592235EFE200ADB09B /* KVC_VC.m in Sources */,
 			);
@@ -1272,6 +1278,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LALS6K674B;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LearnObjectiveC/Header.pch";
 				INFOPLIST_FILE = LearnObjectiveC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1293,6 +1300,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LALS6K674B;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LearnObjectiveC/Header.pch";
 				INFOPLIST_FILE = LearnObjectiveC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
