@@ -12,6 +12,8 @@
 		180F1970225C348A00F62A8C /* TimeComplexityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F196F225C348A00F62A8C /* TimeComplexityVC.m */; };
 		180F1976225C49D200F62A8C /* MainLinearTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F1975225C49D200F62A8C /* MainLinearTableVC.m */; };
 		180F1979225C4A4D00F62A8C /* DefineLinearTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F1978225C4A4D00F62A8C /* DefineLinearTableVC.m */; };
+		1814E89E2293E8D5006A892C /* StackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E89D2293E8D5006A892C /* StackVC.m */; };
+		1814E8A12293E919006A892C /* MainStackTempVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E8A02293E919006A892C /* MainStackTempVC.m */; };
 		181F31912230BDDB0098E099 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31902230BDDB0098E099 /* AppDelegate.m */; };
 		181F31942230BDDB0098E099 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181F31932230BDDB0098E099 /* ViewController.m */; };
 		181F31972230BDDB0098E099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181F31952230BDDB0098E099 /* Main.storyboard */; };
@@ -96,6 +98,10 @@
 		180F1975225C49D200F62A8C /* MainLinearTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainLinearTableVC.m; sourceTree = "<group>"; };
 		180F1977225C4A4D00F62A8C /* DefineLinearTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineLinearTableVC.h; sourceTree = "<group>"; };
 		180F1978225C4A4D00F62A8C /* DefineLinearTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefineLinearTableVC.m; sourceTree = "<group>"; };
+		1814E89C2293E8D5006A892C /* StackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackVC.h; sourceTree = "<group>"; };
+		1814E89D2293E8D5006A892C /* StackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackVC.m; sourceTree = "<group>"; };
+		1814E89F2293E919006A892C /* MainStackTempVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStackTempVC.h; sourceTree = "<group>"; };
+		1814E8A02293E919006A892C /* MainStackTempVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStackTempVC.m; sourceTree = "<group>"; };
 		181F318C2230BDDB0098E099 /* LearnObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181F318F2230BDDB0098E099 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		181F31902230BDDB0098E099 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -300,6 +306,33 @@
 				180F1975225C49D200F62A8C /* MainLinearTableVC.m */,
 			);
 			path = MainLinearTableVC;
+			sourceTree = "<group>";
+		};
+		1814E8992293E858006A892C /* 栈和队列 */ = {
+			isa = PBXGroup;
+			children = (
+				1814E89B2293E8D5006A892C /* 栈 */,
+				1814E89A2293E8D5006A892C /* MainStackTempVC */,
+			);
+			path = "栈和队列";
+			sourceTree = "<group>";
+		};
+		1814E89A2293E8D5006A892C /* MainStackTempVC */ = {
+			isa = PBXGroup;
+			children = (
+				1814E89F2293E919006A892C /* MainStackTempVC.h */,
+				1814E8A02293E919006A892C /* MainStackTempVC.m */,
+			);
+			path = MainStackTempVC;
+			sourceTree = "<group>";
+		};
+		1814E89B2293E8D5006A892C /* 栈 */ = {
+			isa = PBXGroup;
+			children = (
+				1814E89C2293E8D5006A892C /* StackVC.h */,
+				1814E89D2293E8D5006A892C /* StackVC.m */,
+			);
+			path = "栈";
 			sourceTree = "<group>";
 		};
 		181F31832230BDDB0098E099 = {
@@ -659,6 +692,7 @@
 		18ED24FF225AE93B00006116 /* 数据结构与算法 */ = {
 			isa = PBXGroup;
 			children = (
+				1814E8992293E858006A892C /* 栈和队列 */,
 				180F1971225C496F00F62A8C /* 线性表 */,
 				180F196D225C345A00F62A8C /* 算法的时间复杂度 */,
 				18ED2500225AE93B00006116 /* MainStructureVC */,
@@ -1082,6 +1116,7 @@
 				181F31CD2230C3530098E099 /* BaseViewController.m in Sources */,
 				18FEC63A22377ED300313854 /* NSMutableArray+ErrorHandle.m in Sources */,
 				181F31DE2230EA940098E099 /* BAD_ACCESS_VC.m in Sources */,
+				1814E89E2293E8D5006A892C /* StackVC.m in Sources */,
 				180C82DB2238910D0092EBF0 /* BuriesPointTestVC.m in Sources */,
 				181F31D12230C44A0098E099 /* MyTableViewVC.m in Sources */,
 				181F319F2230BDDD0098E099 /* main.m in Sources */,
@@ -1093,6 +1128,7 @@
 				183ADC6B2236100E00ADB09B /* DesignMainVC.m in Sources */,
 				18FEC63922377ED300313854 /* NSArray+ErrorHandle.m in Sources */,
 				18481323223A21A300C566D5 /* MVC_Model.m in Sources */,
+				1814E8A12293E919006A892C /* MainStackTempVC.m in Sources */,
 				551662A72256FA770058C9F1 /* UIButton+Extenion.m in Sources */,
 				5516629B2256F6F40058C9F1 /* NSDictionary+CLLocation.m in Sources */,
 				551662A42256FA610058C9F1 /* UILabel+Extenion.m in Sources */,

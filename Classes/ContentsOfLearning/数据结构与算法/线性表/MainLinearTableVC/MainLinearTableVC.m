@@ -23,6 +23,7 @@
                       [ObjectiveModel initTitle:@"单链表" vcName:@"SQListLinkedStorageVC"],
                       [ObjectiveModel initTitle:@"单向循环链表" vcName:@"CircularLinkedListVC"],
                       [ObjectiveModel initTitle:@"双向链表" vcName:@"BothWayLinkListVC"],
+                      [ObjectiveModel initTitle:@"栈" vcName:@"StackVC"],
                       ];
 }
 

@@ -37,6 +37,7 @@ typedef struct Node *LinkList;
     self.Messages = @[
                       [ObjectiveModel initTitle:@"算法的时间复杂度" vcName:@"TimeComplexityVC"],
                       [ObjectiveModel initTitle:@"线性表" vcName:@"MainLinearTableVC"],
+                      [ObjectiveModel initTitle:@"栈和队列" vcName:@"MainStackTempVC"],
                       ];
     RYQLog(@"MainStructureVC 执行了viewDidLoad");
 }
