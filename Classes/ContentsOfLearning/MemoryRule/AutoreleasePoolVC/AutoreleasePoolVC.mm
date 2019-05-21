@@ -50,27 +50,25 @@
 
 @implementation AutoreleasePoolVC
 
+__weak id reference = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-//    self.name = @"自动释放池";
-    
     @autoreleasepool {
-        self.name = @"自动释放池";
-        Animal *dog = [[Animal alloc] init];
+        NSString *str = [NSString stringWithFormat:@"sunnyxx"];
+        // str是一个autorelease对象，设置一个weak的引用来观察它
+        reference = str;
     }
-    RYQLog(@"%@", self.name);
-    NSDictionary *dictionary = [NSDictionary dictionary];
- 
-    
 }
-
-- (void)dealloc {
-    RYQLog(@"dealloc");
-    RYQLog(@"%@", self.name);
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    RYQLog(@"%@", reference); // Console: sunnyxx
 }
-
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    RYQLog(@"%@", reference); // Console: (null)
+}
 
 
 

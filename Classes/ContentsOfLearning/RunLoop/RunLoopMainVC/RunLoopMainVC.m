@@ -30,7 +30,7 @@ typedef NS_ENUM(NSUInteger ,EventLoopMode) {
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [self simulateRunLoop:EventLoopStopMode];
 //    });
-//    [[NSRunLoop currentRunLoop] run];
+    [[NSRunLoop currentRunLoop] run];
     NSArray *array = @[@"23sd", @"sadsad"];
     [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         RYQLog(@"%@", obj);
