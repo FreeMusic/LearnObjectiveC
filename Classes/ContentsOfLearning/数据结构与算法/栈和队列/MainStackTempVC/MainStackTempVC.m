@@ -19,6 +19,7 @@
     
     self.Messages = @[
                       [ObjectiveModel initTitle:@"栈" vcName:@"StackVC"],
+                      [ObjectiveModel initTitle:@"队列" vcName:@"QueueVC"],
                       ];
 }
 
