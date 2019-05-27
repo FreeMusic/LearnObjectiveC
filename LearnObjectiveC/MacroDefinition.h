@@ -113,10 +113,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define DocumentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES)lastObject]
 
 #define UserDataPath [DocumentPath stringByAppendingPathComponent:@"User.data"]
-/**
- 强转字符串
- */
-#define String(myid) [NSString stringWithFormat:@"%@", myid]
+///**
+// 强转字符串
+// */
+//#define String(myid) [NSString stringWithFormat:@"%@", myid]
 // 背景色
 #define BACKGROUND_COLOR [UIColor colorWithRed:228/255.0 green:228/255.0 blue:228/255.0 alpha:1.0]
 
