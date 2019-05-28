@@ -23,7 +23,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSString *string = @"qqq23432qqqq";
+    [self compareExample:string];
+}
 
+
+- (void)compareExample:(NSString *)string{
+    if (string.length < 2) {
+        return;
+    }
+    NSString *first = [string substringWithRange: NSMakeRange(0, 1)];;
+    NSString *current = @"";
+    for (int i = 1; i < string.length; i++) {
+        
+        NSRange range = NSMakeRange(i, 1);
+        current = [string substringWithRange:range];
+        if (![first isEqualToString:current]) {
+            RYQLog(@"不同的字符 %@   位置 %d", current, i+1);
+            break;
+        }else{
+            first = current;
+        }
+    }
+    if ([first isEqualToString:current]) {
+        RYQLog(@"该字符串中的字符完全一样");
+        return;
+    }
 }
 
 

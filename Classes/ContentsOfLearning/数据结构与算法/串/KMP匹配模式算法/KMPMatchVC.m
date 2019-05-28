@@ -17,7 +17,6 @@ typedef char String[MaxSize+1];//0号单元存放串的长度
 @interface KMPMatchVC ()
 
 
-
 @end
 
 @implementation KMPMatchVC
@@ -30,8 +29,10 @@ typedef char String[MaxSize+1];//0号单元存放串的长度
     initString(s1, "abcdex");
     initString(s2, "ex");
 //    StringPrint(s1);
+    //朴素匹配法
     int index = Index(s1, s2);
     RYQLog(@"%d", index);
+    //
 }
 
 /**
@@ -102,6 +103,20 @@ int Index(String S, String T)
     if (j > T[0]) {
         return i-T[0];
     }
+    
+    return 0;
+}
+
+/**
+ KMP模式匹配法
+
+ @param S 主串
+ @param T 子串
+ @return 子串在主串中的位置
+ */
+int KMP_Index(String S, String T)
+{
+    
     
     return 0;
 }
