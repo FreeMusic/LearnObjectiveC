@@ -27,12 +27,14 @@ typedef char String[MaxSize+1];//0号单元存放串的长度
     
     String s1, s2;
     initString(s1, "abcdex");
-    initString(s2, "ex");
+    initString(s2, "abcdex");
 //    StringPrint(s1);
     //朴素匹配法
-    int index = Index(s1, s2);
-    RYQLog(@"%d", index);
+//    int index = Index(s1, s2);
+//    RYQLog(@"index = %d", index);
     //
+    int kmp_index = KMP_Index(s1, s2);
+//    RYQLog(@"kmp_index = %d", kmp_index);
 }
 
 /**
@@ -116,7 +118,43 @@ int Index(String S, String T)
  */
 int KMP_Index(String S, String T)
 {
+    int next[100];
+    Get_Index(T, next);
     
+    for (int i = 0; i < T[0]; i++) {
+//        RYQLog(@"第%d个值为%d", i+1, next[i]);
+    }
+    
+    return 0;
+}
+
+/**
+ 返回T串next数组
+
+ @param T T串
+ @return next数组
+ */
+int Get_Index(String T, int *next)
+{
+    
+    int i,j;
+    i = 1;
+    j = 0;
+    while (i < T[0]) {//T[0]是串T的长度
+        
+        if (j == 0 || T[i] == T[j]) {//T[i]表示后缀的单个字符， T[j]表示前缀的单个字符
+            
+            ++i;
+            ++j;
+            next[i] = j;
+            RYQLog(@"第%d个值为%d", i-1, next[i-1]);
+        }else{
+            
+            j = next[j];//若字符串不相同，则j值回溯
+            RYQLog(@"第%d个值为%d", i-1, next[i]);
+        }
+        
+    }
     
     return 0;
 }
