@@ -27,14 +27,16 @@ typedef char String[MaxSize+1];//0号单元存放串的长度
     
     String s1, s2;
     initString(s1, "abcdex");
-    initString(s2, "abcdex");
+    initString(s2, "exvfgfgrgr");
 //    StringPrint(s1);
     //朴素匹配法
 //    int index = Index(s1, s2);
 //    RYQLog(@"index = %d", index);
     //
-    int kmp_index = KMP_Index(s1, s2);
+//    int kmp_index = KMP_Index(s1, s2);
 //    RYQLog(@"kmp_index = %d", kmp_index);
+    int kmp_index = Index_KMP(s1, s2);
+    RYQLog(@"kmp_index = %d", kmp_index);
 }
 
 /**
@@ -108,55 +110,105 @@ int Index(String S, String T)
     
     return 0;
 }
-
-/**
- KMP模式匹配法
-
- @param S 主串
- @param T 子串
- @return 子串在主串中的位置
- */
-int KMP_Index(String S, String T)
+/* Õ®π˝º∆À„∑µªÿ◊”¥ÆTµƒnext ˝◊È°£ */
+void get_next(String T, int *next)
 {
-    int next[100];
-    Get_Index(T, next);
-    
-    for (int i = 0; i < T[0]; i++) {
-//        RYQLog(@"第%d个值为%d", i+1, next[i]);
-    }
-    
-    return 0;
-}
-
-/**
- 返回T串next数组
-
- @param T T串
- @return next数组
- */
-int Get_Index(String T, int *next)
-{
-    
-    int i,j;
-    i = 1;
-    j = 0;
-    while (i < T[0]) {//T[0]是串T的长度
-        
-        if (j == 0 || T[i] == T[j]) {//T[i]表示后缀的单个字符， T[j]表示前缀的单个字符
-            
+    int i,j,k;
+    i=1;
+    j=0;
+    k = 0;
+    next[1]=0;
+    while (i<T[0])  /* ¥À¥¶T[0]±Ì æ¥ÆTµƒ≥§∂» */
+    {
+        if(j==0 || T[i]== T[j])     /* T[i]±Ì æ∫Û◊∫µƒµ•∏ˆ◊÷∑˚£¨T[j]±Ì æ«∞◊∫µƒµ•∏ˆ◊÷∑˚ */
+        {
             ++i;
             ++j;
             next[i] = j;
-            RYQLog(@"第%d个值为%d", i-1, next[i-1]);
-        }else{
-            
-            j = next[j];//若字符串不相同，则j值回溯
-            RYQLog(@"第%d个值为%d", i-1, next[i]);
+            RYQLog(@"第%d个值为%d", i, next[i]);
         }
+        else{
+            j= next[j];    /* »Ù◊÷∑˚≤ªœ‡Õ¨£¨‘Új÷µªÿÀ› */
+            RYQLog(@"第%d个值为%d", i, next[i]);
+        }
+        k++;
         
     }
-    
-    return 0;
+
 }
+
+/* ∑µªÿ◊”¥ÆT‘⁄÷˜¥ÆS÷–µ⁄pos∏ˆ◊÷∑˚÷Æ∫ÛµƒŒª÷√°£»Ù≤ª¥Ê‘⁄£¨‘Ú∫Ø ˝∑µªÿ÷µŒ™0°£ */
+/*  T∑«ø’£¨1°‹pos°‹StrLength(S)°£ */
+int Index_KMP(String S, String T)
+{
+    int i = 1;        /* i”√”⁄÷˜¥ÆS÷–µ±«∞Œª÷√œ¬±Í÷µ£¨»Ùpos≤ªŒ™1£¨‘Ú¥”posŒª÷√ø™ º∆•≈‰ */
+    int j = 1;            /* j”√”⁄◊”¥ÆT÷–µ±«∞Œª÷√œ¬±Í÷µ */
+    int next[255];        /* ∂®“Â“ªnext ˝◊È */
+    get_next(T, next);    /* ∂‘¥ÆT◊˜∑÷Œˆ£¨µ√µΩnext ˝◊È */
+    while (i <= S[0] && j <= T[0]) /* »Ùi–°”⁄Sµƒ≥§∂»≤¢«“j–°”⁄Tµƒ≥§∂» ±£¨—≠ª∑ºÃ–¯ */
+    {
+        if (j==0 || S[i] == T[j])     /* ¡Ω◊÷ƒ∏œ‡µ»‘ÚºÃ–¯£¨”Î∆”ÀÿÀ„∑®‘ˆº”¡Àj=0≈–∂œ */
+        {
+            ++i;
+            ++j;
+        }
+        else             /* ÷∏’Î∫ÛÕÀ÷ÿ–¬ø™ º∆•≈‰ */
+            j = next[j];/* jÕÀªÿ∫œ  µƒŒª÷√£¨i÷µ≤ª±‰ */
+    }
+    if (j > T[0])
+        return i-T[0];
+    else
+        return 0;
+}
+
+///**
+// KMP模式匹配法
+//
+// @param S 主串
+// @param T 子串
+// @return 子串在主串中的位置
+// */
+//int KMP_Index(String S, String T)
+//{
+//    int next[100];
+//    Get_Index(T, next);
+//
+//    for (int i = 0; i < T[0]; i++) {
+////        RYQLog(@"第%d个值为%d", i+1, next[i]);
+//    }
+//
+//    return 0;
+//}
+//
+///**
+// 返回T串next数组
+//
+// @param T T串
+// @return next数组
+// */
+//int Get_Index(String T, int *next)
+//{
+//
+//    int i,j;
+//    i = 1;
+//    j = 0;
+//    while (i < T[0]) {//T[0]是串T的长度
+//
+//        if (j == 0 || T[i] == T[j]) {//T[i]表示后缀的单个字符， T[j]表示前缀的单个字符
+//
+//            ++i;
+//            ++j;
+//            next[i] = j;
+//            RYQLog(@"第%d个值为%d", i-1, next[i-1]);
+//        }else{
+//
+//            j = next[j];//若字符串不相同，则j值回溯
+//            RYQLog(@"第%d个值为%d", i-1, next[i]);
+//        }
+//
+//    }
+//
+//    return 0;
+//}
 
 @end
