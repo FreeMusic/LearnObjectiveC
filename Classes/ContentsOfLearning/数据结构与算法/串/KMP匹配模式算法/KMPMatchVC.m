@@ -9,6 +9,7 @@
  子串的定位操作通常称作串的模式匹配
  */
 #import "KMPMatchVC.h"
+
 #define MaxSize 100
 
 
@@ -122,7 +123,7 @@ int KMP_Index(String S, String T)
     
     int next[100];//定义next数组
     Get_Next(T, next);//获取next数组
-
+    
     while (i <= S[0] && j <= T[0]) {//若i小于S的长度且j小于T的长度时，循环继续
         
         if (j == 0 || S[i] == T[j]) {//与朴素算法相比，增加了j == 0

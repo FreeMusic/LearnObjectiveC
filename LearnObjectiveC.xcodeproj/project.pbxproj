@@ -50,6 +50,7 @@
 		189B850E229B722A002DBEC2 /* MainStringVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B850D229B722A002DBEC2 /* MainStringVC.m */; };
 		189B8512229B7A0F002DBEC2 /* StoreOfStringVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B8511229B7A0F002DBEC2 /* StoreOfStringVC.m */; };
 		189B8516229B8317002DBEC2 /* KMPMatchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B8515229B8317002DBEC2 /* KMPMatchVC.m */; };
+		189F68B722A617DE001F6D6F /* MainTreeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189F68B622A617DE001F6D6F /* MainTreeVC.m */; };
 		18D412A322768D7900DF7815 /* SQListSequentialListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D412A222768D7900DF7815 /* SQListSequentialListVC.m */; };
 		18D412AA2276A66400DF7815 /* SQListLinkedStorageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D412A92276A66400DF7815 /* SQListLinkedStorageVC.m */; };
 		18E247DA2296773200B8AF63 /* QueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E247D92296773200B8AF63 /* QueueVC.m */; };
@@ -184,6 +185,8 @@
 		189B8511229B7A0F002DBEC2 /* StoreOfStringVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreOfStringVC.m; sourceTree = "<group>"; };
 		189B8514229B8317002DBEC2 /* KMPMatchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMPMatchVC.h; sourceTree = "<group>"; };
 		189B8515229B8317002DBEC2 /* KMPMatchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMPMatchVC.m; sourceTree = "<group>"; };
+		189F68B522A617DE001F6D6F /* MainTreeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTreeVC.h; sourceTree = "<group>"; };
+		189F68B622A617DE001F6D6F /* MainTreeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTreeVC.m; sourceTree = "<group>"; };
 		18D412A122768D7900DF7815 /* SQListSequentialListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQListSequentialListVC.h; sourceTree = "<group>"; };
 		18D412A222768D7900DF7815 /* SQListSequentialListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQListSequentialListVC.m; sourceTree = "<group>"; };
 		18D412A82276A66400DF7815 /* SQListLinkedStorageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQListLinkedStorageVC.h; sourceTree = "<group>"; };
@@ -738,6 +741,23 @@
 			path = "KMP匹配模式算法";
 			sourceTree = "<group>";
 		};
+		189F68B322A617C0001F6D6F /* 树 */ = {
+			isa = PBXGroup;
+			children = (
+				189F68B422A617C0001F6D6F /* MainTreeVC */,
+			);
+			path = "树";
+			sourceTree = "<group>";
+		};
+		189F68B422A617C0001F6D6F /* MainTreeVC */ = {
+			isa = PBXGroup;
+			children = (
+				189F68B522A617DE001F6D6F /* MainTreeVC.h */,
+				189F68B622A617DE001F6D6F /* MainTreeVC.m */,
+			);
+			path = MainTreeVC;
+			sourceTree = "<group>";
+		};
 		18D412A022768D4D00DF7815 /* 线性表顺序存储结构 */ = {
 			isa = PBXGroup;
 			children = (
@@ -777,6 +797,7 @@
 		18ED24FF225AE93B00006116 /* 数据结构与算法 */ = {
 			isa = PBXGroup;
 			children = (
+				189F68B322A617C0001F6D6F /* 树 */,
 				189B8506229B70A6002DBEC2 /* 串 */,
 				1814E8992293E858006A892C /* 栈和队列 */,
 				180F1971225C496F00F62A8C /* 线性表 */,
@@ -1202,6 +1223,7 @@
 				189B850E229B722A002DBEC2 /* MainStringVC.m in Sources */,
 				181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */,
 				1879F3C622895D1D00C48D34 /* Person.m in Sources */,
+				189F68B722A617DE001F6D6F /* MainTreeVC.m in Sources */,
 				1846836822320CCA0032A4EE /* CopyTargetVC.m in Sources */,
 				180F1976225C49D200F62A8C /* MainLinearTableVC.m in Sources */,
 				181F31CD2230C3530098E099 /* BaseViewController.m in Sources */,
