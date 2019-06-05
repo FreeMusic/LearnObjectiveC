@@ -29,7 +29,7 @@
     [super viewDidLoad];
    
     self.Messages = @[
-                    [ObjectiveModel initTitle:@"算法的时间复杂度" vcName:@"TimeComplexityVC"],
+                    [ObjectiveModel initTitle:@"二叉树的定义" vcName:@"BinaryTreeDefineVC"],
                       ];
 }
 
