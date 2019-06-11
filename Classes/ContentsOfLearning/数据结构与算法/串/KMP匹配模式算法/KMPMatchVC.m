@@ -26,16 +26,19 @@ typedef char String[MaxSize+1];//0号单元存放串的长度
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    char *goodchina = "COOLCHINA";
+    char *china = "CHINA";
+    
     String s1, s2;
-    initString(s1, "abcdexababaaaba");
-    initString(s2, "ababaaaba");
+    initString(s1, goodchina);
+    initString(s2, china);
 //    StringPrint(s1);
     //朴素匹配法
-//    int index = Index(s1, s2);
-//    RYQLog(@"index = %d", index);
-    //
-    int kmp_index = KMP_Index(s1, s2);
-    RYQLog(@"kmp_index = %d", kmp_index);
+    int index = Index(s1, s2);
+    RYQLog(@"index = %d", index);
+    
+//    int kmp_index = KMP_Index(s1, s2);
+//    RYQLog(@"kmp_index = %d", kmp_index);
 }
 
 /**
@@ -92,16 +95,30 @@ int Index(String S, String T)
 {
     int i = 1;//i用于主串S中当前位置下标值，若pos不为1，则从pos位置开始匹配。
     int j = 1;//j用于子串T中当前位置下标值
-    while (i <= S[0] && j <=T[0])
-    {//若i小于S的长度并且j小于T的长度时，循环继续
-        if (S[i] == T[j]) {//两字符相等
-            i++;
-            j++;
-        }else{//指针后退 重新开始匹配
-            i = i-j+2;//i退回到上次匹配首位的下一位
-            j = 1;//j退回到子串T的首位
+    
+    while (i <= S[0]) {
+        while (j <= T[0]) {
+            if (S[i] == T[j]) {//两字符相等
+                i++;
+                j++;
+            }else{
+                i = i-j+2;//i退回到上次匹配首位的下一位
+                j = 1;//j退回到子串T的首位
+            }
         }
     }
+        
+    
+//    while (i <= S[0] && j <=T[0])
+//    {//若i小于S的长度并且j小于T的长度时，循环继续
+//        if (S[i] == T[j]) {//两字符相等
+//            i++;
+//            j++;
+//        }else{//指针后退 重新开始匹配
+//            i = i-j+2;//i退回到上次匹配首位的下一位
+//            j = 1;//j退回到子串T的首位
+//        }
+//    }
     
     if (j > T[0]) {
         return i-T[0];
