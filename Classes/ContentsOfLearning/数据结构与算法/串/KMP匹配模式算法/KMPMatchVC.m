@@ -27,8 +27,8 @@ typedef char String[MaxSize+1];//0号单元存放串的长度
     [super viewDidLoad];
     
     String s1, s2;
-    initString(s1, "abcdexababaaaba");
-    initString(s2, "ababaaaba");
+    initString(s1, "goodchina");
+    initString(s2, "china");
 //    StringPrint(s1);
     //朴素匹配法
 //    int index = Index(s1, s2);
