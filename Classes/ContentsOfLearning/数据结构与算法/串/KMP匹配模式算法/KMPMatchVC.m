@@ -30,8 +30,7 @@ typedef char String[MaxSize+1];//0号单元存放串的长度
     char *china = "CHINA";
     
     String s1, s2;
-    initString(s1, "goodchina");
-    initString(s2, "china");
+
     initString(s1, goodchina);
     initString(s2, china);
 //    StringPrint(s1);
