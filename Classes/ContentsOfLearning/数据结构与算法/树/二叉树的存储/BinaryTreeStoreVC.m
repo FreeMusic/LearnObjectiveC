@@ -20,16 +20,26 @@
 
 #import "BinaryTreeStoreVC.h"
 
+typedef char CharElemType;
+CharElemType none = ' ';//字符型以空格符为空
 /**
 二叉树的二叉链表结点的结构定义
  */
 typedef struct BiTNode{//结点结构
     
-    ElemType data;//结点数据
+    CharElemType data;//结点数据
     struct BiTNode *leftChild, *rightChild;//左右孩子指针
     struct BiTNode *parrent;//指向父结点的指针
     
 }BiTNode, *BiTree;
+
+
+
+#define MaxSize 100
+typedef char String[MaxSize+1];//0号单元存放串的长度
+String str;
+
+int myIndex = 1;
 
 @interface BinaryTreeStoreVC ()
 
@@ -38,12 +48,96 @@ typedef struct BiTNode{//结点结构
 @implementation BinaryTreeStoreVC
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+
+    int i;
+    BiTree tree;
+    CharElemType elem;
+    //二叉树的初始化
+    initBiTree(&tree);
+    stringAssign(str, "ABDH#K###E##CFI###G#J##");//#表示空
+    //二叉树的创建赋值
+    CreateBiTree(&tree);
+    //二叉树的前置遍历
+//    PreOrderTraverse(tree);
 }
 
+/**
+ 二叉树的初始化
 
+ @param tree 二叉树
+ */
+void initBiTree(BiTree *tree)
+{
+    *tree = NULL;
+}
+
+/**
+ 生成一个其值等于chars的串T
+
+ @param T 串T
+ @param chars char数组
+ @return 成功或失败
+ */
+Status stringAssign(String T, char *chars)
+{
+    int i;
+    
+    if (strlen(chars) > MaxSize) {
+        return ERROR;
+    }else{
+        T[0] = strlen(chars);//长度
+        for (i = 1; i < T[0]; i++) {
+            T[i] = *(chars+i-1);
+        }
+        
+        return SUCCESS;
+    }
+}
+
+/**
+ 构造二叉树
+
+ @param tree 二叉树
+ */
+void CreateBiTree(BiTree *tree)
+{
+    CharElemType elem;
+    elem = str[myIndex++];
+    
+    if (!*tree) {
+        *tree = (BiTree)malloc(sizeof(BiTNode));//初始化
+    }
+//    RYQLog(@"%@", *tree);
+//    if (elem == '#') {
+//        *tree = NULL;
+//    }else{
+    
+        if (!*tree) {
+            exit(OVERFLOW);
+        }else{
+            (*tree)->data = elem;
+            CreateBiTree(&(*tree) -> leftChild);
+            CreateBiTree(&(*tree) -> rightChild);
+        }
+//    }
+}
+
+/**
+ 二叉树的前置遍历
+
+ @param tree 二叉树
+ */
+void PreOrderTraverse (BiTree tree)
+{
+    if (tree == NULL) {
+        return;
+    }
+    RYQLog(@" %c ", tree->data);//显示结点数据，可以更改为对其他结点的操作
+    PreOrderTraverse(tree->leftChild);//先遍历左子树
+    PreOrderTraverse(tree->rightChild);//再遍历右子树
+}
 
 @end
