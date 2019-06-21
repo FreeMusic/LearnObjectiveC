@@ -21,19 +21,22 @@
 #import "BinaryTreeStoreVC.h"
 
 #define MAXSIZE 100
-int ourIndex=1;
+int ourIndex = 1;//用于构造二叉树
 
-typedef char String[24]; /*  0∫≈µ•‘™¥Ê∑≈¥Æµƒ≥§∂» */
+typedef char String[MAXSIZE];//0号位置存放串的长度
 String string;
 
-typedef char CharElemType;
-CharElemType NIL=' '; /* ◊÷∑˚–Õ“‘ø’∏Ò∑˚Œ™ø’ */
+typedef char CharElemType;//数据类型
+CharElemType none = ' ';//用空格表示空
 
-typedef struct BiTNode  /* Ω·µ„Ω·ππ */
-{
-    CharElemType data;        /* Ω·µ„ ˝æ› */
-    struct BiTNode *leftChild,*rightChild; /* ◊Û”“∫¢◊”÷∏’Î */
-}BiTNode,*BiTree;
+/**
+ 二叉树的结点结构
+ */
+typedef struct BiTNode{
+    CharElemType data;//数据项
+    struct BiTNode *leftChild, *rightChild;//左右孩子
+    struct BiTNode *parrent;//父结点
+}BiTNode, *BiTree;
 
 @interface BinaryTreeStoreVC ()
 
@@ -44,70 +47,123 @@ typedef struct BiTNode  /* Ω·µ„Ω·ππ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    int i;
-    BiTree T;
-    CharElemType e1;
-    InitBiTree(&T);
+
+    BiTree tree;
+    //构造空的二叉树
+    initTree(&tree);
+    //将字符分开一个个放在数组中
+    stringAssign(string, "ABDH#K###E##CFI###G#J##");
+    //二叉树的赋值
+    CreateOurBiTree(&tree);
     
-    
-    StrAssign(string,"ABDH#K###E##CFI###G#J##");
-    
-    CreateOurBiTree(&T);
+    //二叉树的前序遍历
+    BiTreePreorderTraverse(tree);
+    //二叉树的中序遍历
+    BiTreeInorderTraverse(tree);
+    //二叉树的后序遍历
+    BiTreePostOrderTraverse(tree);
 }
 
-Status StrAssign(String T,char *chars)
+/**
+ 构造空的二叉树
+
+ @param tree 二叉树
+ */
+void initTree(BiTree *tree)
+{
+    *tree = NULL;
+}
+
+/**
+ 将字符分开一个个放在数组中
+
+ @param T 字符数组
+ @param chars 字符串
+ @return 结果
+ */
+Status stringAssign(String T, char *chars)
 {
     int i;
-    if(strlen(chars)>MAXSIZE){
+    if (strlen(chars) > MAXSIZE) {
         return ERROR;
-    }
-    else
-    {
-        T[0]=strlen(chars);
-        for(i=1;i<=T[0];i++)
-            T[i]=*(chars+i-1);
+    }else{
+        T[0] = strlen(chars);
+        for (i = 1; i <= T[0]; i++){
+            T[i] = *(chars+i-1);
+        }
         return SUCCESS;
     }
 }
-/* ************************************************ */
 
-Status visit(CharElemType e)
-{
-    printf("%c ",e);
-    return SUCCESS;
-}
+/**
+ 二叉树的赋值  前序遍历的方式
 
-/* ππ‘Ïø’∂˛≤Ê ˜T */
-Status InitBiTree(BiTree *tree)
-{
-    *tree=NULL;
-    return SUCCESS;
-}
-
-/* ∞¥«∞–Ú ‰»Î∂˛≤Ê ˜÷–Ω·µ„µƒ÷µ£®“ª∏ˆ◊÷∑˚£© */
-/* #±Ì æø’ ˜£¨ππ‘Ï∂˛≤Ê¡¥±Ì±Ì æ∂˛≤Ê ˜T°£ */
+ @param tree 二叉树
+ */
 void CreateOurBiTree(BiTree *tree)
 {
-    CharElemType elem;
-    
-    /* scanf("%c",&ch); */
-    elem=string[ourIndex++];
-    
-    if(elem=='#'){
-        *tree=NULL;
-    }
-    else
-    {
-        *tree=(BiTree)malloc(sizeof(BiTNode));
-        if(!*tree){
+    CharElemType elem = string[ourIndex++];//从字符数组中挨个取出字符
+
+    if (elem == '#') {//#表示空
+        *tree = NULL;
+    }else{
+        *tree = (BiTree)malloc(sizeof(BiTNode));
+        if (!*tree) {
             exit(OVERFLOW);
+        }else{
+            (*tree)->data = elem;//生成根结点
+            CreateOurBiTree(&(*tree)->leftChild);//构造左子树
+            CreateOurBiTree(&(*tree)->rightChild);//构造右子树
         }
-        (*tree)->data=elem; /* …˙≥…∏˘Ω·µ„ */
-        CreateOurBiTree(&(*tree)->leftChild); /* ππ‘Ï◊Û◊” ˜ */
-        CreateOurBiTree(&(*tree)->rightChild); /* ππ‘Ï”“◊” ˜ */
     }
 }
 
+/**
+ 二叉树的前序遍历  先根结点 再次左子树 最后右子树
 
+ @param tree 二叉树
+ */
+void BiTreePreorderTraverse(BiTree tree)
+{
+    if (tree == NULL) {
+        return;
+    }
+    
+    RYQLog(@"二叉树的前序遍历  %c ", tree->data);//显示结点数据
+    BiTreePreorderTraverse(tree->leftChild);//先遍历左子树
+    BiTreePreorderTraverse(tree->rightChild);//再遍历右子树
+}
+
+/**
+ 二叉树的中序遍历  先左子树 再根结点 最后右子树
+
+ @param tree 二叉树
+ */
+void BiTreeInorderTraverse(BiTree tree)
+{
+    if (tree == NULL) {
+        return;
+    }
+    
+    BiTreeInorderTraverse(tree->leftChild);
+    RYQLog(@"二叉树的中序遍历  %c ", tree->data);//显示结点数据
+    BiTreeInorderTraverse(tree->rightChild);
+}
+
+/**
+ 二叉树的后序遍历  先左结点 后右结点 再根结点
+
+ @param tree 二叉树
+ */
+void BiTreePostOrderTraverse(BiTree tree)
+{
+    if (tree == NULL) {
+        return;
+    }
+    
+    BiTreePostOrderTraverse(tree->leftChild);
+    BiTreePostOrderTraverse(tree->rightChild);
+    RYQLog(@"二叉树的后序遍历  %c ", tree->data);//显示结点数据
+}
 
 @end

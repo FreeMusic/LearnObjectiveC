@@ -31,6 +31,7 @@
     self.Messages = @[
                     [ObjectiveModel initTitle:@"二叉树的定义" vcName:@"BinaryTreeDefineVC"],
                     [ObjectiveModel initTitle:@"二叉树的存储" vcName:@"BinaryTreeStoreVC"],
+                    [ObjectiveModel initTitle:@"线索二叉树" vcName:@"CluesBinaryTreeVC"],
                       ];
 }
 

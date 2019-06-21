@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18098A4122BCCF6B003BAFBA /* CluesBinaryTreeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18098A4022BCCF6B003BAFBA /* CluesBinaryTreeVC.m */; };
 		180C82D8223890F10092EBF0 /* FunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C82D7223890F10092EBF0 /* FunctionVC.m */; };
 		180C82DB2238910D0092EBF0 /* BuriesPointTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C82DA2238910D0092EBF0 /* BuriesPointTestVC.m */; };
 		180F1970225C348A00F62A8C /* TimeComplexityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F196F225C348A00F62A8C /* TimeComplexityVC.m */; };
@@ -97,6 +98,8 @@
 /* Begin PBXFileReference section */
 		0AEFD4F2AC48ADFBBE8E1805 /* Pods-LearnObjectiveCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCUITests/Pods-LearnObjectiveCUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0CC6282705465E117CA14B2F /* Pods-LearnObjectiveCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCTests/Pods-LearnObjectiveCTests.debug.xcconfig"; sourceTree = "<group>"; };
+		18098A3F22BCCF6B003BAFBA /* CluesBinaryTreeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CluesBinaryTreeVC.h; sourceTree = "<group>"; };
+		18098A4022BCCF6B003BAFBA /* CluesBinaryTreeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CluesBinaryTreeVC.m; sourceTree = "<group>"; };
 		180C82D6223890F10092EBF0 /* FunctionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionVC.h; sourceTree = "<group>"; };
 		180C82D7223890F10092EBF0 /* FunctionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionVC.m; sourceTree = "<group>"; };
 		180C82D92238910D0092EBF0 /* BuriesPointTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuriesPointTestVC.h; sourceTree = "<group>"; };
@@ -267,6 +270,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18098A3E22BCCF28003BAFBA /* 线索二叉树 */ = {
+			isa = PBXGroup;
+			children = (
+				18098A3F22BCCF6B003BAFBA /* CluesBinaryTreeVC.h */,
+				18098A4022BCCF6B003BAFBA /* CluesBinaryTreeVC.m */,
+			);
+			path = "线索二叉树";
+			sourceTree = "<group>";
+		};
 		180C82D3223890A00092EBF0 /* FunctionOptimization */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,6 +762,7 @@
 		189F68B322A617C0001F6D6F /* 树 */ = {
 			isa = PBXGroup;
 			children = (
+				18098A3E22BCCF28003BAFBA /* 线索二叉树 */,
 				18E5ADE122B8BCF0009E1EA6 /* 二叉树的存储 */,
 				18DE584022A7AE0900668BDD /* 二叉树的定义 */,
 				189F68B422A617C0001F6D6F /* MainTreeVC */,
@@ -1242,6 +1255,7 @@
 				189B8512229B7A0F002DBEC2 /* StoreOfStringVC.m in Sources */,
 				18481326223A21B600C566D5 /* MVC_View.m in Sources */,
 				181F31E7223111A20098E099 /* RunLoopMainVC.m in Sources */,
+				18098A4122BCCF6B003BAFBA /* CluesBinaryTreeVC.m in Sources */,
 				183ADC582235EFE200ADB09B /* KVC_Model.m in Sources */,
 				181F31942230BDDB0098E099 /* ViewController.m in Sources */,
 				185AF0432297DA7400E065EF /* GCDVC.m in Sources */,
