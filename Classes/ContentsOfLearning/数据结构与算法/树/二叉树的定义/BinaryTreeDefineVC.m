@@ -26,18 +26,14 @@
  */
 #import "BinaryTreeDefineVC.h"
 
+
+
 @interface BinaryTreeDefineVC ()
 
 @end
 
 @implementation BinaryTreeDefineVC
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-   
-    
-}
 
 
 @end

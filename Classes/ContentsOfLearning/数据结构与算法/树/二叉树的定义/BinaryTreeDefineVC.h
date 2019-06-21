@@ -6,11 +6,11 @@
 //  Copyright © 2019 橘子. All rights reserved.
 //
 
-#import "BaseDataStructureVC.h"
+#import "BaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BinaryTreeDefineVC : BaseDataStructureVC
+@interface BinaryTreeDefineVC : BaseViewController
 
 @end
 
