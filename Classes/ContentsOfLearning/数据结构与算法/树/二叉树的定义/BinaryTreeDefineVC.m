@@ -26,7 +26,19 @@
  */
 #import "BinaryTreeDefineVC.h"
 
+#define MaxSize 100
 
+typedef char CharElemType;
+
+typedef struct YQBiNode {
+    CharElemType data;
+    struct YQBiNode *leftChild, *rightChild;
+}YQBiNode, *YQBiTree;
+
+typedef char YQString[MaxSize];
+YQString mystr;
+
+int elemIndex = 1;
 
 @interface BinaryTreeDefineVC ()
 
@@ -34,6 +46,82 @@
 
 @implementation BinaryTreeDefineVC
 
+- (void)viewDidLoad{
+    
+    [super viewDidLoad];
+    
+    YQBiTree tree;
+    initTestTree(&tree);
+    stringAssignArray(mystr, "ABDH#K###E##CFI###G#J##");
+    CreateYQBiTree(&tree);
+    preOrderTravel(tree);
+    inOrderTravel(tree);
+    postOrderTravel(tree);
+}
 
+void initTestTree(YQBiTree *tree)
+{
+    *tree = NULL;
+}
+
+void stringAssignArray(YQString T, char *chars)
+{
+    if (strlen(chars) > MaxSize) {
+        return;
+    }
+    T[0] = strlen(chars);
+    for (int i = 1; i <= T[0]; i++) {
+        T[i] = *(chars+i-1);
+    }
+}
+
+void CreateYQBiTree(YQBiTree *tree)
+{
+    CharElemType elem = mystr[elemIndex++];
+    if (elem == '#') {
+        *tree = NULL;
+    }else{
+        
+        *tree = (YQBiTree)malloc(sizeof(YQBiNode));
+        if (!*tree) {
+            return;
+        }else{
+            (*tree)->data = elem;
+            CreateYQBiTree(&(*tree)->leftChild);
+            CreateYQBiTree(&(*tree)->rightChild);
+        }
+    }
+}
+
+void preOrderTravel(YQBiTree tree)
+{
+    if (tree == NULL) {
+        return;
+    }
+    
+    RYQLog(@"preOrderTravel %c", tree->data);
+    preOrderTravel(tree->leftChild);
+    preOrderTravel(tree->rightChild);
+}
+
+void inOrderTravel(YQBiTree tree)
+{
+    if (tree == NULL) {
+        return;
+    }
+    inOrderTravel(tree->leftChild);
+    RYQLog(@"inOrderTravel %c", tree->data);
+    inOrderTravel(tree->rightChild);
+}
+
+void postOrderTravel(YQBiTree tree)
+{
+    if (tree == NULL) {
+        return;
+    }
+    postOrderTravel(tree->leftChild);
+    postOrderTravel(tree->rightChild);
+    RYQLog(@"postOrderTravel %c", tree->data);
+}
 
 @end

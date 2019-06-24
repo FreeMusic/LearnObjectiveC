@@ -15,6 +15,27 @@
  */
 
 #import "CluesBinaryTreeVC.h"
+#define MAXSIZE 100
+
+typedef char CluesElemType;
+
+typedef char CluesString[24];
+CluesString myString;
+int cluesIndex = 1;
+
+typedef enum {
+    Link,
+    Thread
+} PointerTag;//Link==0表示指向左右孩子的指针
+
+typedef struct BiThreadNode{
+    CluesElemType data;//结点数据
+    struct BiThreadNode *leftChild, *rightChild;//左右孩子
+    PointerTag leftTag;
+    PointerTag rightTag;//左右标志
+}BiThreadNode, *BiThreadTree;
+
+CluesElemType NIL = '#';//字符以#为空
 
 @interface CluesBinaryTreeVC ()
 
@@ -23,12 +44,72 @@
 @implementation CluesBinaryTreeVC
 
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    BiThreadTree HTree, TTree;
+    cluesStringAssign(myString, "ABDH#K###E##CFI###G#J##");
+    CreateBiThreadTree(&TTree);//按照前序产生二叉树
 }
 
+/**
+ 遍历结点
+
+ @param elem 结点元素
+ */
+void visit(CluesElemType elem)
+{
+    RYQLog(@"%c", elem);
+}
+/**
+ 将字符分开一个个放在数组中
+ 
+ @param T 字符数组
+ @param chars 字符串
+ @return 结果
+ */
+Status cluesStringAssign(CluesString T, char *chars)
+{
+    if (strlen(chars) > MAXSIZE) {
+        return ERROR;
+    }else{
+        T[0] = strlen(chars);
+        for (int i = 1; i <= T[0]; i++) {
+            T[i] = *(chars+i-1);
+        }
+    }
+    return SUCCESS;
+}
+
+/**
+ 创建线索二叉树 前序创建方式
+
+ @param tree 线索二叉树
+ @return Status
+ */
+Status CreateBiThreadTree(BiThreadTree *tree)
+{
+    CluesElemType elem = myString[cluesIndex++];
+    if (elem == NIL) {
+        *tree = NULL;
+    }else{
+        *tree = (BiThreadTree)malloc(sizeof(BiThreadNode));
+        if (!*tree) {
+            exit(OVERFLOW);
+        }else{
+            (*tree)->data = elem;//生成根结点
+            CreateBiThreadTree(&(*tree)->leftChild);//递归构造左子树
+            if ((*tree)->leftChild) {//有左孩子
+                (*tree)->leftTag = Link;
+            }
+            CreateBiThreadTree(&(*tree)->rightChild);//递归构造右子树
+            if ((*tree)->rightChild) {//有右孩子
+                (*tree)->rightTag = Link;
+            }
+        }
+    }
+    
+    return SUCCESS;
+}
 
 @end
