@@ -36,6 +36,7 @@ typedef struct BiThreadNode{
 }BiThreadNode, *BiThreadTree;
 
 CluesElemType NIL = '#';//字符以#为空
+BiThreadTree preHeader;//全局变量 始终指向刚刚访问的结点
 
 @interface CluesBinaryTreeVC ()
 
@@ -50,6 +51,8 @@ CluesElemType NIL = '#';//字符以#为空
     BiThreadTree HTree, TTree;
     cluesStringAssign(myString, "ABDH#K###E##CFI###G#J##");
     CreateBiThreadTree(&TTree);//按照前序产生二叉树
+    inOrderThreading(TTree);
+    inOrderTravelalThreading(TTree);
 }
 
 /**
@@ -57,9 +60,10 @@ CluesElemType NIL = '#';//字符以#为空
 
  @param elem 结点元素
  */
-void visit(CluesElemType elem)
+Status visit(CluesElemType elem)
 {
     RYQLog(@"%c", elem);
+    return SUCCESS;
 }
 /**
  将字符分开一个个放在数组中
@@ -109,6 +113,61 @@ Status CreateBiThreadTree(BiThreadTree *tree)
         }
     }
     
+    return SUCCESS;
+}
+
+/**
+ 中序遍历线索化二叉树
+
+ @param tree 线索二叉树
+ */
+void inOrderThreading(BiThreadTree tree)
+{
+    if (tree == NULL) {
+        return;
+    }
+    
+    inOrderThreading(tree->leftChild);//递归左子树的线索化
+    if (!tree->leftChild) {//没有左孩子
+        tree->leftTag = Thread;//前驱线索
+        tree->leftChild = preHeader;//左孩子指针指向前驱
+    }
+    
+    if (preHeader != NULL) {
+        if (!(preHeader->rightChild == NULL)) {//前驱没有右孩子
+            preHeader->rightTag = Thread;//后继线索
+            preHeader->rightChild = tree;//后继右孩子指针指向后继 当前结点 tree
+        }
+    }
+    
+    preHeader = tree;//保持preHeader指向tree的前驱
+    inOrderThreading(tree->rightChild);//保持右子树线索化
+}
+
+/**
+ 中序遍历二叉线索表
+
+ @param T 二叉线索表
+ @return    是否成功
+ */
+Status inOrderTravelalThreading(BiThreadTree T)
+{
+    
+    BiThreadTree p;
+    p=T->leftChild; /* p÷∏œÚ∏˘Ω·µ„ */
+    while(p!=T)
+    { /* ø’ ˜ªÚ±È¿˙Ω· ¯ ±,p==T */
+        while(p->leftTag==Link)
+            p=p->leftChild;
+        if(!visit(p->data)) /* ∑√Œ ∆‰◊Û◊” ˜Œ™ø’µƒΩ·µ„ */
+            return ERROR;
+        while(p->rightTag==Thread&&p->rightChild!=T)
+        {
+            p=p->rightChild;
+            visit(p->data); /* ∑√Œ ∫ÛºÃΩ·µ„ */
+        }
+        p=p->rightChild;
+    }
     return SUCCESS;
 }
 
