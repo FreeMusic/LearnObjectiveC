@@ -48,11 +48,11 @@ BiThreadTree preHeader;//全局变量 始终指向刚刚访问的结点
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    BiThreadTree HTree, TTree;
-    cluesStringAssign(myString, "ABDH#K###E##CFI###G#J##");
-    CreateBiThreadTree(&TTree);//按照前序产生二叉树
-    inOrderThreading(TTree);
-    inOrderTravelalThreading(TTree);
+    BiThreadTree H, T;
+    cluesStringAssign(myString, "ABDH##I##EJ###CF##G##");
+    CreateBiThreadTree(&T);//按照前序产生二叉树
+    inOrderThreadingHead(&H, T);
+    inOrderTravelalThreading(H);
 }
 
 /**
@@ -67,7 +67,7 @@ Status visit(CluesElemType elem)
 }
 /**
  将字符分开一个个放在数组中
- 
+
  @param T 字符数组
  @param chars 字符串
  @return 结果
@@ -112,7 +112,7 @@ Status CreateBiThreadTree(BiThreadTree *tree)
             }
         }
     }
-    
+
     return SUCCESS;
 }
 
@@ -123,48 +123,70 @@ Status CreateBiThreadTree(BiThreadTree *tree)
  */
 void inOrderThreading(BiThreadTree tree)
 {
-    if (tree == NULL) {
-        return;
-    }
-    
-    inOrderThreading(tree->leftChild);//递归左子树的线索化
-    if (!tree->leftChild) {//没有左孩子
-        tree->leftTag = Thread;//前驱线索
-        tree->leftChild = preHeader;//左孩子指针指向前驱
-    }
-    
-    if (preHeader != NULL) {
-        if (!(preHeader->rightChild == NULL)) {//前驱没有右孩子
+    if (tree) {
+        inOrderThreading(tree->leftChild);//递归左子树的线索化
+        if (!tree->leftChild) {//没有左孩子
+            tree->leftTag = Thread;//前驱线索
+            tree->leftChild = preHeader;//左孩子指针指向前驱
+        }
+        if (!preHeader->rightChild) {//前驱没有右孩子
             preHeader->rightTag = Thread;//后继线索
             preHeader->rightChild = tree;//后继右孩子指针指向后继 当前结点 tree
         }
+        
+        preHeader = tree;//保持preHeader指向tree的前驱
+        inOrderThreading(tree->rightChild);//保持右子树线索化
     }
-    
-    preHeader = tree;//保持preHeader指向tree的前驱
-    inOrderThreading(tree->rightChild);//保持右子树线索化
+}
+
+/**
+ 中序遍历二叉树tree，并将其中序线索化，threadTree指向头结点
+
+ @param threadTree threadTree指向头结点
+ @param tree 二叉树tree
+ */
+void inOrderThreadingHead(BiThreadTree *threadTree, BiThreadTree tree)
+{
+    *threadTree = (BiThreadTree)malloc(sizeof(BiThreadNode));
+
+    if (!*threadTree) {
+        exit(OVERFLOW);
+    }
+    (*threadTree)->leftTag = Link;//建立头结点
+    (*threadTree)->rightTag = Thread;
+    (*threadTree)->rightChild = (*threadTree);//右指针回指
+    if (!tree) {//若二叉树为空，则左指针回指
+        (*threadTree)->leftChild = (*threadTree);
+    }else{
+        (*threadTree)->leftChild = tree;
+        preHeader = (*threadTree);
+        inOrderThreading(tree);//中序遍历 进行中序线索化
+        preHeader->rightChild = *threadTree;
+        preHeader->rightTag = Thread;//最后一个结点进行线索化
+        (*threadTree)->rightChild = preHeader;
+    }
 }
 
 /**
  中序遍历二叉线索表
 
- @param T 二叉线索表
+ @param tree 二叉线索表
  @return    是否成功
  */
-Status inOrderTravelalThreading(BiThreadTree T)
+Status inOrderTravelalThreading(BiThreadTree tree)
 {
-    
-    BiThreadTree p;
-    p=T->leftChild; /* p÷∏œÚ∏˘Ω·µ„ */
-    while(p!=T)
-    { /* ø’ ˜ªÚ±È¿˙Ω· ¯ ±,p==T */
+    BiThreadTree p = tree->leftChild;//p指针指向根结点
+    while(p != tree)//空树或遍历结束时， p==tree
+    {
         while(p->leftTag==Link)
+        {
             p=p->leftChild;
-        if(!visit(p->data)) /* ∑√Œ ∆‰◊Û◊” ˜Œ™ø’µƒΩ·µ„ */
-            return ERROR;
-        while(p->rightTag==Thread&&p->rightChild!=T)
+        }
+        RYQLog(@"p->data = %c", p->data);//访问前驱结点
+        while(p->rightTag==Thread&&p->rightChild!=tree)
         {
             p=p->rightChild;
-            visit(p->data); /* ∑√Œ ∫ÛºÃΩ·µ„ */
+            RYQLog(@"p->data = %c", p->data);//访问后继结点
         }
         p=p->rightChild;
     }

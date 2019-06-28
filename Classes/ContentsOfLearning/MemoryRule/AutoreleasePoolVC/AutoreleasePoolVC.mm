@@ -51,6 +51,7 @@
 @implementation AutoreleasePoolVC
 
 __weak id reference = nil;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -61,10 +62,12 @@ __weak id reference = nil;
         reference = str;
     }
 }
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     RYQLog(@"%@", reference); // Console: sunnyxx
 }
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     RYQLog(@"%@", reference); // Console: (null)
