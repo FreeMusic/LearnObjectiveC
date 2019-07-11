@@ -31,6 +31,6 @@
  */
 #import "UIButton+Extenion.h"
 #import "UILabel+Extenion.h"
-
+#import "UITableViewCell+Extention.h"
 
 #endif /* Header_h */

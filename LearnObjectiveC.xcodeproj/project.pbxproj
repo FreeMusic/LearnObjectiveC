@@ -47,6 +47,7 @@
 		1879F3C622895D1D00C48D34 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879F3C422895D1C00C48D34 /* Person.m */; };
 		187C3EE0228166E5000F205C /* CircularLinkedListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C3EDF228166E5000F205C /* CircularLinkedListVC.m */; };
 		187C3EE322816716000F205C /* BothWayLinkListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C3EE222816716000F205C /* BothWayLinkListVC.m */; };
+		1892AE2622D4255C00F4E007 /* AdjacentMatrixVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892AE2522D4255C00F4E007 /* AdjacentMatrixVC.m */; };
 		189B850A229B71EE002DBEC2 /* StringVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B8509229B71EE002DBEC2 /* StringVC.m */; };
 		189B850E229B722A002DBEC2 /* MainStringVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B850D229B722A002DBEC2 /* MainStringVC.m */; };
 		189B8512229B7A0F002DBEC2 /* StoreOfStringVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B8511229B7A0F002DBEC2 /* StoreOfStringVC.m */; };
@@ -54,6 +55,9 @@
 		189F68B722A617DE001F6D6F /* MainTreeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 189F68B622A617DE001F6D6F /* MainTreeVC.m */; };
 		18AF150922C9AA450048732F /* MainGraphVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF150822C9AA450048732F /* MainGraphVC.m */; };
 		18AF150D22C9AB150048732F /* DefineGraphVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF150C22C9AB150048732F /* DefineGraphVC.m */; };
+		18AFB14022D703A400C78822 /* FigureOutLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFB13F22D703A400C78822 /* FigureOutLayoutVC.m */; };
+		18AFB14322D7042F00C78822 /* LayOutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFB14222D7042F00C78822 /* LayOutCell.m */; };
+		18AFB14722D709F200C78822 /* UITableViewCell+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFB14622D709F200C78822 /* UITableViewCell+Extention.m */; };
 		18D412A322768D7900DF7815 /* SQListSequentialListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D412A222768D7900DF7815 /* SQListSequentialListVC.m */; };
 		18D412AA2276A66400DF7815 /* SQListLinkedStorageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D412A92276A66400DF7815 /* SQListLinkedStorageVC.m */; };
 		18DE584322A7AE3100668BDD /* BinaryTreeDefineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE584222A7AE3100668BDD /* BinaryTreeDefineVC.m */; };
@@ -184,6 +188,8 @@
 		187C3EDF228166E5000F205C /* CircularLinkedListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircularLinkedListVC.m; sourceTree = "<group>"; };
 		187C3EE122816716000F205C /* BothWayLinkListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BothWayLinkListVC.h; sourceTree = "<group>"; };
 		187C3EE222816716000F205C /* BothWayLinkListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BothWayLinkListVC.m; sourceTree = "<group>"; };
+		1892AE2422D4255C00F4E007 /* AdjacentMatrixVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdjacentMatrixVC.h; sourceTree = "<group>"; };
+		1892AE2522D4255C00F4E007 /* AdjacentMatrixVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdjacentMatrixVC.m; sourceTree = "<group>"; };
 		189B8508229B71EE002DBEC2 /* StringVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringVC.h; sourceTree = "<group>"; };
 		189B8509229B71EE002DBEC2 /* StringVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringVC.m; sourceTree = "<group>"; };
 		189B850C229B722A002DBEC2 /* MainStringVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStringVC.h; sourceTree = "<group>"; };
@@ -198,6 +204,12 @@
 		18AF150822C9AA450048732F /* MainGraphVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainGraphVC.m; sourceTree = "<group>"; };
 		18AF150B22C9AB150048732F /* DefineGraphVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineGraphVC.h; sourceTree = "<group>"; };
 		18AF150C22C9AB150048732F /* DefineGraphVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefineGraphVC.m; sourceTree = "<group>"; };
+		18AFB13E22D703A400C78822 /* FigureOutLayoutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FigureOutLayoutVC.h; sourceTree = "<group>"; };
+		18AFB13F22D703A400C78822 /* FigureOutLayoutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FigureOutLayoutVC.m; sourceTree = "<group>"; };
+		18AFB14122D7042F00C78822 /* LayOutCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayOutCell.h; sourceTree = "<group>"; };
+		18AFB14222D7042F00C78822 /* LayOutCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayOutCell.m; sourceTree = "<group>"; };
+		18AFB14522D709F200C78822 /* UITableViewCell+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extention.h"; sourceTree = "<group>"; };
+		18AFB14622D709F200C78822 /* UITableViewCell+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extention.m"; sourceTree = "<group>"; };
 		18D412A122768D7900DF7815 /* SQListSequentialListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQListSequentialListVC.h; sourceTree = "<group>"; };
 		18D412A222768D7900DF7815 /* SQListSequentialListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQListSequentialListVC.m; sourceTree = "<group>"; };
 		18D412A82276A66400DF7815 /* SQListLinkedStorageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQListLinkedStorageVC.h; sourceTree = "<group>"; };
@@ -288,6 +300,7 @@
 		180C82D3223890A00092EBF0 /* FunctionOptimization */ = {
 			isa = PBXGroup;
 			children = (
+				18AFB13D22D7038D00C78822 /* FigureOutLayout */,
 				185AF0402297DA6100E065EF /* GCD */,
 				551662932256F28A0058C9F1 /* ImageMessageVC */,
 				180C82D5223890D60092EBF0 /* Function */,
@@ -718,6 +731,15 @@
 			path = "单向循环链表";
 			sourceTree = "<group>";
 		};
+		1892AE2322D4252D00F4E007 /* 无向图邻接矩阵创建 */ = {
+			isa = PBXGroup;
+			children = (
+				1892AE2422D4255C00F4E007 /* AdjacentMatrixVC.h */,
+				1892AE2522D4255C00F4E007 /* AdjacentMatrixVC.m */,
+			);
+			path = "无向图邻接矩阵创建";
+			sourceTree = "<group>";
+		};
 		189B8506229B70A6002DBEC2 /* 串 */ = {
 			isa = PBXGroup;
 			children = (
@@ -788,6 +810,7 @@
 		18AF150522C9AA300048732F /* 图 */ = {
 			isa = PBXGroup;
 			children = (
+				1892AE2322D4252D00F4E007 /* 无向图邻接矩阵创建 */,
 				18AF150A22C9AAFC0048732F /* 图的定义 */,
 				18AF150622C9AA300048732F /* MainGraphVC */,
 			);
@@ -810,6 +833,26 @@
 				18AF150C22C9AB150048732F /* DefineGraphVC.m */,
 			);
 			path = "图的定义";
+			sourceTree = "<group>";
+		};
+		18AFB13D22D7038D00C78822 /* FigureOutLayout */ = {
+			isa = PBXGroup;
+			children = (
+				18AFB13E22D703A400C78822 /* FigureOutLayoutVC.h */,
+				18AFB13F22D703A400C78822 /* FigureOutLayoutVC.m */,
+				18AFB14122D7042F00C78822 /* LayOutCell.h */,
+				18AFB14222D7042F00C78822 /* LayOutCell.m */,
+			);
+			path = FigureOutLayout;
+			sourceTree = "<group>";
+		};
+		18AFB14422D709D800C78822 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				18AFB14522D709F200C78822 /* UITableViewCell+Extention.h */,
+				18AFB14622D709F200C78822 /* UITableViewCell+Extention.m */,
+			);
+			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
 		18D412A022768D4D00DF7815 /* 线性表顺序存储结构 */ = {
@@ -1006,6 +1049,7 @@
 		551662972256F6D40058C9F1 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				18AFB14422D709D800C78822 /* UITableViewCell */,
 				551662A02256FA390058C9F1 /* UIButton */,
 				551662A12256FA390058C9F1 /* UILabel */,
 				551662982256F6D40058C9F1 /* NSDictionary */,
@@ -1274,9 +1318,11 @@
 				18FEC62C22374EE200313854 /* TransmitObject.m in Sources */,
 				189B850A229B71EE002DBEC2 /* StringVC.m in Sources */,
 				18FEC62922374E9900313854 /* MessageTransmitVC.m in Sources */,
+				18AFB14022D703A400C78822 /* FigureOutLayoutVC.m in Sources */,
 				180F1970225C348A00F62A8C /* TimeComplexityVC.m in Sources */,
 				550B4DF52287B07900417CA5 /* Animal.m in Sources */,
 				187C3EE0228166E5000F205C /* CircularLinkedListVC.m in Sources */,
+				18AFB14322D7042F00C78822 /* LayOutCell.m in Sources */,
 				18E523022277DDDE001DAA3A /* BaseDataStructureVC.m in Sources */,
 				18D412AA2276A66400DF7815 /* SQListLinkedStorageVC.m in Sources */,
 				180C82D8223890F10092EBF0 /* FunctionVC.m in Sources */,
@@ -1292,6 +1338,7 @@
 				18098A4122BCCF6B003BAFBA /* CluesBinaryTreeVC.m in Sources */,
 				183ADC582235EFE200ADB09B /* KVC_Model.m in Sources */,
 				181F31942230BDDB0098E099 /* ViewController.m in Sources */,
+				1892AE2622D4255C00F4E007 /* AdjacentMatrixVC.m in Sources */,
 				185AF0432297DA7400E065EF /* GCDVC.m in Sources */,
 				18481320223A218300C566D5 /* MVCController.m in Sources */,
 				551662962256F2A20058C9F1 /* ImageMessageVC.m in Sources */,
@@ -1304,6 +1351,7 @@
 				181F31CD2230C3530098E099 /* BaseViewController.m in Sources */,
 				189B8516229B8317002DBEC2 /* KMPMatchVC.m in Sources */,
 				18FEC63A22377ED300313854 /* NSMutableArray+ErrorHandle.m in Sources */,
+				18AFB14722D709F200C78822 /* UITableViewCell+Extention.m in Sources */,
 				181F31DE2230EA940098E099 /* BAD_ACCESS_VC.m in Sources */,
 				1814E89E2293E8D5006A892C /* StackVC.m in Sources */,
 				180C82DB2238910D0092EBF0 /* BuriesPointTestVC.m in Sources */,

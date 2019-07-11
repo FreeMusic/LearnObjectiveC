@@ -19,6 +19,7 @@
     
     self.Messages = @[
                       [ObjectiveModel initTitle:@"图的定义" vcName:@"DefineGraphVC"],
+                      [ObjectiveModel initTitle:@"邻接矩阵创建" vcName:@"AdjacentMatrixVC"],
                       ];
 }
 
