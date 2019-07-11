@@ -58,6 +58,7 @@
 		18AFB14022D703A400C78822 /* FigureOutLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFB13F22D703A400C78822 /* FigureOutLayoutVC.m */; };
 		18AFB14322D7042F00C78822 /* LayOutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFB14222D7042F00C78822 /* LayOutCell.m */; };
 		18AFB14722D709F200C78822 /* UITableViewCell+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFB14622D709F200C78822 /* UITableViewCell+Extention.m */; };
+		18AFB14F22D73B1400C78822 /* AdjacencyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFB14E22D73B1400C78822 /* AdjacencyListVC.m */; };
 		18D412A322768D7900DF7815 /* SQListSequentialListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D412A222768D7900DF7815 /* SQListSequentialListVC.m */; };
 		18D412AA2276A66400DF7815 /* SQListLinkedStorageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D412A92276A66400DF7815 /* SQListLinkedStorageVC.m */; };
 		18DE584322A7AE3100668BDD /* BinaryTreeDefineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE584222A7AE3100668BDD /* BinaryTreeDefineVC.m */; };
@@ -210,6 +211,8 @@
 		18AFB14222D7042F00C78822 /* LayOutCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayOutCell.m; sourceTree = "<group>"; };
 		18AFB14522D709F200C78822 /* UITableViewCell+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extention.h"; sourceTree = "<group>"; };
 		18AFB14622D709F200C78822 /* UITableViewCell+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extention.m"; sourceTree = "<group>"; };
+		18AFB14D22D73B1400C78822 /* AdjacencyListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdjacencyListVC.h; sourceTree = "<group>"; };
+		18AFB14E22D73B1400C78822 /* AdjacencyListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdjacencyListVC.m; sourceTree = "<group>"; };
 		18D412A122768D7900DF7815 /* SQListSequentialListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQListSequentialListVC.h; sourceTree = "<group>"; };
 		18D412A222768D7900DF7815 /* SQListSequentialListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQListSequentialListVC.m; sourceTree = "<group>"; };
 		18D412A82276A66400DF7815 /* SQListLinkedStorageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQListLinkedStorageVC.h; sourceTree = "<group>"; };
@@ -731,13 +734,13 @@
 			path = "单向循环链表";
 			sourceTree = "<group>";
 		};
-		1892AE2322D4252D00F4E007 /* 无向图邻接矩阵创建 */ = {
+		1892AE2322D4252D00F4E007 /* 图邻接矩阵创建 */ = {
 			isa = PBXGroup;
 			children = (
 				1892AE2422D4255C00F4E007 /* AdjacentMatrixVC.h */,
 				1892AE2522D4255C00F4E007 /* AdjacentMatrixVC.m */,
 			);
-			path = "无向图邻接矩阵创建";
+			path = "图邻接矩阵创建";
 			sourceTree = "<group>";
 		};
 		189B8506229B70A6002DBEC2 /* 串 */ = {
@@ -810,7 +813,8 @@
 		18AF150522C9AA300048732F /* 图 */ = {
 			isa = PBXGroup;
 			children = (
-				1892AE2322D4252D00F4E007 /* 无向图邻接矩阵创建 */,
+				18AFB14C22D73ABB00C78822 /* 邻接表 */,
+				1892AE2322D4252D00F4E007 /* 图邻接矩阵创建 */,
 				18AF150A22C9AAFC0048732F /* 图的定义 */,
 				18AF150622C9AA300048732F /* MainGraphVC */,
 			);
@@ -853,6 +857,15 @@
 				18AFB14622D709F200C78822 /* UITableViewCell+Extention.m */,
 			);
 			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		18AFB14C22D73ABB00C78822 /* 邻接表 */ = {
+			isa = PBXGroup;
+			children = (
+				18AFB14D22D73B1400C78822 /* AdjacencyListVC.h */,
+				18AFB14E22D73B1400C78822 /* AdjacencyListVC.m */,
+			);
+			path = "邻接表";
 			sourceTree = "<group>";
 		};
 		18D412A022768D4D00DF7815 /* 线性表顺序存储结构 */ = {
@@ -1326,6 +1339,7 @@
 				18E523022277DDDE001DAA3A /* BaseDataStructureVC.m in Sources */,
 				18D412AA2276A66400DF7815 /* SQListLinkedStorageVC.m in Sources */,
 				180C82D8223890F10092EBF0 /* FunctionVC.m in Sources */,
+				18AFB14F22D73B1400C78822 /* AdjacencyListVC.m in Sources */,
 				5516629F2256F75C0058C9F1 /* GeoCoding.m in Sources */,
 				18FEC63022377E7500313854 /* ArrayBoundsVC.m in Sources */,
 				18E247DA2296773200B8AF63 /* QueueVC.m in Sources */,
