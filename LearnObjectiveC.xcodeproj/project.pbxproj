@@ -67,6 +67,7 @@
 		18E523022277DDDE001DAA3A /* BaseDataStructureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E523012277DDDE001DAA3A /* BaseDataStructureVC.m */; };
 		18E5ADE422B8BD0E009E1EA6 /* BinaryTreeStoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E5ADE322B8BD0E009E1EA6 /* BinaryTreeStoreVC.m */; };
 		18ED2503225AE95A00006116 /* MainStructureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ED2502225AE95A00006116 /* MainStructureVC.m */; };
+		18EF870222E1BC3600609A39 /* BreadthFirstSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EF870122E1BC3600609A39 /* BreadthFirstSearchVC.m */; };
 		18FBA88D22E03EAC00E0B1F9 /* ADJacencyMultiplelistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FBA88C22E03EAC00E0B1F9 /* ADJacencyMultiplelistVC.m */; };
 		18FBA89222E042CD00E0B1F9 /* EdgeListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FBA89122E042CD00E0B1F9 /* EdgeListVC.m */; };
 		18FBA89622E0479900E0B1F9 /* DepthFirstSeachVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FBA89522E0479900E0B1F9 /* DepthFirstSeachVC.m */; };
@@ -233,6 +234,8 @@
 		18E5ADE322B8BD0E009E1EA6 /* BinaryTreeStoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeStoreVC.m; sourceTree = "<group>"; };
 		18ED2501225AE95A00006116 /* MainStructureVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainStructureVC.h; sourceTree = "<group>"; };
 		18ED2502225AE95A00006116 /* MainStructureVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainStructureVC.m; sourceTree = "<group>"; };
+		18EF870022E1BC3600609A39 /* BreadthFirstSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BreadthFirstSearchVC.h; sourceTree = "<group>"; };
+		18EF870122E1BC3600609A39 /* BreadthFirstSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreadthFirstSearchVC.m; sourceTree = "<group>"; };
 		18FBA88B22E03EAC00E0B1F9 /* ADJacencyMultiplelistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADJacencyMultiplelistVC.h; sourceTree = "<group>"; };
 		18FBA88C22E03EAC00E0B1F9 /* ADJacencyMultiplelistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADJacencyMultiplelistVC.m; sourceTree = "<group>"; };
 		18FBA89022E042CD00E0B1F9 /* EdgeListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EdgeListVC.h; sourceTree = "<group>"; };
@@ -825,6 +828,7 @@
 		18AF150522C9AA300048732F /* 图 */ = {
 			isa = PBXGroup;
 			children = (
+				18EF86FF22E1BBD400609A39 /* 深度广度优先遍历(邻接表) */,
 				18FBA89322E0477C00E0B1F9 /* 深度优先遍历和广度优先遍历(邻接矩阵) */,
 				18FBA88F22E042B700E0B1F9 /* 边集数组 */,
 				18FBA88A22E03E7900E0B1F9 /* 邻接多重表 */,
@@ -975,6 +979,15 @@
 			children = (
 			);
 			path = Reflection;
+			sourceTree = "<group>";
+		};
+		18EF86FF22E1BBD400609A39 /* 深度广度优先遍历(邻接表) */ = {
+			isa = PBXGroup;
+			children = (
+				18EF870022E1BC3600609A39 /* BreadthFirstSearchVC.h */,
+				18EF870122E1BC3600609A39 /* BreadthFirstSearchVC.m */,
+			);
+			path = "深度广度优先遍历(邻接表)";
 			sourceTree = "<group>";
 		};
 		18FBA88A22E03E7900E0B1F9 /* 邻接多重表 */ = {
@@ -1397,6 +1410,7 @@
 				18FEC63022377E7500313854 /* ArrayBoundsVC.m in Sources */,
 				18E247DA2296773200B8AF63 /* QueueVC.m in Sources */,
 				180F1979225C4A4D00F62A8C /* DefineLinearTableVC.m in Sources */,
+				18EF870222E1BC3600609A39 /* BreadthFirstSearchVC.m in Sources */,
 				18E5ADE422B8BD0E009E1EA6 /* BinaryTreeStoreVC.m in Sources */,
 				1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */,
 				189B8512229B7A0F002DBEC2 /* StoreOfStringVC.m in Sources */,
