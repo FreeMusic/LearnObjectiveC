@@ -22,12 +22,14 @@
 #define YQYES 1
 #define YQNO 0
 
-typedef int BOOLEAN;//BOOLEAN是布尔类型，其值是true或false
+typedef int BOOLEAN;//BOOLEAN是布尔类型，其值是YQYES或YQNO
 
 typedef char VertexType;//顶点类型
-typedef char VertexTypeStrings[MaxSize];
 typedef int EdgeType;//边上的权值类型
 
+/**
+ 邻接矩阵结构
+ */
 typedef struct {
     VertexType vexs[MaxVex];//顶点表
     EdgeType arc[MaxVex][MaxVex];//邻接矩阵 可看作边表
@@ -113,7 +115,7 @@ Status EnterCycleQueue(SequentialCycleQueue *queue, int elem)
  @param queue 队列
  @param elem 删除的元素
  */
-void deleteCycleQueue(SequentialCycleQueue *queue, int *elem)
+void DeleteCycleQueue(SequentialCycleQueue *queue, int *elem)
 {
     if (queue->front == queue->rear) {//队列不为空  不作任何操作
         return;
@@ -142,8 +144,8 @@ void deleteCycleQueue(SequentialCycleQueue *queue, int *elem)
 void CreateMGraph(MGraph *graph)
 {
     int i, j;
-    graph->numEdges = 15 ;
-    graph->numVertexs = 9;
+    graph->numEdges = MaxEdge ;
+    graph->numVertexs = MaxVex;
     
     //读入顶点信息建立顶点表
     char *vexChars = "ABCDEFGHI";
@@ -245,7 +247,7 @@ void breadthFirstSearchTraverse(MGraph graph)
             RYQLog(@"%c", graph.vexs[i]);//打印顶点，也可以其他操作
             EnterCycleQueue(&queue, i);//将此顶点入队列
             while (!CycleQueueEmpty(queue)) {//如果队列不为空
-                deleteCycleQueue(&queue, &i);//将队列元素出队列，赋值给i
+                DeleteCycleQueue(&queue, &i);//将队列元素出队列，赋值给i
                 for (j = 0; j < graph.numVertexs; j++) {
                     //判断其他顶点若与当前顶点存在并且未被访问过
                     if (graph.arc[i][j] == 1 && !visited[j]) {
