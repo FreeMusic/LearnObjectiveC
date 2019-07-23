@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LayOutCell : UITableViewCell
+@interface LayOutCell : UICollectionViewCell
+
+- (void)zoomCardView;
 
 @end
 

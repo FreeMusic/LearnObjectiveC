@@ -18,26 +18,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[LayOutCell class] forCellReuseIdentifier:@"LayOutCell"];
-    self.tableView.frame = CGRectMake(0, 0, kScreenWidth/2, kScreenHeight);
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.collectionView.frame = CGRectMake(0, 0, kScreenWidth, 400*m6Scale);
+    self.collectionView.center = self.view.center;
+    self.collectionView.pagingEnabled = YES;
+    [self.collectionView registerClass:[LayOutCell class] forCellWithReuseIdentifier:@"LayOutCell"];
 }
 
-#pragma  UITableViewDataSource---numberOfRowsInSection
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 10;
 }
 
-#pragma UITableViewDataSource---cellForRowAtIndexPath
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    LayOutCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LayOutCell"];
+    LayOutCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LayOutCell" forIndexPath:indexPath];
+    [cell zoomCardView];
     
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    return 400*m6Scale;
+/**
+ 设置item的大小
+ */
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(kScreenWidth, 400*m6Scale);
 }
 
 @end
