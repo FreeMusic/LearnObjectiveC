@@ -78,6 +78,8 @@
 		18FEC63A22377ED300313854 /* NSMutableArray+ErrorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC63622377ED300313854 /* NSMutableArray+ErrorHandle.m */; };
 		18FEC63B22377ED300313854 /* NSObject+SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC63822377ED300313854 /* NSObject+SwizzleMethod.m */; };
 		18FEC63E2237801500313854 /* BoundsNextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEC63D2237801500313854 /* BoundsNextVC.m */; };
+		18FFB16522E6B9370011FBD8 /* MinimumTreeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFB16422E6B9370011FBD8 /* MinimumTreeVC.m */; };
+		18FFB16922E708020011FBD8 /* MyCollectionViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFB16822E708020011FBD8 /* MyCollectionViewVC.m */; };
 		550B4DF52287B07900417CA5 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 550B4DF42287B07900417CA5 /* Animal.m */; };
 		551662962256F2A20058C9F1 /* ImageMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 551662952256F2A20058C9F1 /* ImageMessageVC.m */; };
 		5516629B2256F6F40058C9F1 /* NSDictionary+CLLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5516629A2256F6F40058C9F1 /* NSDictionary+CLLocation.m */; };
@@ -256,6 +258,10 @@
 		18FEC63822377ED300313854 /* NSObject+SwizzleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SwizzleMethod.m"; sourceTree = "<group>"; };
 		18FEC63C2237801500313854 /* BoundsNextVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoundsNextVC.h; sourceTree = "<group>"; };
 		18FEC63D2237801500313854 /* BoundsNextVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoundsNextVC.m; sourceTree = "<group>"; };
+		18FFB16322E6B9370011FBD8 /* MinimumTreeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinimumTreeVC.h; sourceTree = "<group>"; };
+		18FFB16422E6B9370011FBD8 /* MinimumTreeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinimumTreeVC.m; sourceTree = "<group>"; };
+		18FFB16722E708020011FBD8 /* MyCollectionViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewVC.h; sourceTree = "<group>"; };
+		18FFB16822E708020011FBD8 /* MyCollectionViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewVC.m; sourceTree = "<group>"; };
 		38E4C8AE55DD99ABC5D96520 /* libPods-LearnObjectiveC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjectiveC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4947D508C763C6A7F9AB609C /* libPods-LearnObjectiveCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnObjectiveCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F744E4CB9B4A24875B64718 /* Pods-LearnObjectiveCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCUITests/Pods-LearnObjectiveCUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -517,6 +523,7 @@
 		181F31C92230C3310098E099 /* BaseVC */ = {
 			isa = PBXGroup;
 			children = (
+				18FFB16622E707E30011FBD8 /* MyCollectionViewVC */,
 				18E522FF2277DDCB001DAA3A /* BaseDataStructureVC */,
 				181F31D22230C5ED0098E099 /* MyTableReFreshVC */,
 				181F31CE2230C43D0098E099 /* MyTableViewVC */,
@@ -828,6 +835,7 @@
 		18AF150522C9AA300048732F /* 图 */ = {
 			isa = PBXGroup;
 			children = (
+				18FFB16222E6B90F0011FBD8 /* 最小生成树 */,
 				18EF86FF22E1BBD400609A39 /* 深度广度优先遍历(邻接表) */,
 				18FBA89322E0477C00E0B1F9 /* 深度优先遍历和广度优先遍历(邻接矩阵) */,
 				18FBA88F22E042B700E0B1F9 /* 边集数组 */,
@@ -1103,6 +1111,24 @@
 				18FEC63822377ED300313854 /* NSObject+SwizzleMethod.m */,
 			);
 			path = ArrayBounds;
+			sourceTree = "<group>";
+		};
+		18FFB16222E6B90F0011FBD8 /* 最小生成树 */ = {
+			isa = PBXGroup;
+			children = (
+				18FFB16322E6B9370011FBD8 /* MinimumTreeVC.h */,
+				18FFB16422E6B9370011FBD8 /* MinimumTreeVC.m */,
+			);
+			path = "最小生成树";
+			sourceTree = "<group>";
+		};
+		18FFB16622E707E30011FBD8 /* MyCollectionViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				18FFB16722E708020011FBD8 /* MyCollectionViewVC.h */,
+				18FFB16822E708020011FBD8 /* MyCollectionViewVC.m */,
+			);
+			path = MyCollectionViewVC;
 			sourceTree = "<group>";
 		};
 		42A076A795CE4B7DA295BF06 /* Frameworks */ = {
@@ -1414,6 +1440,7 @@
 				18E5ADE422B8BD0E009E1EA6 /* BinaryTreeStoreVC.m in Sources */,
 				1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */,
 				189B8512229B7A0F002DBEC2 /* StoreOfStringVC.m in Sources */,
+				18FFB16522E6B9370011FBD8 /* MinimumTreeVC.m in Sources */,
 				18481326223A21B600C566D5 /* MVC_View.m in Sources */,
 				181F31E7223111A20098E099 /* RunLoopMainVC.m in Sources */,
 				18098A4122BCCF6B003BAFBA /* CluesBinaryTreeVC.m in Sources */,
@@ -1464,6 +1491,7 @@
 				18DE584322A7AE3100668BDD /* BinaryTreeDefineVC.m in Sources */,
 				183ADC5E2235FABA00ADB09B /* AutoreleasePoolVC.mm in Sources */,
 				183ADC6722360FD800ADB09B /* FactoryDesignVC.m in Sources */,
+				18FFB16922E708020011FBD8 /* MyCollectionViewVC.m in Sources */,
 				183ADC592235EFE200ADB09B /* KVC_VC.m in Sources */,
 				18AF150D22C9AB150048732F /* DefineGraphVC.m in Sources */,
 			);
