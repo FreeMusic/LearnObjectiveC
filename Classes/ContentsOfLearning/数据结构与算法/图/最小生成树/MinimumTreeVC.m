@@ -24,6 +24,15 @@ typedef struct {
     int numVertexes, numEdges;
 }MGraph;
 
+/**
+ 对边集数组Edge结构的定义
+ */
+typedef struct {
+    int begin;
+    int end;
+    int weight;
+}Edge;
+
 @interface MinimumTreeVC ()
 
 @end
@@ -38,6 +47,8 @@ typedef struct {
     CreateMinimumTreeMGraph(&graph);
     //普里姆算法 计算最小生成树
     PrimMiniSpanTree(graph);
+    //克鲁斯卡尔算法  计算最小生成树
+    KruskalMiniSpanTree(graph);
 }
 
 /**
@@ -92,6 +103,7 @@ void CreateMinimumTreeMGraph(MGraph *graph)
  */
 void PrimMiniSpanTree(MGraph graph)
 {
+    RYQLog(@"普里姆算法 计算最小生成树");
     int min, i, j, k;
     int adjVex[MaxVex];//保存相关顶点下标
     int lowCost[MaxVex];//保存相关顶点间边的权值
@@ -113,7 +125,7 @@ void PrimMiniSpanTree(MGraph graph)
             }
             j++;
         }
-        RYQLog(@"(%d, %d)", adjVex[k], k);//打印当前顶点边中权值最小的边
+        RYQLog(@"(%d, %d)  此路径的最小值为%d ", adjVex[k], k, min);//打印当前顶点边中权值最小的边
         lowCost[k] = 0;//将当前顶点的权值设为0，表示此顶点已经完成任务
         for (j = 1; j < graph.numVertexes; j++) {//循环所有顶点
             if (lowCost[j] != 0 && graph.arc[k][j] < lowCost[j]) {
@@ -123,6 +135,94 @@ void PrimMiniSpanTree(MGraph graph)
             }
         }
     }
+}
+
+/**
+ 克鲁斯卡尔算法  计算最小生成树
+
+ @param graph 图
+ */
+void KruskalMiniSpanTree(MGraph graph)
+{
+    int i, j, n, m;
+    int k = 0;
+    int parent[MaxVex];//定义一数组用来判断边与边是否形成环路
+    
+    Edge edges[MaxEdge];//定义边集数组，edge的结构为begin，end，weight均为整型
+    //用来构建边集数组并排序
+    for (i = 0; i < graph.numVertexes-1; i++) {
+        for (j = i + 1; j < graph.numVertexes; j++) {
+            if (graph.arc[i][j] < Infinity) {
+                edges[k].begin = i;
+                edges[k].end = j;
+                edges[k].weight = graph.arc[i][j];
+                k++;
+            }
+        }
+    }
+    //对权值进行排序
+    KruskalSort(edges, &graph);
+    
+    for (i = 0; i < graph.numVertexes; i++) {
+        parent[i] = 0;//初始化数组值为0
+    }
+    RYQLog(@"打印最小生成树");
+    for (i = 0; i < graph.numEdges; i++) {//循环每一条边
+        n = KruskalFind(parent, edges[i].begin);
+        m = KruskalFind(parent, edges[i].end);
+        if (n != m) {
+            //假如n与m不相等。说明此边没有与现有的生成树形成环路
+            parent[n] = m;//将此边的尾顶点放入下标为起点的parent中，表明此顶点已经在生成树集合中
+            RYQLog(@"(%d,%d) weight = %d", edges[i].begin, edges[i].end, edges[i].weight);
+        }
+    }
+}
+
+/**
+ 对权值进行排序
+ */
+void KruskalSort(Edge edges[], MGraph *graph)
+{
+    int i , j;
+    for (i = 0; i < graph->numEdges; i++) {
+        for (j = i+1; j < graph->numEdges; j++) {
+            if (edges[i].weight > edges[j].weight) {
+                KruskalSwip(edges, i, j);
+            }
+        }
+    }
+    RYQLog(@"权排序之后的为");
+    for (i = 0; i < graph->numEdges; i++) {
+        RYQLog(@"(%d,%d)  weight = %d", edges[i].begin, edges[i].end, edges[i].weight);
+    }
+}
+
+/**
+ 交换权值以及头和尾
+ */
+void KruskalSwip(Edge *edges, int i, int j)
+{
+    int temp;
+    temp = edges[i].begin;
+    edges[i].begin = edges[j].begin;
+    edges[j].begin = temp;
+    temp = edges[i].end;
+    edges[i].end = edges[j].end;
+    edges[j].end = temp;
+    temp = edges[i].weight;
+    edges[i].weight = edges[j].weight;
+    edges[j].weight = temp;
+}
+
+/**
+ 查找连线顶点的尾部下标
+ */
+int KruskalFind(int *parent, int find)
+{
+    while (parent[find] > 0) {
+        find = parent[find];
+    }
+    return find;
 }
 
 @end
