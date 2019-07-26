@@ -69,7 +69,11 @@ BOOLEAN hasVisited[MaxVex];//访问标志的数组
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+<<<<<<< HEAD
+    
+=======
 
+>>>>>>> 46b73da98ae5e08eb59add56bb503c410fe9b6e4
     MGraph graph;
     GraphADJlist list;
     //构建邻接矩阵
