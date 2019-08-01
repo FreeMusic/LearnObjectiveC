@@ -99,7 +99,17 @@ void CreateShortPathMGraph(MGraph *graph)
  */
 void DijkstraShortestPath(MGraph graph, int v0, PathArc *path, ShortPathTable *shortPath)
 {
+    int v,w,k,min;
+    int final[MaxVex];//final[w]=1表示求得定点v0到vw的最短路径
+    for (v = 0; v < graph.numVertexes; v++) {
+        //初始化数据
+        final[v] = 0;//全部顶点初始化为未知最短路径状态
+        (*shortPath)[v] = graph.arc[v0][v];//将与v0点有连线的顶点加上权值
+        (*path)[v] = -1;//初始化路径数组path为-1
+    }
     
+    (*shortPath)[v0] = 0;//v0到v0的路径为0
+    final[v0] = 0;//
 }
 
 @end
