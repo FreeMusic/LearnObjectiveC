@@ -31,7 +31,7 @@ typedef int ShortPathTable[MaxVex];//用于存储到各点最短路径的权值�
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    int i, j, v0;
+    int v0;
     MGraph graph;
     PathArc path;
     ShortPathTable shortPath;//求顶点到其余各点的最短路径
@@ -40,6 +40,7 @@ typedef int ShortPathTable[MaxVex];//用于存储到各点最短路径的权值�
     CreateShortPathMGraph(&graph);
     //迪杰斯特拉算法
     DijkstraShortestPath(graph, v0, &path, &shortPath);
+    
 }
 
 /**
@@ -86,6 +87,12 @@ void CreateShortPathMGraph(MGraph *graph)
     graph->arc[6][8] = 7;
     
     graph->arc[7][8] = 4;
+    
+    for (i = 0; i < graph->numVertexes; i++) {
+        for (j = i; j < graph->numVertexes; j++) {
+            graph->arc[j][i] = graph->arc[i][j];
+        }
+    }
 }
 
 /**
@@ -99,7 +106,9 @@ void CreateShortPathMGraph(MGraph *graph)
  */
 void DijkstraShortestPath(MGraph graph, int v0, PathArc *path, ShortPathTable *shortPath)
 {
-    int v,w,k,min;
+    int v,w,k = 0,min;
+    int remerK = 0;
+    NSString *pathDescribtion = [NSString stringWithFormat:@"最短路径为: v%d", graph.vexs[0]];
     int final[MaxVex];//final[w]=1表示求得定点v0到vw的最短路径
     for (v = 0; v < graph.numVertexes; v++) {
         //初始化数据
@@ -109,7 +118,36 @@ void DijkstraShortestPath(MGraph graph, int v0, PathArc *path, ShortPathTable *s
     }
     
     (*shortPath)[v0] = 0;//v0到v0的路径为0
-    final[v0] = 0;//
+    final[v0] = 1;//v0到v0不需要求路径
+    //开始主循环，每次求得v0到某个v顶点的最短路径
+    for (v = 1; v < graph.numVertexes; v++) {
+        min = Infinity;//当前所知离v0顶点的最近距离
+        for (w = 0; w < graph.numVertexes; w++) {//寻找离v0的最近的顶点
+            if (!final[w] && (*shortPath)[w] < min) {
+                k = w;
+                min = (*shortPath)[w];//w顶点离v0顶点更近
+            }
+        }
+        final[k] = 1;//将目前找到的最近的位置点设置为1
+        for (w = 0; w < graph.numVertexes; w++) {//修正当前最短路径和距离
+            //如果经过v顶点的路径比现在这条路的长度短的话
+            if (!final[w] && (min+graph.arc[k][w] < (*shortPath)[w])) {
+                //说明找到了更短的路径 修改(*shortPath)[w]和path[w]
+                (*shortPath)[w] = min + graph.arc[k][w];//修改当前路径的长度
+                (*path)[w] = k;
+                if (remerK != k) {
+                    remerK = k;
+                    pathDescribtion = [pathDescribtion stringByAppendingString:[NSString stringWithFormat:@" -> v%d", remerK]];
+                }
+            }
+        }
+    }
+    pathDescribtion = [pathDescribtion stringByAppendingString:[NSString stringWithFormat:@" -> v%d", graph.numVertexes-1]];
+    RYQLog(@"%@", pathDescribtion);
+    
+    for (int i = 1; i < graph.numVertexes; ++i) {
+        RYQLog(@"v%d到v%d的最短路径为: %d", graph.vexs[0] , graph.vexs[i], (*shortPath)[i]);
+    }
 }
 
 @end
