@@ -20,6 +20,9 @@ typedef struct {
 typedef int PathArc[MaxVex];//用于存储最短路径下标的数组
 typedef int ShortPathTable[MaxVex];//用于存储到各点最短路径的权值和
 
+typedef int FloydPathArc[MaxVex][MaxVex];
+typedef int FloydShortPathTable[MaxVex][MaxVex];
+
 @interface ShortestPathVC ()
 
 
@@ -40,7 +43,10 @@ typedef int ShortPathTable[MaxVex];//用于存储到各点最短路径的权值�
     CreateShortPathMGraph(&graph);
     //迪杰斯特拉算法
     DijkstraShortestPath(graph, v0, &path, &shortPath);
-    
+    //弗洛伊德算法
+    FloydPathArc Floydpath;
+    FloydShortPathTable FloydshortPath;//求顶点到其余各点的最短路径
+    FloydShortestPath(graph, &Floydpath, &FloydshortPath);
 }
 
 /**
@@ -106,6 +112,7 @@ void CreateShortPathMGraph(MGraph *graph)
  */
 void DijkstraShortestPath(MGraph graph, int v0, PathArc *path, ShortPathTable *shortPath)
 {
+    RYQLog(@"迪杰斯特拉算法求最短路径");
     int v,w,k = 0,min;
     int remerK = 0;
     NSString *pathDescribtion = [NSString stringWithFormat:@"最短路径为: v%d", graph.vexs[0]];
@@ -147,6 +154,42 @@ void DijkstraShortestPath(MGraph graph, int v0, PathArc *path, ShortPathTable *s
     
     for (int i = 1; i < graph.numVertexes; ++i) {
         RYQLog(@"v%d到v%d的最短路径为: %d", graph.vexs[0] , graph.vexs[i], (*shortPath)[i]);
+    }
+}
+
+/**
+ Floyd算法，求网图graph中各顶点到其余顶点w的最短路径path[v][w]以及带权长度shortPath[v][w]
+
+ @param graph 网图
+ @param path 最短路径
+ @param shortPath 带权长度
+ */
+void FloydShortestPath(MGraph graph, FloydPathArc *path, FloydShortPathTable *shortPath)
+{
+    int v, w, k;
+    for (v = 0; v < graph.numVertexes; v++) {//初始化path和shortPath
+        for (w = 0; w < graph.numVertexes; w++) {
+            (*shortPath)[v][w] = graph.arc[v][w];//shortPath[v][w]值即为对应点间的权值
+            (*path)[v][w] = w;//初始化path
+        }
+    }
+    
+    for (k = 0; k < graph.numVertexes; k++) {
+        for (v = 0; v < graph.numVertexes; v++) {
+            for (w = 0; w < graph.numVertexes; w++) {
+                //如果经过下标为k顶点路径比原来两点间的路径更短
+                (*shortPath)[v][w] = (*shortPath)[v][k] + (*shortPath)[k][w];//将当前两个顶点间权值设为更小的一个
+                (*shortPath)[v][w] = (*path)[v][k];//路径设置为径路下标为k的顶点
+            }
+        }
+    }
+    
+    for (v= 0; v < graph.numVertexes; v++) {
+        for (w = k+1; w < graph.numVertexes; w++) {
+            RYQLog(@"v%d-v%d  weight:%d", v, w, (*shortPath)[v][w]);
+            k = (*path)[v][w];//获得第一个路径顶点下标
+            RYQLog(@"path : %d", v);//打印路径顶点
+        }
     }
 }
 
