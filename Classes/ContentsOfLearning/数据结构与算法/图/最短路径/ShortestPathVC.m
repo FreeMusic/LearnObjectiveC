@@ -51,7 +51,7 @@ typedef int FloydShortPathTable[MaxVex][MaxVex];
 
 /**
  构建图
-
+ 
  @param graph 图
  */
 void CreateShortPathMGraph(MGraph *graph)
@@ -104,7 +104,7 @@ void CreateShortPathMGraph(MGraph *graph)
 /**
  Dijkstra算法  求有向网graph的v0顶点到其余顶点v的最短路径path[v]及带权长度shortPath[v]
  path[v]的值为前驱顶点下标，shortPath[v]表示v0到v的最短路径长度和
-
+ 
  @param graph 有向网graph
  @param v0 v0顶点
  @param path 最短路径path[v]
@@ -159,13 +159,14 @@ void DijkstraShortestPath(MGraph graph, int v0, PathArc *path, ShortPathTable *s
 
 /**
  Floyd算法，求网图graph中各顶点到其余顶点w的最短路径path[v][w]以及带权长度shortPath[v][w]
-
+ 
  @param graph 网图
  @param path 最短路径
  @param shortPath 带权长度
  */
 void FloydShortestPath(MGraph graph, FloydPathArc *path, FloydShortPathTable *shortPath)
 {
+    RYQLog(@"弗洛伊德算法求最短路径");
     int v, w, k;
     for (v = 0; v < graph.numVertexes; v++) {//初始化path和shortPath
         for (w = 0; w < graph.numVertexes; w++) {
@@ -178,17 +179,26 @@ void FloydShortestPath(MGraph graph, FloydPathArc *path, FloydShortPathTable *sh
         for (v = 0; v < graph.numVertexes; v++) {
             for (w = 0; w < graph.numVertexes; w++) {
                 //如果经过下标为k顶点路径比原来两点间的路径更短
-                (*shortPath)[v][w] = (*shortPath)[v][k] + (*shortPath)[k][w];//将当前两个顶点间权值设为更小的一个
-                (*shortPath)[v][w] = (*path)[v][k];//路径设置为径路下标为k的顶点
+                if ((*shortPath)[v][w] > (*shortPath)[v][k] + (*shortPath)[k][w]) {
+                    (*shortPath)[v][w] = (*shortPath)[v][k] + (*shortPath)[k][w];//将当前两个顶点间权值设为更小的一个
+                    (*path)[v][w] = (*path)[v][k];//路径设置为径路下标为k的顶点
+                }
             }
         }
     }
     
-    for (v= 0; v < graph.numVertexes; v++) {
-        for (w = k+1; w < graph.numVertexes; w++) {
-            RYQLog(@"v%d-v%d  weight:%d", v, w, (*shortPath)[v][w]);
-            k = (*path)[v][w];//获得第一个路径顶点下标
-            RYQLog(@"path : %d", v);//打印路径顶点
+    for (v = 0; v < graph.numVertexes; v++) {
+        for (w = 0; w < graph.numVertexes; w++) {
+            if (v < w) {
+                NSString *shorest = [NSString stringWithFormat:@"v%d-v%d的最短路径为：v%d", v, w, v];
+                k = (*path)[v][w];//获得第一个路径顶点下标
+                while (k != w) {
+                    shorest = [NSString stringWithFormat:@"%@ -> v%d", shorest, k];
+                    k = (*path)[k][w];//获得下一个路径顶点下标
+                }
+                shorest = [NSString stringWithFormat:@"%@ -> v%d   长度：%d", shorest, w, (*shortPath)[v][w]];
+                RYQLog(@"%@", shorest);
+            }
         }
     }
 }

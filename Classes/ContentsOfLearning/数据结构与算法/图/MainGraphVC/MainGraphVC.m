@@ -28,6 +28,7 @@
                       [ObjectiveModel initTitle:@"深度广度优先遍历(邻接表)" vcName:@"BreadthFirstSearchVC"],
                       [ObjectiveModel initTitle:@"最小生成树" vcName:@"MinimumTreeVC"],
                       [ObjectiveModel initTitle:@"最短路径" vcName:@"ShortestPathVC"],
+                      [ObjectiveModel initTitle:@"拓扑排序" vcName:@"TopologicalSortingVC"],
                       ];
 }
 

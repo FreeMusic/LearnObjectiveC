@@ -62,6 +62,7 @@
 		18AFB14F22D73B1400C78822 /* AdjacencyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFB14E22D73B1400C78822 /* AdjacencyListVC.m */; };
 		18D412A322768D7900DF7815 /* SQListSequentialListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D412A222768D7900DF7815 /* SQListSequentialListVC.m */; };
 		18D412AA2276A66400DF7815 /* SQListLinkedStorageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D412A92276A66400DF7815 /* SQListLinkedStorageVC.m */; };
+		18DA477622FA7B0C009F0187 /* TopologicalSortingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA477522FA7B0C009F0187 /* TopologicalSortingVC.m */; };
 		18DE584322A7AE3100668BDD /* BinaryTreeDefineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DE584222A7AE3100668BDD /* BinaryTreeDefineVC.m */; };
 		18E247DA2296773200B8AF63 /* QueueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E247D92296773200B8AF63 /* QueueVC.m */; };
 		18E4DAB622DDACAC00DD5829 /* CurbTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4DAB522DDACAC00DD5829 /* CurbTableVC.m */; };
@@ -227,6 +228,8 @@
 		18D412A222768D7900DF7815 /* SQListSequentialListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQListSequentialListVC.m; sourceTree = "<group>"; };
 		18D412A82276A66400DF7815 /* SQListLinkedStorageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQListLinkedStorageVC.h; sourceTree = "<group>"; };
 		18D412A92276A66400DF7815 /* SQListLinkedStorageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQListLinkedStorageVC.m; sourceTree = "<group>"; };
+		18DA477422FA7B0C009F0187 /* TopologicalSortingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopologicalSortingVC.h; sourceTree = "<group>"; };
+		18DA477522FA7B0C009F0187 /* TopologicalSortingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopologicalSortingVC.m; sourceTree = "<group>"; };
 		18DE584122A7AE3100668BDD /* BinaryTreeDefineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeDefineVC.h; sourceTree = "<group>"; };
 		18DE584222A7AE3100668BDD /* BinaryTreeDefineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeDefineVC.m; sourceTree = "<group>"; };
 		18E247D82296773200B8AF63 /* QueueVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueVC.h; sourceTree = "<group>"; };
@@ -847,6 +850,7 @@
 		18AF150522C9AA300048732F /* 图 */ = {
 			isa = PBXGroup;
 			children = (
+				18DA477322FA7AD7009F0187 /* 拓扑排序 */,
 				1872753622E941C400E7E01F /* 最短路径 */,
 				18FFB16222E6B90F0011FBD8 /* 最小生成树 */,
 				18EF86FF22E1BBD400609A39 /* 深度广度优先遍历(邻接表) */,
@@ -925,6 +929,15 @@
 				18D412A92276A66400DF7815 /* SQListLinkedStorageVC.m */,
 			);
 			path = "单链表";
+			sourceTree = "<group>";
+		};
+		18DA477322FA7AD7009F0187 /* 拓扑排序 */ = {
+			isa = PBXGroup;
+			children = (
+				18DA477422FA7B0C009F0187 /* TopologicalSortingVC.h */,
+				18DA477522FA7B0C009F0187 /* TopologicalSortingVC.m */,
+			);
+			path = "拓扑排序";
 			sourceTree = "<group>";
 		};
 		18DE584022A7AE0900668BDD /* 二叉树的定义 */ = {
@@ -1473,6 +1486,7 @@
 				181F31CD2230C3530098E099 /* BaseViewController.m in Sources */,
 				189B8516229B8317002DBEC2 /* KMPMatchVC.m in Sources */,
 				18FEC63A22377ED300313854 /* NSMutableArray+ErrorHandle.m in Sources */,
+				18DA477622FA7B0C009F0187 /* TopologicalSortingVC.m in Sources */,
 				18AFB14722D709F200C78822 /* UITableViewCell+Extention.m in Sources */,
 				181F31DE2230EA940098E099 /* BAD_ACCESS_VC.m in Sources */,
 				1814E89E2293E8D5006A892C /* StackVC.m in Sources */,
