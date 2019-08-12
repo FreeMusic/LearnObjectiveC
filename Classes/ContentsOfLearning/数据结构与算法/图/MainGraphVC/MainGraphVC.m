@@ -29,6 +29,7 @@
                       [ObjectiveModel initTitle:@"最小生成树" vcName:@"MinimumTreeVC"],
                       [ObjectiveModel initTitle:@"最短路径" vcName:@"ShortestPathVC"],
                       [ObjectiveModel initTitle:@"拓扑排序" vcName:@"TopologicalSortingVC"],
+                      [ObjectiveModel initTitle:@"关键路径" vcName:@"CriticalPathVC"],
                       ];
 }
 
