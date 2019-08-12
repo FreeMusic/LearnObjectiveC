@@ -6,11 +6,11 @@
 //  Copyright © 2019 橘子. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseDataStructureVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TopologicalSortingVC : BaseViewController
+@interface TopologicalSortingVC : BaseDataStructureVC
 
 @end
 
