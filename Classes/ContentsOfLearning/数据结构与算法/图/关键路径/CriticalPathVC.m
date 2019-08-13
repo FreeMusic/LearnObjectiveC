@@ -66,8 +66,13 @@ typedef struct {
     [super viewDidLoad];
     
     MGraph graph;
+    GraphADJlist list;
     //构建图
     CreateCriticalPathMGraph(&graph);
+    //利用邻接矩阵构建邻接表
+    CreateCriticalPathALGraph(graph, &list);
+    //求关键路径，graphlist为有向图，输出graphlist的各项相关活动
+    CriticalPath(list);
 }
 
 /**
@@ -106,6 +111,160 @@ void CreateCriticalPathMGraph(MGraph *graph)
     graph->arc[6][9] = 2;
     graph->arc[7][8] = 5;
     graph->arc[8][9] = 3;
+}
+
+/**
+ 利用邻接矩阵构建邻接表
+ */
+void CreateCriticalPathALGraph(MGraph graph, GraphADJlist *graphlist)
+{
+    int i, j;
+    EdgeNode *edge;
+    
+    *graphlist = (GraphADJlist)malloc(sizeof(graphADJlist));
+    
+    (*graphlist)->numVertexs = graph.numVertexs;
+    (*graphlist)->numEdges = graph.numEdges;
+    
+    for (i = 0; i < graph.numVertexs; i++) {
+        //读入顶点信息，建立顶点表
+        (*graphlist)->list[i].inCome = 0;
+        (*graphlist)->list[i].data = graph.vexs[i];
+        (*graphlist)->list[i].firstEdge = NULL;//将边表置为空
+    }
+    
+    for (i = 0; i < graph.numVertexs; i++) {//建立边表
+        for (j = 0; j < graph.numVertexs; j++) {
+            if (graph.arc[i][j] != 0 && graph.arc[i][j] < Infinity) {
+                RYQLog(@"j = %d", j);
+                edge = (EdgeNode *)malloc(sizeof(EdgeNode));
+                edge->adjVex = j;//邻接序号为j
+                edge->weight = graph.arc[i][j];//权重赋值
+                edge->next = (*graphlist)->list[i].firstEdge;//将当前顶点上的指向的结点指针赋值给edge
+                (*graphlist)->list[i].firstEdge = edge;//将当前顶点的指针指向edge
+                (*graphlist)->list[j].inCome++;
+                //                edge = (EdgeNode *)malloc(sizeof(EdgeNode));
+                //                edge->adjVex = j;//邻接序号为j
+                //                edge->weight = graph.arc[i][j];
+                //                edge->next = (*graphlist)->list[i].firstEdge;//将当前顶点上的指向的结点指针赋值给edge
+                //                (*graphlist)->list[i].firstEdge = edge;//将当前d顶点的指针指向edge
+                //                (*graphlist)->list[j].inCome++;
+            }
+        }
+    }
+    //    int i, j;
+    //    EdgeNode *edge;
+    //
+    //    *graphlist = (GraphADJlist)malloc(sizeof(graphlist));
+    //
+    //    (*graphlist)->numVertexs = graph.numVertexs;
+    //    (*graphlist)->numEdges = graph.numEdges;
+    //    for (i = 0; i < graph.numVertexs; i++) {//读入顶点信息，建立顶点表
+    //        (*graphlist)->list[i].inCome = 0;
+    //        (*graphlist)->list[i].data = graph.vexs[i];
+    //        (*graphlist)->list[i].firstEdge = NULL;
+    //    }
+    //
+    //    for (i = 0; i < graph.numVertexs; i++) {//建立边表
+    //        for (j = 0; j < graph.numVertexs; j++) {
+    //            if (graph.arc[i][j] != 0 && graph.arc[i][j] < Infinity) {
+    //                RYQLog(@"j = %d", j);
+    //                edge = (EdgeNode *)malloc(sizeof(EdgeNode));
+    //                edge->adjVex = j;//邻接序号为j
+    //                edge->weight = graph.arc[i][j];//权重赋值
+    //                edge->next = (*graphlist)->list[i].firstEdge;//将当前顶点上的指向的结点指针赋值给edge
+    //                (*graphlist)->list[i].firstEdge = edge;//将当前顶点的指针指向edge
+    //                (*graphlist)->list[j].inCome++;
+    //            }
+    //        }
+    //    }
+}
+
+/**
+ 拓扑排序
+ */
+void TopologicalSortingCriticalPath(GraphADJlist graphlist)
+{
+    EdgeNode *edge;
+    int i, k, gettop;
+    int top = 0;//用于栈指针下标
+    int count = 0;//用于统计输出顶点的个数
+    int *stack;//建栈将入度为0的顶点入栈
+    stack = (int *)malloc(graphlist->numVertexs * sizeof(int));
+    for (i = 0; i < graphlist->numVertexs; i++) {
+        if (0 == graphlist->list[i].inCome) {//将入度为0的顶点入栈
+            stack[++top] = i;
+        }
+    }
+    top2 = 0;
+    etv = (int *)malloc(graphlist->numVertexs * sizeof(int));//事件最早发生时间数组
+    for (i = 0; i < graphlist->numVertexs; i++) {
+        etv[i] = 0;//初始化
+    }
+    stack2 = (int *)malloc(graphlist->numVertexs * sizeof(int));//初始化拓扑序列栈
+    while (top != 0) {
+        gettop = stack[top--];
+        RYQLog(@"%d -> ", graphlist->list[gettop].data);
+        count++;//输出号顶点，并计数
+        
+        stack2[++top2] = gettop;//将弹出的顶点序号压入拓扑序列的栈
+        
+        for (edge = graphlist->list[gettop].firstEdge; edge; edge = edge->next) {
+            k = edge->adjVex;
+            if (!(--graphlist->list[k].inCome)) {//将号顶点的邻接点的入度减一，如果减一后为0，则入栈
+                stack[++top] = k;
+            }
+            if ((etv[gettop] + edge->weight) > etv[k]) {
+                //求各顶点事件的最早发生事件etv的值
+                etv[k] = etv[gettop] + edge->weight;
+            }
+        }
+    }
+    if (count < graphlist->numVertexs) {
+        RYQLog(@"graphList无回路");
+    }else{
+        RYQLog(@"graphList有回路");
+    }
+}
+
+/**
+ 求关键路径，graphlist为有向图，输出graphlist的各项相关活动
+ */
+void CriticalPath(GraphADJlist graphlist)
+{
+    EdgeNode *edge;
+    int i, gettop, k, j;
+    int ete, lte;//声明活动最早发生时间和最迟发生时间的变量
+    TopologicalSortingCriticalPath(graphlist);//求拓扑序列，计算数组etv和stack2的值
+    ltv = (int *)malloc(graphlist->numVertexs * sizeof(int));//事件最早发生时间数组
+    for (i = 0; i < graphlist->numVertexs; i++) {
+        RYQLog(@"%d -> ", etv[i]);
+    }
+    
+    while (top2 != 0) {//出栈是求ltv
+        gettop = stack2[top2--];
+        for (edge = graphlist->list[gettop].firstEdge; edge; edge = edge->next) {
+            k = edge->adjVex;
+            if (ltv[k] - edge->weight < ltv[gettop]) {
+                ltv[gettop] = ltv[k] - edge->weight;
+            }
+        }
+    }
+    for (i = 0; i < graphlist->numVertexs; i++) {
+        printf("%d -> ", ltv[i]);
+    }
+    printf("\n");
+    
+    for (j = 0; j < graphlist->numVertexs; j++) {//求ete,lte和关键活动
+        for (edge = graphlist->list[j].firstEdge; edge; edge = edge->next) {
+            k = edge->adjVex;
+            ete = etv[j];//活动最早发生时间
+            lte = ltv[k] - edge->weight;//活动最迟发生时间
+            if (ete == lte) {//两者在关键路径上相等
+                printf("<v%d - v%d> 长度:%d \n", graphlist->list[j].data, graphlist->list[k].data, edge->weight);
+            }
+        }
+    }
 }
 
 @end
