@@ -10,6 +10,8 @@
 		18098A4122BCCF6B003BAFBA /* CluesBinaryTreeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18098A4022BCCF6B003BAFBA /* CluesBinaryTreeVC.m */; };
 		180C82D8223890F10092EBF0 /* FunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C82D7223890F10092EBF0 /* FunctionVC.m */; };
 		180C82DB2238910D0092EBF0 /* BuriesPointTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C82DA2238910D0092EBF0 /* BuriesPointTestVC.m */; };
+		180CF1C8230399210096C58B /* MainSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CF1C7230399210096C58B /* MainSearchVC.m */; };
+		180CF1CC230399AF0096C58B /* SearchTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CF1CB230399AF0096C58B /* SearchTableVC.m */; };
 		180F1970225C348A00F62A8C /* TimeComplexityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F196F225C348A00F62A8C /* TimeComplexityVC.m */; };
 		180F1976225C49D200F62A8C /* MainLinearTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F1975225C49D200F62A8C /* MainLinearTableVC.m */; };
 		180F1979225C4A4D00F62A8C /* DefineLinearTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F1978225C4A4D00F62A8C /* DefineLinearTableVC.m */; };
@@ -121,6 +123,10 @@
 		180C82D7223890F10092EBF0 /* FunctionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionVC.m; sourceTree = "<group>"; };
 		180C82D92238910D0092EBF0 /* BuriesPointTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuriesPointTestVC.h; sourceTree = "<group>"; };
 		180C82DA2238910D0092EBF0 /* BuriesPointTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuriesPointTestVC.m; sourceTree = "<group>"; };
+		180CF1C6230399210096C58B /* MainSearchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainSearchVC.h; sourceTree = "<group>"; };
+		180CF1C7230399210096C58B /* MainSearchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainSearchVC.m; sourceTree = "<group>"; };
+		180CF1CA230399AF0096C58B /* SearchTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTableVC.h; sourceTree = "<group>"; };
+		180CF1CB230399AF0096C58B /* SearchTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTableVC.m; sourceTree = "<group>"; };
 		180F196E225C348A00F62A8C /* TimeComplexityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeComplexityVC.h; sourceTree = "<group>"; };
 		180F196F225C348A00F62A8C /* TimeComplexityVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeComplexityVC.m; sourceTree = "<group>"; };
 		180F1974225C49D200F62A8C /* MainLinearTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainLinearTableVC.h; sourceTree = "<group>"; };
@@ -358,6 +364,33 @@
 				180C82D7223890F10092EBF0 /* FunctionVC.m */,
 			);
 			path = Function;
+			sourceTree = "<group>";
+		};
+		180CF1C4230399090096C58B /* 查找 */ = {
+			isa = PBXGroup;
+			children = (
+				180CF1C9230399970096C58B /* 查找概论 */,
+				180CF1C5230399090096C58B /* MainSearchVC */,
+			);
+			path = "查找";
+			sourceTree = "<group>";
+		};
+		180CF1C5230399090096C58B /* MainSearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				180CF1C6230399210096C58B /* MainSearchVC.h */,
+				180CF1C7230399210096C58B /* MainSearchVC.m */,
+			);
+			path = MainSearchVC;
+			sourceTree = "<group>";
+		};
+		180CF1C9230399970096C58B /* 查找概论 */ = {
+			isa = PBXGroup;
+			children = (
+				180CF1CA230399AF0096C58B /* SearchTableVC.h */,
+				180CF1CB230399AF0096C58B /* SearchTableVC.m */,
+			);
+			path = "查找概论";
 			sourceTree = "<group>";
 		};
 		180F196D225C345A00F62A8C /* 算法的时间复杂度 */ = {
@@ -992,6 +1025,7 @@
 		18ED24FF225AE93B00006116 /* 数据结构与算法 */ = {
 			isa = PBXGroup;
 			children = (
+				180CF1C4230399090096C58B /* 查找 */,
 				18AF150522C9AA300048732F /* 图 */,
 				189F68B322A617C0001F6D6F /* 树 */,
 				189B8506229B70A6002DBEC2 /* 串 */,
@@ -1491,6 +1525,7 @@
 				185AF0432297DA7400E065EF /* GCDVC.m in Sources */,
 				18481320223A218300C566D5 /* MVCController.m in Sources */,
 				551662962256F2A20058C9F1 /* ImageMessageVC.m in Sources */,
+				180CF1CC230399AF0096C58B /* SearchTableVC.m in Sources */,
 				189B850E229B722A002DBEC2 /* MainStringVC.m in Sources */,
 				181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */,
 				1879F3C622895D1D00C48D34 /* Person.m in Sources */,
@@ -1515,6 +1550,7 @@
 				18FEC63B22377ED300313854 /* NSObject+SwizzleMethod.m in Sources */,
 				183ADC6B2236100E00ADB09B /* DesignMainVC.m in Sources */,
 				18FEC63922377ED300313854 /* NSArray+ErrorHandle.m in Sources */,
+				180CF1C8230399210096C58B /* MainSearchVC.m in Sources */,
 				18481323223A21A300C566D5 /* MVC_Model.m in Sources */,
 				1814E8A12293E919006A892C /* MainStackTempVC.m in Sources */,
 				551662A72256FA770058C9F1 /* UIButton+Extenion.m in Sources */,

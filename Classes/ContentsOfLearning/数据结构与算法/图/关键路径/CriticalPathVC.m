@@ -143,41 +143,9 @@ void CreateCriticalPathALGraph(MGraph graph, GraphADJlist *graphlist)
                 edge->next = (*graphlist)->list[i].firstEdge;//将当前顶点上的指向的结点指针赋值给edge
                 (*graphlist)->list[i].firstEdge = edge;//将当前顶点的指针指向edge
                 (*graphlist)->list[j].inCome++;
-                //                edge = (EdgeNode *)malloc(sizeof(EdgeNode));
-                //                edge->adjVex = j;//邻接序号为j
-                //                edge->weight = graph.arc[i][j];
-                //                edge->next = (*graphlist)->list[i].firstEdge;//将当前顶点上的指向的结点指针赋值给edge
-                //                (*graphlist)->list[i].firstEdge = edge;//将当前d顶点的指针指向edge
-                //                (*graphlist)->list[j].inCome++;
             }
         }
     }
-    //    int i, j;
-    //    EdgeNode *edge;
-    //
-    //    *graphlist = (GraphADJlist)malloc(sizeof(graphlist));
-    //
-    //    (*graphlist)->numVertexs = graph.numVertexs;
-    //    (*graphlist)->numEdges = graph.numEdges;
-    //    for (i = 0; i < graph.numVertexs; i++) {//读入顶点信息，建立顶点表
-    //        (*graphlist)->list[i].inCome = 0;
-    //        (*graphlist)->list[i].data = graph.vexs[i];
-    //        (*graphlist)->list[i].firstEdge = NULL;
-    //    }
-    //
-    //    for (i = 0; i < graph.numVertexs; i++) {//建立边表
-    //        for (j = 0; j < graph.numVertexs; j++) {
-    //            if (graph.arc[i][j] != 0 && graph.arc[i][j] < Infinity) {
-    //                RYQLog(@"j = %d", j);
-    //                edge = (EdgeNode *)malloc(sizeof(EdgeNode));
-    //                edge->adjVex = j;//邻接序号为j
-    //                edge->weight = graph.arc[i][j];//权重赋值
-    //                edge->next = (*graphlist)->list[i].firstEdge;//将当前顶点上的指向的结点指针赋值给edge
-    //                (*graphlist)->list[i].firstEdge = edge;//将当前顶点的指针指向edge
-    //                (*graphlist)->list[j].inCome++;
-    //            }
-    //        }
-    //    }
 }
 
 /**

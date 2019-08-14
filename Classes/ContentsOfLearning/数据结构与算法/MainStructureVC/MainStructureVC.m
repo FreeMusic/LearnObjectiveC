@@ -41,6 +41,7 @@ typedef struct Node *LinkList;
                       [ObjectiveModel initTitle:@"字符串" vcName:@"MainStringVC"],
                       [ObjectiveModel initTitle:@"树🌲" vcName:@"MainTreeVC"],
                       [ObjectiveModel initTitle:@"图🤮" vcName:@"MainGraphVC"],
+                      [ObjectiveModel initTitle:@"查找🔍" vcName:@"MainSearchVC"],
                       ];
     RYQLog(@"MainStructureVC 执行了viewDidLoad");
 }
