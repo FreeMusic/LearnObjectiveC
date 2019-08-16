@@ -19,6 +19,7 @@
     
     self.Messages = @[
                       [ObjectiveModel initTitle:@"查找概论🔍" vcName:@"SearchTableVC"],
+                      [ObjectiveModel initTitle:@"顺序查找表" vcName:@"SequentialSearchVC"],
                       ];
 }
 
