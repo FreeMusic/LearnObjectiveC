@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D79C4F60087D7FFA71BECB79D66F75CB"
-               BlueprintName = "Pods-LearnObjectiveC"
+               BlueprintIdentifier = "7CA3B437D7438649BE6C700067C8EDF8"
+               BlueprintName = "FLAnimatedImage"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-LearnObjectiveC.a">
+               BuildableName = "libFLAnimatedImage.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

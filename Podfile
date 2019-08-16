@@ -11,6 +11,8 @@ target 'LearnObjectiveC' do
   pod 'SDWebImage'
   pod 'MJRefresh'
   pod 'Bugly'
+  pod 'FLAnimatedImage'
+  pod 'SDWebImage/GIF'
 
   target 'LearnObjectiveCTests' do
     inherit! :search_paths
