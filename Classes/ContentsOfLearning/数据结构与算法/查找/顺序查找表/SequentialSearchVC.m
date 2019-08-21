@@ -37,7 +37,7 @@ int Fib[MaxSize];//斐波那契数列
     //有哨兵顺序查找
     SentrySequentialSearch(list, MaxSize, MaxSize/2);
     //折半查找
-    BinarySearch(array, MaxSize, 62);
+    BinarySearch(array, 10, 62);
     //插值查找
     InterPloationSearch(array, MaxSize, MaxSize/2);
     //构造斐波那契数列
@@ -97,7 +97,7 @@ void BinarySearch(int *list, int n, int key)
     int low, high, mid;
     low = 1;//定义最低下标为记录首位
     high = n;//定义最高下标为记录首位
-    while (low < high) {
+    while (low <= high) {
         //开启折半查找
         mid = (low+high)/2;//折半
         if (key < list[mid]) {
