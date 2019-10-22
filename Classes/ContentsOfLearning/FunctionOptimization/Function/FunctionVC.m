@@ -21,6 +21,7 @@
                       [ObjectiveModel initTitle:@"App埋点测试" vcName:@"BuriesPointTestVC"],
                       [ObjectiveModel initTitle:@"照片信息" vcName:@"ImageMessageVC"],
                       [ObjectiveModel initTitle:@"一些约束问题" vcName:@"FigureOutLayoutVC"],
+                      [ObjectiveModel initTitle:@"GCD" vcName:@"GCDVC"],
                       ];
 }
 

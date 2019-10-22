@@ -93,6 +93,8 @@
 		551662A72256FA770058C9F1 /* UIButton+Extenion.m in Sources */ = {isa = PBXBuildFile; fileRef = 551662A62256FA770058C9F1 /* UIButton+Extenion.m */; };
 		551662AB2257014E0058C9F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551662AA2257014E0058C9F1 /* Assets.xcassets */; };
 		55309EFB23018B5A0039589F /* CriticalPathVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55309EFA23018B5A0039589F /* CriticalPathVC.m */; };
+		55BCAEE2235568BD00830093 /* FactoryDesignVC+FactorA.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCAEE1235568BD00830093 /* FactoryDesignVC+FactorA.m */; };
+		55BCAEE5235568CB00830093 /* FactoryDesignVC+FactorB.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCAEE4235568CB00830093 /* FactoryDesignVC+FactorB.m */; };
 		919735996E7228FD6C736DD0 /* libPods-LearnObjectiveCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4947D508C763C6A7F9AB609C /* libPods-LearnObjectiveCUITests.a */; };
 		98BEB752F35B782F968A28C1 /* libPods-LearnObjectiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C8AE55DD99ABC5D96520 /* libPods-LearnObjectiveC.a */; };
 		BC9A8EB5F33AEAD001DAB123 /* libPods-LearnObjectiveCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E40F4D024E57FB0808C251 /* libPods-LearnObjectiveCTests.a */; };
@@ -296,6 +298,10 @@
 		551662AA2257014E0058C9F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55309EF923018B5A0039589F /* CriticalPathVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CriticalPathVC.h; sourceTree = "<group>"; };
 		55309EFA23018B5A0039589F /* CriticalPathVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CriticalPathVC.m; sourceTree = "<group>"; };
+		55BCAEE0235568BD00830093 /* FactoryDesignVC+FactorA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FactoryDesignVC+FactorA.h"; sourceTree = "<group>"; };
+		55BCAEE1235568BD00830093 /* FactoryDesignVC+FactorA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FactoryDesignVC+FactorA.m"; sourceTree = "<group>"; };
+		55BCAEE3235568CB00830093 /* FactoryDesignVC+FactorB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FactoryDesignVC+FactorB.h"; sourceTree = "<group>"; };
+		55BCAEE4235568CB00830093 /* FactoryDesignVC+FactorB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FactoryDesignVC+FactorB.m"; sourceTree = "<group>"; };
 		6CE4228E588080A260588FC4 /* Pods-LearnObjectiveC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveC/Pods-LearnObjectiveC.debug.xcconfig"; sourceTree = "<group>"; };
 		7D59E1C2B96E2BCECF32C3EA /* Pods-LearnObjectiveCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCTests/Pods-LearnObjectiveCTests.release.xcconfig"; sourceTree = "<group>"; };
 		97E466B2B25271A16FB16F47 /* Pods-LearnObjectiveC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveC.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveC/Pods-LearnObjectiveC.release.xcconfig"; sourceTree = "<group>"; };
@@ -742,6 +748,10 @@
 			children = (
 				183ADC6522360FD800ADB09B /* FactoryDesignVC.h */,
 				183ADC6622360FD800ADB09B /* FactoryDesignVC.m */,
+				55BCAEE0235568BD00830093 /* FactoryDesignVC+FactorA.h */,
+				55BCAEE1235568BD00830093 /* FactoryDesignVC+FactorA.m */,
+				55BCAEE3235568CB00830093 /* FactoryDesignVC+FactorB.h */,
+				55BCAEE4235568CB00830093 /* FactoryDesignVC+FactorB.m */,
 			);
 			path = FactoryDesign;
 			sourceTree = "<group>";
@@ -1533,9 +1543,11 @@
 				18098A4122BCCF6B003BAFBA /* CluesBinaryTreeVC.m in Sources */,
 				183ADC582235EFE200ADB09B /* KVC_Model.m in Sources */,
 				18FBA89622E0479900E0B1F9 /* DepthFirstSeachVC.m in Sources */,
+				55BCAEE2235568BD00830093 /* FactoryDesignVC+FactorA.m in Sources */,
 				181F31942230BDDB0098E099 /* ViewController.m in Sources */,
 				1892AE2622D4255C00F4E007 /* AdjacentMatrixVC.m in Sources */,
 				185AF0432297DA7400E065EF /* GCDVC.m in Sources */,
+				55BCAEE5235568CB00830093 /* FactoryDesignVC+FactorB.m in Sources */,
 				18481320223A218300C566D5 /* MVCController.m in Sources */,
 				551662962256F2A20058C9F1 /* ImageMessageVC.m in Sources */,
 				180CF1CC230399AF0096C58B /* SearchTableVC.m in Sources */,

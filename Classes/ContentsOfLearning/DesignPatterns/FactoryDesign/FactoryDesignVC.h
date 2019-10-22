@@ -10,4 +10,6 @@
 
 @interface FactoryDesignVC : BaseViewController
 
+@property (nonatomic, readonly, copy) NSString *name;
+
 @end

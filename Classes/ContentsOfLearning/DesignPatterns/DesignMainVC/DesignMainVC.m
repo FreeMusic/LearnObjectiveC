@@ -22,7 +22,7 @@
                       [ObjectiveModel initTitle:@"工厂设计模式" vcName:@"FactoryDesignVC"],
                       [ObjectiveModel initTitle:@"MVC设计模式" vcName:@"MVCController"],
                       ];
-    
+
 }
 
 
