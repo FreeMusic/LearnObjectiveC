@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     /// 异步函数下的主队列
-//    [self asyncMainThread];
+    [self asyncMainThread];
     //异步函数并发队列
     [self asyncConcurrentThread];
 }

@@ -22,6 +22,7 @@
                       [ObjectiveModel initTitle:@"照片信息" vcName:@"ImageMessageVC"],
                       [ObjectiveModel initTitle:@"一些约束问题" vcName:@"FigureOutLayoutVC"],
                       [ObjectiveModel initTitle:@"GCD" vcName:@"GCDVC"],
+                      [ObjectiveModel initTitle:@"UITextFiled输入限制" vcName:@"TextFiledInputLimitVC"],
                       ];
 }
 
