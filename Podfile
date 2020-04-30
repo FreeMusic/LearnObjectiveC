@@ -13,6 +13,8 @@ target 'LearnObjectiveC' do
   pod 'Bugly'
   pod 'FLAnimatedImage'
   pod 'SDWebImage/GIF'
+  #输入框
+  pod 'IQKeyboardManager'
 
   target 'LearnObjectiveCTests' do
     inherit! :search_paths

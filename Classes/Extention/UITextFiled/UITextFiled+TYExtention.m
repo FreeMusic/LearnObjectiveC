@@ -37,7 +37,9 @@ static char UITextFieldInputRulesKey;
 
 //*****输入监听******//
 - (void)setEditValueBlock:(UITextFieldEditValueChangeBlock)editValueBlock{
-    [self addTarget:self action:@selector(textFiledValueEditChanged:) forControlEvents:UIControlEventEditingChanged];
+//    if (![self respondsToSelector:@selector(textFiledValueEditChanged:)]) {
+        [self addTarget:self action:@selector(textFiledValueEditChanged:) forControlEvents:UIControlEventEditingChanged];
+//    }
     objc_setAssociatedObject(self, &UITextFieldEditKey, editValueBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
@@ -48,7 +50,6 @@ static char UITextFieldInputRulesKey;
 //*****输入最大长度******//
 - (void)setInputMax:(int)inputMax{
     objc_setAssociatedObject(self, @selector(inputMax), @(inputMax), OBJC_ASSOCIATION_ASSIGN);
-    [self addTarget:self action:@selector(textFiledValueEditChanged:) forControlEvents:UIControlEventEditingChanged];
 }
 
 - (int)inputMax{
@@ -90,6 +91,9 @@ static char UITextFieldInputRulesKey;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if ([self.inputRules isEqualToString:@""]) {
+        return YES;
+    }
     NSCharacterSet *cs;
     cs = [[NSCharacterSet characterSetWithCharactersInString:self.inputRules] invertedSet];
     NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];

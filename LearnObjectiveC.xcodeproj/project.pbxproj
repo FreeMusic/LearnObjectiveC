@@ -97,6 +97,8 @@
 		55BCAEE5235568CB00830093 /* FactoryDesignVC+FactorB.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCAEE4235568CB00830093 /* FactoryDesignVC+FactorB.m */; };
 		919735996E7228FD6C736DD0 /* libPods-LearnObjectiveCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4947D508C763C6A7F9AB609C /* libPods-LearnObjectiveCUITests.a */; };
 		98BEB752F35B782F968A28C1 /* libPods-LearnObjectiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C8AE55DD99ABC5D96520 /* libPods-LearnObjectiveC.a */; };
+		B600459D245A8356000F4BFA /* TextFiledInputLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B600459C245A8356000F4BFA /* TextFiledInputLimitCell.m */; };
+		B60045A0245A9AB1000F4BFA /* TextFiledInputModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B600459F245A9AB1000F4BFA /* TextFiledInputModel.m */; };
 		B66B11BE245834DD0090262B /* UITextFiled+TYExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = B66B11BD245834DD0090262B /* UITextFiled+TYExtention.m */; };
 		B66B11C22458357A0090262B /* TextFiledInputLimitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B66B11C12458357A0090262B /* TextFiledInputLimitVC.m */; };
 		BC9A8EB5F33AEAD001DAB123 /* libPods-LearnObjectiveCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E40F4D024E57FB0808C251 /* libPods-LearnObjectiveCTests.a */; };
@@ -307,6 +309,10 @@
 		6CE4228E588080A260588FC4 /* Pods-LearnObjectiveC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveC/Pods-LearnObjectiveC.debug.xcconfig"; sourceTree = "<group>"; };
 		7D59E1C2B96E2BCECF32C3EA /* Pods-LearnObjectiveCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCTests/Pods-LearnObjectiveCTests.release.xcconfig"; sourceTree = "<group>"; };
 		97E466B2B25271A16FB16F47 /* Pods-LearnObjectiveC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveC.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveC/Pods-LearnObjectiveC.release.xcconfig"; sourceTree = "<group>"; };
+		B600459B245A8356000F4BFA /* TextFiledInputLimitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFiledInputLimitCell.h; sourceTree = "<group>"; };
+		B600459C245A8356000F4BFA /* TextFiledInputLimitCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFiledInputLimitCell.m; sourceTree = "<group>"; };
+		B600459E245A9AB1000F4BFA /* TextFiledInputModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFiledInputModel.h; sourceTree = "<group>"; };
+		B600459F245A9AB1000F4BFA /* TextFiledInputModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFiledInputModel.m; sourceTree = "<group>"; };
 		B66B11BC245834DD0090262B /* UITextFiled+TYExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextFiled+TYExtention.h"; sourceTree = "<group>"; };
 		B66B11BD245834DD0090262B /* UITextFiled+TYExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextFiled+TYExtention.m"; sourceTree = "<group>"; };
 		B66B11C02458357A0090262B /* TextFiledInputLimitVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFiledInputLimitVC.h; sourceTree = "<group>"; };
@@ -1315,6 +1321,10 @@
 			children = (
 				B66B11C02458357A0090262B /* TextFiledInputLimitVC.h */,
 				B66B11C12458357A0090262B /* TextFiledInputLimitVC.m */,
+				B600459B245A8356000F4BFA /* TextFiledInputLimitCell.h */,
+				B600459C245A8356000F4BFA /* TextFiledInputLimitCell.m */,
+				B600459E245A9AB1000F4BFA /* TextFiledInputModel.h */,
+				B600459F245A9AB1000F4BFA /* TextFiledInputModel.m */,
 			);
 			path = "UITextFiled输入限制";
 			sourceTree = "<group>";
@@ -1543,12 +1553,14 @@
 			files = (
 				18FEC62C22374EE200313854 /* TransmitObject.m in Sources */,
 				18E4DAB622DDACAC00DD5829 /* CurbTableVC.m in Sources */,
+				B60045A0245A9AB1000F4BFA /* TextFiledInputModel.m in Sources */,
 				189B850A229B71EE002DBEC2 /* StringVC.m in Sources */,
 				18FEC62922374E9900313854 /* MessageTransmitVC.m in Sources */,
 				18AFB14022D703A400C78822 /* FigureOutLayoutVC.m in Sources */,
 				180F1970225C348A00F62A8C /* TimeComplexityVC.m in Sources */,
 				B66B11C22458357A0090262B /* TextFiledInputLimitVC.m in Sources */,
 				550B4DF52287B07900417CA5 /* Animal.m in Sources */,
+				B600459D245A8356000F4BFA /* TextFiledInputLimitCell.m in Sources */,
 				187C3EE0228166E5000F205C /* CircularLinkedListVC.m in Sources */,
 				18AFB14322D7042F00C78822 /* LayOutCell.m in Sources */,
 				18E523022277DDDE001DAA3A /* BaseDataStructureVC.m in Sources */,

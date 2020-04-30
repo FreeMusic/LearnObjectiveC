@@ -7,8 +7,12 @@
 //
 
 #import "TextFiledInputLimitVC.h"
+#import "TextFiledInputLimitCell.h"
+#import "TextFiledInputModel.h"
 
 @interface TextFiledInputLimitVC ()
+
+@property (nonatomic, strong) NSArray *contentModelArray;//模型数组
 
 @end
 
@@ -17,23 +21,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UITextField *textField = [UITextField textFiledWithPlaceHolder:@"请输入" textColor:[UIColor redColor] font:16 addSubView:self.view];
-    textField.layer.borderColor = [UIColor grayColor].CGColor;
-    textField.layer.borderWidth = 1;
-    textField.frame = CGRectMake(20, 200, 300, 50);
-    
-    //*******此处用法是 限制长度和输入规则 并且有输入结果回调*********//
-    [textField setTextFieldInputMax:10 inputRules:@"1234567890" editValueBlock:^(UITextField * _Nonnull textField) {
-        RYQLog(@"*********%@*********", textField.text);
-    }];
-    
-    //*******如果限制长度和输入规则和有输入结果回调想用到其中某一种 可以灵活以下设置*********//
-    //    [textField setInputMax:10];
-    //    [textField setInputRules:@"123456789"];
-    //    [textField setEditValueBlock:^(UITextField * _Nonnull textField) {
-    //        NSLog(@"*********%@*********", textField.text);
-    //    }];
+    self.contentModelArray = [TextFiledInputModel createTextFiledContentArray];
+    [self.tableView registerClass:[TextFiledInputLimitCell class] forCellReuseIdentifier:@"TextFiledInputLimitCell"];
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TextFiledInputLimitCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextFiledInputLimitCell"];
+    cell.inputModel = self.contentModelArray[indexPath.row];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.view endEditing:YES];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.contentModelArray.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 56;
+}
 
 @end
