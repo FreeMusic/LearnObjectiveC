@@ -14,6 +14,11 @@ static char UITextFieldInputRulesKey;
 
 @interface UITextField ()<UITextFieldDelegate>
 
+@property (nonatomic, assign) BOOL hasAddTarget;//是否已经添加了点击回调 避免重复addTarget操作
+@property (nonatomic, copy) UITextFieldEditValueChangeBlock editValueBlock;//编辑文本回调
+@property (nonatomic, assign) int inputMax;//输入框输入的最大长度
+@property (nonatomic, copy) NSString *inputRules;//输入规则限制
+
 @end
 
 @implementation UITextField (TYExtention)
@@ -35,11 +40,23 @@ static char UITextFieldInputRulesKey;
     return textFiled;
 }
 
+//*****是否已经添加了点击回调 避免重复addTarget操作******//
+- (void)setHasAddTarget:(BOOL)hasAddTarget{
+    objc_setAssociatedObject(self, @selector(hasAddTarget), @(hasAddTarget), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (BOOL)hasAddTarget{
+    NSNumber *value = objc_getAssociatedObject(self, @selector(hasAddTarget));
+    return value.boolValue;
+}
+
 //*****输入监听******//
 - (void)setEditValueBlock:(UITextFieldEditValueChangeBlock)editValueBlock{
-//    if (![self respondsToSelector:@selector(textFiledValueEditChanged:)]) {
+    if (self.hasAddTarget == NO) {
+        //避免重addTarget
+        self.hasAddTarget = YES;
         [self addTarget:self action:@selector(textFiledValueEditChanged:) forControlEvents:UIControlEventEditingChanged];
-//    }
+    }
     objc_setAssociatedObject(self, &UITextFieldEditKey, editValueBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 

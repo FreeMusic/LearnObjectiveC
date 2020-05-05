@@ -12,6 +12,7 @@ static int normallength = 20;
 static int idCardlength = 18;
 static int phonelength = 11;
 static int bankCardlength = 19;
+static int postCodelength = 6;
 
 NSString *idCardRules = @"0123456789X";
 NSString *numberRules = @"0123456789";
@@ -67,8 +68,15 @@ NSString *numberRules = @"0123456789";
         inputMax = bankCardlength;
         inputRules = numberRules;
         self.inputFiled.keyboardType = UIKeyboardTypeNumberPad;
+    }else if ([inputModel.title containsString:@"邮政编码"]){
+        inputMax = postCodelength;
+        inputRules = numberRules;
+        self.inputFiled.keyboardType = UIKeyboardTypeNumberPad;
+    }else if ([inputModel.title containsString:@"详细地址"]){
+        inputMax = 0;
     }
     //*******此处用法是 限制长度和输入规则 并且有输入结果回调*********//
+    //*******inputMax为0 则输入长度不受限制  inputRules 为空字符串 @"" 输入规则不受限制*********//
     [self.inputFiled setTextFieldInputMax:inputMax inputRules:inputRules editValueBlock:^(UITextField * _Nonnull textField) {
         RYQLog(@"%@：%@", inputModel.title, textField.text);
         inputModel.content = textField.text;

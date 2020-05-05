@@ -15,10 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITextField (TYExtention)
 
-@property (nonatomic, copy) UITextFieldEditValueChangeBlock editValueBlock;
-@property (nonatomic, assign) int inputMax;//输入框输入的最大长度
-@property (nonatomic, copy) NSString *inputRules;//输入规则限制
-
 /// 创建UITextField
 /// @param placeHolder 占位文字
 /// @param textColor 输入字体颜色
