@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -97,6 +97,9 @@
 		55BCAEE5235568CB00830093 /* FactoryDesignVC+FactorB.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCAEE4235568CB00830093 /* FactoryDesignVC+FactorB.m */; };
 		919735996E7228FD6C736DD0 /* libPods-LearnObjectiveCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4947D508C763C6A7F9AB609C /* libPods-LearnObjectiveCUITests.a */; };
 		98BEB752F35B782F968A28C1 /* libPods-LearnObjectiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C8AE55DD99ABC5D96520 /* libPods-LearnObjectiveC.a */; };
+		B1EE4CEE24C0268800465499 /* InterpretationNSObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */; };
+		B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF124C0275C00465499 /* IvarAndPropertyVC.m */; };
+		B1EE4CF524C027D700465499 /* IvarPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF424C027D700465499 /* IvarPropertyObject.m */; };
 		B600459D245A8356000F4BFA /* TextFiledInputLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B600459C245A8356000F4BFA /* TextFiledInputLimitCell.m */; };
 		B60045A0245A9AB1000F4BFA /* TextFiledInputModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B600459F245A9AB1000F4BFA /* TextFiledInputModel.m */; };
 		B66B11BE245834DD0090262B /* UITextFiled+TYExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = B66B11BD245834DD0090262B /* UITextFiled+TYExtention.m */; };
@@ -309,6 +312,12 @@
 		6CE4228E588080A260588FC4 /* Pods-LearnObjectiveC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveC/Pods-LearnObjectiveC.debug.xcconfig"; sourceTree = "<group>"; };
 		7D59E1C2B96E2BCECF32C3EA /* Pods-LearnObjectiveCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCTests/Pods-LearnObjectiveCTests.release.xcconfig"; sourceTree = "<group>"; };
 		97E466B2B25271A16FB16F47 /* Pods-LearnObjectiveC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveC.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveC/Pods-LearnObjectiveC.release.xcconfig"; sourceTree = "<group>"; };
+		B1EE4CEC24C0268800465499 /* InterpretationNSObjectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterpretationNSObjectVC.h; sourceTree = "<group>"; };
+		B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterpretationNSObjectVC.m; sourceTree = "<group>"; };
+		B1EE4CF024C0275C00465499 /* IvarAndPropertyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IvarAndPropertyVC.h; sourceTree = "<group>"; };
+		B1EE4CF124C0275C00465499 /* IvarAndPropertyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IvarAndPropertyVC.m; sourceTree = "<group>"; };
+		B1EE4CF324C027D700465499 /* IvarPropertyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IvarPropertyObject.h; sourceTree = "<group>"; };
+		B1EE4CF424C027D700465499 /* IvarPropertyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IvarPropertyObject.m; sourceTree = "<group>"; };
 		B600459B245A8356000F4BFA /* TextFiledInputLimitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFiledInputLimitCell.h; sourceTree = "<group>"; };
 		B600459C245A8356000F4BFA /* TextFiledInputLimitCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFiledInputLimitCell.m; sourceTree = "<group>"; };
 		B600459E245A9AB1000F4BFA /* TextFiledInputModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFiledInputModel.h; sourceTree = "<group>"; };
@@ -566,6 +575,7 @@
 		181F31C62230C2940098E099 /* ContentsOfLearning */ = {
 			isa = PBXGroup;
 			children = (
+				B1EE4CEB24C0263A00465499 /* 解读NSObject */,
 				18ED24FF225AE93B00006116 /* 数据结构与算法 */,
 				180C82D3223890A00092EBF0 /* FunctionOptimization */,
 				183ADC6322360FA500ADB09B /* DesignPatterns */,
@@ -1307,6 +1317,27 @@
 			path = "关键路径";
 			sourceTree = "<group>";
 		};
+		B1EE4CEB24C0263A00465499 /* 解读NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				B1EE4CEF24C0270800465499 /* 成员变量与属性 */,
+				B1EE4CEC24C0268800465499 /* InterpretationNSObjectVC.h */,
+				B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */,
+			);
+			path = "解读NSObject";
+			sourceTree = "<group>";
+		};
+		B1EE4CEF24C0270800465499 /* 成员变量与属性 */ = {
+			isa = PBXGroup;
+			children = (
+				B1EE4CF024C0275C00465499 /* IvarAndPropertyVC.h */,
+				B1EE4CF124C0275C00465499 /* IvarAndPropertyVC.m */,
+				B1EE4CF324C027D700465499 /* IvarPropertyObject.h */,
+				B1EE4CF424C027D700465499 /* IvarPropertyObject.m */,
+			);
+			path = "成员变量与属性";
+			sourceTree = "<group>";
+		};
 		B66B11BB245834DD0090262B /* UITextFiled */ = {
 			isa = PBXGroup;
 			children = (
@@ -1561,6 +1592,7 @@
 				550B4DF52287B07900417CA5 /* Animal.m in Sources */,
 				B600459D245A8356000F4BFA /* TextFiledInputLimitCell.m in Sources */,
 				187C3EE0228166E5000F205C /* CircularLinkedListVC.m in Sources */,
+				B1EE4CF524C027D700465499 /* IvarPropertyObject.m in Sources */,
 				18AFB14322D7042F00C78822 /* LayOutCell.m in Sources */,
 				18E523022277DDDE001DAA3A /* BaseDataStructureVC.m in Sources */,
 				18D412AA2276A66400DF7815 /* SQListLinkedStorageVC.m in Sources */,
@@ -1574,6 +1606,7 @@
 				18EF870222E1BC3600609A39 /* BreadthFirstSearchVC.m in Sources */,
 				18E5ADE422B8BD0E009E1EA6 /* BinaryTreeStoreVC.m in Sources */,
 				1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */,
+				B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */,
 				189B8512229B7A0F002DBEC2 /* StoreOfStringVC.m in Sources */,
 				18FFB16522E6B9370011FBD8 /* MinimumTreeVC.m in Sources */,
 				18481326223A21B600C566D5 /* MVC_View.m in Sources */,
@@ -1636,6 +1669,7 @@
 				183ADC6722360FD800ADB09B /* FactoryDesignVC.m in Sources */,
 				18FFB16922E708020011FBD8 /* MyCollectionViewVC.m in Sources */,
 				183ADC592235EFE200ADB09B /* KVC_VC.m in Sources */,
+				B1EE4CEE24C0268800465499 /* InterpretationNSObjectVC.m in Sources */,
 				18AF150D22C9AB150048732F /* DefineGraphVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
