@@ -97,6 +97,10 @@
 		55BCAEE5235568CB00830093 /* FactoryDesignVC+FactorB.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCAEE4235568CB00830093 /* FactoryDesignVC+FactorB.m */; };
 		919735996E7228FD6C736DD0 /* libPods-LearnObjectiveCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4947D508C763C6A7F9AB609C /* libPods-LearnObjectiveCUITests.a */; };
 		98BEB752F35B782F968A28C1 /* libPods-LearnObjectiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C8AE55DD99ABC5D96520 /* libPods-LearnObjectiveC.a */; };
+		B1333E412521CC6D0063F757 /* LeeCodeMainlistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E402521CC6D0063F757 /* LeeCodeMainlistVC.m */; };
+		B1333E452521CFAC0063F757 /* TenNumsAheadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E442521CFAC0063F757 /* TenNumsAheadVC.m */; };
+		B142B3322539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m in Sources */ = {isa = PBXBuildFile; fileRef = B142B3302539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m */; };
+		B142B3332539815000E8A9C6 /* LZYPWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B142B3312539815000E8A9C6 /* LZYPWebViewVC.m */; };
 		B1EE4CEE24C0268800465499 /* InterpretationNSObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */; };
 		B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF124C0275C00465499 /* IvarAndPropertyVC.m */; };
 		B1EE4CF524C027D700465499 /* IvarPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF424C027D700465499 /* IvarPropertyObject.m */; };
@@ -312,6 +316,14 @@
 		6CE4228E588080A260588FC4 /* Pods-LearnObjectiveC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveC/Pods-LearnObjectiveC.debug.xcconfig"; sourceTree = "<group>"; };
 		7D59E1C2B96E2BCECF32C3EA /* Pods-LearnObjectiveCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCTests/Pods-LearnObjectiveCTests.release.xcconfig"; sourceTree = "<group>"; };
 		97E466B2B25271A16FB16F47 /* Pods-LearnObjectiveC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveC.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveC/Pods-LearnObjectiveC.release.xcconfig"; sourceTree = "<group>"; };
+		B1333E3F2521CC6D0063F757 /* LeeCodeMainlistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeeCodeMainlistVC.h; sourceTree = "<group>"; };
+		B1333E402521CC6D0063F757 /* LeeCodeMainlistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeeCodeMainlistVC.m; sourceTree = "<group>"; };
+		B1333E432521CFAC0063F757 /* TenNumsAheadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TenNumsAheadVC.h; sourceTree = "<group>"; };
+		B1333E442521CFAC0063F757 /* TenNumsAheadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TenNumsAheadVC.m; sourceTree = "<group>"; };
+		B142B32E2539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LZYPWebViewVC+ProgressNotifi.h"; sourceTree = "<group>"; };
+		B142B32F2539815000E8A9C6 /* LZYPWebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZYPWebViewVC.h; sourceTree = "<group>"; };
+		B142B3302539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LZYPWebViewVC+ProgressNotifi.m"; sourceTree = "<group>"; };
+		B142B3312539815000E8A9C6 /* LZYPWebViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZYPWebViewVC.m; sourceTree = "<group>"; };
 		B1EE4CEC24C0268800465499 /* InterpretationNSObjectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterpretationNSObjectVC.h; sourceTree = "<group>"; };
 		B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterpretationNSObjectVC.m; sourceTree = "<group>"; };
 		B1EE4CF024C0275C00465499 /* IvarAndPropertyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IvarAndPropertyVC.h; sourceTree = "<group>"; };
@@ -378,6 +390,7 @@
 		180C82D3223890A00092EBF0 /* FunctionOptimization */ = {
 			isa = PBXGroup;
 			children = (
+				B142B32C2539812E00E8A9C6 /* XYWebView */,
 				B66B11BF245835490090262B /* UITextFiled输入限制 */,
 				18AFB13D22D7038D00C78822 /* FigureOutLayout */,
 				185AF0402297DA6100E065EF /* GCD */,
@@ -1071,6 +1084,7 @@
 		18ED24FF225AE93B00006116 /* 数据结构与算法 */ = {
 			isa = PBXGroup;
 			children = (
+				B1333E3E2521CC030063F757 /* LeeCode */,
 				180CF1C4230399090096C58B /* 查找 */,
 				18AF150522C9AA300048732F /* 图 */,
 				189F68B322A617C0001F6D6F /* 树 */,
@@ -1315,6 +1329,44 @@
 				55309EFA23018B5A0039589F /* CriticalPathVC.m */,
 			);
 			path = "关键路径";
+			sourceTree = "<group>";
+		};
+		B1333E3E2521CC030063F757 /* LeeCode */ = {
+			isa = PBXGroup;
+			children = (
+				B1333E422521CDE80063F757 /* Nunbers */,
+				B1333E3F2521CC6D0063F757 /* LeeCodeMainlistVC.h */,
+				B1333E402521CC6D0063F757 /* LeeCodeMainlistVC.m */,
+			);
+			path = LeeCode;
+			sourceTree = "<group>";
+		};
+		B1333E422521CDE80063F757 /* Nunbers */ = {
+			isa = PBXGroup;
+			children = (
+				B1333E432521CFAC0063F757 /* TenNumsAheadVC.h */,
+				B1333E442521CFAC0063F757 /* TenNumsAheadVC.m */,
+			);
+			path = Nunbers;
+			sourceTree = "<group>";
+		};
+		B142B32C2539812E00E8A9C6 /* XYWebView */ = {
+			isa = PBXGroup;
+			children = (
+				B142B32D2539815000E8A9C6 /* LZYPWebViewVC */,
+			);
+			path = XYWebView;
+			sourceTree = "<group>";
+		};
+		B142B32D2539815000E8A9C6 /* LZYPWebViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				B142B32E2539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.h */,
+				B142B3302539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m */,
+				B142B32F2539815000E8A9C6 /* LZYPWebViewVC.h */,
+				B142B3312539815000E8A9C6 /* LZYPWebViewVC.m */,
+			);
+			path = LZYPWebViewVC;
 			sourceTree = "<group>";
 		};
 		B1EE4CEB24C0263A00465499 /* 解读NSObject */ = {
@@ -1585,6 +1637,7 @@
 				18E4DAB622DDACAC00DD5829 /* CurbTableVC.m in Sources */,
 				B60045A0245A9AB1000F4BFA /* TextFiledInputModel.m in Sources */,
 				189B850A229B71EE002DBEC2 /* StringVC.m in Sources */,
+				B142B3322539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m in Sources */,
 				18FEC62922374E9900313854 /* MessageTransmitVC.m in Sources */,
 				18AFB14022D703A400C78822 /* FigureOutLayoutVC.m in Sources */,
 				180F1970225C348A00F62A8C /* TimeComplexityVC.m in Sources */,
@@ -1602,6 +1655,7 @@
 				18FEC63022377E7500313854 /* ArrayBoundsVC.m in Sources */,
 				18E247DA2296773200B8AF63 /* QueueVC.m in Sources */,
 				55309EFB23018B5A0039589F /* CriticalPathVC.m in Sources */,
+				B1333E412521CC6D0063F757 /* LeeCodeMainlistVC.m in Sources */,
 				180F1979225C4A4D00F62A8C /* DefineLinearTableVC.m in Sources */,
 				18EF870222E1BC3600609A39 /* BreadthFirstSearchVC.m in Sources */,
 				18E5ADE422B8BD0E009E1EA6 /* BinaryTreeStoreVC.m in Sources */,
@@ -1612,6 +1666,7 @@
 				18481326223A21B600C566D5 /* MVC_View.m in Sources */,
 				181F31E7223111A20098E099 /* RunLoopMainVC.m in Sources */,
 				18098A4122BCCF6B003BAFBA /* CluesBinaryTreeVC.m in Sources */,
+				B142B3332539815000E8A9C6 /* LZYPWebViewVC.m in Sources */,
 				183ADC582235EFE200ADB09B /* KVC_Model.m in Sources */,
 				18FBA89622E0479900E0B1F9 /* DepthFirstSeachVC.m in Sources */,
 				55BCAEE2235568BD00830093 /* FactoryDesignVC+FactorA.m in Sources */,
@@ -1649,6 +1704,7 @@
 				18FEC63922377ED300313854 /* NSArray+ErrorHandle.m in Sources */,
 				180CF1C8230399210096C58B /* MainSearchVC.m in Sources */,
 				18481323223A21A300C566D5 /* MVC_Model.m in Sources */,
+				B1333E452521CFAC0063F757 /* TenNumsAheadVC.m in Sources */,
 				1814E8A12293E919006A892C /* MainStackTempVC.m in Sources */,
 				551662A72256FA770058C9F1 /* UIButton+Extenion.m in Sources */,
 				5516629B2256F6F40058C9F1 /* NSDictionary+CLLocation.m in Sources */,
