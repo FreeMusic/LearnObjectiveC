@@ -25,6 +25,7 @@
                       [ObjectiveModel initTitle:@"GCD" vcName:@"GCDVC"],
                       [ObjectiveModel initTitle:@"UITextFiled输入限制" vcName:@"TextFiledInputLimitVC"],
                       [ObjectiveModel initTitle:@"网页" vcName:@"LZYPWebViewVC"],
+                      [ObjectiveModel initTitle:@"小球颤动" vcName:@"BallFibrillationVC"],
                       ];
 }
 

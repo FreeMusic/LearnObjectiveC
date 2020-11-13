@@ -97,6 +97,11 @@
 		55BCAEE5235568CB00830093 /* FactoryDesignVC+FactorB.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BCAEE4235568CB00830093 /* FactoryDesignVC+FactorB.m */; };
 		919735996E7228FD6C736DD0 /* libPods-LearnObjectiveCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4947D508C763C6A7F9AB609C /* libPods-LearnObjectiveCUITests.a */; };
 		98BEB752F35B782F968A28C1 /* libPods-LearnObjectiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E4C8AE55DD99ABC5D96520 /* libPods-LearnObjectiveC.a */; };
+		B1080B81255E56330095B93C /* BallFibrillationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080B80255E56330095B93C /* BallFibrillationVC.m */; };
+		B1080B85255E5D830095B93C /* UIView+TYExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080B84255E5D830095B93C /* UIView+TYExtention.m */; };
+		B1080B8C255E5E910095B93C /* XYGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080B8B255E5E910095B93C /* XYGCDTimer.m */; };
+		B1080B8F255E60DE0095B93C /* AimationBall.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080B8E255E60DE0095B93C /* AimationBall.m */; };
+		B1080B96255E71090095B93C /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080B95255E71090095B93C /* UIColor+Extention.m */; };
 		B1333E412521CC6D0063F757 /* LeeCodeMainlistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E402521CC6D0063F757 /* LeeCodeMainlistVC.m */; };
 		B1333E452521CFAC0063F757 /* TenNumsAheadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E442521CFAC0063F757 /* TenNumsAheadVC.m */; };
 		B142B3322539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m in Sources */ = {isa = PBXBuildFile; fileRef = B142B3302539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m */; };
@@ -316,6 +321,16 @@
 		6CE4228E588080A260588FC4 /* Pods-LearnObjectiveC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveC/Pods-LearnObjectiveC.debug.xcconfig"; sourceTree = "<group>"; };
 		7D59E1C2B96E2BCECF32C3EA /* Pods-LearnObjectiveCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveCTests/Pods-LearnObjectiveCTests.release.xcconfig"; sourceTree = "<group>"; };
 		97E466B2B25271A16FB16F47 /* Pods-LearnObjectiveC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnObjectiveC.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnObjectiveC/Pods-LearnObjectiveC.release.xcconfig"; sourceTree = "<group>"; };
+		B1080B7F255E56330095B93C /* BallFibrillationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BallFibrillationVC.h; sourceTree = "<group>"; };
+		B1080B80255E56330095B93C /* BallFibrillationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BallFibrillationVC.m; sourceTree = "<group>"; };
+		B1080B83255E5D830095B93C /* UIView+TYExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TYExtention.h"; sourceTree = "<group>"; };
+		B1080B84255E5D830095B93C /* UIView+TYExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYExtention.m"; sourceTree = "<group>"; };
+		B1080B8A255E5E910095B93C /* XYGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYGCDTimer.h; sourceTree = "<group>"; };
+		B1080B8B255E5E910095B93C /* XYGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYGCDTimer.m; sourceTree = "<group>"; };
+		B1080B8D255E60DE0095B93C /* AimationBall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AimationBall.h; sourceTree = "<group>"; };
+		B1080B8E255E60DE0095B93C /* AimationBall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AimationBall.m; sourceTree = "<group>"; };
+		B1080B94255E71090095B93C /* UIColor+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
+		B1080B95255E71090095B93C /* UIColor+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extention.m"; sourceTree = "<group>"; };
 		B1333E3F2521CC6D0063F757 /* LeeCodeMainlistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeeCodeMainlistVC.h; sourceTree = "<group>"; };
 		B1333E402521CC6D0063F757 /* LeeCodeMainlistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeeCodeMainlistVC.m; sourceTree = "<group>"; };
 		B1333E432521CFAC0063F757 /* TenNumsAheadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TenNumsAheadVC.h; sourceTree = "<group>"; };
@@ -390,6 +405,7 @@
 		180C82D3223890A00092EBF0 /* FunctionOptimization */ = {
 			isa = PBXGroup;
 			children = (
+				B1080B7E255E55ED0095B93C /* BallFibrillation */,
 				B142B32C2539812E00E8A9C6 /* XYWebView */,
 				B66B11BF245835490090262B /* UITextFiled输入限制 */,
 				18AFB13D22D7038D00C78822 /* FigureOutLayout */,
@@ -603,6 +619,7 @@
 		181F31C72230C2940098E099 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B1080B89255E5E910095B93C /* XYGCDTimer */,
 				18FEC63122377ED300313854 /* ToolsObject */,
 				181F31C82230C2AD0098E099 /* ToolsVC */,
 			);
@@ -1277,6 +1294,8 @@
 		551662972256F6D40058C9F1 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				B1080B90255E70C00095B93C /* UIColor */,
+				B1080B82255E5D830095B93C /* UIView */,
 				B66B11BB245834DD0090262B /* UITextFiled */,
 				18AFB14422D709D800C78822 /* UITableViewCell */,
 				551662A02256FA390058C9F1 /* UIButton */,
@@ -1329,6 +1348,44 @@
 				55309EFA23018B5A0039589F /* CriticalPathVC.m */,
 			);
 			path = "关键路径";
+			sourceTree = "<group>";
+		};
+		B1080B7E255E55ED0095B93C /* BallFibrillation */ = {
+			isa = PBXGroup;
+			children = (
+				B1080B7F255E56330095B93C /* BallFibrillationVC.h */,
+				B1080B80255E56330095B93C /* BallFibrillationVC.m */,
+				B1080B8D255E60DE0095B93C /* AimationBall.h */,
+				B1080B8E255E60DE0095B93C /* AimationBall.m */,
+			);
+			path = BallFibrillation;
+			sourceTree = "<group>";
+		};
+		B1080B82255E5D830095B93C /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				B1080B83255E5D830095B93C /* UIView+TYExtention.h */,
+				B1080B84255E5D830095B93C /* UIView+TYExtention.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		B1080B89255E5E910095B93C /* XYGCDTimer */ = {
+			isa = PBXGroup;
+			children = (
+				B1080B8A255E5E910095B93C /* XYGCDTimer.h */,
+				B1080B8B255E5E910095B93C /* XYGCDTimer.m */,
+			);
+			path = XYGCDTimer;
+			sourceTree = "<group>";
+		};
+		B1080B90255E70C00095B93C /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				B1080B94255E71090095B93C /* UIColor+Extention.h */,
+				B1080B95255E71090095B93C /* UIColor+Extention.m */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 		B1333E3E2521CC030063F757 /* LeeCode */ = {
@@ -1647,6 +1704,7 @@
 				187C3EE0228166E5000F205C /* CircularLinkedListVC.m in Sources */,
 				B1EE4CF524C027D700465499 /* IvarPropertyObject.m in Sources */,
 				18AFB14322D7042F00C78822 /* LayOutCell.m in Sources */,
+				B1080B8F255E60DE0095B93C /* AimationBall.m in Sources */,
 				18E523022277DDDE001DAA3A /* BaseDataStructureVC.m in Sources */,
 				18D412AA2276A66400DF7815 /* SQListLinkedStorageVC.m in Sources */,
 				180C82D8223890F10092EBF0 /* FunctionVC.m in Sources */,
@@ -1657,12 +1715,14 @@
 				55309EFB23018B5A0039589F /* CriticalPathVC.m in Sources */,
 				B1333E412521CC6D0063F757 /* LeeCodeMainlistVC.m in Sources */,
 				180F1979225C4A4D00F62A8C /* DefineLinearTableVC.m in Sources */,
+				B1080B8C255E5E910095B93C /* XYGCDTimer.m in Sources */,
 				18EF870222E1BC3600609A39 /* BreadthFirstSearchVC.m in Sources */,
 				18E5ADE422B8BD0E009E1EA6 /* BinaryTreeStoreVC.m in Sources */,
 				1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */,
 				B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */,
 				189B8512229B7A0F002DBEC2 /* StoreOfStringVC.m in Sources */,
 				18FFB16522E6B9370011FBD8 /* MinimumTreeVC.m in Sources */,
+				B1080B85255E5D830095B93C /* UIView+TYExtention.m in Sources */,
 				18481326223A21B600C566D5 /* MVC_View.m in Sources */,
 				181F31E7223111A20098E099 /* RunLoopMainVC.m in Sources */,
 				18098A4122BCCF6B003BAFBA /* CluesBinaryTreeVC.m in Sources */,
@@ -1685,6 +1745,8 @@
 				180F1976225C49D200F62A8C /* MainLinearTableVC.m in Sources */,
 				181F31CD2230C3530098E099 /* BaseViewController.m in Sources */,
 				189B8516229B8317002DBEC2 /* KMPMatchVC.m in Sources */,
+				B1080B96255E71090095B93C /* UIColor+Extention.m in Sources */,
+				B1080B81255E56330095B93C /* BallFibrillationVC.m in Sources */,
 				18FEC63A22377ED300313854 /* NSMutableArray+ErrorHandle.m in Sources */,
 				18DA477622FA7B0C009F0187 /* TopologicalSortingVC.m in Sources */,
 				18AFB14722D709F200C78822 /* UITableViewCell+Extention.m in Sources */,
