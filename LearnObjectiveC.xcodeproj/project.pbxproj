@@ -102,6 +102,11 @@
 		B1080B8C255E5E910095B93C /* XYGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080B8B255E5E910095B93C /* XYGCDTimer.m */; };
 		B1080B8F255E60DE0095B93C /* AimationBall.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080B8E255E60DE0095B93C /* AimationBall.m */; };
 		B1080B96255E71090095B93C /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080B95255E71090095B93C /* UIColor+Extention.m */; };
+		B122E5DF2565FF69005BD098 /* TextViewInputVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5DE2565FF69005BD098 /* TextViewInputVC.m */; };
+		B122E5E22565FFEF005BD098 /* TextViewInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5E12565FFEF005BD098 /* TextViewInputCell.m */; };
+		B122E5E6256600BB005BD098 /* UITableView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5E5256600BB005BD098 /* UITableView+Extention.m */; };
+		B122E5E925660277005BD098 /* TextViewInputModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5E825660277005BD098 /* TextViewInputModel.m */; };
+		B122E5ED256607DB005BD098 /* UITextView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5EC256607DB005BD098 /* UITextView+Extention.m */; };
 		B1333E412521CC6D0063F757 /* LeeCodeMainlistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E402521CC6D0063F757 /* LeeCodeMainlistVC.m */; };
 		B1333E452521CFAC0063F757 /* TenNumsAheadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E442521CFAC0063F757 /* TenNumsAheadVC.m */; };
 		B142B3322539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m in Sources */ = {isa = PBXBuildFile; fileRef = B142B3302539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m */; };
@@ -331,6 +336,16 @@
 		B1080B8E255E60DE0095B93C /* AimationBall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AimationBall.m; sourceTree = "<group>"; };
 		B1080B94255E71090095B93C /* UIColor+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
 		B1080B95255E71090095B93C /* UIColor+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extention.m"; sourceTree = "<group>"; };
+		B122E5DD2565FF69005BD098 /* TextViewInputVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewInputVC.h; sourceTree = "<group>"; };
+		B122E5DE2565FF69005BD098 /* TextViewInputVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewInputVC.m; sourceTree = "<group>"; };
+		B122E5E02565FFEF005BD098 /* TextViewInputCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewInputCell.h; sourceTree = "<group>"; };
+		B122E5E12565FFEF005BD098 /* TextViewInputCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewInputCell.m; sourceTree = "<group>"; };
+		B122E5E4256600BB005BD098 /* UITableView+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Extention.h"; sourceTree = "<group>"; };
+		B122E5E5256600BB005BD098 /* UITableView+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Extention.m"; sourceTree = "<group>"; };
+		B122E5E725660277005BD098 /* TextViewInputModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewInputModel.h; sourceTree = "<group>"; };
+		B122E5E825660277005BD098 /* TextViewInputModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewInputModel.m; sourceTree = "<group>"; };
+		B122E5EB256607DB005BD098 /* UITextView+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extention.h"; sourceTree = "<group>"; };
+		B122E5EC256607DB005BD098 /* UITextView+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extention.m"; sourceTree = "<group>"; };
 		B1333E3F2521CC6D0063F757 /* LeeCodeMainlistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeeCodeMainlistVC.h; sourceTree = "<group>"; };
 		B1333E402521CC6D0063F757 /* LeeCodeMainlistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeeCodeMainlistVC.m; sourceTree = "<group>"; };
 		B1333E432521CFAC0063F757 /* TenNumsAheadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TenNumsAheadVC.h; sourceTree = "<group>"; };
@@ -405,6 +420,7 @@
 		180C82D3223890A00092EBF0 /* FunctionOptimization */ = {
 			isa = PBXGroup;
 			children = (
+				B122E5DC2565FF47005BD098 /* UITextView输入限制 */,
 				B1080B7E255E55ED0095B93C /* BallFibrillation */,
 				B142B32C2539812E00E8A9C6 /* XYWebView */,
 				B66B11BF245835490090262B /* UITextFiled输入限制 */,
@@ -1294,6 +1310,8 @@
 		551662972256F6D40058C9F1 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				B122E5EA256607BD005BD098 /* UITextView */,
+				B122E5E325660087005BD098 /* UITableView */,
 				B1080B90255E70C00095B93C /* UIColor */,
 				B1080B82255E5D830095B93C /* UIView */,
 				B66B11BB245834DD0090262B /* UITextFiled */,
@@ -1386,6 +1404,37 @@
 				B1080B95255E71090095B93C /* UIColor+Extention.m */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		B122E5DC2565FF47005BD098 /* UITextView输入限制 */ = {
+			isa = PBXGroup;
+			children = (
+				B122E5DD2565FF69005BD098 /* TextViewInputVC.h */,
+				B122E5DE2565FF69005BD098 /* TextViewInputVC.m */,
+				B122E5E02565FFEF005BD098 /* TextViewInputCell.h */,
+				B122E5E12565FFEF005BD098 /* TextViewInputCell.m */,
+				B122E5E725660277005BD098 /* TextViewInputModel.h */,
+				B122E5E825660277005BD098 /* TextViewInputModel.m */,
+			);
+			path = "UITextView输入限制";
+			sourceTree = "<group>";
+		};
+		B122E5E325660087005BD098 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				B122E5E4256600BB005BD098 /* UITableView+Extention.h */,
+				B122E5E5256600BB005BD098 /* UITableView+Extention.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		B122E5EA256607BD005BD098 /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				B122E5EB256607DB005BD098 /* UITextView+Extention.h */,
+				B122E5EC256607DB005BD098 /* UITextView+Extention.m */,
+			);
+			path = UITextView;
 			sourceTree = "<group>";
 		};
 		B1333E3E2521CC030063F757 /* LeeCode */ = {
@@ -1706,6 +1755,7 @@
 				18AFB14322D7042F00C78822 /* LayOutCell.m in Sources */,
 				B1080B8F255E60DE0095B93C /* AimationBall.m in Sources */,
 				18E523022277DDDE001DAA3A /* BaseDataStructureVC.m in Sources */,
+				B122E5E925660277005BD098 /* TextViewInputModel.m in Sources */,
 				18D412AA2276A66400DF7815 /* SQListLinkedStorageVC.m in Sources */,
 				180C82D8223890F10092EBF0 /* FunctionVC.m in Sources */,
 				18AFB14F22D73B1400C78822 /* AdjacencyListVC.m in Sources */,
@@ -1721,6 +1771,7 @@
 				1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */,
 				B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */,
 				189B8512229B7A0F002DBEC2 /* StoreOfStringVC.m in Sources */,
+				B122E5ED256607DB005BD098 /* UITextView+Extention.m in Sources */,
 				18FFB16522E6B9370011FBD8 /* MinimumTreeVC.m in Sources */,
 				B1080B85255E5D830095B93C /* UIView+TYExtention.m in Sources */,
 				18481326223A21B600C566D5 /* MVC_View.m in Sources */,
@@ -1734,6 +1785,7 @@
 				1892AE2622D4255C00F4E007 /* AdjacentMatrixVC.m in Sources */,
 				185AF0432297DA7400E065EF /* GCDVC.m in Sources */,
 				55BCAEE5235568CB00830093 /* FactoryDesignVC+FactorB.m in Sources */,
+				B122E5E22565FFEF005BD098 /* TextViewInputCell.m in Sources */,
 				18481320223A218300C566D5 /* MVCController.m in Sources */,
 				551662962256F2A20058C9F1 /* ImageMessageVC.m in Sources */,
 				180CF1CC230399AF0096C58B /* SearchTableVC.m in Sources */,
@@ -1769,12 +1821,14 @@
 				B1333E452521CFAC0063F757 /* TenNumsAheadVC.m in Sources */,
 				1814E8A12293E919006A892C /* MainStackTempVC.m in Sources */,
 				551662A72256FA770058C9F1 /* UIButton+Extenion.m in Sources */,
+				B122E5E6256600BB005BD098 /* UITableView+Extention.m in Sources */,
 				5516629B2256F6F40058C9F1 /* NSDictionary+CLLocation.m in Sources */,
 				551662A42256FA610058C9F1 /* UILabel+Extenion.m in Sources */,
 				1806E57D2306A85300549C33 /* SequentialSearchVC.m in Sources */,
 				181F31912230BDDB0098E099 /* AppDelegate.m in Sources */,
 				1872753922E941EB00E7E01F /* ShortestPathVC.m in Sources */,
 				18FEC63E2237801500313854 /* BoundsNextVC.m in Sources */,
+				B122E5DF2565FF69005BD098 /* TextViewInputVC.m in Sources */,
 				181F31D52230C5FA0098E099 /* MyTableReFreshVC.m in Sources */,
 				18ED2503225AE95A00006116 /* MainStructureVC.m in Sources */,
 				18FBA88D22E03EAC00E0B1F9 /* ADJacencyMultiplelistVC.m in Sources */,

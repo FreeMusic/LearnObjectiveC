@@ -10,7 +10,7 @@
 #import "AimationBall.h"
 
 static CGFloat ballWidth = 20;
-static CGFloat animationTime = 1;
+static CGFloat animationTime = 2;
 
 @interface BallFibrillationVC ()
 
@@ -33,6 +33,7 @@ static CGFloat animationTime = 1;
     [self initBackView];
     /// 球动画
     [self ballAnimation];
+    
 }
 
 /// 背景
@@ -99,11 +100,13 @@ static CGFloat animationTime = 1;
         [UIView animateWithDuration:animationTime animations:^{
             for (AimationBall *ball in balls) {
                 ball.frame = ball.endFrame;
+                ball.backgroundColor = [UIColor randomColor];
             }
         }completion:^(BOOL finished) {
             [UIView animateWithDuration:animationTime animations:^{
                 for (AimationBall *ball in balls) {
                     ball.frame = ball.originalFrame;
+                    ball.backgroundColor = [UIColor randomColor];
                 }
             }];
         }];

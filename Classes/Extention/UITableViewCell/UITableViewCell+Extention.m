@@ -20,4 +20,15 @@
     return value.doubleValue;
 }
 
++ (id)cellReuseWithTableView:(UITableView *)tableView {
+    
+    id cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
+    if (cell == nil) {
+        [tableView registerClass:[self class] forCellReuseIdentifier:NSStringFromClass([self class])];
+        cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
+    }
+    
+    return cell;
+}
+
 @end

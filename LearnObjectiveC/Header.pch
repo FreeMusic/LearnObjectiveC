@@ -36,5 +36,6 @@
 #import "UIView+TYExtention.h"
 #import "XYGCDTimer.h"
 #import "UIColor+Extention.h"
+#import "UITableView+Extention.h"
 
 #endif /* Header_h */
