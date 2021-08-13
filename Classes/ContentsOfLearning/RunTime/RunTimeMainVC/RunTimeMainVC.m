@@ -36,6 +36,7 @@
                       [ObjectiveModel initTitle:@"KVO" vcName:@"KVO_VC"],
                       [ObjectiveModel initTitle:@"消息转发" vcName:@"MessageTransmitVC"],
                       [ObjectiveModel initTitle:@"防止数组越界" vcName:@"ArrayBoundsVC"],
+                      [ObjectiveModel initTitle:@"消息转发整理" vcName:@"MessageFirstVC"],
                       ];
 }
 

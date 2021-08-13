@@ -111,9 +111,13 @@
 		B1333E452521CFAC0063F757 /* TenNumsAheadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E442521CFAC0063F757 /* TenNumsAheadVC.m */; };
 		B142B3322539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m in Sources */ = {isa = PBXBuildFile; fileRef = B142B3302539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m */; };
 		B142B3332539815000E8A9C6 /* LZYPWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B142B3312539815000E8A9C6 /* LZYPWebViewVC.m */; };
+		B146331426C3615E005A9860 /* MessageFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B146331326C3615E005A9860 /* MessageFirstVC.m */; };
+		B146331D26C362B6005A9860 /* MessageFirstObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B146331C26C362B6005A9860 /* MessageFirstObject.m */; };
+		B146332626C36F6B005A9860 /* XYMessageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B146332526C36F6B005A9860 /* XYMessageTool.m */; };
 		B1EE4CEE24C0268800465499 /* InterpretationNSObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */; };
 		B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF124C0275C00465499 /* IvarAndPropertyVC.m */; };
 		B1EE4CF524C027D700465499 /* IvarPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF424C027D700465499 /* IvarPropertyObject.m */; };
+		B1FE4CBD26C3B987002AFD60 /* XYMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FE4CBC26C3B987002AFD60 /* XYMessageObject.m */; };
 		B600459D245A8356000F4BFA /* TextFiledInputLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B600459C245A8356000F4BFA /* TextFiledInputLimitCell.m */; };
 		B60045A0245A9AB1000F4BFA /* TextFiledInputModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B600459F245A9AB1000F4BFA /* TextFiledInputModel.m */; };
 		B66B11BE245834DD0090262B /* UITextFiled+TYExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = B66B11BD245834DD0090262B /* UITextFiled+TYExtention.m */; };
@@ -354,12 +358,20 @@
 		B142B32F2539815000E8A9C6 /* LZYPWebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZYPWebViewVC.h; sourceTree = "<group>"; };
 		B142B3302539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LZYPWebViewVC+ProgressNotifi.m"; sourceTree = "<group>"; };
 		B142B3312539815000E8A9C6 /* LZYPWebViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZYPWebViewVC.m; sourceTree = "<group>"; };
+		B146331226C3615E005A9860 /* MessageFirstVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageFirstVC.h; sourceTree = "<group>"; };
+		B146331326C3615E005A9860 /* MessageFirstVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageFirstVC.m; sourceTree = "<group>"; };
+		B146331B26C362B6005A9860 /* MessageFirstObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageFirstObject.h; sourceTree = "<group>"; };
+		B146331C26C362B6005A9860 /* MessageFirstObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageFirstObject.m; sourceTree = "<group>"; };
+		B146332426C36F6B005A9860 /* XYMessageTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYMessageTool.h; sourceTree = "<group>"; };
+		B146332526C36F6B005A9860 /* XYMessageTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYMessageTool.m; sourceTree = "<group>"; };
 		B1EE4CEC24C0268800465499 /* InterpretationNSObjectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterpretationNSObjectVC.h; sourceTree = "<group>"; };
 		B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterpretationNSObjectVC.m; sourceTree = "<group>"; };
 		B1EE4CF024C0275C00465499 /* IvarAndPropertyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IvarAndPropertyVC.h; sourceTree = "<group>"; };
 		B1EE4CF124C0275C00465499 /* IvarAndPropertyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IvarAndPropertyVC.m; sourceTree = "<group>"; };
 		B1EE4CF324C027D700465499 /* IvarPropertyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IvarPropertyObject.h; sourceTree = "<group>"; };
 		B1EE4CF424C027D700465499 /* IvarPropertyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IvarPropertyObject.m; sourceTree = "<group>"; };
+		B1FE4CBB26C3B987002AFD60 /* XYMessageObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYMessageObject.h; sourceTree = "<group>"; };
+		B1FE4CBC26C3B987002AFD60 /* XYMessageObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYMessageObject.m; sourceTree = "<group>"; };
 		B600459B245A8356000F4BFA /* TextFiledInputLimitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFiledInputLimitCell.h; sourceTree = "<group>"; };
 		B600459C245A8356000F4BFA /* TextFiledInputLimitCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFiledInputLimitCell.m; sourceTree = "<group>"; };
 		B600459E245A9AB1000F4BFA /* TextFiledInputModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFiledInputModel.h; sourceTree = "<group>"; };
@@ -1229,6 +1241,7 @@
 		18FEC62622374E8800313854 /* MessageTransmit */ = {
 			isa = PBXGroup;
 			children = (
+				B146331126C3612D005A9860 /* MessageFirstVC */,
 				18FEC62722374E9900313854 /* MessageTransmitVC.h */,
 				18FEC62822374E9900313854 /* MessageTransmitVC.m */,
 				18FEC62A22374EE200313854 /* TransmitObject.h */,
@@ -1310,6 +1323,7 @@
 		551662972256F6D40058C9F1 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				B1FE4CBA26C3B925002AFD60 /* XYMessageTransmit */,
 				B122E5EA256607BD005BD098 /* UITextView */,
 				B122E5E325660087005BD098 /* UITableView */,
 				B1080B90255E70C00095B93C /* UIColor */,
@@ -1475,6 +1489,17 @@
 			path = LZYPWebViewVC;
 			sourceTree = "<group>";
 		};
+		B146331126C3612D005A9860 /* MessageFirstVC */ = {
+			isa = PBXGroup;
+			children = (
+				B146331226C3615E005A9860 /* MessageFirstVC.h */,
+				B146331326C3615E005A9860 /* MessageFirstVC.m */,
+				B146331B26C362B6005A9860 /* MessageFirstObject.h */,
+				B146331C26C362B6005A9860 /* MessageFirstObject.m */,
+			);
+			path = MessageFirstVC;
+			sourceTree = "<group>";
+		};
 		B1EE4CEB24C0263A00465499 /* 解读NSObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -1494,6 +1519,17 @@
 				B1EE4CF424C027D700465499 /* IvarPropertyObject.m */,
 			);
 			path = "成员变量与属性";
+			sourceTree = "<group>";
+		};
+		B1FE4CBA26C3B925002AFD60 /* XYMessageTransmit */ = {
+			isa = PBXGroup;
+			children = (
+				B146332426C36F6B005A9860 /* XYMessageTool.h */,
+				B146332526C36F6B005A9860 /* XYMessageTool.m */,
+				B1FE4CBB26C3B987002AFD60 /* XYMessageObject.h */,
+				B1FE4CBC26C3B987002AFD60 /* XYMessageObject.m */,
+			);
+			path = XYMessageTransmit;
 			sourceTree = "<group>";
 		};
 		B66B11BB245834DD0090262B /* UITextFiled */ = {
@@ -1763,6 +1799,7 @@
 				18FEC63022377E7500313854 /* ArrayBoundsVC.m in Sources */,
 				18E247DA2296773200B8AF63 /* QueueVC.m in Sources */,
 				55309EFB23018B5A0039589F /* CriticalPathVC.m in Sources */,
+				B146332626C36F6B005A9860 /* XYMessageTool.m in Sources */,
 				B1333E412521CC6D0063F757 /* LeeCodeMainlistVC.m in Sources */,
 				180F1979225C4A4D00F62A8C /* DefineLinearTableVC.m in Sources */,
 				B1080B8C255E5E910095B93C /* XYGCDTimer.m in Sources */,
@@ -1791,6 +1828,7 @@
 				180CF1CC230399AF0096C58B /* SearchTableVC.m in Sources */,
 				189B850E229B722A002DBEC2 /* MainStringVC.m in Sources */,
 				181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */,
+				B1FE4CBD26C3B987002AFD60 /* XYMessageObject.m in Sources */,
 				1879F3C622895D1D00C48D34 /* Person.m in Sources */,
 				189F68B722A617DE001F6D6F /* MainTreeVC.m in Sources */,
 				1846836822320CCA0032A4EE /* CopyTargetVC.m in Sources */,
@@ -1802,6 +1840,7 @@
 				18FEC63A22377ED300313854 /* NSMutableArray+ErrorHandle.m in Sources */,
 				18DA477622FA7B0C009F0187 /* TopologicalSortingVC.m in Sources */,
 				18AFB14722D709F200C78822 /* UITableViewCell+Extention.m in Sources */,
+				B146331426C3615E005A9860 /* MessageFirstVC.m in Sources */,
 				181F31DE2230EA940098E099 /* BAD_ACCESS_VC.m in Sources */,
 				1814E89E2293E8D5006A892C /* StackVC.m in Sources */,
 				180C82DB2238910D0092EBF0 /* BuriesPointTestVC.m in Sources */,
@@ -1831,6 +1870,7 @@
 				B122E5DF2565FF69005BD098 /* TextViewInputVC.m in Sources */,
 				181F31D52230C5FA0098E099 /* MyTableReFreshVC.m in Sources */,
 				18ED2503225AE95A00006116 /* MainStructureVC.m in Sources */,
+				B146331D26C362B6005A9860 /* MessageFirstObject.m in Sources */,
 				18FBA88D22E03EAC00E0B1F9 /* ADJacencyMultiplelistVC.m in Sources */,
 				18FBA89222E042CD00E0B1F9 /* EdgeListVC.m in Sources */,
 				18D412A322768D7900DF7815 /* SQListSequentialListVC.m in Sources */,
