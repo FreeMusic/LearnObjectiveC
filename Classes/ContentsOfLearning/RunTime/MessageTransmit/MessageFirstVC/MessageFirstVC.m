@@ -8,6 +8,7 @@
 
 #import "MessageFirstVC.h"
 #import "MessageFirstObject.h"
+#import "MessageSecondObject.h"
 
 @interface MessageFirstVC ()
 
@@ -18,8 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    /// 消息转发的第一阶段
-    [self messageFirstStep];
+//    /// 消息转发的第一阶段
+//    [self messageFirstStep];
+    /// 消息转发的第二阶段
+    [self messageSecondStep];
 }
 
 
@@ -30,6 +33,17 @@
     [message methodInstacePlay];
     [MessageFirstObject methodClassPlay];
     [MessageFirstObject performSelector:@selector(classPlayMessage)];
+}
+
+
+/// 消息转发的第二阶段
+- (void)messageSecondStep {
+    MessageSecondObject *message = [[MessageSecondObject alloc] init];
+    [message playObject];
+    
+    [message otherPlay];
+    
+    [message mixPlay];
 }
 
 

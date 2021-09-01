@@ -10,4 +10,8 @@
 
 @implementation XYFuctionObject
 
+- (void)playObject {
+    RYQLog(@"%@**********playObject", NSStringFromClass([self class]));
+}
+
 @end

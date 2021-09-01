@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MessageSecondObject : XYMessageSecondObject
+@interface MessageSecondObject : XYMessageObject
+
+- (void)playObject;
+
+- (void)otherPlay;
+
+- (void)mixPlay;
 
 @end
 

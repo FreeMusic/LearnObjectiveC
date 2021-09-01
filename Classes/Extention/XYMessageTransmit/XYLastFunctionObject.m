@@ -10,4 +10,8 @@
 
 @implementation XYLastFunctionObject
 
+- (void)otherPlay {
+    RYQLog(@"*************otherPlay*************");
+}
+
 @end

@@ -27,6 +27,7 @@
                       [ObjectiveModel initTitle:@"UITextView输入限制" vcName:@"TextViewInputVC"],
                       [ObjectiveModel initTitle:@"网页" vcName:@"LZYPWebViewVC"],
                       [ObjectiveModel initTitle:@"小球颤动" vcName:@"BallFibrillationVC"],
+                      [ObjectiveModel initTitle:@"手机通讯录" vcName:@"PhoneAddressBookVC"],
                       ];
 }
 

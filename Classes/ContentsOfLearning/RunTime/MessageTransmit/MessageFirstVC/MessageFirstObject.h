@@ -6,11 +6,11 @@
 //  Copyright © 2021 橘子. All rights reserved.
 //
 
-#import "XYMessageObject.h"
+#import "XYMessagePreventCrashObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MessageFirstObject : XYMessageObject
+@interface MessageFirstObject : XYMessagePreventCrashObject
 
 - (void)methodInstacePlay;
 
