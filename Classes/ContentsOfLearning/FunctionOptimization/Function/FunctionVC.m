@@ -36,7 +36,7 @@
     
     if (model.vcName) {
         if ([model.vcName isEqualToString:@"LZYPWebViewVC"]) {
-            LZYPWebViewVC *webVC = [[LZYPWebViewVC alloc] initWithURL:@"https://www.baidu.com"];
+            LZYPWebViewVC *webVC = [[LZYPWebViewVC alloc] initWithURL:@"https://baijiahao.baidu.com/s?id=1709685926162450607&wfr=spider&for=pc"];
             [self.navigationController pushViewController:webVC animated:YES];
             return;
         }
