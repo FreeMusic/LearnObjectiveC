@@ -119,6 +119,11 @@
 		B186291D26C63EBB00250682 /* XYFuctionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B186291C26C63EBB00250682 /* XYFuctionObject.m */; };
 		B186292326C6466400250682 /* XYMessagePreventCrashObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B186292226C6466400250682 /* XYMessagePreventCrashObject.m */; };
 		B186292926C65FCF00250682 /* XYLastFunctionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B186292826C65FCF00250682 /* XYLastFunctionObject.m */; };
+		B191ACED274738A8003B6448 /* LotAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B191ACEC274738A8003B6448 /* LotAnimationVC.m */; };
+		B191ACF527473EDC003B6448 /* FaceSignWaitAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACF427473EDC003B6448 /* FaceSignWaitAnimation.json */; };
+		B191ACFA27477AD7003B6448 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACF927477AD7003B6448 /* animation.json */; };
+		B191ACFF274799BE003B6448 /* 111.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACFE274799BE003B6448 /* 111.json */; };
+		B191AD0427479AC5003B6448 /* bybike.json in Resources */ = {isa = PBXBuildFile; fileRef = B191AD0327479AC5003B6448 /* bybike.json */; };
 		B1EE4CEE24C0268800465499 /* InterpretationNSObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */; };
 		B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF124C0275C00465499 /* IvarAndPropertyVC.m */; };
 		B1EE4CF524C027D700465499 /* IvarPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF424C027D700465499 /* IvarPropertyObject.m */; };
@@ -379,6 +384,12 @@
 		B186292226C6466400250682 /* XYMessagePreventCrashObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYMessagePreventCrashObject.m; sourceTree = "<group>"; };
 		B186292726C65FCF00250682 /* XYLastFunctionObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYLastFunctionObject.h; sourceTree = "<group>"; };
 		B186292826C65FCF00250682 /* XYLastFunctionObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYLastFunctionObject.m; sourceTree = "<group>"; };
+		B191ACEB274738A8003B6448 /* LotAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LotAnimationVC.h; sourceTree = "<group>"; };
+		B191ACEC274738A8003B6448 /* LotAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LotAnimationVC.m; sourceTree = "<group>"; };
+		B191ACF427473EDC003B6448 /* FaceSignWaitAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FaceSignWaitAnimation.json; sourceTree = "<group>"; };
+		B191ACF927477AD7003B6448 /* animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
+		B191ACFE274799BE003B6448 /* 111.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 111.json; sourceTree = "<group>"; };
+		B191AD0327479AC5003B6448 /* bybike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bybike.json; sourceTree = "<group>"; };
 		B1EE4CEC24C0268800465499 /* InterpretationNSObjectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterpretationNSObjectVC.h; sourceTree = "<group>"; };
 		B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterpretationNSObjectVC.m; sourceTree = "<group>"; };
 		B1EE4CF024C0275C00465499 /* IvarAndPropertyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IvarAndPropertyVC.h; sourceTree = "<group>"; };
@@ -447,6 +458,7 @@
 		180C82D3223890A00092EBF0 /* FunctionOptimization */ = {
 			isa = PBXGroup;
 			children = (
+				B191ACEA27473858003B6448 /* LotAnimation */,
 				B103517226DDBC4C00734860 /* PhoneAddressBookVC */,
 				B122E5DC2565FF47005BD098 /* UITextView输入限制 */,
 				B1080B7E255E55ED0095B93C /* BallFibrillation */,
@@ -1527,6 +1539,19 @@
 			path = MessageFirstVC;
 			sourceTree = "<group>";
 		};
+		B191ACEA27473858003B6448 /* LotAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				B191AD0327479AC5003B6448 /* bybike.json */,
+				B191ACFE274799BE003B6448 /* 111.json */,
+				B191ACF427473EDC003B6448 /* FaceSignWaitAnimation.json */,
+				B191ACEB274738A8003B6448 /* LotAnimationVC.h */,
+				B191ACEC274738A8003B6448 /* LotAnimationVC.m */,
+				B191ACF927477AD7003B6448 /* animation.json */,
+			);
+			path = LotAnimation;
+			sourceTree = "<group>";
+		};
 		B1EE4CEB24C0263A00465499 /* 解读NSObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -1707,9 +1732,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B191AD0427479AC5003B6448 /* bybike.json in Resources */,
 				181F319C2230BDDD0098E099 /* LaunchScreen.storyboard in Resources */,
+				B191ACFA27477AD7003B6448 /* animation.json in Resources */,
 				551662AB2257014E0058C9F1 /* Assets.xcassets in Resources */,
+				B191ACFF274799BE003B6448 /* 111.json in Resources */,
 				181F31972230BDDB0098E099 /* Main.storyboard in Resources */,
+				B191ACF527473EDC003B6448 /* FaceSignWaitAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1841,6 +1870,7 @@
 				B1080B8C255E5E910095B93C /* XYGCDTimer.m in Sources */,
 				18EF870222E1BC3600609A39 /* BreadthFirstSearchVC.m in Sources */,
 				18E5ADE422B8BD0E009E1EA6 /* BinaryTreeStoreVC.m in Sources */,
+				B191ACED274738A8003B6448 /* LotAnimationVC.m in Sources */,
 				1846836B2232463B0032A4EE /* KVO_AimModel.m in Sources */,
 				B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */,
 				189B8512229B7A0F002DBEC2 /* StoreOfStringVC.m in Sources */,

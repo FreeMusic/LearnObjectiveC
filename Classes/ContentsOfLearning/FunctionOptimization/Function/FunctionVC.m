@@ -28,6 +28,7 @@
                       [ObjectiveModel initTitle:@"网页" vcName:@"LZYPWebViewVC"],
                       [ObjectiveModel initTitle:@"小球颤动" vcName:@"BallFibrillationVC"],
                       [ObjectiveModel initTitle:@"手机通讯录" vcName:@"PhoneAddressBookVC"],
+                      [ObjectiveModel initTitle:@"Lottie动画(一)" vcName:@"LotAnimationVC"],
                       ];
 }
 

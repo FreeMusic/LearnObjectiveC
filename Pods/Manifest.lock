@@ -17,6 +17,7 @@ PODS:
   - Bugly (2.5.0)
   - FLAnimatedImage (1.0.12)
   - IQKeyboardManager (6.5.5)
+  - lottie-ios_Oc (0.0.1)
   - Masonry (1.1.0)
   - MJRefresh (3.1.15.7)
   - SDWebImage (4.4.2):
@@ -31,31 +32,33 @@ DEPENDENCIES:
   - Bugly
   - FLAnimatedImage
   - IQKeyboardManager
+  - lottie-ios_Oc
   - Masonry
   - MJRefresh
   - SDWebImage
   - SDWebImage/GIF
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - AFNetworking
     - Bugly
     - FLAnimatedImage
+    - IQKeyboardManager
+    - lottie-ios_Oc
     - Masonry
     - MJRefresh
     - SDWebImage
-  trunk:
-    - IQKeyboardManager
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  lottie-ios_Oc: 246311aa2a6106fe03cb34e3e30f8daf7e1e7d9a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 2ee2f88881101fb80455e4459eedbbd5bbf503fc
+PODFILE CHECKSUM: 255aa00b417bd8389c3596491509de1c798a6ccc
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3
