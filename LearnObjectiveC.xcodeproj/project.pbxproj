@@ -115,6 +115,8 @@
 		B146331426C3615E005A9860 /* MessageFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B146331326C3615E005A9860 /* MessageFirstVC.m */; };
 		B146331D26C362B6005A9860 /* MessageFirstObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B146331C26C362B6005A9860 /* MessageFirstObject.m */; };
 		B146332626C36F6B005A9860 /* XYMessageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B146332526C36F6B005A9860 /* XYMessageTool.m */; };
+		B17B831B2770560B0033F26F /* NSString+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B17B831A2770560B0033F26F /* NSString+Extention.m */; };
+		B17B8325277060650033F26F /* NSObject+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B17B8324277060650033F26F /* NSObject+Extention.m */; };
 		B186291726C63D0600250682 /* MessageSecondObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B186291626C63D0600250682 /* MessageSecondObject.m */; };
 		B186291D26C63EBB00250682 /* XYFuctionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B186291C26C63EBB00250682 /* XYFuctionObject.m */; };
 		B186292326C6466400250682 /* XYMessagePreventCrashObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B186292226C6466400250682 /* XYMessagePreventCrashObject.m */; };
@@ -376,6 +378,10 @@
 		B146331C26C362B6005A9860 /* MessageFirstObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageFirstObject.m; sourceTree = "<group>"; };
 		B146332426C36F6B005A9860 /* XYMessageTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYMessageTool.h; sourceTree = "<group>"; };
 		B146332526C36F6B005A9860 /* XYMessageTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYMessageTool.m; sourceTree = "<group>"; };
+		B17B83192770560B0033F26F /* NSString+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extention.h"; sourceTree = "<group>"; };
+		B17B831A2770560B0033F26F /* NSString+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extention.m"; sourceTree = "<group>"; };
+		B17B8323277060650033F26F /* NSObject+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extention.h"; sourceTree = "<group>"; };
+		B17B8324277060650033F26F /* NSObject+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extention.m"; sourceTree = "<group>"; };
 		B186291526C63D0600250682 /* MessageSecondObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageSecondObject.h; sourceTree = "<group>"; };
 		B186291626C63D0600250682 /* MessageSecondObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageSecondObject.m; sourceTree = "<group>"; };
 		B186291B26C63EBB00250682 /* XYFuctionObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYFuctionObject.h; sourceTree = "<group>"; };
@@ -1351,6 +1357,8 @@
 		551662972256F6D40058C9F1 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				B17B8322277060410033F26F /* NSObject */,
+				B17B8318277055C40033F26F /* NSString */,
 				B1FE4CBA26C3B925002AFD60 /* XYMessageTransmit */,
 				B122E5EA256607BD005BD098 /* UITextView */,
 				B122E5E325660087005BD098 /* UITableView */,
@@ -1537,6 +1545,24 @@
 				B186291626C63D0600250682 /* MessageSecondObject.m */,
 			);
 			path = MessageFirstVC;
+			sourceTree = "<group>";
+		};
+		B17B8318277055C40033F26F /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				B17B83192770560B0033F26F /* NSString+Extention.h */,
+				B17B831A2770560B0033F26F /* NSString+Extention.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		B17B8322277060410033F26F /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				B17B8323277060650033F26F /* NSObject+Extention.h */,
+				B17B8324277060650033F26F /* NSObject+Extention.m */,
+			);
+			path = NSObject;
 			sourceTree = "<group>";
 		};
 		B191ACEA27473858003B6448 /* LotAnimation */ = {
@@ -1837,6 +1863,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B17B8325277060650033F26F /* NSObject+Extention.m in Sources */,
 				18FEC62C22374EE200313854 /* TransmitObject.m in Sources */,
 				18E4DAB622DDACAC00DD5829 /* CurbTableVC.m in Sources */,
 				B60045A0245A9AB1000F4BFA /* TextFiledInputModel.m in Sources */,
@@ -1897,6 +1924,7 @@
 				181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */,
 				B1FE4CBD26C3B987002AFD60 /* XYMessageObject.m in Sources */,
 				1879F3C622895D1D00C48D34 /* Person.m in Sources */,
+				B17B831B2770560B0033F26F /* NSString+Extention.m in Sources */,
 				189F68B722A617DE001F6D6F /* MainTreeVC.m in Sources */,
 				1846836822320CCA0032A4EE /* CopyTargetVC.m in Sources */,
 				180F1976225C49D200F62A8C /* MainLinearTableVC.m in Sources */,

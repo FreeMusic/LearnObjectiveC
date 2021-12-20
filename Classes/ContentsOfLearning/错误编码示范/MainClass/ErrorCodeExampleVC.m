@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSString *string = @{@"key": @"value"};
+    RYQLog(@"%d", [string isEmptyString])
+    
     self.Messages = @[
                       [ObjectiveModel initTitle:@"BAD_ACCESS" vcName:@"BAD_ACCESS_VC"],
                       ];
