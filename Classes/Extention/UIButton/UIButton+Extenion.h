@@ -42,6 +42,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) SXYButtonBackColor color;
 
+@property (nonatomic, assign) NSTimeInterval xy_eventInterval;///时间间隔
+
 /**
  *  适用于 有背景颜色 有圆角 的按钮 点击事件可以在block回调中处理
  */

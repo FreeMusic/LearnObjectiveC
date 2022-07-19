@@ -12,8 +12,22 @@
 //runtime用键取值 此处定义一个键  键的类型随意 int 什么都可以  但是char类型占用内存最小
 static char buttonActionKey;
 
+static char *const kEventIntervalKey = "XY_KEventIntervalKey";//时间间隔
+static char *const kEventInvalidKey = "XY_KEventInvalidKey";//是否失效
+
+@interface UIButton ()
+
+@property (nonatomic, assign) BOOL xy_eventInvalid;///
+
+@end
+
 @implementation UIButton (Extenion)
 
++ (void)load {
+//    Method clickMethod = class_getInstanceMethod(self, @selector(sendAction:to:forEvent:));
+//    Method xy_clickMethod = class_getInstanceMethod(self, @selector(xy_sendAction:to:forEvent:));
+//    method_exchangeImplementations(clickMethod, xy_clickMethod);
+}
 
 //按钮背景色的setter 和 getter方法实现
 - (void)setColor:(SXYButtonBackColor)color{
@@ -106,6 +120,30 @@ static char buttonActionKey;
     if (block) {
         block(button);
     }
+}
+
+- (void)xy_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
+    if (!self.xy_eventInvalid) {
+        self.xy_eventInvalid = YES;
+        [self xy_sendAction:action to:target forEvent:event];
+        [self performSelector:@selector(setXy_eventInvalid:) withObject:@(NO) afterDelay:self.xy_eventInterval];
+    }
+}
+
+- (NSTimeInterval)xy_eventInterval {
+    return [objc_getAssociatedObject(self, kEventIntervalKey) doubleValue];
+}
+
+- (void)setXy_eventInterval:(NSTimeInterval)xy_eventInterval {
+    objc_setAssociatedObject(self, kEventIntervalKey, @(xy_eventInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)xy_eventInvalid {
+    return [objc_getAssociatedObject(self, kEventInvalidKey) boolValue];
+}
+
+- (void)setXy_eventInvalid:(BOOL)xy_eventInvalid {
+    objc_setAssociatedObject(self, kEventInvalidKey, @(xy_eventInvalid), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

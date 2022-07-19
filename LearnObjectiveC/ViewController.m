@@ -33,6 +33,7 @@
                     [ObjectiveModel initTitle:@"功能优化" vcName:@"FunctionVC"],
                     [ObjectiveModel initTitle:@"数据结构与算法" vcName:@"MainStructureVC"],
                     [ObjectiveModel initTitle:@"解读NSObject" vcName:@"InterpretationNSObjectVC"],
+                    [ObjectiveModel initTitle:@"第三方SDK使用体验" vcName:@"ThirdSDKVC"],
                     ];
 }
 

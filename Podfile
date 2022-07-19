@@ -16,6 +16,7 @@ target 'LearnObjectiveC' do
   pod 'lottie-ios_Oc'
   #输入框
   pod 'IQKeyboardManager'
+  pod 'GPUImage'
 
   target 'LearnObjectiveCTests' do
     inherit! :search_paths

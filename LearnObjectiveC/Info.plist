@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>张良</string>
+	<string>嘻嘻哈哈</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleGetInfoString</key>
@@ -46,6 +46,8 @@
 	</dict>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>App需要您的同意,才能访问媒体资料库</string>
+	<key>NSContactsUsageDescription</key>
+	<string>App需要您的同意,才能访问通讯录</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>App需要您的同意,才能访问蓝牙</string>
 	<key>NSCalendarsUsageDescription</key>

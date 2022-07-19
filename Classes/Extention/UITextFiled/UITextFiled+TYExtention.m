@@ -120,4 +120,10 @@ static char UITextFieldInputRulesKey;
     return canChange;
 }
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    RYQLog(@"楷书输入了")
+    
+    return YES;
+}
+
 @end

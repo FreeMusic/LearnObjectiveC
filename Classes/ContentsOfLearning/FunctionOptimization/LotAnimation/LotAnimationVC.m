@@ -8,31 +8,68 @@
 
 #import "LotAnimationVC.h"
 #import "LOTAnimationView.h"
+#import "XYGCDTimer.h"
+
+static double timeInterval = 1;
 
 @interface LotAnimationVC ()
+
+@property (nonatomic, copy) NSString *elemTitle;///
+@property (nonatomic, strong) LOTAnimationView *animation;///
 
 @end
 
 @implementation LotAnimationVC
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *filePath_= [[NSBundle mainBundle] pathForResource:@"bybike" ofType:@"json"];
+    NSString *filePath_= [[NSBundle mainBundle] pathForResource:@"liveing" ofType:@"json"];
     
-    LOTAnimationView *animation = [LOTAnimationView animationWithFilePath:filePath_];
-    animation.loopAnimation = YES;
-    animation.frame = CGRectMake((kScreenWidth-300)/2, NavigationBarHeight*2, 50, 50);
-    [self.view addSubview:animation];
-    [animation play];
-    animation.transform = CGAffineTransformMakeRotation(-M_PI*0.15);
+    self.animation = [LOTAnimationView animationWithFilePath:filePath_];
+    self.animation.loopAnimation = YES;
+    self.animation.frame = CGRectMake(0, NavigationBarHeight*2, 50, 50);
+    [self.view addSubview:self.animation];
+    [self.animation play];
+//    animation.transform = CGAffineTransformMakeRotation(-M_PI*0.15);
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(animationTouch)];
-    [animation addGestureRecognizer:tap];
+//    LOTAnimationView *newView = self.animation;
+//    [[XYGCDTimer shareTimer] startTimerWithTimeInterVal:timeInterval*2 circleBlock:^{
+//        RYQLog(@"动画");
+//        [UIView animateWithDuration:timeInterval animations:^{
+//            newView.frame = CGRectMake(kScreenWidth-50, NavigationBarHeight*2, 50, 50);
+//        } completion:^(BOOL finished) {
+//            [UIView animateWithDuration:timeInterval animations:^{
+//                newView.frame = CGRectMake(0, NavigationBarHeight*2, 50, 50);
+//            }];
+//        }];
+//    }];
+}
+
+- (void)startRepeatAnimation:(LOTAnimationView *)animation {
+    
+    [UIView animateWithDuration:timeInterval animations:^{
+        animation.frame = CGRectMake(kScreenWidth-50, NavigationBarHeight*2, 50, 50);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:timeInterval animations:^{
+            animation.frame = CGRectMake(0, NavigationBarHeight*2, 50, 50);
+        }];
+    }];
+    
+}
+
+- (void)repeatAgainWithAnimation {
+    RYQLog(@"动画");
 }
 
 - (void)animationTouch {
     RYQLog(@"animationTouch");
+}
+
+- (void)dealloc {
+    RYQLog(@"移除");
+    [[XYGCDTimer shareTimer] removeTimer];
 }
 
 @end

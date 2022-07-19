@@ -108,6 +108,7 @@
 		B122E5E6256600BB005BD098 /* UITableView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5E5256600BB005BD098 /* UITableView+Extention.m */; };
 		B122E5E925660277005BD098 /* TextViewInputModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5E825660277005BD098 /* TextViewInputModel.m */; };
 		B122E5ED256607DB005BD098 /* UITextView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5EC256607DB005BD098 /* UITextView+Extention.m */; };
+		B12FB5C72779A398002D97A9 /* PhoneBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B12FB5C62779A398002D97A9 /* PhoneBookCell.m */; };
 		B1333E412521CC6D0063F757 /* LeeCodeMainlistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E402521CC6D0063F757 /* LeeCodeMainlistVC.m */; };
 		B1333E452521CFAC0063F757 /* TenNumsAheadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E442521CFAC0063F757 /* TenNumsAheadVC.m */; };
 		B142B3322539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m in Sources */ = {isa = PBXBuildFile; fileRef = B142B3302539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m */; };
@@ -126,9 +127,14 @@
 		B191ACFA27477AD7003B6448 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACF927477AD7003B6448 /* animation.json */; };
 		B191ACFF274799BE003B6448 /* 111.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACFE274799BE003B6448 /* 111.json */; };
 		B191AD0427479AC5003B6448 /* bybike.json in Resources */ = {isa = PBXBuildFile; fileRef = B191AD0327479AC5003B6448 /* bybike.json */; };
+		B1D12344286EC2A30050FFF3 /* liveing.json in Resources */ = {isa = PBXBuildFile; fileRef = B1D12343286EC2A30050FFF3 /* liveing.json */; };
+		B1E7BC592886537C00DECF3D /* ThirdSDKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7BC582886537C00DECF3D /* ThirdSDKVC.m */; };
+		B1E7BC5D2886542000DECF3D /* GPUImageSDKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7BC5C2886542000DECF3D /* GPUImageSDKVC.m */; };
+		B1E7BC60288658B800DECF3D /* GPUImageEnumData.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7BC5F288658B800DECF3D /* GPUImageEnumData.m */; };
 		B1EE4CEE24C0268800465499 /* InterpretationNSObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */; };
 		B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF124C0275C00465499 /* IvarAndPropertyVC.m */; };
 		B1EE4CF524C027D700465499 /* IvarPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF424C027D700465499 /* IvarPropertyObject.m */; };
+		B1F9F0522800091B00709624 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F9F0502800091B00709624 /* NSDictionary+NilSafe.m */; };
 		B1FE4CBD26C3B987002AFD60 /* XYMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FE4CBC26C3B987002AFD60 /* XYMessageObject.m */; };
 		B600459D245A8356000F4BFA /* TextFiledInputLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B600459C245A8356000F4BFA /* TextFiledInputLimitCell.m */; };
 		B60045A0245A9AB1000F4BFA /* TextFiledInputModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B600459F245A9AB1000F4BFA /* TextFiledInputModel.m */; };
@@ -364,6 +370,8 @@
 		B122E5E825660277005BD098 /* TextViewInputModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewInputModel.m; sourceTree = "<group>"; };
 		B122E5EB256607DB005BD098 /* UITextView+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extention.h"; sourceTree = "<group>"; };
 		B122E5EC256607DB005BD098 /* UITextView+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extention.m"; sourceTree = "<group>"; };
+		B12FB5C52779A398002D97A9 /* PhoneBookCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneBookCell.h; sourceTree = "<group>"; };
+		B12FB5C62779A398002D97A9 /* PhoneBookCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneBookCell.m; sourceTree = "<group>"; };
 		B1333E3F2521CC6D0063F757 /* LeeCodeMainlistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeeCodeMainlistVC.h; sourceTree = "<group>"; };
 		B1333E402521CC6D0063F757 /* LeeCodeMainlistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeeCodeMainlistVC.m; sourceTree = "<group>"; };
 		B1333E432521CFAC0063F757 /* TenNumsAheadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TenNumsAheadVC.h; sourceTree = "<group>"; };
@@ -396,12 +404,21 @@
 		B191ACF927477AD7003B6448 /* animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
 		B191ACFE274799BE003B6448 /* 111.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 111.json; sourceTree = "<group>"; };
 		B191AD0327479AC5003B6448 /* bybike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bybike.json; sourceTree = "<group>"; };
+		B1D12343286EC2A30050FFF3 /* liveing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = liveing.json; sourceTree = "<group>"; };
+		B1E7BC572886537C00DECF3D /* ThirdSDKVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdSDKVC.h; sourceTree = "<group>"; };
+		B1E7BC582886537C00DECF3D /* ThirdSDKVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdSDKVC.m; sourceTree = "<group>"; };
+		B1E7BC5B2886542000DECF3D /* GPUImageSDKVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageSDKVC.h; sourceTree = "<group>"; };
+		B1E7BC5C2886542000DECF3D /* GPUImageSDKVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageSDKVC.m; sourceTree = "<group>"; };
+		B1E7BC5E288658B800DECF3D /* GPUImageEnumData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageEnumData.h; sourceTree = "<group>"; };
+		B1E7BC5F288658B800DECF3D /* GPUImageEnumData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageEnumData.m; sourceTree = "<group>"; };
 		B1EE4CEC24C0268800465499 /* InterpretationNSObjectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterpretationNSObjectVC.h; sourceTree = "<group>"; };
 		B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterpretationNSObjectVC.m; sourceTree = "<group>"; };
 		B1EE4CF024C0275C00465499 /* IvarAndPropertyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IvarAndPropertyVC.h; sourceTree = "<group>"; };
 		B1EE4CF124C0275C00465499 /* IvarAndPropertyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IvarAndPropertyVC.m; sourceTree = "<group>"; };
 		B1EE4CF324C027D700465499 /* IvarPropertyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IvarPropertyObject.h; sourceTree = "<group>"; };
 		B1EE4CF424C027D700465499 /* IvarPropertyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IvarPropertyObject.m; sourceTree = "<group>"; };
+		B1F9F0502800091B00709624 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
+		B1F9F0512800091B00709624 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
 		B1FE4CBB26C3B987002AFD60 /* XYMessageObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYMessageObject.h; sourceTree = "<group>"; };
 		B1FE4CBC26C3B987002AFD60 /* XYMessageObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYMessageObject.m; sourceTree = "<group>"; };
 		B600459B245A8356000F4BFA /* TextFiledInputLimitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFiledInputLimitCell.h; sourceTree = "<group>"; };
@@ -666,6 +683,7 @@
 		181F31C62230C2940098E099 /* ContentsOfLearning */ = {
 			isa = PBXGroup;
 			children = (
+				B1E7BC562886533700DECF3D /* ThirdSDK */,
 				B1EE4CEB24C0263A00465499 /* 解读NSObject */,
 				18ED24FF225AE93B00006116 /* 数据结构与算法 */,
 				180C82D3223890A00092EBF0 /* FunctionOptimization */,
@@ -1357,6 +1375,7 @@
 		551662972256F6D40058C9F1 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				B1F9F04F2800091B00709624 /* NSDictionary-NilSafe */,
 				B17B8322277060410033F26F /* NSObject */,
 				B17B8318277055C40033F26F /* NSString */,
 				B1FE4CBA26C3B925002AFD60 /* XYMessageTransmit */,
@@ -1423,6 +1442,8 @@
 			children = (
 				B103517326DDBCB000734860 /* PhoneAddressBookVC.h */,
 				B103517426DDBCB000734860 /* PhoneAddressBookVC.m */,
+				B12FB5C52779A398002D97A9 /* PhoneBookCell.h */,
+				B12FB5C62779A398002D97A9 /* PhoneBookCell.m */,
 			);
 			path = PhoneAddressBookVC;
 			sourceTree = "<group>";
@@ -1568,6 +1589,7 @@
 		B191ACEA27473858003B6448 /* LotAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				B1D12343286EC2A30050FFF3 /* liveing.json */,
 				B191AD0327479AC5003B6448 /* bybike.json */,
 				B191ACFE274799BE003B6448 /* 111.json */,
 				B191ACF427473EDC003B6448 /* FaceSignWaitAnimation.json */,
@@ -1576,6 +1598,27 @@
 				B191ACF927477AD7003B6448 /* animation.json */,
 			);
 			path = LotAnimation;
+			sourceTree = "<group>";
+		};
+		B1E7BC562886533700DECF3D /* ThirdSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B1E7BC5A288653ED00DECF3D /* GPUImageSDK */,
+				B1E7BC572886537C00DECF3D /* ThirdSDKVC.h */,
+				B1E7BC582886537C00DECF3D /* ThirdSDKVC.m */,
+			);
+			path = ThirdSDK;
+			sourceTree = "<group>";
+		};
+		B1E7BC5A288653ED00DECF3D /* GPUImageSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B1E7BC5B2886542000DECF3D /* GPUImageSDKVC.h */,
+				B1E7BC5C2886542000DECF3D /* GPUImageSDKVC.m */,
+				B1E7BC5E288658B800DECF3D /* GPUImageEnumData.h */,
+				B1E7BC5F288658B800DECF3D /* GPUImageEnumData.m */,
+			);
+			path = GPUImageSDK;
 			sourceTree = "<group>";
 		};
 		B1EE4CEB24C0263A00465499 /* 解读NSObject */ = {
@@ -1597,6 +1640,15 @@
 				B1EE4CF424C027D700465499 /* IvarPropertyObject.m */,
 			);
 			path = "成员变量与属性";
+			sourceTree = "<group>";
+		};
+		B1F9F04F2800091B00709624 /* NSDictionary-NilSafe */ = {
+			isa = PBXGroup;
+			children = (
+				B1F9F0502800091B00709624 /* NSDictionary+NilSafe.m */,
+				B1F9F0512800091B00709624 /* NSDictionary+NilSafe.h */,
+			);
+			path = "NSDictionary-NilSafe";
 			sourceTree = "<group>";
 		};
 		B1FE4CBA26C3B925002AFD60 /* XYMessageTransmit */ = {
@@ -1760,6 +1812,7 @@
 			files = (
 				B191AD0427479AC5003B6448 /* bybike.json in Resources */,
 				181F319C2230BDDD0098E099 /* LaunchScreen.storyboard in Resources */,
+				B1D12344286EC2A30050FFF3 /* liveing.json in Resources */,
 				B191ACFA27477AD7003B6448 /* animation.json in Resources */,
 				551662AB2257014E0058C9F1 /* Assets.xcassets in Resources */,
 				B191ACFF274799BE003B6448 /* 111.json in Resources */,
@@ -1875,6 +1928,7 @@
 				180F1970225C348A00F62A8C /* TimeComplexityVC.m in Sources */,
 				B66B11C22458357A0090262B /* TextFiledInputLimitVC.m in Sources */,
 				B186292326C6466400250682 /* XYMessagePreventCrashObject.m in Sources */,
+				B1E7BC5D2886542000DECF3D /* GPUImageSDKVC.m in Sources */,
 				550B4DF52287B07900417CA5 /* Animal.m in Sources */,
 				B600459D245A8356000F4BFA /* TextFiledInputLimitCell.m in Sources */,
 				187C3EE0228166E5000F205C /* CircularLinkedListVC.m in Sources */,
@@ -1890,6 +1944,7 @@
 				5516629F2256F75C0058C9F1 /* GeoCoding.m in Sources */,
 				18FEC63022377E7500313854 /* ArrayBoundsVC.m in Sources */,
 				18E247DA2296773200B8AF63 /* QueueVC.m in Sources */,
+				B12FB5C72779A398002D97A9 /* PhoneBookCell.m in Sources */,
 				55309EFB23018B5A0039589F /* CriticalPathVC.m in Sources */,
 				B146332626C36F6B005A9860 /* XYMessageTool.m in Sources */,
 				B1333E412521CC6D0063F757 /* LeeCodeMainlistVC.m in Sources */,
@@ -1922,6 +1977,7 @@
 				180CF1CC230399AF0096C58B /* SearchTableVC.m in Sources */,
 				189B850E229B722A002DBEC2 /* MainStringVC.m in Sources */,
 				181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */,
+				B1E7BC592886537C00DECF3D /* ThirdSDKVC.m in Sources */,
 				B1FE4CBD26C3B987002AFD60 /* XYMessageObject.m in Sources */,
 				1879F3C622895D1D00C48D34 /* Person.m in Sources */,
 				B17B831B2770560B0033F26F /* NSString+Extention.m in Sources */,
@@ -1943,10 +1999,12 @@
 				181F31D12230C44A0098E099 /* MyTableViewVC.m in Sources */,
 				181F319F2230BDDD0098E099 /* main.m in Sources */,
 				181F31DA2230E7890098E099 /* ErrorCodeExampleVC.m in Sources */,
+				B1F9F0522800091B00709624 /* NSDictionary+NilSafe.m in Sources */,
 				B103517526DDBCB000734860 /* PhoneAddressBookVC.m in Sources */,
 				183C6330228BF748002CDDB2 /* AutoreleasePool.mm in Sources */,
 				1846836522320CB90032A4EE /* MemoryMainVC.m in Sources */,
 				183ADC622235FED100ADB09B /* ArrayRemoveVC.m in Sources */,
+				B1E7BC60288658B800DECF3D /* GPUImageEnumData.m in Sources */,
 				B66B11BE245834DD0090262B /* UITextFiled+TYExtention.m in Sources */,
 				18FEC63B22377ED300313854 /* NSObject+SwizzleMethod.m in Sources */,
 				183ADC6B2236100E00ADB09B /* DesignMainVC.m in Sources */,
