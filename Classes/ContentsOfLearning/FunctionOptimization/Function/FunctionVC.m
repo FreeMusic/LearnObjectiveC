@@ -29,6 +29,9 @@
                       [ObjectiveModel initTitle:@"小球颤动" vcName:@"BallFibrillationVC"],
                       [ObjectiveModel initTitle:@"手机通讯录" vcName:@"PhoneAddressBookVC"],
                       [ObjectiveModel initTitle:@"Lottie动画(一)" vcName:@"LotAnimationVC"],
+                      [ObjectiveModel initTitle:@"获取所有相册照片" vcName:@"AllImageVC"],
+                      [ObjectiveModel initTitle:@"折叠cell" vcName:@"FoldingCellVC"],
+                      [ObjectiveModel initTitle:@"自定义键盘" vcName:@"KeyBoardVC"],
                       ];
 }
 

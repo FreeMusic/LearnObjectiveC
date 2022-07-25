@@ -20,7 +20,7 @@ static char labelActionKey;
 + (UILabel *)LabelWithColor:(UIColor *)color andTextFont:(CGFloat)font andText:(NSString *)text addSubView:(UIView *)view{
     UILabel *label = [[UILabel alloc] init];
     label.textColor = color;
-    label.font = [UIFont systemFontOfSize:font*m6Scale];
+    label.font = [UIFont systemFontOfSize:font];
     label.text = text;
     [view addSubview:label];
     

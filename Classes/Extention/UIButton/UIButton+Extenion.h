@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 //按钮的点击事件 block
-typedef void(^ButtonActionBlock)(UIButton *button);
+typedef void(^ButtonActionBlock)(UIButton * _Nullable button);
 
 /**
  枚举按钮的背景颜色

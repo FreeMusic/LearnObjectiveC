@@ -40,5 +40,6 @@
 #import "UITableView+Extention.h"
 #import "NSString+Extention.h"
 #import "NSObject+Extention.h"
+#import "LZYPAlertController.h"
 
 #endif /* Header_h */

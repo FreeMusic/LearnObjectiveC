@@ -111,11 +111,18 @@
 		B12FB5C72779A398002D97A9 /* PhoneBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B12FB5C62779A398002D97A9 /* PhoneBookCell.m */; };
 		B1333E412521CC6D0063F757 /* LeeCodeMainlistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E402521CC6D0063F757 /* LeeCodeMainlistVC.m */; };
 		B1333E452521CFAC0063F757 /* TenNumsAheadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E442521CFAC0063F757 /* TenNumsAheadVC.m */; };
+		B13603B928892E4A0003BB45 /* AllImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B13603B828892E4A0003BB45 /* AllImageVC.m */; };
 		B142B3322539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m in Sources */ = {isa = PBXBuildFile; fileRef = B142B3302539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m */; };
 		B142B3332539815000E8A9C6 /* LZYPWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B142B3312539815000E8A9C6 /* LZYPWebViewVC.m */; };
 		B146331426C3615E005A9860 /* MessageFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B146331326C3615E005A9860 /* MessageFirstVC.m */; };
 		B146331D26C362B6005A9860 /* MessageFirstObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B146331C26C362B6005A9860 /* MessageFirstObject.m */; };
 		B146332626C36F6B005A9860 /* XYMessageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B146332526C36F6B005A9860 /* XYMessageTool.m */; };
+		B14BDF9E28868A72006C892A /* LZYPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14BDF9D28868A72006C892A /* LZYPAlertController.m */; };
+		B14BDFA1288698F7006C892A /* GPUImageEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = B14BDFA0288698F7006C892A /* GPUImageEditView.m */; };
+		B173EAAB288E367C00A4B8AE /* FoldingCellVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B173EAAA288E367C00A4B8AE /* FoldingCellVC.m */; };
+		B173EAAE288E39A000A4B8AE /* FoldingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B173EAAD288E39A000A4B8AE /* FoldingModel.m */; };
+		B173EAB2288E68E300A4B8AE /* KeyBoardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B173EAB1288E68E300A4B8AE /* KeyBoardVC.m */; };
+		B173EAB5288E692E00A4B8AE /* XYKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = B173EAB4288E692E00A4B8AE /* XYKeyBoard.m */; };
 		B17B831B2770560B0033F26F /* NSString+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B17B831A2770560B0033F26F /* NSString+Extention.m */; };
 		B17B8325277060650033F26F /* NSObject+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B17B8324277060650033F26F /* NSObject+Extention.m */; };
 		B186291726C63D0600250682 /* MessageSecondObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B186291626C63D0600250682 /* MessageSecondObject.m */; };
@@ -127,6 +134,7 @@
 		B191ACFA27477AD7003B6448 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACF927477AD7003B6448 /* animation.json */; };
 		B191ACFF274799BE003B6448 /* 111.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACFE274799BE003B6448 /* 111.json */; };
 		B191AD0427479AC5003B6448 /* bybike.json in Resources */ = {isa = PBXBuildFile; fileRef = B191AD0327479AC5003B6448 /* bybike.json */; };
+		B1C15CF5288A8F76001F58BB /* ElemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C15CF4288A8F76001F58BB /* ElemCell.m */; };
 		B1D12344286EC2A30050FFF3 /* liveing.json in Resources */ = {isa = PBXBuildFile; fileRef = B1D12343286EC2A30050FFF3 /* liveing.json */; };
 		B1E7BC592886537C00DECF3D /* ThirdSDKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7BC582886537C00DECF3D /* ThirdSDKVC.m */; };
 		B1E7BC5D2886542000DECF3D /* GPUImageSDKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7BC5C2886542000DECF3D /* GPUImageSDKVC.m */; };
@@ -376,6 +384,8 @@
 		B1333E402521CC6D0063F757 /* LeeCodeMainlistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeeCodeMainlistVC.m; sourceTree = "<group>"; };
 		B1333E432521CFAC0063F757 /* TenNumsAheadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TenNumsAheadVC.h; sourceTree = "<group>"; };
 		B1333E442521CFAC0063F757 /* TenNumsAheadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TenNumsAheadVC.m; sourceTree = "<group>"; };
+		B13603B728892E4A0003BB45 /* AllImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllImageVC.h; sourceTree = "<group>"; };
+		B13603B828892E4A0003BB45 /* AllImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllImageVC.m; sourceTree = "<group>"; };
 		B142B32E2539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LZYPWebViewVC+ProgressNotifi.h"; sourceTree = "<group>"; };
 		B142B32F2539815000E8A9C6 /* LZYPWebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZYPWebViewVC.h; sourceTree = "<group>"; };
 		B142B3302539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LZYPWebViewVC+ProgressNotifi.m"; sourceTree = "<group>"; };
@@ -386,6 +396,18 @@
 		B146331C26C362B6005A9860 /* MessageFirstObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageFirstObject.m; sourceTree = "<group>"; };
 		B146332426C36F6B005A9860 /* XYMessageTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYMessageTool.h; sourceTree = "<group>"; };
 		B146332526C36F6B005A9860 /* XYMessageTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYMessageTool.m; sourceTree = "<group>"; };
+		B14BDF9C28868A72006C892A /* LZYPAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZYPAlertController.h; sourceTree = "<group>"; };
+		B14BDF9D28868A72006C892A /* LZYPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZYPAlertController.m; sourceTree = "<group>"; };
+		B14BDF9F288698F7006C892A /* GPUImageEditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageEditView.h; sourceTree = "<group>"; };
+		B14BDFA0288698F7006C892A /* GPUImageEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageEditView.m; sourceTree = "<group>"; };
+		B173EAA9288E367C00A4B8AE /* FoldingCellVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoldingCellVC.h; sourceTree = "<group>"; };
+		B173EAAA288E367C00A4B8AE /* FoldingCellVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoldingCellVC.m; sourceTree = "<group>"; };
+		B173EAAC288E39A000A4B8AE /* FoldingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoldingModel.h; sourceTree = "<group>"; };
+		B173EAAD288E39A000A4B8AE /* FoldingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoldingModel.m; sourceTree = "<group>"; };
+		B173EAB0288E68E300A4B8AE /* KeyBoardVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyBoardVC.h; sourceTree = "<group>"; };
+		B173EAB1288E68E300A4B8AE /* KeyBoardVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyBoardVC.m; sourceTree = "<group>"; };
+		B173EAB3288E692E00A4B8AE /* XYKeyBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYKeyBoard.h; sourceTree = "<group>"; };
+		B173EAB4288E692E00A4B8AE /* XYKeyBoard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYKeyBoard.m; sourceTree = "<group>"; };
 		B17B83192770560B0033F26F /* NSString+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extention.h"; sourceTree = "<group>"; };
 		B17B831A2770560B0033F26F /* NSString+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extention.m"; sourceTree = "<group>"; };
 		B17B8323277060650033F26F /* NSObject+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extention.h"; sourceTree = "<group>"; };
@@ -404,6 +426,8 @@
 		B191ACF927477AD7003B6448 /* animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
 		B191ACFE274799BE003B6448 /* 111.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 111.json; sourceTree = "<group>"; };
 		B191AD0327479AC5003B6448 /* bybike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bybike.json; sourceTree = "<group>"; };
+		B1C15CF3288A8F76001F58BB /* ElemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ElemCell.h; sourceTree = "<group>"; };
+		B1C15CF4288A8F76001F58BB /* ElemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElemCell.m; sourceTree = "<group>"; };
 		B1D12343286EC2A30050FFF3 /* liveing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = liveing.json; sourceTree = "<group>"; };
 		B1E7BC572886537C00DECF3D /* ThirdSDKVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdSDKVC.h; sourceTree = "<group>"; };
 		B1E7BC582886537C00DECF3D /* ThirdSDKVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdSDKVC.m; sourceTree = "<group>"; };
@@ -481,6 +505,9 @@
 		180C82D3223890A00092EBF0 /* FunctionOptimization */ = {
 			isa = PBXGroup;
 			children = (
+				B173EAAF288E68BF00A4B8AE /* KeyBoard */,
+				B173EAA8288E362800A4B8AE /* FoldingCell */,
+				B13603B628892E220003BB45 /* AllImage */,
 				B191ACEA27473858003B6448 /* LotAnimation */,
 				B103517226DDBC4C00734860 /* PhoneAddressBookVC */,
 				B122E5DC2565FF47005BD098 /* UITextView输入限制 */,
@@ -709,6 +736,7 @@
 		181F31C82230C2AD0098E099 /* ToolsVC */ = {
 			isa = PBXGroup;
 			children = (
+				B107F4C8288689A900C89D9E /* AlertVC */,
 				181F31C92230C3310098E099 /* BaseVC */,
 			);
 			path = ToolsVC;
@@ -1448,6 +1476,14 @@
 			path = PhoneAddressBookVC;
 			sourceTree = "<group>";
 		};
+		B107F4C8288689A900C89D9E /* AlertVC */ = {
+			isa = PBXGroup;
+			children = (
+				B14BDF9B28868A72006C892A /* LZYPAlertController */,
+			);
+			path = AlertVC;
+			sourceTree = "<group>";
+		};
 		B1080B7E255E55ED0095B93C /* BallFibrillation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1536,6 +1572,15 @@
 			path = Nunbers;
 			sourceTree = "<group>";
 		};
+		B13603B628892E220003BB45 /* AllImage */ = {
+			isa = PBXGroup;
+			children = (
+				B13603B728892E4A0003BB45 /* AllImageVC.h */,
+				B13603B828892E4A0003BB45 /* AllImageVC.m */,
+			);
+			path = AllImage;
+			sourceTree = "<group>";
+		};
 		B142B32C2539812E00E8A9C6 /* XYWebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1566,6 +1611,39 @@
 				B186291626C63D0600250682 /* MessageSecondObject.m */,
 			);
 			path = MessageFirstVC;
+			sourceTree = "<group>";
+		};
+		B14BDF9B28868A72006C892A /* LZYPAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				B14BDF9C28868A72006C892A /* LZYPAlertController.h */,
+				B14BDF9D28868A72006C892A /* LZYPAlertController.m */,
+			);
+			path = LZYPAlertController;
+			sourceTree = "<group>";
+		};
+		B173EAA8288E362800A4B8AE /* FoldingCell */ = {
+			isa = PBXGroup;
+			children = (
+				B173EAA9288E367C00A4B8AE /* FoldingCellVC.h */,
+				B173EAAA288E367C00A4B8AE /* FoldingCellVC.m */,
+				B1C15CF3288A8F76001F58BB /* ElemCell.h */,
+				B1C15CF4288A8F76001F58BB /* ElemCell.m */,
+				B173EAAC288E39A000A4B8AE /* FoldingModel.h */,
+				B173EAAD288E39A000A4B8AE /* FoldingModel.m */,
+			);
+			path = FoldingCell;
+			sourceTree = "<group>";
+		};
+		B173EAAF288E68BF00A4B8AE /* KeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				B173EAB0288E68E300A4B8AE /* KeyBoardVC.h */,
+				B173EAB1288E68E300A4B8AE /* KeyBoardVC.m */,
+				B173EAB3288E692E00A4B8AE /* XYKeyBoard.h */,
+				B173EAB4288E692E00A4B8AE /* XYKeyBoard.m */,
+			);
+			path = KeyBoard;
 			sourceTree = "<group>";
 		};
 		B17B8318277055C40033F26F /* NSString */ = {
@@ -1617,6 +1695,8 @@
 				B1E7BC5C2886542000DECF3D /* GPUImageSDKVC.m */,
 				B1E7BC5E288658B800DECF3D /* GPUImageEnumData.h */,
 				B1E7BC5F288658B800DECF3D /* GPUImageEnumData.m */,
+				B14BDF9F288698F7006C892A /* GPUImageEditView.h */,
+				B14BDFA0288698F7006C892A /* GPUImageEditView.m */,
 			);
 			path = GPUImageSDK;
 			sourceTree = "<group>";
@@ -1943,6 +2023,7 @@
 				B186291D26C63EBB00250682 /* XYFuctionObject.m in Sources */,
 				5516629F2256F75C0058C9F1 /* GeoCoding.m in Sources */,
 				18FEC63022377E7500313854 /* ArrayBoundsVC.m in Sources */,
+				B14BDFA1288698F7006C892A /* GPUImageEditView.m in Sources */,
 				18E247DA2296773200B8AF63 /* QueueVC.m in Sources */,
 				B12FB5C72779A398002D97A9 /* PhoneBookCell.m in Sources */,
 				55309EFB23018B5A0039589F /* CriticalPathVC.m in Sources */,
@@ -1957,6 +2038,7 @@
 				B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */,
 				189B8512229B7A0F002DBEC2 /* StoreOfStringVC.m in Sources */,
 				B122E5ED256607DB005BD098 /* UITextView+Extention.m in Sources */,
+				B14BDF9E28868A72006C892A /* LZYPAlertController.m in Sources */,
 				18FFB16522E6B9370011FBD8 /* MinimumTreeVC.m in Sources */,
 				B1080B85255E5D830095B93C /* UIView+TYExtention.m in Sources */,
 				18481326223A21B600C566D5 /* MVC_View.m in Sources */,
@@ -1966,6 +2048,7 @@
 				183ADC582235EFE200ADB09B /* KVC_Model.m in Sources */,
 				18FBA89622E0479900E0B1F9 /* DepthFirstSeachVC.m in Sources */,
 				B186291726C63D0600250682 /* MessageSecondObject.m in Sources */,
+				B13603B928892E4A0003BB45 /* AllImageVC.m in Sources */,
 				55BCAEE2235568BD00830093 /* FactoryDesignVC+FactorA.m in Sources */,
 				181F31942230BDDB0098E099 /* ViewController.m in Sources */,
 				1892AE2622D4255C00F4E007 /* AdjacentMatrixVC.m in Sources */,
@@ -1975,9 +2058,11 @@
 				18481320223A218300C566D5 /* MVCController.m in Sources */,
 				551662962256F2A20058C9F1 /* ImageMessageVC.m in Sources */,
 				180CF1CC230399AF0096C58B /* SearchTableVC.m in Sources */,
+				B1C15CF5288A8F76001F58BB /* ElemCell.m in Sources */,
 				189B850E229B722A002DBEC2 /* MainStringVC.m in Sources */,
 				181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */,
 				B1E7BC592886537C00DECF3D /* ThirdSDKVC.m in Sources */,
+				B173EAAB288E367C00A4B8AE /* FoldingCellVC.m in Sources */,
 				B1FE4CBD26C3B987002AFD60 /* XYMessageObject.m in Sources */,
 				1879F3C622895D1D00C48D34 /* Person.m in Sources */,
 				B17B831B2770560B0033F26F /* NSString+Extention.m in Sources */,
@@ -1991,7 +2076,9 @@
 				18FEC63A22377ED300313854 /* NSMutableArray+ErrorHandle.m in Sources */,
 				18DA477622FA7B0C009F0187 /* TopologicalSortingVC.m in Sources */,
 				18AFB14722D709F200C78822 /* UITableViewCell+Extention.m in Sources */,
+				B173EAB5288E692E00A4B8AE /* XYKeyBoard.m in Sources */,
 				B146331426C3615E005A9860 /* MessageFirstVC.m in Sources */,
+				B173EAB2288E68E300A4B8AE /* KeyBoardVC.m in Sources */,
 				181F31DE2230EA940098E099 /* BAD_ACCESS_VC.m in Sources */,
 				1814E89E2293E8D5006A892C /* StackVC.m in Sources */,
 				180C82DB2238910D0092EBF0 /* BuriesPointTestVC.m in Sources */,
@@ -2024,6 +2111,7 @@
 				B122E5DF2565FF69005BD098 /* TextViewInputVC.m in Sources */,
 				181F31D52230C5FA0098E099 /* MyTableReFreshVC.m in Sources */,
 				18ED2503225AE95A00006116 /* MainStructureVC.m in Sources */,
+				B173EAAE288E39A000A4B8AE /* FoldingModel.m in Sources */,
 				B146331D26C362B6005A9860 /* MessageFirstObject.m in Sources */,
 				18FBA88D22E03EAC00E0B1F9 /* ADJacencyMultiplelistVC.m in Sources */,
 				18FBA89222E042CD00E0B1F9 /* EdgeListVC.m in Sources */,

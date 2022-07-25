@@ -12,13 +12,21 @@ typedef enum : NSUInteger {
     ColorFilterStyle,
 } GPUFilter;
 
+typedef void(^ImageFinishSelectBlock) (UIImage * _Nonnull image);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GPUImageEnumData : NSObject
 
+@property (nonatomic, strong) UIViewController *presentVC;///
+
+@property (nonatomic, copy) ImageFinishSelectBlock finishSelect;///
+
 - (NSDictionary *)filterDataWithType: (GPUFilter)style;
 
 - (NSString *)colorFilterValueForKey:(NSString *)key;
+
+- (void)presentSelectAction;
 
 @end
 
