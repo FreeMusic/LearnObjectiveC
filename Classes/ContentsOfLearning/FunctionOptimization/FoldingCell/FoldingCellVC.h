@@ -6,11 +6,11 @@
 //  Copyright © 2022 橘子. All rights reserved.
 //
 
-#import "MyCollectionViewVC.h"
+#import "MyTableViewVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FoldingCellVC : MyCollectionViewVC
+@interface FoldingCellVC : MyTableViewVC
 
 @end
 

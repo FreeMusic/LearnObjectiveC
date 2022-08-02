@@ -8,7 +8,7 @@
 
 #import "XYKeyBoard.h"
 
-static CGFloat keyBoardHeight = 300;
+static CGFloat keyBoardHeight = 240;
 static CGFloat TimeInterval = 0.3;
 
 static int baseTag = 4598;
@@ -35,6 +35,7 @@ static NSString *deleteString = @"删除";
         CGFloat height = (keyBoardHeight - 3) / 4;
         
         self.inputString = @"";
+        _maxNum = 6;
         
         _keyBoardView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, keyBoardHeight)];
         _keyBoardView.backgroundColor = [UIColor grayColor];

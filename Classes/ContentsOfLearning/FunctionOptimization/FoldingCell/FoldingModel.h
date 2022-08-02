@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat width;///
 ///
 
-
-
 - (instancetype)initWithText: (NSString *)text;
 
 @end

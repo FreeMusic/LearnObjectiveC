@@ -119,6 +119,10 @@
 		B146332626C36F6B005A9860 /* XYMessageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B146332526C36F6B005A9860 /* XYMessageTool.m */; };
 		B14BDF9E28868A72006C892A /* LZYPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14BDF9D28868A72006C892A /* LZYPAlertController.m */; };
 		B14BDFA1288698F7006C892A /* GPUImageEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = B14BDFA0288698F7006C892A /* GPUImageEditView.m */; };
+		B163C3D728977704008C1560 /* XYCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B163C3D628977704008C1560 /* XYCollectionViewFlowLayout.m */; };
+		B163C3DD28978359008C1560 /* XYFoldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B163C3DC28978359008C1560 /* XYFoldCell.m */; };
+		B163C3E028978532008C1560 /* ElemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B163C3DE28978532008C1560 /* ElemCell.m */; };
+		B163C3E32897A7F5008C1560 /* XYFoldTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B163C3E22897A7F5008C1560 /* XYFoldTool.m */; };
 		B173EAAB288E367C00A4B8AE /* FoldingCellVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B173EAAA288E367C00A4B8AE /* FoldingCellVC.m */; };
 		B173EAAE288E39A000A4B8AE /* FoldingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B173EAAD288E39A000A4B8AE /* FoldingModel.m */; };
 		B173EAB2288E68E300A4B8AE /* KeyBoardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B173EAB1288E68E300A4B8AE /* KeyBoardVC.m */; };
@@ -134,7 +138,6 @@
 		B191ACFA27477AD7003B6448 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACF927477AD7003B6448 /* animation.json */; };
 		B191ACFF274799BE003B6448 /* 111.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACFE274799BE003B6448 /* 111.json */; };
 		B191AD0427479AC5003B6448 /* bybike.json in Resources */ = {isa = PBXBuildFile; fileRef = B191AD0327479AC5003B6448 /* bybike.json */; };
-		B1C15CF5288A8F76001F58BB /* ElemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C15CF4288A8F76001F58BB /* ElemCell.m */; };
 		B1D12344286EC2A30050FFF3 /* liveing.json in Resources */ = {isa = PBXBuildFile; fileRef = B1D12343286EC2A30050FFF3 /* liveing.json */; };
 		B1E7BC592886537C00DECF3D /* ThirdSDKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7BC582886537C00DECF3D /* ThirdSDKVC.m */; };
 		B1E7BC5D2886542000DECF3D /* GPUImageSDKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7BC5C2886542000DECF3D /* GPUImageSDKVC.m */; };
@@ -400,6 +403,14 @@
 		B14BDF9D28868A72006C892A /* LZYPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZYPAlertController.m; sourceTree = "<group>"; };
 		B14BDF9F288698F7006C892A /* GPUImageEditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageEditView.h; sourceTree = "<group>"; };
 		B14BDFA0288698F7006C892A /* GPUImageEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageEditView.m; sourceTree = "<group>"; };
+		B163C3D528977704008C1560 /* XYCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		B163C3D628977704008C1560 /* XYCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		B163C3DB28978359008C1560 /* XYFoldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYFoldCell.h; sourceTree = "<group>"; };
+		B163C3DC28978359008C1560 /* XYFoldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYFoldCell.m; sourceTree = "<group>"; };
+		B163C3DE28978532008C1560 /* ElemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElemCell.m; sourceTree = "<group>"; };
+		B163C3DF28978532008C1560 /* ElemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElemCell.h; sourceTree = "<group>"; };
+		B163C3E12897A7F5008C1560 /* XYFoldTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYFoldTool.h; sourceTree = "<group>"; };
+		B163C3E22897A7F5008C1560 /* XYFoldTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYFoldTool.m; sourceTree = "<group>"; };
 		B173EAA9288E367C00A4B8AE /* FoldingCellVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoldingCellVC.h; sourceTree = "<group>"; };
 		B173EAAA288E367C00A4B8AE /* FoldingCellVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoldingCellVC.m; sourceTree = "<group>"; };
 		B173EAAC288E39A000A4B8AE /* FoldingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoldingModel.h; sourceTree = "<group>"; };
@@ -426,8 +437,6 @@
 		B191ACF927477AD7003B6448 /* animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
 		B191ACFE274799BE003B6448 /* 111.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 111.json; sourceTree = "<group>"; };
 		B191AD0327479AC5003B6448 /* bybike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bybike.json; sourceTree = "<group>"; };
-		B1C15CF3288A8F76001F58BB /* ElemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ElemCell.h; sourceTree = "<group>"; };
-		B1C15CF4288A8F76001F58BB /* ElemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElemCell.m; sourceTree = "<group>"; };
 		B1D12343286EC2A30050FFF3 /* liveing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = liveing.json; sourceTree = "<group>"; };
 		B1E7BC572886537C00DECF3D /* ThirdSDKVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdSDKVC.h; sourceTree = "<group>"; };
 		B1E7BC582886537C00DECF3D /* ThirdSDKVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdSDKVC.m; sourceTree = "<group>"; };
@@ -1627,10 +1636,16 @@
 			children = (
 				B173EAA9288E367C00A4B8AE /* FoldingCellVC.h */,
 				B173EAAA288E367C00A4B8AE /* FoldingCellVC.m */,
-				B1C15CF3288A8F76001F58BB /* ElemCell.h */,
-				B1C15CF4288A8F76001F58BB /* ElemCell.m */,
+				B163C3DF28978532008C1560 /* ElemCell.h */,
+				B163C3DE28978532008C1560 /* ElemCell.m */,
+				B163C3DB28978359008C1560 /* XYFoldCell.h */,
+				B163C3DC28978359008C1560 /* XYFoldCell.m */,
+				B163C3D528977704008C1560 /* XYCollectionViewFlowLayout.h */,
+				B163C3D628977704008C1560 /* XYCollectionViewFlowLayout.m */,
 				B173EAAC288E39A000A4B8AE /* FoldingModel.h */,
 				B173EAAD288E39A000A4B8AE /* FoldingModel.m */,
+				B163C3E12897A7F5008C1560 /* XYFoldTool.h */,
+				B163C3E22897A7F5008C1560 /* XYFoldTool.m */,
 			);
 			path = FoldingCell;
 			sourceTree = "<group>";
@@ -1999,6 +2014,7 @@
 				B17B8325277060650033F26F /* NSObject+Extention.m in Sources */,
 				18FEC62C22374EE200313854 /* TransmitObject.m in Sources */,
 				18E4DAB622DDACAC00DD5829 /* CurbTableVC.m in Sources */,
+				B163C3E32897A7F5008C1560 /* XYFoldTool.m in Sources */,
 				B60045A0245A9AB1000F4BFA /* TextFiledInputModel.m in Sources */,
 				B186292926C65FCF00250682 /* XYLastFunctionObject.m in Sources */,
 				189B850A229B71EE002DBEC2 /* StringVC.m in Sources */,
@@ -2029,6 +2045,8 @@
 				55309EFB23018B5A0039589F /* CriticalPathVC.m in Sources */,
 				B146332626C36F6B005A9860 /* XYMessageTool.m in Sources */,
 				B1333E412521CC6D0063F757 /* LeeCodeMainlistVC.m in Sources */,
+				B163C3D728977704008C1560 /* XYCollectionViewFlowLayout.m in Sources */,
+				B163C3E028978532008C1560 /* ElemCell.m in Sources */,
 				180F1979225C4A4D00F62A8C /* DefineLinearTableVC.m in Sources */,
 				B1080B8C255E5E910095B93C /* XYGCDTimer.m in Sources */,
 				18EF870222E1BC3600609A39 /* BreadthFirstSearchVC.m in Sources */,
@@ -2046,6 +2064,7 @@
 				18098A4122BCCF6B003BAFBA /* CluesBinaryTreeVC.m in Sources */,
 				B142B3332539815000E8A9C6 /* LZYPWebViewVC.m in Sources */,
 				183ADC582235EFE200ADB09B /* KVC_Model.m in Sources */,
+				B163C3DD28978359008C1560 /* XYFoldCell.m in Sources */,
 				18FBA89622E0479900E0B1F9 /* DepthFirstSeachVC.m in Sources */,
 				B186291726C63D0600250682 /* MessageSecondObject.m in Sources */,
 				B13603B928892E4A0003BB45 /* AllImageVC.m in Sources */,
@@ -2058,7 +2077,6 @@
 				18481320223A218300C566D5 /* MVCController.m in Sources */,
 				551662962256F2A20058C9F1 /* ImageMessageVC.m in Sources */,
 				180CF1CC230399AF0096C58B /* SearchTableVC.m in Sources */,
-				B1C15CF5288A8F76001F58BB /* ElemCell.m in Sources */,
 				189B850E229B722A002DBEC2 /* MainStringVC.m in Sources */,
 				181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */,
 				B1E7BC592886537C00DECF3D /* ThirdSDKVC.m in Sources */,

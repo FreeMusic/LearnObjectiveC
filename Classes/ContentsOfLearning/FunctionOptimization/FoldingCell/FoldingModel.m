@@ -8,6 +8,10 @@
 
 #import "FoldingModel.h"
 
+@interface FoldingModel ()
+
+@end
+
 @implementation FoldingModel
 
 - (instancetype)initWithText: (NSString *)text {
@@ -23,7 +27,7 @@
 - (CGSize) caculateStringSizeWithText: (NSString *)text {
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     //最大宽度为300，最大高度为200
-    CGSize size = [text boundingRectWithSize:CGSizeMake(300, 200) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15] ,NSParagraphStyleAttributeName:paragraphStyle} context:nil].size;
+    CGSize size = [text boundingRectWithSize:CGSizeMake(kScreenWidth, 200) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15] ,NSParagraphStyleAttributeName:paragraphStyle} context:nil].size;
      
     return size;
 }

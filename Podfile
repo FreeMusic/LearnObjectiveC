@@ -17,6 +17,8 @@ target 'LearnObjectiveC' do
   #输入框
   pod 'IQKeyboardManager'
   pod 'GPUImage'
+  
+  pod 'ZLCollectionViewFlowLayout' 
 
   target 'LearnObjectiveCTests' do
     inherit! :search_paths
