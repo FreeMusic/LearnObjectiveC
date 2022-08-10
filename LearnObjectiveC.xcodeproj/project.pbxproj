@@ -103,9 +103,9 @@
 		B1080B8C255E5E910095B93C /* XYGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080B8B255E5E910095B93C /* XYGCDTimer.m */; };
 		B1080B8F255E60DE0095B93C /* AimationBall.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080B8E255E60DE0095B93C /* AimationBall.m */; };
 		B1080B96255E71090095B93C /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080B95255E71090095B93C /* UIColor+Extention.m */; };
-		B1080DAC28A37D4B0093A635 /* CycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080DAB28A37D4B0093A635 /* CycleVC.m */; };
-		B1080DB028A37DE40093A635 /* XYCyclePlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080DAF28A37DE40093A635 /* XYCyclePlayView.m */; };
-		B1080DB328A380A30093A635 /* XYCyclePlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080DB228A380A30093A635 /* XYCyclePlayCell.m */; };
+		B1080DBB28A3A1D10093A635 /* XYCyclePlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080DB528A3A1D10093A635 /* XYCyclePlayView.m */; };
+		B1080DBC28A3A1D10093A635 /* XYCyclePlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080DB628A3A1D10093A635 /* XYCyclePlayCell.m */; };
+		B1080DBD28A3A1D10093A635 /* CycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080DBA28A3A1D10093A635 /* CycleVC.m */; };
 		B122E5DF2565FF69005BD098 /* TextViewInputVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5DE2565FF69005BD098 /* TextViewInputVC.m */; };
 		B122E5E22565FFEF005BD098 /* TextViewInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5E12565FFEF005BD098 /* TextViewInputCell.m */; };
 		B122E5E6256600BB005BD098 /* UITableView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5E5256600BB005BD098 /* UITableView+Extention.m */; };
@@ -374,12 +374,12 @@
 		B1080B8E255E60DE0095B93C /* AimationBall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AimationBall.m; sourceTree = "<group>"; };
 		B1080B94255E71090095B93C /* UIColor+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
 		B1080B95255E71090095B93C /* UIColor+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extention.m"; sourceTree = "<group>"; };
-		B1080DAA28A37D4B0093A635 /* CycleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CycleVC.h; sourceTree = "<group>"; };
-		B1080DAB28A37D4B0093A635 /* CycleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CycleVC.m; sourceTree = "<group>"; };
-		B1080DAE28A37DE40093A635 /* XYCyclePlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCyclePlayView.h; sourceTree = "<group>"; };
-		B1080DAF28A37DE40093A635 /* XYCyclePlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCyclePlayView.m; sourceTree = "<group>"; };
-		B1080DB128A380A30093A635 /* XYCyclePlayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCyclePlayCell.h; sourceTree = "<group>"; };
-		B1080DB228A380A30093A635 /* XYCyclePlayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCyclePlayCell.m; sourceTree = "<group>"; };
+		B1080DB528A3A1D10093A635 /* XYCyclePlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCyclePlayView.m; sourceTree = "<group>"; };
+		B1080DB628A3A1D10093A635 /* XYCyclePlayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCyclePlayCell.m; sourceTree = "<group>"; };
+		B1080DB728A3A1D10093A635 /* XYCyclePlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCyclePlayView.h; sourceTree = "<group>"; };
+		B1080DB828A3A1D10093A635 /* XYCyclePlayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCyclePlayCell.h; sourceTree = "<group>"; };
+		B1080DB928A3A1D10093A635 /* CycleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleVC.h; sourceTree = "<group>"; };
+		B1080DBA28A3A1D10093A635 /* CycleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleVC.m; sourceTree = "<group>"; };
 		B122E5DD2565FF69005BD098 /* TextViewInputVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewInputVC.h; sourceTree = "<group>"; };
 		B122E5DE2565FF69005BD098 /* TextViewInputVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewInputVC.m; sourceTree = "<group>"; };
 		B122E5E02565FFEF005BD098 /* TextViewInputCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewInputCell.h; sourceTree = "<group>"; };
@@ -1544,20 +1544,20 @@
 		B1080DA928A37D0F0093A635 /* CycleView */ = {
 			isa = PBXGroup;
 			children = (
-				B1080DAD28A37DAA0093A635 /* XYCyclePlayView */,
-				B1080DAA28A37D4B0093A635 /* CycleVC.h */,
-				B1080DAB28A37D4B0093A635 /* CycleVC.m */,
+				B1080DB928A3A1D10093A635 /* CycleVC.h */,
+				B1080DBA28A3A1D10093A635 /* CycleVC.m */,
+				B1080DB428A3A1D10093A635 /* XYCyclePlayView */,
 			);
 			path = CycleView;
 			sourceTree = "<group>";
 		};
-		B1080DAD28A37DAA0093A635 /* XYCyclePlayView */ = {
+		B1080DB428A3A1D10093A635 /* XYCyclePlayView */ = {
 			isa = PBXGroup;
 			children = (
-				B1080DAE28A37DE40093A635 /* XYCyclePlayView.h */,
-				B1080DAF28A37DE40093A635 /* XYCyclePlayView.m */,
-				B1080DB128A380A30093A635 /* XYCyclePlayCell.h */,
-				B1080DB228A380A30093A635 /* XYCyclePlayCell.m */,
+				B1080DB528A3A1D10093A635 /* XYCyclePlayView.m */,
+				B1080DB628A3A1D10093A635 /* XYCyclePlayCell.m */,
+				B1080DB728A3A1D10093A635 /* XYCyclePlayView.h */,
+				B1080DB828A3A1D10093A635 /* XYCyclePlayCell.h */,
 			);
 			path = XYCyclePlayView;
 			sourceTree = "<group>";
@@ -2079,7 +2079,6 @@
 				B163C3D728977704008C1560 /* XYCollectionViewFlowLayout.m in Sources */,
 				B163C3E028978532008C1560 /* ElemCell.m in Sources */,
 				180F1979225C4A4D00F62A8C /* DefineLinearTableVC.m in Sources */,
-				B1080DAC28A37D4B0093A635 /* CycleVC.m in Sources */,
 				B1080B8C255E5E910095B93C /* XYGCDTimer.m in Sources */,
 				18EF870222E1BC3600609A39 /* BreadthFirstSearchVC.m in Sources */,
 				18E5ADE422B8BD0E009E1EA6 /* BinaryTreeStoreVC.m in Sources */,
@@ -2088,7 +2087,6 @@
 				B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */,
 				189B8512229B7A0F002DBEC2 /* StoreOfStringVC.m in Sources */,
 				B122E5ED256607DB005BD098 /* UITextView+Extention.m in Sources */,
-				B1080DB328A380A30093A635 /* XYCyclePlayCell.m in Sources */,
 				B14BDF9E28868A72006C892A /* LZYPAlertController.m in Sources */,
 				18FFB16522E6B9370011FBD8 /* MinimumTreeVC.m in Sources */,
 				B1080B85255E5D830095B93C /* UIView+TYExtention.m in Sources */,
@@ -2101,7 +2099,6 @@
 				18FBA89622E0479900E0B1F9 /* DepthFirstSeachVC.m in Sources */,
 				B186291726C63D0600250682 /* MessageSecondObject.m in Sources */,
 				B13603B928892E4A0003BB45 /* AllImageVC.m in Sources */,
-				B1080DB028A37DE40093A635 /* XYCyclePlayView.m in Sources */,
 				55BCAEE2235568BD00830093 /* FactoryDesignVC+FactorA.m in Sources */,
 				181F31942230BDDB0098E099 /* ViewController.m in Sources */,
 				1892AE2622D4255C00F4E007 /* AdjacentMatrixVC.m in Sources */,
@@ -2150,6 +2147,7 @@
 				18FEC63922377ED300313854 /* NSArray+ErrorHandle.m in Sources */,
 				180CF1C8230399210096C58B /* MainSearchVC.m in Sources */,
 				18481323223A21A300C566D5 /* MVC_Model.m in Sources */,
+				B1080DBC28A3A1D10093A635 /* XYCyclePlayCell.m in Sources */,
 				B1333E452521CFAC0063F757 /* TenNumsAheadVC.m in Sources */,
 				1814E8A12293E919006A892C /* MainStackTempVC.m in Sources */,
 				551662A72256FA770058C9F1 /* UIButton+Extenion.m in Sources */,
@@ -2157,6 +2155,7 @@
 				5516629B2256F6F40058C9F1 /* NSDictionary+CLLocation.m in Sources */,
 				551662A42256FA610058C9F1 /* UILabel+Extenion.m in Sources */,
 				1806E57D2306A85300549C33 /* SequentialSearchVC.m in Sources */,
+				B1080DBB28A3A1D10093A635 /* XYCyclePlayView.m in Sources */,
 				181F31912230BDDB0098E099 /* AppDelegate.m in Sources */,
 				1872753922E941EB00E7E01F /* ShortestPathVC.m in Sources */,
 				18FEC63E2237801500313854 /* BoundsNextVC.m in Sources */,
@@ -2167,6 +2166,7 @@
 				B146331D26C362B6005A9860 /* MessageFirstObject.m in Sources */,
 				18FBA88D22E03EAC00E0B1F9 /* ADJacencyMultiplelistVC.m in Sources */,
 				18FBA89222E042CD00E0B1F9 /* EdgeListVC.m in Sources */,
+				B1080DBD28A3A1D10093A635 /* CycleVC.m in Sources */,
 				18D412A322768D7900DF7815 /* SQListSequentialListVC.m in Sources */,
 				187C3EE322816716000F205C /* BothWayLinkListVC.m in Sources */,
 				181F31F522311A730098E099 /* KVO_VC.m in Sources */,
