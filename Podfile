@@ -17,6 +17,7 @@ target 'LearnObjectiveC' do
   #输入框
   pod 'IQKeyboardManager'
   pod 'GPUImage'
+  pod 'UMLink'
   
   pod 'ZLCollectionViewFlowLayout' 
 

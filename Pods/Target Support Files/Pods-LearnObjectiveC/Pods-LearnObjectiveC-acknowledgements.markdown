@@ -161,6 +161,21 @@ THE SOFTWARE.
 
 
 
+## UMCommon
+
+Copyright 2011 - 2021 umeng.com. All rights reserved.
+
+
+## UMDevice
+
+Copyright 2011 - 2021 umeng.com. All rights reserved.
+
+
+## UMLink
+
+Copyright 2011 - 2020 umeng.com. All rights reserved.
+
+
 ## ZLCollectionViewFlowLayout
 
 MIT License
