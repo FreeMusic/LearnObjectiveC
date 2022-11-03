@@ -26,6 +26,8 @@
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"//引入webimage
 #import "GPUImage.h"
+#import "NSMutableArray+ErrorHandle.h"
+#import "NSArray+ErrorHandle.h"
 
 /**
  工具类文件

@@ -89,7 +89,7 @@
 
 - (UILabel *)labelWithPosition:(int)position{
     
-    UILabel *label = [UILabel LabelWithColor:BLACK_COLOR andTextFont:30 andText:self.titles[position] addSubView:self.view];
+    UILabel *label = [UILabel LabelWithColor:BLACK_COLOR andTextFont:12 andText:self.titles[position] addSubView:self.view];
     label.numberOfLines = 0;
     [label makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.imageView.left);

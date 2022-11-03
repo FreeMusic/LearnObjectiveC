@@ -33,6 +33,9 @@
         [ObjectiveModel initTitle:@"获取所有相册照片" vcName:@"AllImageVC"],
         [ObjectiveModel initTitle:@"折叠cell" vcName:@"FoldingCellVC"],
         [ObjectiveModel initTitle:@"自定义键盘" vcName:@"KeyBoardVC"],
+        [ObjectiveModel initTitle:@"CollectionView长按拖拽" vcName:@"CollectionViewDragVC"],
+        [ObjectiveModel initTitle:@"浏览文件" vcName:@"DocumentVC"],
+        [ObjectiveModel initTitle:@"图片的旋转" vcName:@"ImageOrientationVC"],
     ];
 }
 

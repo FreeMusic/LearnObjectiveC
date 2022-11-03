@@ -41,6 +41,7 @@ static char *const kEventInvalidKey = "XY_KEventInvalidKey";//是否失效
         [self setBackgroundColor:[UIColor clearColor]];
     }else if (color == ButtonYellowColor){
         self.userInteractionEnabled = YES;
+        [self setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
         [self setBackgroundColor:[UIColor yellowColor]];
     }else if (color == ButtonNormalColorWithLine){
         [self setTitleColor:DarkNavigationColor forState:0];
