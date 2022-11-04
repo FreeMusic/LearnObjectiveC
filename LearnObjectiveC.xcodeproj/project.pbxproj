@@ -115,6 +115,7 @@
 		B1333E412521CC6D0063F757 /* LeeCodeMainlistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E402521CC6D0063F757 /* LeeCodeMainlistVC.m */; };
 		B1333E452521CFAC0063F757 /* TenNumsAheadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1333E442521CFAC0063F757 /* TenNumsAheadVC.m */; };
 		B13603B928892E4A0003BB45 /* AllImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B13603B828892E4A0003BB45 /* AllImageVC.m */; };
+		B136762E2914F647005DD729 /* LXYImageBrowserManger.m in Sources */ = {isa = PBXBuildFile; fileRef = B136762D2914F647005DD729 /* LXYImageBrowserManger.m */; };
 		B142B3322539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m in Sources */ = {isa = PBXBuildFile; fileRef = B142B3302539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m */; };
 		B142B3332539815000E8A9C6 /* LZYPWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B142B3312539815000E8A9C6 /* LZYPWebViewVC.m */; };
 		B146331426C3615E005A9860 /* MessageFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B146331326C3615E005A9860 /* MessageFirstVC.m */; };
@@ -133,12 +134,20 @@
 		B173EAB2288E68E300A4B8AE /* KeyBoardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B173EAB1288E68E300A4B8AE /* KeyBoardVC.m */; };
 		B173EAB5288E692E00A4B8AE /* XYKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = B173EAB4288E692E00A4B8AE /* XYKeyBoard.m */; };
 		B174A226291252D300C4E382 /* ImageOrientationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B174A225291252D300C4E382 /* ImageOrientationVC.m */; };
+		B17A91132913638300494ED7 /* UIKitPlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B17A91122913638300494ED7 /* UIKitPlayVC.m */; };
+		B17A9117291363F600494ED7 /* UIViewAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B17A9116291363F600494ED7 /* UIViewAnimationVC.m */; };
+		B17A911B2913AF0900494ED7 /* TransitionAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B17A911A2913AF0900494ED7 /* TransitionAnimationVC.m */; };
 		B17B831B2770560B0033F26F /* NSString+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B17B831A2770560B0033F26F /* NSString+Extention.m */; };
 		B17B8325277060650033F26F /* NSObject+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B17B8324277060650033F26F /* NSObject+Extention.m */; };
 		B186291726C63D0600250682 /* MessageSecondObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B186291626C63D0600250682 /* MessageSecondObject.m */; };
 		B186291D26C63EBB00250682 /* XYFuctionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B186291C26C63EBB00250682 /* XYFuctionObject.m */; };
 		B186292326C6466400250682 /* XYMessagePreventCrashObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B186292226C6466400250682 /* XYMessagePreventCrashObject.m */; };
 		B186292926C65FCF00250682 /* XYLastFunctionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B186292826C65FCF00250682 /* XYLastFunctionObject.m */; };
+		B18C12E72915084400F79041 /* LXYImageBrowserTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = B18C12E62915084400F79041 /* LXYImageBrowserTranslation.m */; };
+		B18C12EA2915087A00F79041 /* LXYImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B18C12E92915087A00F79041 /* LXYImageBrowserViewController.m */; };
+		B18C12ED291508CB00F79041 /* LXYImageBrowserMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = B18C12EC291508CB00F79041 /* LXYImageBrowserMainView.m */; };
+		B18C12F0291508F200F79041 /* LXYImageBrowserSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = B18C12EF291508F200F79041 /* LXYImageBrowserSubView.m */; };
+		B18C12F32915092A00F79041 /* LXYImageBrowserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B18C12F22915092A00F79041 /* LXYImageBrowserModel.m */; };
 		B191ACED274738A8003B6448 /* LotAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B191ACEC274738A8003B6448 /* LotAnimationVC.m */; };
 		B191ACF527473EDC003B6448 /* FaceSignWaitAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACF427473EDC003B6448 /* FaceSignWaitAnimation.json */; };
 		B191ACFA27477AD7003B6448 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACF927477AD7003B6448 /* animation.json */; };
@@ -403,6 +412,9 @@
 		B1333E442521CFAC0063F757 /* TenNumsAheadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TenNumsAheadVC.m; sourceTree = "<group>"; };
 		B13603B728892E4A0003BB45 /* AllImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllImageVC.h; sourceTree = "<group>"; };
 		B13603B828892E4A0003BB45 /* AllImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllImageVC.m; sourceTree = "<group>"; };
+		B136762C2914F647005DD729 /* LXYImageBrowserManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYImageBrowserManger.h; sourceTree = "<group>"; };
+		B136762D2914F647005DD729 /* LXYImageBrowserManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYImageBrowserManger.m; sourceTree = "<group>"; };
+		B136762F2914F69F005DD729 /* LXYImageBrowserHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYImageBrowserHeader.h; sourceTree = "<group>"; };
 		B142B32E2539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LZYPWebViewVC+ProgressNotifi.h"; sourceTree = "<group>"; };
 		B142B32F2539815000E8A9C6 /* LZYPWebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZYPWebViewVC.h; sourceTree = "<group>"; };
 		B142B3302539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LZYPWebViewVC+ProgressNotifi.m"; sourceTree = "<group>"; };
@@ -439,6 +451,12 @@
 		B173EAB4288E692E00A4B8AE /* XYKeyBoard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYKeyBoard.m; sourceTree = "<group>"; };
 		B174A224291252D300C4E382 /* ImageOrientationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageOrientationVC.h; sourceTree = "<group>"; };
 		B174A225291252D300C4E382 /* ImageOrientationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageOrientationVC.m; sourceTree = "<group>"; };
+		B17A91112913638300494ED7 /* UIKitPlayVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitPlayVC.h; sourceTree = "<group>"; };
+		B17A91122913638300494ED7 /* UIKitPlayVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitPlayVC.m; sourceTree = "<group>"; };
+		B17A9115291363F600494ED7 /* UIViewAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewAnimationVC.h; sourceTree = "<group>"; };
+		B17A9116291363F600494ED7 /* UIViewAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewAnimationVC.m; sourceTree = "<group>"; };
+		B17A91192913AF0900494ED7 /* TransitionAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionAnimationVC.h; sourceTree = "<group>"; };
+		B17A911A2913AF0900494ED7 /* TransitionAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionAnimationVC.m; sourceTree = "<group>"; };
 		B17B83192770560B0033F26F /* NSString+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extention.h"; sourceTree = "<group>"; };
 		B17B831A2770560B0033F26F /* NSString+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extention.m"; sourceTree = "<group>"; };
 		B17B8323277060650033F26F /* NSObject+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extention.h"; sourceTree = "<group>"; };
@@ -451,6 +469,16 @@
 		B186292226C6466400250682 /* XYMessagePreventCrashObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYMessagePreventCrashObject.m; sourceTree = "<group>"; };
 		B186292726C65FCF00250682 /* XYLastFunctionObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYLastFunctionObject.h; sourceTree = "<group>"; };
 		B186292826C65FCF00250682 /* XYLastFunctionObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYLastFunctionObject.m; sourceTree = "<group>"; };
+		B18C12E52915084400F79041 /* LXYImageBrowserTranslation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYImageBrowserTranslation.h; sourceTree = "<group>"; };
+		B18C12E62915084400F79041 /* LXYImageBrowserTranslation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYImageBrowserTranslation.m; sourceTree = "<group>"; };
+		B18C12E82915087A00F79041 /* LXYImageBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYImageBrowserViewController.h; sourceTree = "<group>"; };
+		B18C12E92915087A00F79041 /* LXYImageBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYImageBrowserViewController.m; sourceTree = "<group>"; };
+		B18C12EB291508CB00F79041 /* LXYImageBrowserMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYImageBrowserMainView.h; sourceTree = "<group>"; };
+		B18C12EC291508CB00F79041 /* LXYImageBrowserMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYImageBrowserMainView.m; sourceTree = "<group>"; };
+		B18C12EE291508F200F79041 /* LXYImageBrowserSubView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYImageBrowserSubView.h; sourceTree = "<group>"; };
+		B18C12EF291508F200F79041 /* LXYImageBrowserSubView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYImageBrowserSubView.m; sourceTree = "<group>"; };
+		B18C12F12915092A00F79041 /* LXYImageBrowserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYImageBrowserModel.h; sourceTree = "<group>"; };
+		B18C12F22915092A00F79041 /* LXYImageBrowserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYImageBrowserModel.m; sourceTree = "<group>"; };
 		B191ACEB274738A8003B6448 /* LotAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LotAnimationVC.h; sourceTree = "<group>"; };
 		B191ACEC274738A8003B6448 /* LotAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LotAnimationVC.m; sourceTree = "<group>"; };
 		B191ACF427473EDC003B6448 /* FaceSignWaitAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FaceSignWaitAnimation.json; sourceTree = "<group>"; };
@@ -747,6 +775,7 @@
 		181F31C62230C2940098E099 /* ContentsOfLearning */ = {
 			isa = PBXGroup;
 			children = (
+				B17A91102913634700494ED7 /* UIKitPlay */,
 				B1E7BC562886533700DECF3D /* ThirdSDK */,
 				B1EE4CEB24C0263A00465499 /* 解读NSObject */,
 				18ED24FF225AE93B00006116 /* 数据结构与算法 */,
@@ -1640,6 +1669,26 @@
 			path = AllImage;
 			sourceTree = "<group>";
 		};
+		B136762B2914F622005DD729 /* LXYImageBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				B136762F2914F69F005DD729 /* LXYImageBrowserHeader.h */,
+				B136762C2914F647005DD729 /* LXYImageBrowserManger.h */,
+				B136762D2914F647005DD729 /* LXYImageBrowserManger.m */,
+				B18C12E52915084400F79041 /* LXYImageBrowserTranslation.h */,
+				B18C12E62915084400F79041 /* LXYImageBrowserTranslation.m */,
+				B18C12E82915087A00F79041 /* LXYImageBrowserViewController.h */,
+				B18C12E92915087A00F79041 /* LXYImageBrowserViewController.m */,
+				B18C12EB291508CB00F79041 /* LXYImageBrowserMainView.h */,
+				B18C12EC291508CB00F79041 /* LXYImageBrowserMainView.m */,
+				B18C12EE291508F200F79041 /* LXYImageBrowserSubView.h */,
+				B18C12EF291508F200F79041 /* LXYImageBrowserSubView.m */,
+				B18C12F12915092A00F79041 /* LXYImageBrowserModel.h */,
+				B18C12F22915092A00F79041 /* LXYImageBrowserModel.m */,
+			);
+			path = LXYImageBrowser;
+			sourceTree = "<group>";
+		};
 		B142B32C2539812E00E8A9C6 /* XYWebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1729,6 +1778,36 @@
 				B174A225291252D300C4E382 /* ImageOrientationVC.m */,
 			);
 			path = ImageOrientationVC;
+			sourceTree = "<group>";
+		};
+		B17A91102913634700494ED7 /* UIKitPlay */ = {
+			isa = PBXGroup;
+			children = (
+				B17A9114291363D800494ED7 /* UIViewAnimation */,
+				B17A91112913638300494ED7 /* UIKitPlayVC.h */,
+				B17A91122913638300494ED7 /* UIKitPlayVC.m */,
+			);
+			path = UIKitPlay;
+			sourceTree = "<group>";
+		};
+		B17A9114291363D800494ED7 /* UIViewAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				B136762B2914F622005DD729 /* LXYImageBrowser */,
+				B17A91182913AE9900494ED7 /* TransitionAnimationVC */,
+				B17A9115291363F600494ED7 /* UIViewAnimationVC.h */,
+				B17A9116291363F600494ED7 /* UIViewAnimationVC.m */,
+			);
+			path = UIViewAnimation;
+			sourceTree = "<group>";
+		};
+		B17A91182913AE9900494ED7 /* TransitionAnimationVC */ = {
+			isa = PBXGroup;
+			children = (
+				B17A91192913AF0900494ED7 /* TransitionAnimationVC.h */,
+				B17A911A2913AF0900494ED7 /* TransitionAnimationVC.m */,
+			);
+			path = TransitionAnimationVC;
 			sourceTree = "<group>";
 		};
 		B17B8318277055C40033F26F /* NSString */ = {
@@ -2100,6 +2179,7 @@
 				B142B3322539815000E8A9C6 /* LZYPWebViewVC+ProgressNotifi.m in Sources */,
 				18FEC62922374E9900313854 /* MessageTransmitVC.m in Sources */,
 				18AFB14022D703A400C78822 /* FigureOutLayoutVC.m in Sources */,
+				B18C12E72915084400F79041 /* LXYImageBrowserTranslation.m in Sources */,
 				180F1970225C348A00F62A8C /* TimeComplexityVC.m in Sources */,
 				B66B11C22458357A0090262B /* TextFiledInputLimitVC.m in Sources */,
 				B186292326C6466400250682 /* XYMessagePreventCrashObject.m in Sources */,
@@ -2151,6 +2231,7 @@
 				181F31942230BDDB0098E099 /* ViewController.m in Sources */,
 				1892AE2622D4255C00F4E007 /* AdjacentMatrixVC.m in Sources */,
 				185AF0432297DA7400E065EF /* GCDVC.m in Sources */,
+				B18C12F0291508F200F79041 /* LXYImageBrowserSubView.m in Sources */,
 				55BCAEE5235568CB00830093 /* FactoryDesignVC+FactorB.m in Sources */,
 				B174A226291252D300C4E382 /* ImageOrientationVC.m in Sources */,
 				B122E5E22565FFEF005BD098 /* TextViewInputCell.m in Sources */,
@@ -2159,7 +2240,9 @@
 				180CF1CC230399AF0096C58B /* SearchTableVC.m in Sources */,
 				189B850E229B722A002DBEC2 /* MainStringVC.m in Sources */,
 				181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */,
+				B18C12ED291508CB00F79041 /* LXYImageBrowserMainView.m in Sources */,
 				B1E7BC592886537C00DECF3D /* ThirdSDKVC.m in Sources */,
+				B17A911B2913AF0900494ED7 /* TransitionAnimationVC.m in Sources */,
 				B173EAAB288E367C00A4B8AE /* FoldingCellVC.m in Sources */,
 				B1FE4CBD26C3B987002AFD60 /* XYMessageObject.m in Sources */,
 				1879F3C622895D1D00C48D34 /* Person.m in Sources */,
@@ -2173,8 +2256,10 @@
 				B1080B96255E71090095B93C /* UIColor+Extention.m in Sources */,
 				B1080B81255E56330095B93C /* BallFibrillationVC.m in Sources */,
 				18FEC63A22377ED300313854 /* NSMutableArray+ErrorHandle.m in Sources */,
+				B18C12EA2915087A00F79041 /* LXYImageBrowserViewController.m in Sources */,
 				18DA477622FA7B0C009F0187 /* TopologicalSortingVC.m in Sources */,
 				18AFB14722D709F200C78822 /* UITableViewCell+Extention.m in Sources */,
+				B17A91132913638300494ED7 /* UIKitPlayVC.m in Sources */,
 				B173EAB5288E692E00A4B8AE /* XYKeyBoard.m in Sources */,
 				B146331426C3615E005A9860 /* MessageFirstVC.m in Sources */,
 				B173EAB2288E68E300A4B8AE /* KeyBoardVC.m in Sources */,
@@ -2191,11 +2276,13 @@
 				183C6330228BF748002CDDB2 /* AutoreleasePool.mm in Sources */,
 				1846836522320CB90032A4EE /* MemoryMainVC.m in Sources */,
 				183ADC622235FED100ADB09B /* ArrayRemoveVC.m in Sources */,
+				B17A9117291363F600494ED7 /* UIViewAnimationVC.m in Sources */,
 				B1E7BC60288658B800DECF3D /* GPUImageEnumData.m in Sources */,
 				B66B11BE245834DD0090262B /* UITextFiled+TYExtention.m in Sources */,
 				18FEC63B22377ED300313854 /* NSObject+SwizzleMethod.m in Sources */,
 				183ADC6B2236100E00ADB09B /* DesignMainVC.m in Sources */,
 				18FEC63922377ED300313854 /* NSArray+ErrorHandle.m in Sources */,
+				B136762E2914F647005DD729 /* LXYImageBrowserManger.m in Sources */,
 				180CF1C8230399210096C58B /* MainSearchVC.m in Sources */,
 				18481323223A21A300C566D5 /* MVC_Model.m in Sources */,
 				B1080DBC28A3A1D10093A635 /* XYCyclePlayCell.m in Sources */,
@@ -2220,6 +2307,7 @@
 				B1080DBD28A3A1D10093A635 /* CycleVC.m in Sources */,
 				18D412A322768D7900DF7815 /* SQListSequentialListVC.m in Sources */,
 				187C3EE322816716000F205C /* BothWayLinkListVC.m in Sources */,
+				B18C12F32915092A00F79041 /* LXYImageBrowserModel.m in Sources */,
 				181F31F522311A730098E099 /* KVO_VC.m in Sources */,
 				18DE584322A7AE3100668BDD /* BinaryTreeDefineVC.m in Sources */,
 				183ADC5E2235FABA00ADB09B /* AutoreleasePoolVC.mm in Sources */,
