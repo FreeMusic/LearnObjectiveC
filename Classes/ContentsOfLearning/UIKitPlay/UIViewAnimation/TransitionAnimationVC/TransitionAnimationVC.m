@@ -55,9 +55,7 @@
 #warning 有时候图片的链接地址会无效，更换为有效的链接地址即可
     NSArray * bigImages = @[@"http://img01.cztv.com/201508/19/9008d57f59984e7b188ab69fbb458915.jpg",@"http://img2.100bt.com/upload/ttq/20140315/1394865797382_middle.jpeg",@"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1301/23/c0/17652199_1358923371562.jpg",@"https://b-ssl.duitang.com/uploads/item/201508/25/20150825230502_2nPUC.thumb.700_0.jpeg"];
     //初始化 manger
-    LXYImageBrowserManger *imageBrowserManger = [LXYImageBrowserManger imageBrowserMangerWithUrlStr:bigImages originImageViews:originImageViews originController:self forceTouch:YES forceTouchActionTitles:@[@"赞", @"评论", @"收藏"] forceTouchActionComplete:^(NSUInteger selectIndex, NSString * _Nonnull title) {
-        
-    }];
+    LXYImageBrowserManger *imageBrowserManger = [LXYImageBrowserManger imageBrowserMangerWithUrlStr:bigImages originImageViews:originImageViews originController:self];
 
     _imageBrowserManger = imageBrowserManger;
 }

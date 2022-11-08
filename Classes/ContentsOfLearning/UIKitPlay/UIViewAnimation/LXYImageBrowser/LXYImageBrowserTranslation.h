@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+@class LXYImageBrowserMainView;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LXYImageBrowserTranslation : NSObject
+@interface LXYImageBrowserTranslation : NSObject<UIViewControllerAnimatedTransitioning>
+
+@property(nonatomic,assign)BOOL isBrowserMainView;
+@property(nonatomic,strong)LXYImageBrowserMainView * mainBrowserMainView;
+@property(nonatomic,strong)UIView * browserControllerView;
 
 @end
 

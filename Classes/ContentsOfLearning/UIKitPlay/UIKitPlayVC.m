@@ -20,6 +20,7 @@
     
     self.Messages = @[
         [ObjectiveModel initTitle:@"UIView动画" vcName:@"UIViewAnimationVC"],
+        [ObjectiveModel initTitle:@"UICollectionView转场动画" vcName:@"UICollectionViewAnimationVC"],
     ];
 }
 

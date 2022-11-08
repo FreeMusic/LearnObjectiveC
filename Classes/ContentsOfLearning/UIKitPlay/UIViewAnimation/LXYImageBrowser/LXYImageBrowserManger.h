@@ -9,13 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef void(^ForceTouchActionBlock)(NSUInteger selectIndex, NSString * _Nonnull title);
-
-NS_ASSUME_NONNULL_BEGIN
+typedef void(^ForceTouchActionBlock)(NSInteger selectIndex, NSString * _Nonnull title);
 
 @interface LXYImageBrowserManger : NSObject
-
-@property (nonatomic, assign) NSUInteger selectPage;///选中哪一个imageView
+@property(nonatomic,assign)NSInteger selectPage; ///< 选中哪一个imageView
 
 /**
  初始化 Manger
@@ -23,18 +20,13 @@ NS_ASSUME_NONNULL_BEGIN
  @param imageUrls 各个图片大图的url
  @param originImageViews 原始的小图
  @param controller 小图所有的视图控制器
- @param forceTouchCapability 是否开启3Dtouch
- @param titles 3Dtouch 上滑事件的title，可为 nil
- @param forceTouchActionBlock 设置的3Dtouch 上滑事件的的回调，可为 nil
  @return manger
  */
-+ (id)imageBrowserMangerWithUrlStr:(NSArray<NSString *>*)imageUrls originImageViews:(NSArray<UIImageView *>*)originImageViews originController:(UIViewController *)controller forceTouch:(BOOL)forceTouchCapability forceTouchActionTitles:(nullable NSArray <NSString *>*)titles forceTouchActionComplete:(nullable ForceTouchActionBlock)forceTouchActionBlock;
++ (id _Nonnull )imageBrowserMangerWithUrlStr:(NSArray<NSString *>*_Nullable)imageUrls originImageViews:(NSArray<UIImageView *>*)originImageViews originController:(UIViewController *)controller;
 
 /**
- 用户点击小图，进入图片查看大图。
+ 用户点击 _Nonnull  _Nullable 小图，进入图片查看大图。
  */
 - (void)showImageBrowser;
 
 @end
-
-NS_ASSUME_NONNULL_END
