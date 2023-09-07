@@ -85,14 +85,6 @@
 - (UIImagePickerController *)imagePickerVC {
     if (!_imagePickerVC) {
         _imagePickerVC = [[UIImagePickerController alloc] init];
-        // 设置资源来源（相册、相机、图库之一）
-        //        imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
-        // 设置可用的媒体类型、默认只包含kUTTypeImage，如果想选择视频，请添加kUTTypeMovie
-        // 如果选择的是视屏，允许的视屏时长为20秒
-        _imagePickerVC.videoMaximumDuration = 20;
-        // 允许的视屏质量（如果质量选取的质量过高，会自动降低质量）
-        _imagePickerVC.videoQuality = UIImagePickerControllerQualityTypeHigh;
-        _imagePickerVC.mediaTypes = @[(NSString *)kUTTypeMovie, (NSString *)kUTTypeImage];
         // 设置代理，遵守UINavigationControllerDelegate, UIImagePickerControllerDelegate 协议
         _imagePickerVC.delegate = self;
         _imagePickerVC.modalPresentationStyle = UIModalPresentationFullScreen;

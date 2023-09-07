@@ -23,6 +23,7 @@
 //#define IOS_VPN       @"utun0"  vpn很少用到可以注释
 #define IP_ADDR_IPv4    @"ipv4"
 #define IP_ADDR_IPv6    @"ipv6"
+#import "LOCTool.h"
 
 @interface AppDelegate ()<BuglyDelegate>
 
@@ -32,7 +33,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    [LOCTool appSafeCheck];
     ViewController *VC = [[ViewController alloc] init];
     UINavigationController *naviVC = [[UINavigationController alloc] initWithRootViewController:VC];
     self.window = [[UIWindow alloc] init];

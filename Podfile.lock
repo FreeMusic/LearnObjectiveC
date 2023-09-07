@@ -27,6 +27,12 @@ PODS:
   - SDWebImage/GIF (4.4.2):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
+  - TOCropViewController (2.6.1)
+  - TZImagePickerController (3.8.3):
+    - TZImagePickerController/Basic (= 3.8.3)
+    - TZImagePickerController/Location (= 3.8.3)
+  - TZImagePickerController/Basic (3.8.3)
+  - TZImagePickerController/Location (3.8.3)
   - UMCommon (7.3.7):
     - UMDevice
   - UMDevice (2.2.1)
@@ -45,6 +51,8 @@ DEPENDENCIES:
   - MJRefresh
   - SDWebImage
   - SDWebImage/GIF
+  - TOCropViewController
+  - TZImagePickerController
   - UMLink
   - ZLCollectionViewFlowLayout
 
@@ -59,6 +67,8 @@ SPEC REPOS:
     - Masonry
     - MJRefresh
     - SDWebImage
+    - TOCropViewController
+    - TZImagePickerController
     - UMCommon
     - UMDevice
     - UMLink
@@ -74,11 +84,13 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  TOCropViewController: edfd4f25713d56905ad1e0b9f5be3fbe0f59c863
+  TZImagePickerController: e9909edbadf7381140efc5b5c9f5bdbfd630f7d4
   UMCommon: 37fe35f498e92cf57bbb06a086f02915fc35f211
   UMDevice: 053478c4b4d7292f31f0a275c227d3c4007a5571
   UMLink: d5047e2716c2571d120d890af0f7a41d1b5e5224
   ZLCollectionViewFlowLayout: 50774336ea3750dae72bbcbd0656b213ac34b190
 
-PODFILE CHECKSUM: 7d796c677eedd08aa021b11f8035f8ae30c2edb9
+PODFILE CHECKSUM: 891decf0d4e74bd99827a46e9784fe46c41549cc
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.11.3

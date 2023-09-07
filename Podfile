@@ -18,7 +18,8 @@ target 'LearnObjectiveC' do
   pod 'IQKeyboardManager'
   pod 'GPUImage'
   pod 'UMLink'
-  
+  pod 'TOCropViewController'
+  pod 'TZImagePickerController'
   pod 'ZLCollectionViewFlowLayout' 
 
   target 'LearnObjectiveCTests' do

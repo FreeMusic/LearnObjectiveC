@@ -5,3 +5,5 @@ ${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png
 ${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png
 ${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png
 ${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/TOCropViewController/TOCropViewControllerBundle.bundle
+${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle

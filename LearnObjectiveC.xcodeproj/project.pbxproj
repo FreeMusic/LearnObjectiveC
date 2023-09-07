@@ -153,8 +153,10 @@
 		B191ACFA27477AD7003B6448 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACF927477AD7003B6448 /* animation.json */; };
 		B191ACFF274799BE003B6448 /* 111.json in Resources */ = {isa = PBXBuildFile; fileRef = B191ACFE274799BE003B6448 /* 111.json */; };
 		B191AD0427479AC5003B6448 /* bybike.json in Resources */ = {isa = PBXBuildFile; fileRef = B191AD0327479AC5003B6448 /* bybike.json */; };
+		B19B8C92291CA7CC002FC547 /* UIPDFSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B8C91291CA7CC002FC547 /* UIPDFSelectVC.m */; };
 		B1D12344286EC2A30050FFF3 /* liveing.json in Resources */ = {isa = PBXBuildFile; fileRef = B1D12343286EC2A30050FFF3 /* liveing.json */; };
 		B1D46050291A0696005AFB7C /* UICollectionViewAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D4604F291A0696005AFB7C /* UICollectionViewAnimationVC.m */; };
+		B1D46053291A296C005AFB7C /* AnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D46052291A296C005AFB7C /* AnimationCell.m */; };
 		B1DD1DF3290FB5AB008AB59F /* DocumentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DD1DF2290FB5AB008AB59F /* DocumentVC.m */; };
 		B1DD1DF5290FBBCF008AB59F /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DD1DF4290FBBCF008AB59F /* QuickLook.framework */; };
 		B1E7BC592886537C00DECF3D /* ThirdSDKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7BC582886537C00DECF3D /* ThirdSDKVC.m */; };
@@ -163,6 +165,8 @@
 		B1EE4CEE24C0268800465499 /* InterpretationNSObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */; };
 		B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF124C0275C00465499 /* IvarAndPropertyVC.m */; };
 		B1EE4CF524C027D700465499 /* IvarPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF424C027D700465499 /* IvarPropertyObject.m */; };
+		B1F782232A67B3090010FCE9 /* LOCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F782222A67B3090010FCE9 /* LOCTool.m */; };
+		B1F782272A67BD910010FCE9 /* UIWindow+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F782262A67BD910010FCE9 /* UIWindow+Extention.m */; };
 		B1F9F0522800091B00709624 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F9F0502800091B00709624 /* NSDictionary+NilSafe.m */; };
 		B1FE4CBD26C3B987002AFD60 /* XYMessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FE4CBC26C3B987002AFD60 /* XYMessageObject.m */; };
 		B600459D245A8356000F4BFA /* TextFiledInputLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B600459C245A8356000F4BFA /* TextFiledInputLimitCell.m */; };
@@ -486,9 +490,13 @@
 		B191ACF927477AD7003B6448 /* animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
 		B191ACFE274799BE003B6448 /* 111.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 111.json; sourceTree = "<group>"; };
 		B191AD0327479AC5003B6448 /* bybike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bybike.json; sourceTree = "<group>"; };
+		B19B8C90291CA7CC002FC547 /* UIPDFSelectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIPDFSelectVC.h; sourceTree = "<group>"; };
+		B19B8C91291CA7CC002FC547 /* UIPDFSelectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIPDFSelectVC.m; sourceTree = "<group>"; };
 		B1D12343286EC2A30050FFF3 /* liveing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = liveing.json; sourceTree = "<group>"; };
 		B1D4604E291A0696005AFB7C /* UICollectionViewAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewAnimationVC.h; sourceTree = "<group>"; };
 		B1D4604F291A0696005AFB7C /* UICollectionViewAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewAnimationVC.m; sourceTree = "<group>"; };
+		B1D46051291A296C005AFB7C /* AnimationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationCell.h; sourceTree = "<group>"; };
+		B1D46052291A296C005AFB7C /* AnimationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationCell.m; sourceTree = "<group>"; };
 		B1DD1DF1290FB5AB008AB59F /* DocumentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentVC.h; sourceTree = "<group>"; };
 		B1DD1DF2290FB5AB008AB59F /* DocumentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocumentVC.m; sourceTree = "<group>"; };
 		B1DD1DF4290FBBCF008AB59F /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
@@ -504,6 +512,10 @@
 		B1EE4CF124C0275C00465499 /* IvarAndPropertyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IvarAndPropertyVC.m; sourceTree = "<group>"; };
 		B1EE4CF324C027D700465499 /* IvarPropertyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IvarPropertyObject.h; sourceTree = "<group>"; };
 		B1EE4CF424C027D700465499 /* IvarPropertyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IvarPropertyObject.m; sourceTree = "<group>"; };
+		B1F782212A67B3090010FCE9 /* LOCTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOCTool.h; sourceTree = "<group>"; };
+		B1F782222A67B3090010FCE9 /* LOCTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOCTool.m; sourceTree = "<group>"; };
+		B1F782252A67BD910010FCE9 /* UIWindow+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extention.h"; sourceTree = "<group>"; };
+		B1F782262A67BD910010FCE9 /* UIWindow+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extention.m"; sourceTree = "<group>"; };
 		B1F9F0502800091B00709624 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
 		B1F9F0512800091B00709624 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
 		B1FE4CBB26C3B987002AFD60 /* XYMessageObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYMessageObject.h; sourceTree = "<group>"; };
@@ -795,6 +807,7 @@
 		181F31C72230C2940098E099 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B1F782202A67B2C40010FCE9 /* LOCTool */,
 				B1080B89255E5E910095B93C /* XYGCDTimer */,
 				18FEC63122377ED300313854 /* ToolsObject */,
 				181F31C82230C2AD0098E099 /* ToolsVC */,
@@ -1473,6 +1486,7 @@
 		551662972256F6D40058C9F1 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				B1F782242A67BD740010FCE9 /* UIWindow */,
 				B1F9F04F2800091B00709624 /* NSDictionary-NilSafe */,
 				B17B8322277060410033F26F /* NSObject */,
 				B17B8318277055C40033F26F /* NSString */,
@@ -1786,6 +1800,7 @@
 		B17A91102913634700494ED7 /* UIKitPlay */ = {
 			isa = PBXGroup;
 			children = (
+				B19B8C8F291CA7AE002FC547 /* UIPDFSelectVC */,
 				B1D4604D291A0672005AFB7C /* UICollectionViewAnimation */,
 				B17A9114291363D800494ED7 /* UIViewAnimation */,
 				B17A91112913638300494ED7 /* UIKitPlayVC.h */,
@@ -1846,11 +1861,22 @@
 			path = LotAnimation;
 			sourceTree = "<group>";
 		};
+		B19B8C8F291CA7AE002FC547 /* UIPDFSelectVC */ = {
+			isa = PBXGroup;
+			children = (
+				B19B8C90291CA7CC002FC547 /* UIPDFSelectVC.h */,
+				B19B8C91291CA7CC002FC547 /* UIPDFSelectVC.m */,
+			);
+			path = UIPDFSelectVC;
+			sourceTree = "<group>";
+		};
 		B1D4604D291A0672005AFB7C /* UICollectionViewAnimation */ = {
 			isa = PBXGroup;
 			children = (
 				B1D4604E291A0696005AFB7C /* UICollectionViewAnimationVC.h */,
 				B1D4604F291A0696005AFB7C /* UICollectionViewAnimationVC.m */,
+				B1D46051291A296C005AFB7C /* AnimationCell.h */,
+				B1D46052291A296C005AFB7C /* AnimationCell.m */,
 			);
 			path = UICollectionViewAnimation;
 			sourceTree = "<group>";
@@ -1906,6 +1932,24 @@
 				B1EE4CF424C027D700465499 /* IvarPropertyObject.m */,
 			);
 			path = "成员变量与属性";
+			sourceTree = "<group>";
+		};
+		B1F782202A67B2C40010FCE9 /* LOCTool */ = {
+			isa = PBXGroup;
+			children = (
+				B1F782212A67B3090010FCE9 /* LOCTool.h */,
+				B1F782222A67B3090010FCE9 /* LOCTool.m */,
+			);
+			path = LOCTool;
+			sourceTree = "<group>";
+		};
+		B1F782242A67BD740010FCE9 /* UIWindow */ = {
+			isa = PBXGroup;
+			children = (
+				B1F782252A67BD910010FCE9 /* UIWindow+Extention.h */,
+				B1F782262A67BD910010FCE9 /* UIWindow+Extention.m */,
+			);
+			path = UIWindow;
 			sourceTree = "<group>";
 		};
 		B1F9F04F2800091B00709624 /* NSDictionary-NilSafe */ = {
@@ -2228,6 +2272,7 @@
 				B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */,
 				189B8512229B7A0F002DBEC2 /* StoreOfStringVC.m in Sources */,
 				B122E5ED256607DB005BD098 /* UITextView+Extention.m in Sources */,
+				B19B8C92291CA7CC002FC547 /* UIPDFSelectVC.m in Sources */,
 				B14BDF9E28868A72006C892A /* LZYPAlertController.m in Sources */,
 				18FFB16522E6B9370011FBD8 /* MinimumTreeVC.m in Sources */,
 				B1080B85255E5D830095B93C /* UIView+TYExtention.m in Sources */,
@@ -2266,8 +2311,10 @@
 				180F1976225C49D200F62A8C /* MainLinearTableVC.m in Sources */,
 				B1699EDE290288CE00FA6587 /* DragColloectionViewCell.m in Sources */,
 				181F31CD2230C3530098E099 /* BaseViewController.m in Sources */,
+				B1D46053291A296C005AFB7C /* AnimationCell.m in Sources */,
 				189B8516229B8317002DBEC2 /* KMPMatchVC.m in Sources */,
 				B1080B96255E71090095B93C /* UIColor+Extention.m in Sources */,
+				B1F782232A67B3090010FCE9 /* LOCTool.m in Sources */,
 				B1080B81255E56330095B93C /* BallFibrillationVC.m in Sources */,
 				18FEC63A22377ED300313854 /* NSMutableArray+ErrorHandle.m in Sources */,
 				B18C12EA2915087A00F79041 /* LXYImageBrowserViewController.m in Sources */,
@@ -2309,6 +2356,7 @@
 				1806E57D2306A85300549C33 /* SequentialSearchVC.m in Sources */,
 				B1080DBB28A3A1D10093A635 /* XYCyclePlayView.m in Sources */,
 				181F31912230BDDB0098E099 /* AppDelegate.m in Sources */,
+				B1F782272A67BD910010FCE9 /* UIWindow+Extention.m in Sources */,
 				1872753922E941EB00E7E01F /* ShortestPathVC.m in Sources */,
 				18FEC63E2237801500313854 /* BoundsNextVC.m in Sources */,
 				B122E5DF2565FF69005BD098 /* TextViewInputVC.m in Sources */,
@@ -2513,7 +2561,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuandukeji.LearnObjectiveC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2535,7 +2586,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuandukeji.LearnObjectiveC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

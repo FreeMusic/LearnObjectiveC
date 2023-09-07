@@ -12,7 +12,7 @@
  */
 #import "SequentialSearchVC.h"
 
-#define MaxSize 100 //存储空间初始分配量
+#define MaxSize 40 //存储空间初始分配量
 
 int Fib[MaxSize];//斐波那契数列
 
@@ -148,7 +148,7 @@ void structureFib()
 {
     Fib[0]=0;
     Fib[1]=1;
-    for(int i = 2;i < 100;i++)
+    for(int i = 2;i < MaxSize;i++)
     {
         Fib[i] = Fib[i-1] + Fib[i-2];
     }

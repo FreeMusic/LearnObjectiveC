@@ -9,6 +9,11 @@
 #import "GPUImageSDKVC.h"
 #import "GPUImageEnumData.h"
 #import "GPUImageEditView.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <AddressBook/AddressBook.h>
+#import <CoreLocation/CoreLocation.h>
+#import "TZImagePickerController.h"
 
 const CGFloat editViewHeight = 300;
 
@@ -95,6 +100,12 @@ const CGFloat editViewHeight = 300;
     return imageView;
 }
 
-- (void)photoSelect { [self.enumData presentSelectAction]; }
+- (void)photoSelect {
+//    [self.enumData presentSelectAction];
+    TZImagePickerController *imagePickerVC =
+    [[TZImagePickerController alloc]initWithMaxImagesCount:3 delegate:self];
+//    imagePickerVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+}
 
 @end
