@@ -243,7 +243,7 @@ void DepthFirstSearchAlgorithmRecursive(GraphADJlist list, int i)
     EdgeNode *node;
     hasVisited[i] = YQYES;//
     node = list->list[i].firstEdge;
-    RYQLog(@"%c", list->list[i].data);//打印顶点
+    XYLog(@"%c", list->list[i].data);//打印顶点
     while (node) {
         if (!hasVisited[node->adjVex]) {
             DepthFirstSearchAlgorithmRecursive(list, node->adjVex);
@@ -260,7 +260,7 @@ void DepthFirstSearchAlgorithmRecursive(GraphADJlist list, int i)
 void DepthFirstSearchlist(GraphADJlist list)
 {
     int i;
-    RYQLog(@"邻接表的深度遍历");
+    XYLog(@"邻接表的深度遍历");
     for (i = 0; i < list->numVertexes; i++) {
         hasVisited[i] = YQNO;//初始所有顶点状态都是未访问过的状态
     }
@@ -284,12 +284,12 @@ void BreadthFirstSearchTravellist(GraphADJlist list)
     for (i = 0; i < list->numVertexes; i++) {
         hasVisited[i] = YQNO;
     }
-    RYQLog(@"邻接表的广度遍历");
+    XYLog(@"邻接表的广度遍历");
     initCyclelistQueue(&queue);
     for (i = 0; i < list->numVertexes; i++) {
         if (!hasVisited[i]) {
             hasVisited[i] = YQYES;
-            RYQLog(@"%c", list->list[i].data);
+            XYLog(@"%c", list->list[i].data);
             EnterCyclelistQueue(&queue, i);
             while (!CyclelistQueueEmpty(&queue)) {
                 DeleteCyclelistQueue(&queue, &i);
@@ -297,7 +297,7 @@ void BreadthFirstSearchTravellist(GraphADJlist list)
                 while (node) {
                     if (!hasVisited[node->adjVex]) {//如果顶点未被访问
                         hasVisited[node->adjVex] = YQYES;
-                        RYQLog(@"%c", list->list[node->adjVex].data);
+                        XYLog(@"%c", list->list[node->adjVex].data);
                         EnterCyclelistQueue(&queue, node->adjVex);
                     }
                     node = node->next;//指针指向下一个邻接点

@@ -25,6 +25,7 @@
 #define IP_ADDR_IPv6    @"ipv6"
 #import "LOCTool.h"
 #import "AESTool.h"
+#import <MapKit/MapKit.h>
 
 @interface AppDelegate ()<BuglyDelegate>
 
@@ -43,12 +44,13 @@
     //初始化Bugly
     [self initBuglyConfigure];
     
-    RYQLog(@"%@", [self getIPAddress:NO]);
+    XYLog(@"%@", [self getIPAddress:NO]);
     
-    NSString *string = @"111111"; NSString * key = @"TiMmeCed1dSwet12";
-    NSString *value = [AESTool TW_AES_Encrypt:string mode:TWModeECB key:key keySize:TWKeySizeAES128 iv:nil padding:TWCryptorPKCS7Padding];
-    NSString *res = [AESTool TW_AES_Decrypt:value mode:TWModeECB key:key keySize:TWKeySizeAES128 iv:nil padding:TWCryptorPKCS7Padding];
-    RYQLog(@"%@     ************      %@", value, res);
+    NSMutableArray *array = [NSMutableArray arrayWithArray:@[@(1), @(2), @(3), @(5)]];
+    NSMutableArray *cpyArray = array.mutableCopy;
+    array[0] = @"1212"; cpyArray[0] = @(3333);
+    
+    XYLog(@"%@   %@", array, cpyArray);
     
     return YES;
     

@@ -126,7 +126,7 @@ void visitGraph(YQGraph graph)
         for (j = 0; j < graph.numNodes; j++) {
             content = [NSString stringWithFormat:@"%@%d    ", content, graph.edges[i][j]];
         }
-        RYQLog(@"%@\n", content);
+        XYLog(@"%@\n", content);
     }
 }
 

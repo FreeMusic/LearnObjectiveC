@@ -92,7 +92,7 @@ void createListHead (LinkList *list, int length)
         p->data = rand() % 100 + 1;//生成随机数 赋值给p结点的数据域
         p->next = (*list)->next;
         (*list)->next = p;//将p插入到头结点和新的结点之间
-        RYQLog(@"第%d个元素  它的值为%d", i+1, p->data);
+        XYLog(@"第%d个元素  它的值为%d", i+1, p->data);
     }
 }
 
@@ -118,7 +118,7 @@ void createTailLinkList (LinkList *list, int length)
         p->data = rand() % 100 + 1;//生成随机数 赋值给p结点的数据域
         r->next = p;//将表尾的结点指针指向新的结点
         r = p;//将新的结点赋值给表尾的结点
-        RYQLog(@"第%d个元素  它的值为%d", i+1, p->data);
+        XYLog(@"第%d个元素  它的值为%d", i+1, p->data);
     }
     
     r->next = NULL;//表示当前链表u也结束
@@ -152,13 +152,13 @@ Status GetNodeElem (LinkList list, int i)
     }
     //第i个元素不存在 抛异常
     if (!p || j > i) {
-        RYQLog(@"单链表的数据读取  没有找到该元素");
+        XYLog(@"单链表的数据读取  没有找到该元素");
         
         return ERROR;
     }
     
     ElemType elem = p->data;
-    RYQLog(@"单链表的数据读取  elem = %d", elem);
+    XYLog(@"单链表的数据读取  elem = %d", elem);
 
     return SUCCESS;
 }
@@ -237,7 +237,7 @@ Status NodelistDelete (LinkList *list, int i)
     //将q的g后继结点赋值给p的后集结点
     p->next = q->next;
     ElemType elem = q->data;
-    RYQLog(@"单链表的数据删除   elem = %d", elem);
+    XYLog(@"单链表的数据删除   elem = %d", elem);
     free(q);
     
     return SUCCESS;
@@ -322,7 +322,7 @@ void travelAllStoragelist(LinkList *list)
     int j = 0;
     while (p) {
         ++j;
-        RYQLog(@"遍历单链表 第%d个元素 它的值为%d", j,p->data);
+        XYLog(@"遍历单链表 第%d个元素 它的值为%d", j,p->data);
         
         p = p->next;
         

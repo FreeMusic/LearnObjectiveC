@@ -137,7 +137,7 @@ void CreateCriticalPathALGraph(MGraph graph, GraphADJlist *graphlist)
     for (i = 0; i < graph.numVertexs; i++) {//建立边表
         for (j = 0; j < graph.numVertexs; j++) {
             if (graph.arc[i][j] != 0 && graph.arc[i][j] < Infinity) {
-                RYQLog(@"j = %d", j);
+                XYLog(@"j = %d", j);
                 edge = (EdgeNode *)malloc(sizeof(EdgeNode));
                 edge->adjVex = j;//邻接序号为j
                 edge->weight = graph.arc[i][j];//权重赋值
@@ -173,7 +173,7 @@ void TopologicalSortingCriticalPath(GraphADJlist graphlist)
     stack2 = (int *)malloc(graphlist->numVertexs * sizeof(int));//初始化拓扑序列栈
     while (top != 0) {
         gettop = stack[top--];
-        RYQLog(@"%d -> ", graphlist->list[gettop].data);
+        XYLog(@"%d -> ", graphlist->list[gettop].data);
         count++;//输出号顶点，并计数
         
         stack2[++top2] = gettop;//将弹出的顶点序号压入拓扑序列的栈
@@ -190,9 +190,9 @@ void TopologicalSortingCriticalPath(GraphADJlist graphlist)
         }
     }
     if (count < graphlist->numVertexs) {
-        RYQLog(@"graphList无回路");
+        XYLog(@"graphList无回路");
     }else{
-        RYQLog(@"graphList有回路");
+        XYLog(@"graphList有回路");
     }
 }
 
@@ -207,7 +207,7 @@ void CriticalPath(GraphADJlist graphlist)
     TopologicalSortingCriticalPath(graphlist);//求拓扑序列，计算数组etv和stack2的值
     ltv = (int *)malloc(graphlist->numVertexs * sizeof(int));//事件最早发生时间数组
     for (i = 0; i < graphlist->numVertexs; i++) {
-        RYQLog(@"%d -> ", etv[i]);
+        XYLog(@"%d -> ", etv[i]);
     }
     
     while (top2 != 0) {//出栈是求ltv

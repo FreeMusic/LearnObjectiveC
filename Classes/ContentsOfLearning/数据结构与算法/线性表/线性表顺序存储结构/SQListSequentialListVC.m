@@ -95,7 +95,7 @@ Status GetElem (SQList list, int i)
     }
     ElemType elem = list.data[i - 1];
     
-    RYQLog(@"获得链表元素操作   elem = %d ", elem);
+    XYLog(@"获得链表元素操作   elem = %d ", elem);
     
     return SUCCESS;
 }
@@ -153,13 +153,13 @@ void addElemToList(SQList *list, ElemType elem)
 {
     //线性表已填满  此处先暂时抛出异常
     if (list->length >= list->listSize) {
-        RYQLog(@"线性表已填满");
+        XYLog(@"线性表已填满");
         return;
 //        //线性表的l扩容
 //        sequentialListDilatation(list);
     }
     int length = list->length;
-    RYQLog(@"%d", length);
+    XYLog(@"%d", length);
     //新元素的赋值
     list->data[list->length] = elem;
     list->length ++;
@@ -192,7 +192,7 @@ Status ListDelete (SQList *list, int i)
     }
     //取出删除的元素
     ElemType elem = list->data[i-1];
-    RYQLog(@"要删除的元素 elem = %d", elem);
+    XYLog(@"要删除的元素 elem = %d", elem);
     //删除的位置在表尾 不需要移动元素，在i(其他位置)，从第i个位置遍历到最后一个元素，将这些元素都向前移动一个位置
     if (i < list->length) {
         
@@ -215,10 +215,10 @@ Status ListDelete (SQList *list, int i)
 Status ListisEmpty(SQList list)
 {
     if (list.length == 0) {
-        RYQLog(@"线性表为空");
+        XYLog(@"线性表为空");
         return SUCCESS;
     }
-    RYQLog(@"线性表不为空");
+    XYLog(@"线性表不为空");
     return ERROR;
 }
 
@@ -231,10 +231,10 @@ Status ListisEmpty(SQList list)
 Status ListisFull(SQList list)
 {
     if (list.length >= list.listSize) {
-        RYQLog(@"线性表已满");
+        XYLog(@"线性表已满");
         return SUCCESS;
     }
-    RYQLog(@"线性表未满");
+    XYLog(@"线性表未满");
     return ERROR;
 }
 
@@ -255,13 +255,13 @@ Status ElemisExitInList(SQList list, ElemType elem)
         if (currentElem == elem) {
             
             index = i;
-            RYQLog(@"元素在线性顺序表中 他是第%d个元素", index+1);
+            XYLog(@"元素在线性顺序表中 他是第%d个元素", index+1);
             return SUCCESS;
         }
         
     }
     
-    RYQLog(@"元素不存在线性顺序表中");
+    XYLog(@"元素不存在线性顺序表中");
     
     return ERROR;
 }
@@ -297,7 +297,7 @@ void travelWholeList(SQList list)
 {
     for (int i = 0; i < list.length; i++) {
         
-        RYQLog(@"第%d个元素  它的值为%d", i+1, list.data[i]);
+        XYLog(@"第%d个元素  它的值为%d", i+1, list.data[i]);
         
     }
 }
@@ -344,7 +344,7 @@ void combineTwoLinkLists ()
             addElemToList(&firstList, elem);
         }
     }
-    RYQLog(@"两个线性表的合并   %d", firstList.length);
+    XYLog(@"两个线性表的合并   %d", firstList.length);
 }
 
 /**
@@ -367,7 +367,7 @@ void jointTwoLinkLists ()
         //则将elem插入放到firstList表中
         addElemToList(&firstList, elem);
     }
-    RYQLog(@"两个线性表的拼接   %d", firstList.length);
+    XYLog(@"两个线性表的拼接   %d", firstList.length);
 }
 
 /**

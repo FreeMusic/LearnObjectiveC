@@ -12,7 +12,7 @@
 @implementation FactoryDesignVC (FactorB)
 
 - (void)runFactor{
-    RYQLog(@"FactoryDesignVC+FactorB.h");
+    XYLog(@"FactoryDesignVC+FactorB.h");
 }
 
 @end

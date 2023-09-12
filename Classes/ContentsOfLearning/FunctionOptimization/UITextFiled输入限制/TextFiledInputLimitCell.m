@@ -78,7 +78,7 @@ NSString *numberRules = @"0123456789";
     //*******此处用法是 限制长度和输入规则 并且有输入结果回调*********//
     //*******inputMax为0 则输入长度不受限制  inputRules 为空字符串 @"" 输入规则不受限制*********//
     [self.inputFiled setTextFieldInputMax:inputMax inputRules:inputRules editValueBlock:^(UITextField * _Nonnull textField) {
-        RYQLog(@"%@：%@", inputModel.title, textField.text);
+        XYLog(@"%@：%@", inputModel.title, textField.text);
         inputModel.content = textField.text;
     }];
 }

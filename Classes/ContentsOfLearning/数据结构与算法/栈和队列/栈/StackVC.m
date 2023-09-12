@@ -62,7 +62,7 @@ void travelStack(LinkStack *stack)
     int index = stack->count;
     LinkStackChained elem = stack->top;
     while (index > 0) {
-        RYQLog(@"elem->data = %d", elem->data);
+        XYLog(@"elem->data = %d", elem->data);
         elem = elem->next;
         index--;
     }

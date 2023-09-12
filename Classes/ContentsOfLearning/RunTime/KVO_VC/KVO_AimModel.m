@@ -34,7 +34,7 @@
 //    //新建一个类
 //    NSString *className = [@"RYQKVO" stringByAppendingString:NSStringFromClass([self class])];
 //    Class newClass = objc_allocateClassPair([self class], className.UTF8String, 0);
-//    RYQLog(@"%@", newClass);
+//    XYLog(@"%@", newClass);
 //    //注册类
 //    objc_registerClassPair(newClass);
 //    //修改 调用者类型
@@ -51,7 +51,7 @@
 // _cmd  方法的编号
 // */
 //void ryqsetName(id self,SEL _cmd, NSString *newName) {
-//    RYQLog(@"自定义的实现%@",newName);
+//    XYLog(@"自定义的实现%@",newName);
 //}
 //
 //@end

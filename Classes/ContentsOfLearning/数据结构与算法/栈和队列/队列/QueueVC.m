@@ -125,7 +125,7 @@ void travelQueue(LinkQueue *queue)
     QueuePtr elem = queue->front->next;
     
     while (elem) {
-        RYQLog(@"elem = %d", elem->data);
+        XYLog(@"elem = %d", elem->data);
         elem = elem->next;
     }
 }

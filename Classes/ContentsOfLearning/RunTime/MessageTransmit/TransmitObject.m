@@ -38,15 +38,15 @@
 }
 
 void eatMethod (id obj, SEL _cmd) {
-    RYQLog(@"eatMethod   消息的转发");
+    XYLog(@"eatMethod   消息的转发");
 }
 
 void playMethod (id obj, SEL _cmd) {
-    RYQLog(@"playMethod   消息的转发");
+    XYLog(@"playMethod   消息的转发");
 }
 
 void accourMethod (id obj, SEL _cmd) {
-    RYQLog(@"accourMethod   消息的转发");
+    XYLog(@"accourMethod   消息的转发");
 }
 
 - (id)forwardingTargetForSelector:(SEL)aSelector {

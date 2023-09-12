@@ -42,7 +42,7 @@
 
 - (void)dealloc {
     
-    RYQLog(@"dealloc");
+    XYLog(@"dealloc");
     
 }
 

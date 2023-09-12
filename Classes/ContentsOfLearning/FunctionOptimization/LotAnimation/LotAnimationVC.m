@@ -36,7 +36,7 @@ static double timeInterval = 1;
     
 //    LOTAnimationView *newView = self.animation;
 //    [[XYGCDTimer shareTimer] startTimerWithTimeInterVal:timeInterval*2 circleBlock:^{
-//        RYQLog(@"动画");
+//        XYLog(@"动画");
 //        [UIView animateWithDuration:timeInterval animations:^{
 //            newView.frame = CGRectMake(kScreenWidth-50, NavigationBarHeight*2, 50, 50);
 //        } completion:^(BOOL finished) {
@@ -60,15 +60,15 @@ static double timeInterval = 1;
 }
 
 - (void)repeatAgainWithAnimation {
-    RYQLog(@"动画");
+    XYLog(@"动画");
 }
 
 - (void)animationTouch {
-    RYQLog(@"animationTouch");
+    XYLog(@"animationTouch");
 }
 
 - (void)dealloc {
-    RYQLog(@"移除");
+    XYLog(@"移除");
     [[XYGCDTimer shareTimer] removeTimer];
 }
 

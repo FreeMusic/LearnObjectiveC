@@ -103,7 +103,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    RYQLog(@"didSelectItemAtIndexPath%ld", indexPath.row);
+    XYLog(@"didSelectItemAtIndexPath%ld", indexPath.row);
 }
 
 

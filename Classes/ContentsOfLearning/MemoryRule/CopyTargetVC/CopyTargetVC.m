@@ -22,11 +22,11 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
-    RYQLog(@"视图已经消失了");
+    XYLog(@"视图已经消失了");
 }
 
 - (void)dealloc {
-    RYQLog(@"CopyTargetVC 已经被销毁");
+    XYLog(@"CopyTargetVC 已经被销毁");
 }
 
 

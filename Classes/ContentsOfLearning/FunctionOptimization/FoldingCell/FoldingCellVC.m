@@ -52,7 +52,7 @@
     NSArray *list = self.dataSource[indexPath.section];
     [cell setDataSource:list];
     [cell setTouchIndexRow:^(NSUInteger index) {
-        RYQLog(@"点击了第%ld行  第%ld个", indexPath.section, index);
+        XYLog(@"点击了第%ld行  第%ld个", indexPath.section, index);
         self->_touchSection = indexPath.section;
         [self.tableView reloadData];
     }];

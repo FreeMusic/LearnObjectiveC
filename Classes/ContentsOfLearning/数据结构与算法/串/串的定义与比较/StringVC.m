@@ -39,14 +39,14 @@
         NSRange range = NSMakeRange(i, 1);
         current = [string substringWithRange:range];
         if (![first isEqualToString:current]) {
-            RYQLog(@"不同的字符 %@   位置 %d", current, i+1);
+            XYLog(@"不同的字符 %@   位置 %d", current, i+1);
             break;
         }else{
             first = current;
         }
     }
     if ([first isEqualToString:current]) {
-        RYQLog(@"该字符串中的字符完全一样");
+        XYLog(@"该字符串中的字符完全一样");
         return;
     }
 }

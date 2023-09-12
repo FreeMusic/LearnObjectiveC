@@ -35,17 +35,18 @@
                     [ObjectiveModel initTitle:@"解读NSObject" vcName:@"InterpretationNSObjectVC"],
                     [ObjectiveModel initTitle:@"第三方SDK使用体验" vcName:@"ThirdSDKVC"],
                     [ObjectiveModel initTitle:@"UIKit相关属性" vcName:@"UIKitPlayVC"],
-                    ];
+                    [ObjectiveModel initTitle:@"Fundation相关属性" vcName:@"FundationPlayVC"],
+    ];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    RYQLog(@"ViewController 执行了viewWillDisappear");
+    XYLog(@"ViewController 执行了viewWillDisappear");
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
-    RYQLog(@"ViewController 执行了viewDidDisappear");
+    XYLog(@"ViewController 执行了viewDidDisappear");
 }
 
 

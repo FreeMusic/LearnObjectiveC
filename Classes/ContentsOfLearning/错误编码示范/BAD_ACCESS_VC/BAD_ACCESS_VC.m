@@ -22,9 +22,9 @@
     [super viewDidLoad];
     
     int a = [self returnInt];
-    RYQLog(@"%d", a);
+    XYLog(@"%d", a);
     id badObjc = [self performSelector:@selector(returnInt)];
-    RYQLog(@"%@", badObjc);
+    XYLog(@"%@", badObjc);
 }
 /**
  上面通过id去接受int返回值，int是存放在栈里面的，堆内存地址如何找得到，自然就是 EXC_BAD_ACCESS。

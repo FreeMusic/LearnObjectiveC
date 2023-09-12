@@ -58,11 +58,11 @@ void WithOutSentrySequentialSearch(int *list, int n, int key)
     
     for (i = 1; i <= n; i++) {
         if (list[i] == key) {
-            RYQLog(@"无哨兵顺序查找 ********** 搜查到查找的对象 key = %d", list[i]);
+            XYLog(@"无哨兵顺序查找 ********** 搜查到查找的对象 key = %d", list[i]);
             return;
         }
     }
-    RYQLog(@"无哨兵顺序查找 ********** 没有搜查到查找的对象");
+    XYLog(@"无哨兵顺序查找 ********** 没有搜查到查找的对象");
 }
 /**
  有哨兵顺序查找
@@ -80,9 +80,9 @@ void SentrySequentialSearch(int *list, int n, int key)
         i--;
     }
     if (i== 0) {
-        RYQLog(@"有哨兵顺序查找 ********** 没有搜查到查找的对象");
+        XYLog(@"有哨兵顺序查找 ********** 没有搜查到查找的对象");
     }else{
-        RYQLog(@"有哨兵顺序查找 ********** 搜查到查找的对象 key = %d", list[i]);
+        XYLog(@"有哨兵顺序查找 ********** 搜查到查找的对象 key = %d", list[i]);
     }
 }
 /**
@@ -107,11 +107,11 @@ void BinarySearch(int *list, int n, int key)
             low = mid+1;//最低下标调整到中位下标大一位
         }else{
             //若相等则说明mid即为查找到的位置
-            RYQLog(@"折半查找 ********** 找到的位置为mid = %d", mid);
+            XYLog(@"折半查找 ********** 找到的位置为mid = %d", mid);
             return;
         }
     }
-    RYQLog(@"折半查找 ********** 没有找到key所在的位置");
+    XYLog(@"折半查找 ********** 没有找到key所在的位置");
 }
 /**
  插值查找
@@ -134,11 +134,11 @@ void InterPloationSearch(int *list, int n, int key)
             low = mid+1;//最低下标调整到插值下标大一位
         }else{
             //若相等则说明mid即为查找到的位置
-            RYQLog(@"插值查找 ********** 找到的位置为mid = %d", mid);
+            XYLog(@"插值查找 ********** 找到的位置为mid = %d", mid);
             return;
         }
     }
-    RYQLog(@"插值查找 ********** 没有找到key所在的位置");
+    XYLog(@"插值查找 ********** 没有找到key所在的位置");
 }
 
 /**
@@ -186,16 +186,16 @@ void FibonacciSearch(int *list, int n, int key)
 
             if (mid <= n) {
                 //若相等则说明mid即为查找到的位置
-                RYQLog(@"斐波那契查找 ********** 找到的位置为mid = %d", mid);
+                XYLog(@"斐波那契查找 ********** 找到的位置为mid = %d", mid);
                 return;
             }else{
-                RYQLog(@"斐波那契查找 ********** 找到的位置为n = %d", n);
+                XYLog(@"斐波那契查找 ********** 找到的位置为n = %d", n);
                 return;
             }
         }
     }
 
-    RYQLog(@"斐波那契查找 ********** 没有找到key所在的位置");
+    XYLog(@"斐波那契查找 ********** 没有找到key所在的位置");
 }
 
 @end

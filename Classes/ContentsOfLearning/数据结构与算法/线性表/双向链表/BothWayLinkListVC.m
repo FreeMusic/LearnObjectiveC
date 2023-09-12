@@ -98,13 +98,13 @@ Status GetDouleNodeElem (DoubleLinkList list, int i)
     }
     //第i个元素不存在 抛异常
     if (!p || j > i) {
-        RYQLog(@"双向链表的数据读取  没有找到该元素");
+        XYLog(@"双向链表的数据读取  没有找到该元素");
         
         return ERROR;
     }
     
     ElemType elem = p->data;
-    RYQLog(@"双向链表的数据读取  elem = %d", elem);
+    XYLog(@"双向链表的数据读取  elem = %d", elem);
     
     return SUCCESS;
 }
@@ -172,7 +172,7 @@ Status DouleNodelistDelete (DoubleLinkList *list, int i)
     q->prior->next = q->next;//将q的后继结点赋值给q的前置结点的后指针
     q->next->prior = q->prior;//将q的前置结点赋值给q的后置结点的前指针
     ElemType elem = q->data;
-    RYQLog(@"双向链表的数据删除   elem = %d", elem);
+    XYLog(@"双向链表的数据删除   elem = %d", elem);
     free(q);
     
     return SUCCESS;

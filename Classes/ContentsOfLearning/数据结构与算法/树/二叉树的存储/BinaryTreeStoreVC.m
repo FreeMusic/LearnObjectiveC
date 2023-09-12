@@ -129,7 +129,7 @@ void BiTreePreorderTraverse(BiTree tree)
         return;
     }
     
-    RYQLog(@"二叉树的前序遍历  %c ", tree->data);//显示结点数据
+    XYLog(@"二叉树的前序遍历  %c ", tree->data);//显示结点数据
     BiTreePreorderTraverse(tree->leftChild);//先遍历左子树
     BiTreePreorderTraverse(tree->rightChild);//再遍历右子树
 }
@@ -146,7 +146,7 @@ void BiTreeInorderTraverse(BiTree tree)
     }
     
     BiTreeInorderTraverse(tree->leftChild);
-    RYQLog(@"二叉树的中序遍历  %c ", tree->data);//显示结点数据
+    XYLog(@"二叉树的中序遍历  %c ", tree->data);//显示结点数据
     BiTreeInorderTraverse(tree->rightChild);
 }
 
@@ -163,7 +163,7 @@ void BiTreePostOrderTraverse(BiTree tree)
     
     BiTreePostOrderTraverse(tree->leftChild);
     BiTreePostOrderTraverse(tree->rightChild);
-    RYQLog(@"二叉树的后序遍历  %c ", tree->data);//显示结点数据
+    XYLog(@"二叉树的后序遍历  %c ", tree->data);//显示结点数据
 }
 
 @end

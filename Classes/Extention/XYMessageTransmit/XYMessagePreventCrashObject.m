@@ -18,7 +18,7 @@
 /// @param sel 添加的方法
 /// YES表示能够接受该消息；NO表示不能接收消息。
 + (BOOL)resolveClassMethod:(SEL)sel {
-    RYQLog(@"<%@>类没有实现类方法: %@,请尽快处理!", NSStringFromClass([self class]), NSStringFromSelector(sel));
+    XYLog(@"<%@>类没有实现类方法: %@,请尽快处理!", NSStringFromClass([self class]), NSStringFromSelector(sel));
     [XYMessageTool addClassMethodWithSel:sel withClass:[self class] impMethodSel:@selector(addClassMethod)];
     BOOL canAdd = [super resolveClassMethod:sel];
     return canAdd;
@@ -27,18 +27,18 @@
 /// @param sel 添加的方法
 /// YES表示能够接受该消息；NO表示不能接收消息。
 + (BOOL)resolveInstanceMethod:(SEL)sel {
-    RYQLog(@"<%@>类没有实现实例方法: %@,请尽快处理!", NSStringFromClass([self class]), NSStringFromSelector(sel));
+    XYLog(@"<%@>类没有实现实例方法: %@,请尽快处理!", NSStringFromClass([self class]), NSStringFromSelector(sel));
     [XYMessageTool addInstanceMethodWithSel:sel withClass:[self class] impMethodSel:@selector(addInstaceMethod)];
     BOOL canAdd = [super resolveInstanceMethod:sel];
     return canAdd;
 }
 
 - (void)addInstaceMethod {
-//    RYQLog(@"动态添加实例方法");
+//    XYLog(@"动态添加实例方法");
 }
 
 + (void)addClassMethod {
-//    RYQLog(@"动态添加类方法");
+//    XYLog(@"动态添加类方法");
 }
 
 @end

@@ -47,11 +47,11 @@
     AFHTTPSessionManager *mannager = [AFHTTPSessionManager manager];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:fileUrl]];
     NSURLSessionDownloadTask *task = [mannager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
-        RYQLog(@"%f", 1.0*downloadProgress.completedUnitCount/downloadProgress.totalUnitCount);
+        XYLog(@"%f", 1.0*downloadProgress.completedUnitCount/downloadProgress.totalUnitCount);
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         NSString *filePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
         NSString *fullPath = [filePath stringByAppendingPathComponent:response.suggestedFilename];
-        RYQLog(@"%@", fullPath);
+        XYLog(@"%@", fullPath);
         self.fileURL = [NSURL fileURLWithPath:fullPath];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.previewController reloadData];
@@ -60,7 +60,7 @@
         return self.fileURL;
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        RYQLog(@"%@", filePath);
+        XYLog(@"%@", filePath);
     }];
     
     [task resume];

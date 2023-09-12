@@ -65,15 +65,15 @@
             }
             NSString *result = [fileName stringByReplacingOccurrencesOfString:@"+" withString:@" "];
             fileName = [fileName stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-            RYQLog(@"%@",fileName);
+            XYLog(@"%@",fileName);
             NSData *fileData = [NSData dataWithContentsOfURL:newURL];
             NSArray *arr = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);             NSString *documentPath = [arr lastObject];
             NSString *desFileName = [documentPath stringByAppendingPathComponent:@"file"];
             BOOL success = [fileData writeToFile:desFileName atomically:YES];
-            RYQLog(@"point_test_log%@",desFileName);
-            RYQLog(@"%d",success);
+            XYLog(@"point_test_log%@",desFileName);
+            XYLog(@"%d",success);
             NSData *data = [NSData dataWithContentsOfURL:[NSURL fileURLWithPath:desFileName]];
-            RYQLog(@"%@",data);
+            XYLog(@"%@",data);
             [self dismissViewControllerAnimated:YES completion:NULL];
         }];
         if (error) {

@@ -30,7 +30,7 @@
     XYCyclePlayView *cycleView = [[XYCyclePlayView alloc] initWithFrame:CGRectMake(0, NavigationBarHeight, kScreenWidth, 300) dataSource:dataSource];
     [self.view addSubview:cycleView];
     [cycleView setTouchIndexRow:^(NSUInteger index) {
-        RYQLog(@"点击了%ld", index);
+        XYLog(@"点击了%ld", index);
     }];
 }
 

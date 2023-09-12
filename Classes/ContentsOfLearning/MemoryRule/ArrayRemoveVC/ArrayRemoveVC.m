@@ -24,8 +24,8 @@
     [self.Names addObject:self.name];
     
     [self.Names removeAllObjects];
-    RYQLog(@"%@", self.name);
-    RYQLog(@"%@", self.Names);
+    XYLog(@"%@", self.name);
+    XYLog(@"%@", self.Names);
 }
 
 /**
@@ -39,7 +39,7 @@
 }
 
 - (void)dealloc {
-    RYQLog(@"%@", self.name);
+    XYLog(@"%@", self.name);
 }
 
 @end

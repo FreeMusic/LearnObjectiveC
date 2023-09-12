@@ -199,7 +199,7 @@ void depthFirstSearchTraverse(MGraph graph)
     for (i = 0; i < graph.numVertexs; i++) {
         visited[i] = YQNO;//初始的所有顶点状态都是未访问过的状态
     }
-    RYQLog(@"邻接矩阵的深度遍历操作");
+    XYLog(@"邻接矩阵的深度遍历操作");
     for (i = 0; i < graph.numVertexs; i++) {
         if (!visited[i]) {//对未访问过的顶点调用DFS，若是连通图，只会调用一次
             depthFirstSearch(graph, i);
@@ -217,7 +217,7 @@ void depthFirstSearch(MGraph graph, int i)
     int j;
     visited[i] = YQYES;
     
-    RYQLog(@"%c", graph.vexs[i]);//打印顶点 或者 做其他操作
+    XYLog(@"%c", graph.vexs[i]);//打印顶点 或者 做其他操作
     for (j = 0; j < graph.numVertexs; j++) {
         if (graph.arc[i][j] == 1 && !visited[j]) {
             depthFirstSearch(graph, j);//对为访问的邻接顶点递归调用
@@ -237,14 +237,14 @@ void breadthFirstSearchTraverse(MGraph graph)
     for (i = 0; i < graph.numVertexs; i++) {//初始的所有顶点状态都是未访问过的状态
         visited[i] = YQNO;
     }
-    RYQLog(@"邻接矩阵的广度遍历算法");
+    XYLog(@"邻接矩阵的广度遍历算法");
     initCycleQueue(&queue);//初始化辅助用的队列
     
     for (i = 0; i < graph.numVertexs; i++) {//遍历每一个顶点
         
         if (!visited[i]) {
             visited[i] = YQYES;//标识该顶点已经访问过
-            RYQLog(@"%c", graph.vexs[i]);//打印顶点，也可以其他操作
+            XYLog(@"%c", graph.vexs[i]);//打印顶点，也可以其他操作
             EnterCycleQueue(&queue, i);//将此顶点入队列
             while (!CycleQueueEmpty(queue)) {//如果队列不为空
                 DeleteCycleQueue(&queue, &i);//将队列元素出队列，赋值给i
@@ -252,7 +252,7 @@ void breadthFirstSearchTraverse(MGraph graph)
                     //判断其他顶点若与当前顶点存在并且未被访问过
                     if (graph.arc[i][j] == 1 && !visited[j]) {
                         visited[j] = YQYES;
-                        RYQLog(@"%c", graph.vexs[j]);//打印顶点，也可以其他操作
+                        XYLog(@"%c", graph.vexs[j]);//打印顶点，也可以其他操作
                         EnterCycleQueue(&queue, j);
                     }
                 }

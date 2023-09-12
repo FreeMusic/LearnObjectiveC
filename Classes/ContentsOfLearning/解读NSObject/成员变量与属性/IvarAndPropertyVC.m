@@ -26,7 +26,7 @@
 }
 
 - (void)threadPlayInBackgrond {
-    RYQLog(@"threadPlayInBackgrond");
+    XYLog(@"threadPlayInBackgrond");
 }
 
 //*********获取所有属性**********//
@@ -38,7 +38,7 @@
         const char *name = ivar_getName(ivar);
         const char *type = ivar_getTypeEncoding(ivar);
         
-        RYQLog(@"属性名称为 ： %s     类型 ：%s", name, type);
+        XYLog(@"属性名称为 ： %s     类型 ：%s", name, type);
     }
 }
 
@@ -53,7 +53,7 @@
         //属性描述
         const char *propertyAttr = property_getAttributes(property);
         
-        RYQLog(@"成员变量的名称：%s   类型：%s", propertyAttr, name);
+        XYLog(@"成员变量的名称：%s   类型：%s", propertyAttr, name);
         //属性的特性
         unsigned int attrCount = 0;
         objc_property_attribute_t *atts = property_copyAttributeList(property, &attrCount);
@@ -62,7 +62,7 @@
             const char *attrname = attr.name;
             const char *value = attr.value;
             
-//            RYQLog(@"成员变量的描述：%s   value：%s", attrname, value);
+//            XYLog(@"成员变量的描述：%s   value：%s", attrname, value);
         }
         free(atts);
     }

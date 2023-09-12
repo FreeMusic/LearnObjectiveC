@@ -65,12 +65,12 @@ __weak id reference = nil;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    RYQLog(@"%@", reference); // Console: sunnyxx
+    XYLog(@"%@", reference); // Console: sunnyxx
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    RYQLog(@"%@", reference); // Console: (null)
+    XYLog(@"%@", reference); // Console: (null)
 }
 
 

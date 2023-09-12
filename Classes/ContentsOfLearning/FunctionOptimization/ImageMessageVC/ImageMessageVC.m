@@ -53,7 +53,7 @@
     NSURL *url = [NSURL URLWithString:@"https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=baiduwangpan&step_word=&hs=0&pn=10&spn=0&di=201410&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=326450101%2C2585356879&os=1480216915%2C3283920824&simid=4192784792%2C943291813&adpicid=0&lpn=0&ln=1409&fr=&fmq=1555405289307_R&fm=&ic=undefined&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fimg.xiazaizhijia.com%2Fuploads%2F2016%2F1028%2F20161028043020792.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bxtwzwtzit3tw_z%26e3Bv54AzdH3F633vAzdH3F889ac9_z%26e3Bip4s&gsm=0&rpstart=0&rpnum=0&islist=&querylist=&force=undefined"];
     [self.imageView sd_setImageWithURL:url completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         
-        RYQLog(@"%@    %@     %@", image, error,  imageURL);
+        XYLog(@"%@    %@     %@", image, error,  imageURL);
         
     }];
     
@@ -233,7 +233,7 @@
         
         ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
         
-        RYQLog(@"%@", info);
+        XYLog(@"%@", info);
         
         __block NSMutableDictionary *imageMetadata_GPS = nil;
         

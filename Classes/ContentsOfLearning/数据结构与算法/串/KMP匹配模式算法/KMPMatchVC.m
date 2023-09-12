@@ -36,10 +36,10 @@ typedef char String[MaxSize+1];//0号单元存放串的长度
 //    StringPrint(s1);
     //朴素匹配法
     int index = Index(s1, s2);
-    RYQLog(@"index = %d", index);
+    XYLog(@"index = %d", index);
     
 //    int kmp_index = KMP_Index(s1, s2);
-//    RYQLog(@"kmp_index = %d", kmp_index);
+//    XYLog(@"kmp_index = %d", kmp_index);
 }
 
 /**
@@ -60,7 +60,7 @@ void initString(String T, char *chars)
 void StringPrint(String T)
 {
     for (int i = 1; i <= T[0]; i++) {
-        RYQLog(@"%c\n", T[i]);
+        XYLog(@"%c\n", T[i]);
     }
 }
 

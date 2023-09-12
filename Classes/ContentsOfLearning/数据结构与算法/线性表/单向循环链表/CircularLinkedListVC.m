@@ -102,13 +102,13 @@ Status GetCycleNodeElem (CycleList list, int i)
     }
     //第i个元素不存在 抛异常
     if (!pList || j > i) {
-        RYQLog(@"循环链表的数据读取  没有找到该元素");
+        XYLog(@"循环链表的数据读取  没有找到该元素");
         
         return ERROR;
     }
     
     ElemType elem = pList->data;
-    RYQLog(@"循环链表的数据读取  elem = %d", elem);
+    XYLog(@"循环链表的数据读取  elem = %d", elem);
     
     return SUCCESS;
 }
@@ -187,7 +187,7 @@ Status CycleNodelistDelete (CycleList *list, int i)
     //将q的g后继结点赋值给p的后集结点
     p->next = q->next;
     ElemType elem = q->data;
-    RYQLog(@"循环链表的数据删除   elem = %d", elem);
+    XYLog(@"循环链表的数据删除   elem = %d", elem);
     free(q);
     
     return SUCCESS;

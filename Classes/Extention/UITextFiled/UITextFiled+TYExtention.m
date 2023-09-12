@@ -121,7 +121,7 @@ static char UITextFieldInputRulesKey;
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    RYQLog(@"楷书输入了")
+    XYLog(@"楷书输入了")
     
     return YES;
 }

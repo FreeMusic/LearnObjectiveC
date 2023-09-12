@@ -27,7 +27,7 @@
     }];
     
 //    dispatch_sync(dispatch_get_main_queue(), ^{
-//        RYQLog(@"线程死锁");
+//        XYLog(@"线程死锁");
 //    });
     
 //    FLAnimatedImageView *imgView = [[FLAnimatedImageView alloc] init];

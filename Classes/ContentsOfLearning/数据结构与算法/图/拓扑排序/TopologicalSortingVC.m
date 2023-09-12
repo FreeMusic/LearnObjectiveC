@@ -173,11 +173,11 @@ void TopologicalSorting(GraphADJlist graphList)
             }
         }
     }
-    RYQLog(@"%@", description);
+    XYLog(@"%@", description);
     if (count < graphList->numVertexs) {
-        RYQLog(@"graphList无回路");
+        XYLog(@"graphList无回路");
     }else{
-        RYQLog(@"graphList有回路");
+        XYLog(@"graphList有回路");
     }
 }
 

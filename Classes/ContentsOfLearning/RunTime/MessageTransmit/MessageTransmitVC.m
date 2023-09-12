@@ -86,7 +86,7 @@
     if ([obj respondsToSelector:sel]) {
         [anInvocation invokeWithTarget:obj];
     }else{
-        RYQLog(@"没有找到该方法");
+        XYLog(@"没有找到该方法");
         return;
     }
 }

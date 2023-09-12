@@ -62,7 +62,7 @@ BiThreadTree preHeader;//全局变量 始终指向刚刚访问的结点
  */
 Status visit(CluesElemType elem)
 {
-    RYQLog(@"%c", elem);
+    XYLog(@"%c", elem);
     return SUCCESS;
 }
 /**
@@ -182,11 +182,11 @@ Status inOrderTravelalThreading(BiThreadTree tree)
         {
             p=p->leftChild;
         }
-        RYQLog(@"p->data = %c", p->data);//访问前驱结点
+        XYLog(@"p->data = %c", p->data);//访问前驱结点
         while(p->rightTag==Thread&&p->rightChild!=tree)
         {
             p=p->rightChild;
-            RYQLog(@"p->data = %c", p->data);//访问后继结点
+            XYLog(@"p->data = %c", p->data);//访问后继结点
         }
         p=p->rightChild;
     }

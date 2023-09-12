@@ -58,15 +58,15 @@
 - (void)KeyValueCodingChangePrivacyObject{
     //KVC访问私有变量
     self.model = [[KVC_Model alloc] init];
-    RYQLog(@"%@    %@", self.model.name, [self.model valueForKey:@"privacy"]);
+    XYLog(@"%@    %@", self.model.name, [self.model valueForKey:@"privacy"]);
     //KVC修改私有变量
     [self.model setValue:@"KVC修改私有变量" forKey:@"privacy"];
-    RYQLog(@"%@    %@", self.model.name, [self.model valueForKey:@"privacy"]);
+    XYLog(@"%@    %@", self.model.name, [self.model valueForKey:@"privacy"]);
 }
 
 - (void)dealloc {
     
-    RYQLog(@"dealloc");
+    XYLog(@"dealloc");
     
 }
 

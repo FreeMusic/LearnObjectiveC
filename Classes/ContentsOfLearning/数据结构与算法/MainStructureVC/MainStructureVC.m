@@ -44,12 +44,12 @@ typedef struct Node *LinkList;
                       [ObjectiveModel initTitle:@"查找🔍" vcName:@"MainSearchVC"],
                       [ObjectiveModel initTitle:@"LeeCode" vcName:@"LeeCodeMainlistVC"],
                       ];
-    RYQLog(@"MainStructureVC 执行了viewDidLoad");
+    XYLog(@"MainStructureVC 执行了viewDidLoad");
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    RYQLog(@"MainStructureVC 执行了viewWillAppear");
+    XYLog(@"MainStructureVC 执行了viewWillAppear");
 }
 
 @end

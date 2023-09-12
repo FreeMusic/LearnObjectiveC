@@ -33,7 +33,7 @@ typedef NS_ENUM(NSUInteger ,EventLoopMode) {
 //    [[NSRunLoop currentRunLoop] run];
     NSArray *array = @[@"23sd", @"sadsad"];
     [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        RYQLog(@"%@", obj);
+        XYLog(@"%@", obj);
     }];
 }
 
@@ -41,7 +41,7 @@ typedef NS_ENUM(NSUInteger ,EventLoopMode) {
 {
     self.mode = mode;
     do {
-        RYQLog(@"RunLoop一直在执行着");
+        XYLog(@"RunLoop一直在执行着");
     } while (self.mode == EventLoopStartMode);
 }
 

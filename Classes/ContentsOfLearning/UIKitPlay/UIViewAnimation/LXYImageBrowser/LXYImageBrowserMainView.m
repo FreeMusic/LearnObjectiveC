@@ -88,7 +88,7 @@
 
 #pragma mark -scrollView delegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    RYQLog(@"scrollViewDidEndDecelerating");
+    XYLog(@"scrollViewDidEndDecelerating");
     CGFloat currentX = scrollView.contentOffset.x;
     NSInteger currentPage = currentX / (Screen_Width + SpaceWidth);
     _selectPage = currentPage;
@@ -96,7 +96,7 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    RYQLog(@"scrollViewDidScroll");
+    XYLog(@"scrollViewDidScroll");
     CGFloat currentX = scrollView.contentOffset.x;
     NSInteger currentPage = currentX / (Screen_Width + SpaceWidth);
     [self.pageControl setCurrentPage:currentPage];

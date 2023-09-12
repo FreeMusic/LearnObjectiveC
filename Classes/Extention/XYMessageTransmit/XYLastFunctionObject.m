@@ -11,7 +11,7 @@
 @implementation XYLastFunctionObject
 
 - (void)otherPlay {
-    RYQLog(@"*************otherPlay*************");
+    XYLog(@"*************otherPlay*************");
 }
 
 @end

@@ -112,7 +112,7 @@ void CreateShortPathMGraph(MGraph *graph)
  */
 void DijkstraShortestPath(MGraph graph, int v0, PathArc *path, ShortPathTable *shortPath)
 {
-    RYQLog(@"迪杰斯特拉算法求最短路径");
+    XYLog(@"迪杰斯特拉算法求最短路径");
     int v,w,k = 0,min;
     int remerK = 0;
     NSString *pathDescribtion = [NSString stringWithFormat:@"最短路径为: v%d", graph.vexs[0]];
@@ -150,10 +150,10 @@ void DijkstraShortestPath(MGraph graph, int v0, PathArc *path, ShortPathTable *s
         }
     }
     pathDescribtion = [pathDescribtion stringByAppendingString:[NSString stringWithFormat:@" -> v%d", graph.numVertexes-1]];
-    RYQLog(@"%@", pathDescribtion);
+    XYLog(@"%@", pathDescribtion);
     
     for (int i = 1; i < graph.numVertexes; ++i) {
-        RYQLog(@"v%d到v%d的最短路径为: %d", graph.vexs[0] , graph.vexs[i], (*shortPath)[i]);
+        XYLog(@"v%d到v%d的最短路径为: %d", graph.vexs[0] , graph.vexs[i], (*shortPath)[i]);
     }
 }
 
@@ -166,7 +166,7 @@ void DijkstraShortestPath(MGraph graph, int v0, PathArc *path, ShortPathTable *s
  */
 void FloydShortestPath(MGraph graph, FloydPathArc *path, FloydShortPathTable *shortPath)
 {
-    RYQLog(@"弗洛伊德算法求最短路径");
+    XYLog(@"弗洛伊德算法求最短路径");
     int v, w, k;
     for (v = 0; v < graph.numVertexes; v++) {//初始化path和shortPath
         for (w = 0; w < graph.numVertexes; w++) {
@@ -197,7 +197,7 @@ void FloydShortestPath(MGraph graph, FloydPathArc *path, FloydShortPathTable *sh
                     k = (*path)[k][w];//获得下一个路径顶点下标
                 }
                 shorest = [NSString stringWithFormat:@"%@ -> v%d   长度：%d", shorest, w, (*shortPath)[v][w]];
-                RYQLog(@"%@", shorest);
+                XYLog(@"%@", shorest);
             }
         }
     }

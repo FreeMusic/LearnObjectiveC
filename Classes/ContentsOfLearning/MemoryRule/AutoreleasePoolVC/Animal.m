@@ -12,7 +12,7 @@
 @implementation Animal
 
 - (void)dealloc{
-    RYQLog(@"第%d个Animal--Class 销毁了", self.order);
+    XYLog(@"第%d个Animal--Class 销毁了", self.order);
 }
 
 @end
