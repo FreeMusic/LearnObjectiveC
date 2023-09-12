@@ -121,6 +121,7 @@
 		B146331426C3615E005A9860 /* MessageFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B146331326C3615E005A9860 /* MessageFirstVC.m */; };
 		B146331D26C362B6005A9860 /* MessageFirstObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B146331C26C362B6005A9860 /* MessageFirstObject.m */; };
 		B146332626C36F6B005A9860 /* XYMessageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B146332526C36F6B005A9860 /* XYMessageTool.m */; };
+		B1478E0B2AAFF9E100733B83 /* AESTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B1478E0A2AAFF9E100733B83 /* AESTool.m */; };
 		B14BDF9E28868A72006C892A /* LZYPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14BDF9D28868A72006C892A /* LZYPAlertController.m */; };
 		B14BDFA1288698F7006C892A /* GPUImageEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = B14BDFA0288698F7006C892A /* GPUImageEditView.m */; };
 		B163C3D728977704008C1560 /* XYCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B163C3D628977704008C1560 /* XYCollectionViewFlowLayout.m */; };
@@ -430,6 +431,8 @@
 		B146331C26C362B6005A9860 /* MessageFirstObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageFirstObject.m; sourceTree = "<group>"; };
 		B146332426C36F6B005A9860 /* XYMessageTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYMessageTool.h; sourceTree = "<group>"; };
 		B146332526C36F6B005A9860 /* XYMessageTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYMessageTool.m; sourceTree = "<group>"; };
+		B1478E0A2AAFF9E100733B83 /* AESTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESTool.m; sourceTree = "<group>"; };
+		B1478E0C2AAFF9F400733B83 /* AESTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESTool.h; sourceTree = "<group>"; };
 		B14BDF9C28868A72006C892A /* LZYPAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZYPAlertController.h; sourceTree = "<group>"; };
 		B14BDF9D28868A72006C892A /* LZYPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZYPAlertController.m; sourceTree = "<group>"; };
 		B14BDF9F288698F7006C892A /* GPUImageEditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageEditView.h; sourceTree = "<group>"; };
@@ -807,6 +810,7 @@
 		181F31C72230C2940098E099 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B15319852AAEFAD700869A34 /* AESTool */,
 				B1F782202A67B2C40010FCE9 /* LOCTool */,
 				B1080B89255E5E910095B93C /* XYGCDTimer */,
 				18FEC63122377ED300313854 /* ToolsObject */,
@@ -1747,6 +1751,15 @@
 			path = LZYPAlertController;
 			sourceTree = "<group>";
 		};
+		B15319852AAEFAD700869A34 /* AESTool */ = {
+			isa = PBXGroup;
+			children = (
+				B1478E0C2AAFF9F400733B83 /* AESTool.h */,
+				B1478E0A2AAFF9E100733B83 /* AESTool.m */,
+			);
+			path = AESTool;
+			sourceTree = "<group>";
+		};
 		B1699ED529022F1A00FA6587 /* CollectionViewDrag */ = {
 			isa = PBXGroup;
 			children = (
@@ -2359,6 +2372,7 @@
 				B1F782272A67BD910010FCE9 /* UIWindow+Extention.m in Sources */,
 				1872753922E941EB00E7E01F /* ShortestPathVC.m in Sources */,
 				18FEC63E2237801500313854 /* BoundsNextVC.m in Sources */,
+				B1478E0B2AAFF9E100733B83 /* AESTool.m in Sources */,
 				B122E5DF2565FF69005BD098 /* TextViewInputVC.m in Sources */,
 				181F31D52230C5FA0098E099 /* MyTableReFreshVC.m in Sources */,
 				18ED2503225AE95A00006116 /* MainStructureVC.m in Sources */,
