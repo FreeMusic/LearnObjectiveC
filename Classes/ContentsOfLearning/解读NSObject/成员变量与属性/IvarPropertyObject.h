@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *enumThirdProperty;///
 @property (nonatomic, copy) NSString *enumFourProperty;///
 @property (nonatomic, copy) NSString *enumFiveProperty;///
+@property (nonatomic, copy) NSString *ID;//
 
 @end
 

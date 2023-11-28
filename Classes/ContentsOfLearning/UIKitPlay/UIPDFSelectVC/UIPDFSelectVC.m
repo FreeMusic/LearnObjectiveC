@@ -67,7 +67,8 @@
             fileName = [fileName stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
             XYLog(@"%@",fileName);
             NSData *fileData = [NSData dataWithContentsOfURL:newURL];
-            NSArray *arr = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);             NSString *documentPath = [arr lastObject];
+            NSArray *arr = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            NSString *documentPath = [arr lastObject];
             NSString *desFileName = [documentPath stringByAppendingPathComponent:@"file"];
             BOOL success = [fileData writeToFile:desFileName atomically:YES];
             XYLog(@"point_test_log%@",desFileName);

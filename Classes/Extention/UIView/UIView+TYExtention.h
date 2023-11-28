@@ -77,6 +77,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param frame 分割线frame
 - (UIView *)obtainDividerlineWithFrame:(CGRect)frame;
 
+//截图
+- (UIImage *)screenShot;
+
 @end
 
 NS_ASSUME_NONNULL_END

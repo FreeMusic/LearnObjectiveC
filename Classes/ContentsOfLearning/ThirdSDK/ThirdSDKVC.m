@@ -19,6 +19,7 @@
     
     self.Messages = @[
         [ObjectiveModel initTitle:@"GPUImage库的使用" vcName:@"GPUImageSDKVC"],
+        [ObjectiveModel initTitle:@"苹果地图绘制足迹" vcName:@"XYMapVC"],
     ];
 }
 

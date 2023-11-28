@@ -7,7 +7,19 @@
 //
 
 #import "UtilClass.h"
+#import "AppDelegate.h"
 
 @implementation UtilClass
+
+/// 截取当前屏幕作为一张Image
++ (UIImage *)screenImageWithSize:(CGSize )imgSize{
+      UIGraphicsBeginImageContext(imgSize);
+      CGContextRef context = UIGraphicsGetCurrentContext();
+      AppDelegate * app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+      [app.window.layer renderInContext:context];
+      UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
+      UIGraphicsEndImageContext();
+      return img;
+}
 
 @end

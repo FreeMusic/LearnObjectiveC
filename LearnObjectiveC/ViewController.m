@@ -11,8 +11,12 @@
 #import "RunLoopMainVC.h"
 #import "RunTimeMainVC.h"
 #import "MemoryMainVC.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController ()
+
+@interface ViewController ()<CLLocationManagerDelegate>
+
+@property (nonatomic, strong) CLLocationManager *locationManager;//拍照定位
 
 @end
 
@@ -37,6 +41,7 @@
                     [ObjectiveModel initTitle:@"UIKit相关属性" vcName:@"UIKitPlayVC"],
                     [ObjectiveModel initTitle:@"Fundation相关属性" vcName:@"FundationPlayVC"],
     ];
+//    [self beginLocation];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -106,6 +106,8 @@
 		B1080DBB28A3A1D10093A635 /* XYCyclePlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080DB528A3A1D10093A635 /* XYCyclePlayView.m */; };
 		B1080DBC28A3A1D10093A635 /* XYCyclePlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080DB628A3A1D10093A635 /* XYCyclePlayCell.m */; };
 		B1080DBD28A3A1D10093A635 /* CycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1080DBA28A3A1D10093A635 /* CycleVC.m */; };
+		B115C8212AF8B0510033BD5F /* UtilClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B115C8202AF8B0510033BD5F /* UtilClass.m */; };
+		B121627A2AF9D6B6006BCBE6 /* XYLayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B12162792AF9D6B6006BCBE6 /* XYLayerVC.m */; };
 		B122E5DF2565FF69005BD098 /* TextViewInputVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5DE2565FF69005BD098 /* TextViewInputVC.m */; };
 		B122E5E22565FFEF005BD098 /* TextViewInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5E12565FFEF005BD098 /* TextViewInputCell.m */; };
 		B122E5E6256600BB005BD098 /* UITableView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = B122E5E5256600BB005BD098 /* UITableView+Extention.m */; };
@@ -126,6 +128,7 @@
 		B1478E1B2AB0052700733B83 /* AffineTransformVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1478E1A2AB0052700733B83 /* AffineTransformVC.m */; };
 		B14BDF9E28868A72006C892A /* LZYPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14BDF9D28868A72006C892A /* LZYPAlertController.m */; };
 		B14BDFA1288698F7006C892A /* GPUImageEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = B14BDFA0288698F7006C892A /* GPUImageEditView.m */; };
+		B15069D72B0C41D500C4C780 /* XYMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B15069D62B0C41D500C4C780 /* XYMapVC.m */; };
 		B163C3D728977704008C1560 /* XYCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B163C3D628977704008C1560 /* XYCollectionViewFlowLayout.m */; };
 		B163C3DD28978359008C1560 /* XYFoldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B163C3DC28978359008C1560 /* XYFoldCell.m */; };
 		B163C3E028978532008C1560 /* ElemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B163C3DE28978532008C1560 /* ElemCell.m */; };
@@ -165,6 +168,7 @@
 		B1E7BC592886537C00DECF3D /* ThirdSDKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7BC582886537C00DECF3D /* ThirdSDKVC.m */; };
 		B1E7BC5D2886542000DECF3D /* GPUImageSDKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7BC5C2886542000DECF3D /* GPUImageSDKVC.m */; };
 		B1E7BC60288658B800DECF3D /* GPUImageEnumData.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7BC5F288658B800DECF3D /* GPUImageEnumData.m */; };
+		B1E942D32AF9E7ED0073FA92 /* MAOLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E942D22AF9E7ED0073FA92 /* MAOLayer.m */; };
 		B1EE4CEE24C0268800465499 /* InterpretationNSObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */; };
 		B1EE4CF224C0275C00465499 /* IvarAndPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF124C0275C00465499 /* IvarAndPropertyVC.m */; };
 		B1EE4CF524C027D700465499 /* IvarPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE4CF424C027D700465499 /* IvarPropertyObject.m */; };
@@ -402,6 +406,10 @@
 		B1080DB828A3A1D10093A635 /* XYCyclePlayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCyclePlayCell.h; sourceTree = "<group>"; };
 		B1080DB928A3A1D10093A635 /* CycleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleVC.h; sourceTree = "<group>"; };
 		B1080DBA28A3A1D10093A635 /* CycleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleVC.m; sourceTree = "<group>"; };
+		B115C81F2AF8B0510033BD5F /* UtilClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilClass.h; sourceTree = "<group>"; };
+		B115C8202AF8B0510033BD5F /* UtilClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UtilClass.m; sourceTree = "<group>"; };
+		B12162782AF9D6B6006BCBE6 /* XYLayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYLayerVC.h; sourceTree = "<group>"; };
+		B12162792AF9D6B6006BCBE6 /* XYLayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYLayerVC.m; sourceTree = "<group>"; };
 		B122E5DD2565FF69005BD098 /* TextViewInputVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewInputVC.h; sourceTree = "<group>"; };
 		B122E5DE2565FF69005BD098 /* TextViewInputVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewInputVC.m; sourceTree = "<group>"; };
 		B122E5E02565FFEF005BD098 /* TextViewInputCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewInputCell.h; sourceTree = "<group>"; };
@@ -443,6 +451,8 @@
 		B14BDF9D28868A72006C892A /* LZYPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZYPAlertController.m; sourceTree = "<group>"; };
 		B14BDF9F288698F7006C892A /* GPUImageEditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageEditView.h; sourceTree = "<group>"; };
 		B14BDFA0288698F7006C892A /* GPUImageEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageEditView.m; sourceTree = "<group>"; };
+		B15069D52B0C41D500C4C780 /* XYMapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYMapVC.h; sourceTree = "<group>"; };
+		B15069D62B0C41D500C4C780 /* XYMapVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYMapVC.m; sourceTree = "<group>"; };
 		B163C3D528977704008C1560 /* XYCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		B163C3D628977704008C1560 /* XYCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		B163C3DB28978359008C1560 /* XYFoldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYFoldCell.h; sourceTree = "<group>"; };
@@ -515,6 +525,8 @@
 		B1E7BC5C2886542000DECF3D /* GPUImageSDKVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageSDKVC.m; sourceTree = "<group>"; };
 		B1E7BC5E288658B800DECF3D /* GPUImageEnumData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageEnumData.h; sourceTree = "<group>"; };
 		B1E7BC5F288658B800DECF3D /* GPUImageEnumData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageEnumData.m; sourceTree = "<group>"; };
+		B1E942D12AF9E7ED0073FA92 /* MAOLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAOLayer.h; sourceTree = "<group>"; };
+		B1E942D22AF9E7ED0073FA92 /* MAOLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAOLayer.m; sourceTree = "<group>"; };
 		B1EE4CEC24C0268800465499 /* InterpretationNSObjectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterpretationNSObjectVC.h; sourceTree = "<group>"; };
 		B1EE4CED24C0268800465499 /* InterpretationNSObjectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterpretationNSObjectVC.m; sourceTree = "<group>"; };
 		B1EE4CF024C0275C00465499 /* IvarAndPropertyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IvarAndPropertyVC.h; sourceTree = "<group>"; };
@@ -817,6 +829,7 @@
 		181F31C72230C2940098E099 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B115C81E2AF8B0090033BD5F /* UtilClass */,
 				B15319852AAEFAD700869A34 /* AESTool */,
 				B1F782202A67B2C40010FCE9 /* LOCTool */,
 				B1080B89255E5E910095B93C /* XYGCDTimer */,
@@ -1638,6 +1651,26 @@
 			path = XYCyclePlayView;
 			sourceTree = "<group>";
 		};
+		B115C81E2AF8B0090033BD5F /* UtilClass */ = {
+			isa = PBXGroup;
+			children = (
+				B115C81F2AF8B0510033BD5F /* UtilClass.h */,
+				B115C8202AF8B0510033BD5F /* UtilClass.m */,
+			);
+			path = UtilClass;
+			sourceTree = "<group>";
+		};
+		B12162772AF9D683006BCBE6 /* XYLayer */ = {
+			isa = PBXGroup;
+			children = (
+				B12162782AF9D6B6006BCBE6 /* XYLayerVC.h */,
+				B12162792AF9D6B6006BCBE6 /* XYLayerVC.m */,
+				B1E942D12AF9E7ED0073FA92 /* MAOLayer.h */,
+				B1E942D22AF9E7ED0073FA92 /* MAOLayer.m */,
+			);
+			path = XYLayer;
+			sourceTree = "<group>";
+		};
 		B122E5DC2565FF47005BD098 /* UITextView输入限制 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1777,6 +1810,15 @@
 			path = LZYPAlertController;
 			sourceTree = "<group>";
 		};
+		B15069D42B0C419900C4C780 /* XYMapVC */ = {
+			isa = PBXGroup;
+			children = (
+				B15069D52B0C41D500C4C780 /* XYMapVC.h */,
+				B15069D62B0C41D500C4C780 /* XYMapVC.m */,
+			);
+			path = XYMapVC;
+			sourceTree = "<group>";
+		};
 		B15319852AAEFAD700869A34 /* AESTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -1839,6 +1881,7 @@
 		B17A91102913634700494ED7 /* UIKitPlay */ = {
 			isa = PBXGroup;
 			children = (
+				B12162772AF9D683006BCBE6 /* XYLayer */,
 				B19B8C8F291CA7AE002FC547 /* UIPDFSelectVC */,
 				B1D4604D291A0672005AFB7C /* UICollectionViewAnimation */,
 				B17A9114291363D800494ED7 /* UIViewAnimation */,
@@ -1932,6 +1975,7 @@
 		B1E7BC562886533700DECF3D /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				B15069D42B0C419900C4C780 /* XYMapVC */,
 				B1E7BC5A288653ED00DECF3D /* GPUImageSDK */,
 				B1E7BC572886537C00DECF3D /* ThirdSDKVC.h */,
 				B1E7BC582886537C00DECF3D /* ThirdSDKVC.m */,
@@ -2341,6 +2385,7 @@
 				181F31EA223111AD0098E099 /* RunTimeMainVC.m in Sources */,
 				B18C12ED291508CB00F79041 /* LXYImageBrowserMainView.m in Sources */,
 				B1E7BC592886537C00DECF3D /* ThirdSDKVC.m in Sources */,
+				B15069D72B0C41D500C4C780 /* XYMapVC.m in Sources */,
 				B17A911B2913AF0900494ED7 /* TransitionAnimationVC.m in Sources */,
 				B173EAAB288E367C00A4B8AE /* FoldingCellVC.m in Sources */,
 				B1FE4CBD26C3B987002AFD60 /* XYMessageObject.m in Sources */,
@@ -2351,6 +2396,7 @@
 				1846836822320CCA0032A4EE /* CopyTargetVC.m in Sources */,
 				180F1976225C49D200F62A8C /* MainLinearTableVC.m in Sources */,
 				B1699EDE290288CE00FA6587 /* DragColloectionViewCell.m in Sources */,
+				B115C8212AF8B0510033BD5F /* UtilClass.m in Sources */,
 				181F31CD2230C3530098E099 /* BaseViewController.m in Sources */,
 				B1D46053291A296C005AFB7C /* AnimationCell.m in Sources */,
 				189B8516229B8317002DBEC2 /* KMPMatchVC.m in Sources */,
@@ -2367,6 +2413,8 @@
 				B173EAB2288E68E300A4B8AE /* KeyBoardVC.m in Sources */,
 				181F31DE2230EA940098E099 /* BAD_ACCESS_VC.m in Sources */,
 				B1699ED829022F6800FA6587 /* CollectionViewDragVC.m in Sources */,
+				B121627A2AF9D6B6006BCBE6 /* XYLayerVC.m in Sources */,
+				B1E942D32AF9E7ED0073FA92 /* MAOLayer.m in Sources */,
 				1814E89E2293E8D5006A892C /* StackVC.m in Sources */,
 				180C82DB2238910D0092EBF0 /* BuriesPointTestVC.m in Sources */,
 				18AF150922C9AA450048732F /* MainGraphVC.m in Sources */,
@@ -2526,7 +2574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2578,7 +2626,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -2596,10 +2644,65 @@
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LearnObjectiveC/Header.pch";
 				INFOPLIST_FILE = LearnObjectiveC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FLAnimatedImage\"",
+					"-l\"GPUImage\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"TOCropViewController\"",
+					"-l\"TZImagePickerController\"",
+					"-l\"ZLCollectionViewFlowLayout\"",
+					"-l\"c++\"",
+					"-l\"lottie-ios_Oc\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Bugly\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"PhotosUI\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UMCommon\"",
+					"-framework",
+					"\"UMDevice\"",
+					"-framework",
+					"\"UMLink\"",
+					"-ld64",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuandukeji.LearnObjectiveC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2621,10 +2724,65 @@
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LearnObjectiveC/Header.pch";
 				INFOPLIST_FILE = LearnObjectiveC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FLAnimatedImage\"",
+					"-l\"GPUImage\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"TOCropViewController\"",
+					"-l\"TZImagePickerController\"",
+					"-l\"ZLCollectionViewFlowLayout\"",
+					"-l\"c++\"",
+					"-l\"lottie-ios_Oc\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Bugly\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"PhotosUI\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UMCommon\"",
+					"-framework",
+					"\"UMDevice\"",
+					"-framework",
+					"\"UMLink\"",
+					"-ld64",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuandukeji.LearnObjectiveC;
 				PRODUCT_NAME = "$(TARGET_NAME)";

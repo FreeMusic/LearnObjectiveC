@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UtilClass : NSObject
 
+/// 截取当前屏幕作为一张Image
++ (UIImage *)screenImageWithSize:(CGSize )imgSize;
+
 @end
 
 NS_ASSUME_NONNULL_END

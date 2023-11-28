@@ -27,7 +27,11 @@
 #import "AESTool.h"
 #import <MapKit/MapKit.h>
 
-@interface AppDelegate ()<BuglyDelegate>
+@interface AppDelegate ()<BuglyDelegate, CLLocationManagerDelegate>
+
+@property (nonatomic, assign) UIBackgroundTaskIdentifier backgrounTask;
+@property (nonatomic,strong) NSTimer *timer;
+@property (nonatomic, strong) CLLocationManager *locationManager;//拍照定位
 
 @end
 
@@ -49,12 +53,47 @@
     NSMutableArray *array = [NSMutableArray arrayWithArray:@[@(1), @(2), @(3), @(5)]];
     NSMutableArray *cpyArray = array.mutableCopy;
     array[0] = @"1212"; cpyArray[0] = @(3333);
-    
+//    [self beginLocation];
     XYLog(@"%@   %@", array, cpyArray);
     
     return YES;
     
 }
+
+- (void)beginLocation {
+    self.locationManager= [CLLocationManager new];
+    CLLocationDistance distance = 500;
+    NSTimeInterval time = 20;
+    self.locationManager.delegate = self;
+    [self.locationManager allowDeferredLocationUpdatesUntilTraveled:distance timeout:time];
+    [self.locationManager requestAlwaysAuthorization];
+    @try {
+        self.locationManager.allowsBackgroundLocationUpdates=YES;
+    } @catch (NSException *exception) {
+        NSLog(@"异常：%@", exception);
+    } @finally {
+
+    }
+    [self.locationManager startUpdatingLocation];
+}
+
+//获取一次定位，然后关掉manager
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
+{
+    //防止多次调用
+    
+    CLLocation *currentLocation = [locations lastObject];
+    
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude);
+//    NSTimeInterval locationAge = -[currentLocation.timestamp timeIntervalSinceNow];
+//
+//    if (locationAge > 5.0) return;
+//
+//    if (currentLocation.horizontalAccuracy < 0) return;
+    
+    XYLog(@"%f    %f", coord.longitude, coord.latitude);
+}
+
 
 //获取设备当前网络IP地址（是获取IPv4 还是 IPv6）
 - (NSString *)getIPAddress:(BOOL)preferIPv4
@@ -223,16 +262,6 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 

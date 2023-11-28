@@ -22,6 +22,7 @@
         [ObjectiveModel initTitle:@"UIView动画" vcName:@"UIViewAnimationVC"],
         [ObjectiveModel initTitle:@"UICollectionView转场动画" vcName:@"UICollectionViewAnimationVC"],
         [ObjectiveModel initTitle:@"选择PDF文件" vcName:@"UIPDFSelectVC"],
+        [ObjectiveModel initTitle:@"Layer" vcName:@"XYLayerVC"],
     ];
 }
 

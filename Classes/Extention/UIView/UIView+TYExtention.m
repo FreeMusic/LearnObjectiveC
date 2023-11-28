@@ -211,4 +211,13 @@
 //  return line;
 //}
 
+//截图
+- (UIImage *)screenShot {
+    UIGraphicsImageRendererFormat *format = [UIGraphicsImageRendererFormat defaultFormat];
+    UIGraphicsImageRenderer *render = [[UIGraphicsImageRenderer alloc] initWithSize:self.frame.size format:format];
+    return [render imageWithActions:^(UIGraphicsImageRendererContext * _Nonnull rendererContext) {
+        [self.layer renderInContext:rendererContext.CGContext];
+    }];
+}
+
 @end

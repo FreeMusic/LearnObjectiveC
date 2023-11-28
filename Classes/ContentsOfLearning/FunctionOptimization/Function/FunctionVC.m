@@ -8,6 +8,7 @@
 
 #import "FunctionVC.h"
 #import "LZYPWebViewVC.h"
+#import <Photos/Photos.h>
 
 @interface FunctionVC ()
 
@@ -37,6 +38,21 @@
         [ObjectiveModel initTitle:@"浏览文件" vcName:@"DocumentVC"],
         [ObjectiveModel initTitle:@"图片的旋转" vcName:@"ImageOrientationVC"],
     ];
+//    [[XYGCDTimer shareTimer] timerCutDownFinishedWithTimeInterVal:2 circleBlock:^{
+//        [self save];
+//    }];
+}
+
+- (void)save {
+    UIImage *image = [UtilClass screenImageWithSize:CGSizeMake(kScreenWidth, kScreenHeight)];
+    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+        PHAssetChangeRequest *req = [PHAssetChangeRequest creationRequestForAssetFromImage:image];
+    } completionHandler:^(BOOL success, NSError * _Nullable error) {
+        XYLog(@"%d", success);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [LZYPAlertController initActionAlertWithTitle:@"提示" message:@"成功" presentVC:self];
+        });
+    }];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

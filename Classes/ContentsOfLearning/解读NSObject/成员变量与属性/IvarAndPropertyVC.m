@@ -23,6 +23,9 @@
     [self lxy_ObjectWithIvars];
     /// 获取所有成员变量
     [self lxy_ObjectWithProperties];
+    IvarPropertyObject *valueObject = [[IvarPropertyObject alloc] init];
+    valueObject.ID = @"3333";
+    XYLog(@"%@", valueObject.ID);
 }
 
 - (void)threadPlayInBackgrond {
